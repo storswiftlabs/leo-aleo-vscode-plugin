@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "ES2022",
+		"lib": [
+			"ES2022"
+		],
+		"outDir": "out",
+		"rootDir": "src",
+		"sourceMap": true,
+		"allowJs": false
+	},
+	"include": [
+		"src"
+	],
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	],
+	"references": [
+		{
+			"path": "./client",
+		},
+		{
+			"path": "./server"
+		}
+	]
+}

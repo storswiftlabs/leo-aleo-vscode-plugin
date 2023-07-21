@@ -1,0 +1,380 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "aleo",
+	"scopeName": "source.aleo",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#declaration"
+		},
+		{
+			"include": "#constant"
+		},
+		{
+			"include": "#operator"
+		},
+		{
+			"include": "#namespace"
+		},
+		{
+			"include": "#control"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#finalize"
+		},
+		{
+			"include": "#qualifiers"
+		},
+		{
+			"include": "#instructions"
+		},
+		{
+			"include": "#visibility"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#punctuation"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "\\b(function|return|let|program|as|by|interface|closure|into|import|record|struct|transition|then)\\b"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "support.type",
+					"match": "\\b(i8|i16|i32|i64|i128)\\b"
+				},
+				{
+					"name": "support.type",
+					"match": "\\b(u8|u16|u32|u64|u128)\\b"
+				},
+				{
+					"name": "support.type",
+					"match": "\\b(address|boolean|bool|field|group|scalar|string)\\b"
+				}
+			]
+		},
+		"declaration": {
+			"patterns": [
+				{
+					"include": "#declaration-struct"
+				},
+				{
+					"include": "#declaration-enum"
+				},
+				{
+					"include": "#declaration-function-parameters"
+				}
+			]
+		},
+		"declaration-struct": {
+			"patterns": [
+				{
+					"match": "\\b(record|struct)(\\s+([A-Za-z_]\\w*))?\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type.struct"
+						},
+						"3": {
+							"name": "entity.name.type.struct"
+						}
+					}
+				},
+				{
+					"begin": "\\b(record|struct)\\b\\s*(\\w+)?\\b\\s*(?=\\{)",
+					"beginCaptures": {
+						"1": {
+							"name": "storage.type.struct"
+						},
+						"2": {
+							"name": "entity.name.type.struct"
+						}
+					},
+					"end": "(?=\\})"
+				}
+			]
+		},
+		"declaration-enum":{
+			"patterns": [
+                {
+                    "begin": "\\b(enum)\\s+(\\w+)\\b",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "storage.type.enum"
+                        },
+                        "2": {
+                            "name": "entity.name.type.enum"
+                        }
+                    },
+                    "end": "(?=\\})",
+                    "patterns": [
+                        {
+                            "match": "\\b(\\w+)\\b",
+                            "name": "variable.other.enummember"
+                        },
+                        {
+                            "include": "#punctuation"
+                        },                        
+                        {
+                            "include": "#comment"
+                        }
+                    ]
+                },
+                {
+                    "match": "\\b(enum)(\\s+([A-Za-z_]\\w*))?\\b",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.enum"
+                        },
+                        "3": {
+                            "name": "entity.name.type.enum"
+                        }
+                    }
+                }
+            ]
+		},
+		"declarationfunction-parameters":{
+			"begin": "\\G\\s*(?=\\()",
+            "end": "(?=\\))",
+            "patterns": [
+                {
+                    "include": "#type-primitive"
+                },
+                {
+                    "include": "#type-modifier-extended-scope"
+                },
+                {
+                    "match": "\\b([A-Z]\\w*)\\b",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.struct"
+                        }
+                    }
+                },
+                {
+                    "include": "#variable"
+                },
+                {
+                    "include": "#punctuation"
+                },
+                {
+                    "include": "#comment"
+                }
+            ]
+		},
+		"constant": {
+			"match": "\\b(true|false)\\b",
+			"name": "constant.language.boolean"
+		},
+		"operator": {
+			"patterns": [
+				{
+					"include": "#operator-logic"
+				},
+				{
+					"include": "#operator-mapping"
+				},
+				{
+					"include": "#operator-names"
+				},
+				{
+					"include": "#operator-arithmetic"
+				}
+			]
+		},
+		"operator-logic": {
+			"name": "keyword.operator",
+			"match": "(==|\\!=|<(?!<)|<=|>(?!>)|>=|\\&\\&|\\|\\||\\:{1}(?!=)|\\?|\\!|=)"
+		},
+		"operator-mapping": {
+			"match": "(=>|->)",
+			"name": "keyword.operator.mapping"
+		},
+		"operator-names": {
+			"name": "keyword.control.exceptions",
+			"match": "(:?\\b\\.?(abs|abs_wrapped|add|add_wrapped|and|assert|assert_eq|assert_neq|div|div_wrapped|double|gt|gte|inv|eq|neq|lt|lte|mod|mul|mul_wrapped|nand|neg|nor|not|or|pow|pow_wrapped|rem|rem_wrapped|shl|shl_wrapped|shr|shr_wrapped|square_root|square|sub|sub_wrapped|ternary|xor)\\b)",
+			"begin": "\\.",
+			"end": "("
+		},
+		"operator-arithmetic": {
+			"match": "(\\+|\\-|\\/|\\*)",
+			"name": "keyword.operator.arithmetic"
+		},
+		"namespace": {
+			"patterns": [
+				{
+					"include": "#namespace-global"
+				},
+				{
+					"include": "#namespace-property"
+				}
+			]
+		},
+		"namespace-global": {
+			"name": "constant.character.escape",
+			"match": "\\b\\w+(?=::)"
+		},
+		"namespace-property": {
+			"name": "storage",
+			"match": "(?<=::)\\w+"
+		},
+		"finalize": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "\\b(finalize|mapping|inline|increment|decrement)\\b"
+				}
+			]
+		},
+		"control": {
+			"patterns": [
+				{
+					"include": "#control-flow"
+				}
+			]
+		},
+		"control-flow": {
+			"patterns": [
+				{
+					"match": "\\b(if|else|for|while|do|break|continue|try|catch|finally|throw|return|global)\\b",
+					"name": "keyword.control.flow"
+				},
+				{
+					"begin": "\\b(returns)\\b",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.control.flow.return"
+						}
+					},
+					"end": "(?=\\))",
+					"patterns": [
+						{
+							"include": "#declaration-function-parameters"
+						}
+					]
+				}
+			]
+		},
+		"qualifiers": {
+			"name": "qualifiers.aleo",
+			"match": "\\(|\\)"
+		},
+		"instructions": {
+			"name": "keyword.control.exceptions",
+			"match": "\\b(abs\\.w|abs|add\\.w|add|and|assert\\.eq|assert\\.neq|call|cast|commit\\.bhp256|commit\\.bhp512|commit\\.bhp768|commit\\.bhp1024|commit\\.ped64|commit\\.ped128|div\\.w|div|double|gt|gte|hash\\.bhp256|hash\\.bhp512|hash\\.bhp768|hash\\.bhp1024|hash\\.ped64|hash\\.ped128|hash\\.psd2|hash\\.psd4|hash\\.psd8|inv|input|is\\.eq|is\\.neq|lt|lte|key|mod|mul\\.w|mul|nand|neg|nor|not|or|output|pow\\.w|pow|rem\\.w|rem|shl\\.w|shl|shr\\.w|srh|sqrt|sub\\.w|sub|square|ternary|value|xor|get|set)\\b"
+		},
+		"visibility": {
+			"patterns": [
+				{
+					"name": "variable.parameter",
+					"match": "\\b(constant|public|private|record|self|aleo)\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "(?:-?\\d+(i8|i16|i32|i64|i128|u8|u16|u32|u64|u128){1})|\\b\\d+\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.aleo",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.aleo",
+					"match": "\\\\."
+				}
+			]
+		},
+		"inside_string": {
+			"name": "string.quoted.double.aleo",
+			"patterns": [
+				{
+					"name": "constant.character.escape.aleo",
+					"match": "\\."
+				},
+				{
+					"name": "punctuation.definition.string.end.aleo",
+					"match": "\""
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.aleo",
+					"match": "\\s*//.*"
+				},
+				{
+					"name": "comment.block.c",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"punctuation": {
+            "patterns": [
+                {
+                    "match": ";",
+                    "name": "punctuation.terminator.statement"
+                },
+                {
+                    "match": "\\.",
+                    "name": "punctuation.accessor"
+                },
+                {
+                    "match": ",",
+                    "name": "punctuation.separator"
+                },
+                {
+                    "match": "\\{",
+                    "name": "punctuation.brace.curly.begin"
+                },
+                {
+                    "match": "\\}",
+                    "name": "punctuation.brace.curly.end"
+                },
+                {
+                    "match": "\\[",
+                    "name": "punctuation.brace.square.begin"
+                },
+                {
+                    "match": "\\]",
+                    "name": "punctuation.brace.square.end"
+                },
+                {
+                    "match": "\\(",
+                    "name": "punctuation.parameters.begin"
+                },
+                {
+                    "match": "\\)",
+                    "name": "punctuation.parameters.end"
+                }
+            ]
+        }
+	}
+}

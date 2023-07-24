@@ -13,10 +13,10 @@ Leo&Aleo plugin is a vscode plugin that supports both Leo and Aleo language synt
 ## 3. Features for Aleo language
 
 - language syntax detection
-- language syntax highlighting
+- lcoloranguage syntax highlighting
 - code formatting
 - code execution
-- heme color automatically switches with the vscode theme color
+- heme color automatically switches with the vscode theme 
 
 ## 4. Example
 

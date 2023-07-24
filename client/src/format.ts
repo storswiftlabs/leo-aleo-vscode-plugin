@@ -1,53 +1,7 @@
 import * as vscode from 'vscode';
-import * as prettier from 'prettier';
-import * as path from 'path';
-import { RequiredOptions } from 'prettier';
 
 interface FormatParser {
     parseIndent(line: string): string
-}
-// 
-export async function formatDocument(document: vscode.TextDocument, context: vscode.ExtensionContext): Promise<vscode.TextEdit[]> {
-    const fileInfo = await prettier.getFileInfo(document.uri.fsPath);
-    if (!fileInfo.ignored) {
-        const source = document.getText();
-
-        const pluginPath = path.join(context.extensionPath, '/.prettierrc');
-        const options: RequiredOptions = {
-            parser: 'aleo',
-            plugins: [pluginPath],
-            semi: true,
-            singleQuote: false,
-            jsxSingleQuote: false,
-            trailingComma: 'none',
-            bracketSpacing: true,
-            bracketSameLine: false,
-            jsxBracketSameLine: false,
-            rangeStart: 0,
-            rangeEnd: 0,
-            filepath: document.uri.fsPath,
-            requirePragma: true,
-            insertPragma: true,
-            proseWrap: 'always',
-            arrowParens: 'always',
-            htmlWhitespaceSensitivity: 'ignore',
-            endOfLine: 'lf',
-            quoteProps: 'preserve',
-            vueIndentScriptAndStyle: true,
-            embeddedLanguageFormatting: 'auto',
-            singleAttributePerLine: false,
-            printWidth: 80,
-            tabWidth: 4
-        };
-        //
-        const unformattedCode = document.getText();
-        const formattedCode = await prettier.format(unformattedCode, options);
-        const range = new vscode.Range(
-            document.positionAt(0),
-            document.positionAt(unformattedCode.length)
-        );
-        return [new vscode.TextEdit(range, formattedCode)];
-    }
 }
 
 export class Formatter implements vscode.DocumentFormattingEditProvider {

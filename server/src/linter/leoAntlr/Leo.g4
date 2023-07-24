@@ -213,7 +213,6 @@ loopStatement:
 	'for' identifier ':' type 'in' expression
 	 '..' '='? expression block;
 mappingAttributes: 'get_or_use' | 'set' | 'get';
-// useMapping: 'Mapping::' mappingAttributes functionArguments ';';
 useMapping: 'Mapping::' mappingAttributes functionArguments;
 statement:
 	useMapping

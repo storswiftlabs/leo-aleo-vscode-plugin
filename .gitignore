@@ -7,4 +7,6 @@ yarn.lock
 .vscode
 .antlr
 yarn-error.log
+*.interp
+*.tokens
 .DS_Store

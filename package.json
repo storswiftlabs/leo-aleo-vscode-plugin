@@ -70,7 +70,6 @@
           "*.leo",
           "*.in"
         ],
-        "abnf": "./server/src/grammars/leo.abnf",
         "firstLine": "(?!\\s*#)",
         "configuration": "./syntaxes/language-configuration.json",
         "configurationData": {

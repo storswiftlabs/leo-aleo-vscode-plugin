@@ -17,7 +17,6 @@ export class CLProvider implements vscode.CodeLensProvider {
     }
     provideCodeLenses(document: vscode.TextDocument, token: vscode.CancellationToken): vscode.ProviderResult<vscode.CodeLens[]> {
         this.codeLenses = [];
-        // 遍历文档的所有行
         let matches;
         for (let line = 0; line < document.lineCount; line++) {
             if (matches = this.regex.exec(document.lineAt(line).text)) {
@@ -27,7 +26,7 @@ export class CLProvider implements vscode.CodeLensProvider {
                     title: "▶️Run",
                     command: "leo-aleo-plugin.executeCode",
                     tooltip: "Run this part of code",
-                    arguments: [matches[2]] // 可以传递自定义的参数
+                    arguments: [matches[2]] 
                 };
                 let codeLens = new vscode.CodeLens(range, command);
                 this.codeLenses.push(codeLens);
@@ -75,7 +74,6 @@ class RunCode {
         }
         const uri = editor.document.uri;
         const filePath = uri.fsPath;
-        // FIXME: Whether the path must exist in src
         const inputDirPath = filePath.substring(0, filePath.lastIndexOf(langId === "leo" ? 'src' : 'build') - 1) + '/inputs/';
         const fileName = filePath.substring(0, filePath.lastIndexOf(langId === "leo" ? 'src' : 'build') - 1).split('/').pop() + '.in';
         return inputDirPath + fileName;
@@ -123,11 +121,9 @@ class RunCode {
 
     async execCommand(program: string, execName: string) {
         await vscode.window.showQuickPick(['Yes', 'No'], {
-            // 是否从input文件中获取执行参数？
             placeHolder: 'Do you need to get parameters from the input file?'
         }).then(async (input) => {
             if (input === 'No') {
-                // 不需要时提供一个输入框供用户输入执行参数；
                 await vscode.window.showInputBox({
                     placeHolder: `Please enter parameters of the ${program} Programming.`,
                     prompt: "Example: 1u8  2u8 \"{p1: 1u8, p2: 2u8}\""
@@ -142,7 +138,6 @@ class RunCode {
                     terminal.sendText(`${program} run ${execName} ${params}`);
                 } else {
                     terminal.sendText(`${program} run ${execName}`);
-                    // await vscode.window.showErrorMessage(`Please fill in the execution parameters; ${this.getInputFilePath()}`);
                 }
             }
         });

@@ -1,322 +1,358 @@
+// The Leo library is free software: you can redistribute it and/or modify it under the terms of the
+// GNU General Public License as published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+
+// The Leo library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+// without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License along with the Leo library. If
+// not, see <https://www.gnu.org/licenses/>.
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+// This file specifies the grammar of Leo in the ABNF notation, which is defined in: - RFC 5234
+// (https://www.rfc-editor.org/rfc/rfc5234) - RFC 7405 (https://www.rfc-editor.org/rfc/rfc7405)
+
+// Leo files are written in Unicode, encoded in UTF-8. The grammar in this file applies to the
+// Unicode scalar values that result from the UTF-8 decoding of the files.
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+// Lexical Grammar ---------------
 grammar Leo;
 
-sourceUnit: importDeclaration* programDeclaration EOF;
-programId: identifier '.' identifier;
+// anything but <LF> and <CR>
 
-locator: programId '/' identifier;
-importDeclaration: 'import' programId ';';
+THEN: 'then';
+Identifier: LOWERCASE_LETTER+;
+Digit: DECIMAL_DIGIT+;
 
-programDeclaration: 'program' programId '{' ( programItem)* '}';
-programItem:
-	structDeclaration
-	| recordDeclaration
-	| mappingDeclaration
-	| functionDeclaration
-	| inlineDeclaration
-	| transitionDeclaration;
+fragment LOWERCASE_LETTER: [a-zA-Z0-9_]; // a-z
+fragment DECIMAL_DIGIT: [0-9]; // 0-9
 
-Identifier: IdentifierStart IdentifierPart*;
-fragment IdentifierStart: [a-zA-Z$_];
-fragment IdentifierPart: [a-zA-Z0-9$_];
-fragment DecimalDigit: [0-9]+;
+letter: Identifier;
+bhp: ('BHP256' | 'BHP512' | 'BHP768' | 'BHP1024') '::';
+pedersen: ('Pedersen64' | 'Pedersen128') '::';
+poseidon: ('Poseidon2' | 'Poseidon4' | 'Poseidon8') '::';
+identifier: letter ( letter | Digit | '_')*;
+// but not a keyword or a boolean literal or aleo1...
 
-UnsignedType: 'u8' | 'u16' | 'u32' | 'u64' | 'u128';
-SignedType: 'i8' | 'i16' | 'i32' | 'i64' | 'i128';
+numeral: Digit+;
 
-identifier: Identifier;
+unsigned_literal: numeral UNSIGNED_TYPE;
 
-// token: 
-annotation: '@' Identifier;
+signed_literal: numeral SIGNED_TYPE;
 
-// integerType: UnsignedType | SignedType;
-integerType: UnsignedType | SignedType;
+field_literal: numeral 'field';
 
-FieldType: 'field';
+product_group_literal: numeral 'group';
 
-GroupType: 'group';
+scalar_literal: numeral 'scalar';
 
-ScalarType: 'scalar';
-arithmeticType:
-	integerType
-	| FieldType
-	| GroupType
-	| ScalarType;
-BooleanType: 'bool';
+BOOLEAN_LITERAL: 'true' | 'false';
 
-AddressType: 'address';
+address_literal: addr_identifier Identifier;
+addr_identifier: 'aleo1';
+integer_literal: unsigned_literal | signed_literal;
 
-namedPrimitiveType: BooleanType | arithmeticType | AddressType;
+numeric_literal:
+	integer_literal
+	| field_literal
+	| product_group_literal
+	| scalar_literal;
 
-unitType: '(" ")';
+atomic_literal:
+	numeric_literal
+	| BOOLEAN_LITERAL
+	| address_literal;
 
-primitiveType: namedPrimitiveType | unitType;
+annotation: '@' identifier;
 
-namedType:
-	namedPrimitiveType
-	| identifier ('.' 'record')?
-	| locator ('.' 'record')?;
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-tupleType: '(' type ( ',' type)* ','? ')';
-userDefinedTypeName: identifier ( '.' identifier)*;
-type: namedType | unitType | tupleType | userDefinedTypeName;
+// Syntactic Grammar -----------------
 
-Numeral: DecimalDigit;
-Nnsignedliteral:
-	DecimalDigit ('u8' | 'u16' | 'u32' | 'u64' | 'u128');
+program_id: identifier '.' identifier;
 
-Signedliteral:
-	DecimalDigit ('i8' | 'i16' | 'i32' | 'i64' | 'i128');
+locator: program_id '/' identifier;
 
-Fieldliteral: DecimalDigit 'field';
+UNSIGNED_TYPE: 'u8' | 'u16' | 'u32' | 'u64' | 'u128';
 
-ProductGroupliteral: DecimalDigit 'group';
+SIGNED_TYPE: 'i8' | 'i16' | 'i32' | 'i64' | 'i128';
 
-Scalarliteral: DecimalDigit 'scalar';
+integer_type: UNSIGNED_TYPE | SIGNED_TYPE;
 
-Booleanliteral: 'true' | 'false';
-// FIXME: 限制字符长度为58
-Addressliteral: 'aleo1' Identifier;
+FIELD_TYPE: 'field';
 
-integerliteral: Nnsignedliteral | Signedliteral;
+GROUP_TYPE: 'group';
 
-numericliteral:
-	integerliteral
-	| Fieldliteral
-	| ProductGroupliteral
-	| Scalarliteral;
-atomicliteral: numericliteral | Booleanliteral | Addressliteral;
+SCALAR_TYPE: 'scalar';
 
-fragment GroupCoordinate: ( ','? DecimalDigit) | '+' | '-' | '_';
+arithmetic_type:
+	integer_type
+	| FIELD_TYPE
+	| GROUP_TYPE
+	| SCALAR_TYPE;
 
-AffineGroupliteral:
-	'(' GroupCoordinate ',' GroupCoordinate ')group';
+BOOLEAN_TYPE: 'bool';
 
-literal: atomicliteral | AffineGroupliteral;
+ADDRESS_TYPE: 'address';
 
-groupliteral: ProductGroupliteral | AffineGroupliteral;
+named_primitive_type:
+	BOOLEAN_TYPE
+	| arithmetic_type
+	| ADDRESS_TYPE;
 
-primaryExpression:
+primitive_type: named_primitive_type | '(' ')';
+
+named_type:
+	named_primitive_type
+	| (identifier ( '.' 'record')?)
+	| (locator ( '.' 'record')?);
+
+tuple_type: '(' type ( ',' type)+ ( ',')? ')';
+
+type: named_type | '(' ')' | tuple_type;
+
+group_coordinate: ( ( '-')? numeral) | '+' | '-' | '_';
+
+affine_group_literal:
+	'(' group_coordinate ',' group_coordinate ')group';
+
+literal: atomic_literal | affine_group_literal;
+
+group_literal: product_group_literal | affine_group_literal;
+
+primary_expression:
 	literal
 	| variable
-	| associatedConstant
-	| '(' expression ')'
-	| freeFunctionCall
-	| associatedFunctionCall
-	| unitExpression
-	| tupleExpression
-	| structExpression
-	| selfCaller
-	| blockHeight;
+	| associated_constant
+	| ('(' expression ')')
+	| free_function_call
+	| associated_function_call
+	| '(' ')'
+	| tuple_expression
+	| struct_expression
+	| SELF_CALLER
+	| BLOCK_HEIGHT;
+
 variable: identifier;
 
-associatedConstant: namedType '::' identifier;
+associated_constant: named_type (':' ':') identifier;
 
-freeFunctionCall:
-	identifier functionArguments
-	| locator functionArguments;
+free_function_call: (identifier function_arguments)
+	| (locator function_arguments);
 
-associatedFunctionCall:
-	(
-		'BHP' ('256' | '512' | '768' | '1024')
-		| 'Pedersen' ('64' | '128')
-		| 'Poseidon8' ('2' | '4' | '8')
-		| namedType
-	) '::' identifier functionArguments;
+associated_function_call:
+	named_type (':' ':') identifier function_arguments;
 
-functionArguments: '(' (expression (',' expression)*)? ')';
+function_arguments:
+	'(' (expression ( ',' expression)* ( ',')?) ')'
+	| '(' ')';
 
-unitExpression: '(' ')';
+tuple_expression: '(' expression ( ',' expression)+ ( ',')? ')';
 
-tupleExpression: '(' expression (',' expression)* ','? ')';
+struct_expression:
+	identifier '{' struct_component_initializer (
+		',' struct_component_initializer
+	)* (',')? '}';
 
-structExpression:
-	identifier '{' structComponentInitializer (
-		',' structComponentInitializer
-	)* ','? '}';
-
-structComponentInitializer:
+struct_component_initializer:
 	identifier
-	| identifier ':' expression;
+	| (identifier ':' expression);
 
-selfCaller: 'self' '.' 'caller';
+SELF_CALLER: 'self' '.' 'caller';
 
-blockHeight: 'block' '.' 'height';
+BLOCK_HEIGHT: 'block' '.' 'height';
 
-postfixExpression:
-	primaryExpression
+postfix_expression:
+	primary_expression
 	| useMapping
-	| tupleComponentExpression
-	| structComponentExpression
-	| methodCall;
+	| chacha
+	| associatedFunctionCall
+	| tuple_component_expression
+	| struct_component_expression
+	| method_call;
 
-tupleComponentExpression: identifier '.' Numeral;
+tuple_component_expression: identifier '.' numeral;
 
-structComponentExpression: identifier '.' identifier;
+struct_component_expression: identifier ('.' identifier)+;
 
-methodCall: identifier '.' identifier functionArguments;
-//FIXME:
-unaryExpression:
-	postfixExpression
-	| '!' unaryExpression
-	| '-' unaryExpression;
+method_call: identifier ('.' identifier)+ function_arguments;
 
-exponentialExpression:
-	unaryExpression
-	| unaryExpression '**' exponentialExpression;
-
-multiplicativeExpression:
-	exponentialExpression
-	| multiplicativeExpression '*' exponentialExpression
-	| multiplicativeExpression '/' exponentialExpression
-	| multiplicativeExpression '%' exponentialExpression;
-
-additiveExpression:
-	multiplicativeExpression
-	| additiveExpression '+' multiplicativeExpression
-	| additiveExpression '-' multiplicativeExpression;
-shiftExpression:
-	additiveExpression
-	| shiftExpression '<<' additiveExpression
-	| shiftExpression '>>' additiveExpression;
-conjunctiveExpression:
-	shiftExpression
-	| conjunctiveExpression '|' shiftExpression;
-disjunctiveExpression:
-	conjunctiveExpression
-	| disjunctiveExpression '|' conjunctiveExpression;
-exclusiveDisjunctiveExpression:
-	disjunctiveExpression
-	| exclusiveDisjunctiveExpression '^' disjunctiveExpression;
-orderingExpression:
-	exclusiveDisjunctiveExpression
-	| exclusiveDisjunctiveExpression '<' exclusiveDisjunctiveExpression
-	| exclusiveDisjunctiveExpression '>' exclusiveDisjunctiveExpression
-	| exclusiveDisjunctiveExpression '<=' exclusiveDisjunctiveExpression
-	| exclusiveDisjunctiveExpression '>=' exclusiveDisjunctiveExpression;
-equalityExpression:
-	orderingExpression
-	| orderingExpression '==' orderingExpression
-	| orderingExpression '!=' orderingExpression;
-conditionalConjunctiveExpression:
-	equalityExpression
-	| conditionalConjunctiveExpression '&&' equalityExpression;
-conditionalDisjunctiveExpression:
-	conditionalConjunctiveExpression
-	| conditionalDisjunctiveExpression '||' conditionalConjunctiveExpression;
-binaryExpression: conditionalDisjunctiveExpression;
-conditionalTernaryExpression:
-	binaryExpression
-	| binaryExpression '?' expression ':' expression;
-expression: conditionalTernaryExpression;
-
-loopStatement:
-	'for' identifier ':' type 'in' expression
-	 '..' '='? expression block;
+expression:
+	postfix_expression
+	| ('!' | '~') expression
+	| expression '**' expression
+	| expression ('*' | '/' | '%') expression
+	| expression ('+' | '-') expression
+	| expression ('<<' | '>>') expression
+	| expression '&' expression
+	| expression '|' expression
+	| expression '^' expression
+	| expression ('<' | '>' | '<=' | '>=') expression
+	| expression ('==' | '!=') expression
+	| expression '&&' expression
+	| expression '||' expression
+	| expression '?' expression ':' expression
+	| expression (
+		'='
+		| '+='
+		| '-='
+		| '*='
+		| '/='
+		| '%='
+		| '**='
+		| '<<='
+		| '>>='
+		| '&='
+		| '|='
+		| '^='
+		| '&&='
+		| '||='
+	) expression
+	| primary_expression;
 mappingAttributes: 'get_or_use' | 'set' | 'get';
-useMapping: 'Mapping::' mappingAttributes functionArguments;
+useMapping: 'Mapping::' mappingAttributes function_arguments;
+chacha: 'ChaCha' '::' identifier function_arguments;
+associatedFunctionCall:
+	(bhp | pedersen | poseidon) identifier function_arguments;
 statement:
 	useMapping
-	| expressionStatement
-	| variableDeclaration
-	| conditionalStatement
-	| loopStatement
-	| assignmentStatement
-	| consoleStatement
-	| block
-	| returnStatement;
-block: '{' statement* '}';
-returnStatement:
-	'return' expression? ('then' 'finalize' functionArguments)? ';';
-expressionStatement: expression ';';
-variableDeclaration:
-	'let' identifierOrIdentifiers (':' type)? '=' expression ';';
+	| expression_statement
+	| variable_declaration
+	| conditional_statement
+	| loop_statement
+	| console_statement
+	| return_statement
+	| block;
 
-identifierOrIdentifiers:
+block: '{' statement* '}';
+
+return_statement:
+	'return' expression* (THEN 'finalize' function_arguments)? ';';
+
+expression_statement: expression ';';
+
+variable_declaration:
+	'let' identifier_or_identifiers ':' type '=' expression ';';
+
+identifier_or_identifiers:
 	identifier
-	| '(' identifier (',' identifier)? ','? ')';
+	| ('(' identifier ( ',' identifier)+ ( ',')? ')');
+
 branch: 'if' expression block;
 
-conditionalStatement:
+conditional_statement:
 	branch
-	| branch 'else' block
-	| branch 'else' conditionalStatement;
+	| (branch 'else' block)
+	| (branch 'else' conditional_statement);
 
-assignmentOperator:
-	'='
-	| '+='
-	| '-='
-	| '*='
-	| '/='
-	| '%='
-	| '**='
-	| '<<='
-	| '>>='
-	| '&='
-	| '|='
-	| '^='
-	| '&&='
-	| '||=';
-assignmentStatement:
-	expression assignmentOperator expression ';';
-consoleStatement: consoleCall ';';
-consoleCall: assertCall | assertEqualCall | assertNotEqualCall;
-assertCall: 'assert' '(' expression ')';
-// FIXME: 
-assertEqualCall:
-	'assert_eq' '(' expression ',' expression ','? ')';
-assertNotEqualCall:
-	'assert_neq' '(' expression ',' expression ','? ')';
-functionDeclaration:
-	annotation* 'function' identifier '(' functionParameters? ')' (
-		'->' type
-	)? block;
-functionParameters:
-	functionParameter (',' functionParameter)* ','?;
-functionParameter: ('public' | 'private' | 'constant')? identifier ':' type;
+loop_statement:
+	'for' identifier ':' type 'in' expression ('.' '.') ('=')? expression block;
 
-inlineDeclaration:
-	annotation* 'inline' identifier '(' functionParameters? ')' (
-		'->' type
+console_statement: ('console' '.')? console_call ';';
+
+console_call:
+	assert_call
+	| assert_equal_call
+	| assert_not_equal_call;
+
+assert_call: 'assert' '(' expression ')';
+
+assert_equal_call:
+	'assert_eq' '(' expression ',' expression (',')? ')';
+
+assert_not_equal_call:
+	'assert_neq' '(' expression ',' expression (',')? ')';
+
+function_declaration:
+	annotation* 'function' identifier '(' (function_parameters)? ')' (
+		('-' '>') type
 	)? block;
-transitionDeclaration:
-	annotation* 'transition' identifier '(' functionParameters? ')' (
-		'->' ('public' | 'private' | 'constant')? type
-	)? block finalizer?;
+
+function_parameters:
+	function_parameter (',' function_parameter)* (',')?;
+
+function_parameter: ('public' | 'private' | 'constant')? identifier ':' type;
+
+inline_declaration:
+	annotation* 'inline' identifier '(' (function_parameters)? ')' (
+		('-' '>') type
+	)? block;
+
+transition_declaration:
+	annotation* 'transition' identifier '(' (function_parameters)? ')' (
+		('-' '>') ('public' | 'private' | 'constant')? type
+	)? block (finalizer)?;
 
 finalizer:
-	'finalize' identifier '(' functionParameters ')' (
-		'->' ('public' | 'private' | 'constant') type
+	'finalize' identifier '(' (function_parameters)? ')' (
+		('-' '>') ('public' | 'private' | 'constant')? type
 	)? block;
-structDeclaration:
-	'struct' identifier '{' structComponentDeclarations '}';
 
-structComponentDeclarations:
-	structComponentDeclaration (',' structComponentDeclaration)* ','?;
-structComponentDeclaration: ('public' | 'private' | 'constant')? identifier ':' type;
-recordDeclaration:
-	'record' identifier '{' structComponentDeclarations '}';
+struct_declaration:
+	'struct' identifier '{' struct_component_declarations '}';
 
-mappingDeclaration: 'mapping' identifier ':' type '=>' type ';';
+struct_component_declarations:
+	struct_component_declaration (
+		',' struct_component_declaration
+	)* (',')?;
 
-file: importDeclaration programDeclaration;
-//  Input Grammar
-inputType: type;
-inputExpression: expression;
+struct_component_declaration:
+	('public' | 'private' | 'constant')? identifier ':' type;
 
-inputItem: identifier ':' inputType '=' inputExpression ';';
+record_declaration:
+	'record' identifier '{' struct_component_declarations '}';
 
-inputTitle: '[' ( 'public' | 'private' | 'constant') ']';
+mapping_declaration:
+	'mapping' identifier ':' type ('=' '>') type ';';
 
-inputSection: inputTitle inputItem;
+program_item:
+	function_declaration
+	| inline_declaration
+	| transition_declaration
+	| struct_declaration
+	| record_declaration
+	| mapping_declaration;
 
-inputFile: inputSection;
-// Output Grammar
-outputExpression: expression;
-outputItem: outputExpression ';';
-outputTitle: '[' 'output' ']';
-outputSection: outputTitle outputItem;
-outputFile: outputSection;
+program_declaration: 'program' program_id '{' program_item* '}';
 
+import_declaration: 'import' program_id ';';
+
+sourceUnit: import_declaration* program_declaration;
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+// Input Grammar -------------
+
+input_type: type;
+
+input_expression: expression;
+
+input_item: identifier ':' input_type '=' input_expression ';';
+
+INPUT_TITLE: '[' ( 'public' | 'private' | 'constant') ']';
+
+input_section: INPUT_TITLE input_item*;
+
+input_file: input_section*;
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+// Output Grammar --------------
+
+output_expression: expression;
+
+output_item: output_expression ';';
+
+OUTPUT_TITLE: '[' 'output' ']';
+
+output_section: OUTPUT_TITLE output_item;
+
+output_file: output_section;
+WS: [ \t\r\n\u000C]+ -> skip;
 COMMENT: '/*' .*? '*/' -> channel(HIDDEN);
 
 LINE_COMMENT: '//' ~[\r\n]* -> channel(HIDDEN);

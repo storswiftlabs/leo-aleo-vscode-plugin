@@ -92,7 +92,7 @@
         "aleo.maxNumberOfProblems": {
           "scope": "window",
           "type": "number",
-          "default": 100,
+          "default": 1000,
           "description": "Controls the maximum number of problems produced by the server."
         },
         "aleo.trace.server": {

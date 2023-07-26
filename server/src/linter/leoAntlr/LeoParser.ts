@@ -102,185 +102,172 @@ export default class LeoParser extends Parser {
 	public static readonly T__82 = 83;
 	public static readonly T__83 = 84;
 	public static readonly T__84 = 85;
-	public static readonly T__85 = 86;
-	public static readonly T__86 = 87;
-	public static readonly T__87 = 88;
-	public static readonly T__88 = 89;
-	public static readonly T__89 = 90;
-	public static readonly T__90 = 91;
-	public static readonly T__91 = 92;
-	public static readonly T__92 = 93;
-	public static readonly Identifier = 94;
-	public static readonly UnsignedType = 95;
-	public static readonly SignedType = 96;
-	public static readonly FieldType = 97;
-	public static readonly GroupType = 98;
-	public static readonly ScalarType = 99;
-	public static readonly BooleanType = 100;
-	public static readonly AddressType = 101;
-	public static readonly Numeral = 102;
-	public static readonly Nnsignedliteral = 103;
-	public static readonly Signedliteral = 104;
-	public static readonly Fieldliteral = 105;
-	public static readonly ProductGroupliteral = 106;
-	public static readonly Scalarliteral = 107;
-	public static readonly Booleanliteral = 108;
-	public static readonly Addressliteral = 109;
-	public static readonly AffineGroupliteral = 110;
-	public static readonly COMMENT = 111;
-	public static readonly LINE_COMMENT = 112;
+	public static readonly THEN = 86;
+	public static readonly Identifier = 87;
+	public static readonly Digit = 88;
+	public static readonly BOOLEAN_LITERAL = 89;
+	public static readonly UNSIGNED_TYPE = 90;
+	public static readonly SIGNED_TYPE = 91;
+	public static readonly FIELD_TYPE = 92;
+	public static readonly GROUP_TYPE = 93;
+	public static readonly SCALAR_TYPE = 94;
+	public static readonly BOOLEAN_TYPE = 95;
+	public static readonly ADDRESS_TYPE = 96;
+	public static readonly SELF_CALLER = 97;
+	public static readonly BLOCK_HEIGHT = 98;
+	public static readonly INPUT_TITLE = 99;
+	public static readonly OUTPUT_TITLE = 100;
+	public static readonly WS = 101;
+	public static readonly COMMENT = 102;
+	public static readonly LINE_COMMENT = 103;
 	public static readonly EOF = Token.EOF;
-	public static readonly RULE_sourceUnit = 0;
-	public static readonly RULE_programId = 1;
-	public static readonly RULE_locator = 2;
-	public static readonly RULE_importDeclaration = 3;
-	public static readonly RULE_programDeclaration = 4;
-	public static readonly RULE_programItem = 5;
-	public static readonly RULE_identifier = 6;
-	public static readonly RULE_annotation = 7;
-	public static readonly RULE_integerType = 8;
-	public static readonly RULE_arithmeticType = 9;
-	public static readonly RULE_namedPrimitiveType = 10;
-	public static readonly RULE_unitType = 11;
-	public static readonly RULE_primitiveType = 12;
-	public static readonly RULE_namedType = 13;
-	public static readonly RULE_tupleType = 14;
-	public static readonly RULE_userDefinedTypeName = 15;
-	public static readonly RULE_type = 16;
-	public static readonly RULE_integerliteral = 17;
-	public static readonly RULE_numericliteral = 18;
-	public static readonly RULE_atomicliteral = 19;
-	public static readonly RULE_literal = 20;
-	public static readonly RULE_groupliteral = 21;
-	public static readonly RULE_primaryExpression = 22;
-	public static readonly RULE_variable = 23;
-	public static readonly RULE_associatedConstant = 24;
-	public static readonly RULE_freeFunctionCall = 25;
-	public static readonly RULE_associatedFunctionCall = 26;
-	public static readonly RULE_functionArguments = 27;
-	public static readonly RULE_unitExpression = 28;
-	public static readonly RULE_tupleExpression = 29;
-	public static readonly RULE_structExpression = 30;
-	public static readonly RULE_structComponentInitializer = 31;
-	public static readonly RULE_selfCaller = 32;
-	public static readonly RULE_blockHeight = 33;
-	public static readonly RULE_postfixExpression = 34;
-	public static readonly RULE_tupleComponentExpression = 35;
-	public static readonly RULE_structComponentExpression = 36;
-	public static readonly RULE_methodCall = 37;
-	public static readonly RULE_unaryExpression = 38;
-	public static readonly RULE_exponentialExpression = 39;
-	public static readonly RULE_multiplicativeExpression = 40;
-	public static readonly RULE_additiveExpression = 41;
-	public static readonly RULE_shiftExpression = 42;
-	public static readonly RULE_conjunctiveExpression = 43;
-	public static readonly RULE_disjunctiveExpression = 44;
-	public static readonly RULE_exclusiveDisjunctiveExpression = 45;
-	public static readonly RULE_orderingExpression = 46;
-	public static readonly RULE_equalityExpression = 47;
-	public static readonly RULE_conditionalConjunctiveExpression = 48;
-	public static readonly RULE_conditionalDisjunctiveExpression = 49;
-	public static readonly RULE_binaryExpression = 50;
-	public static readonly RULE_conditionalTernaryExpression = 51;
-	public static readonly RULE_expression = 52;
-	public static readonly RULE_loopStatement = 53;
-	public static readonly RULE_mappingAttributes = 54;
-	public static readonly RULE_useMapping = 55;
-	public static readonly RULE_statement = 56;
-	public static readonly RULE_block = 57;
-	public static readonly RULE_returnStatement = 58;
-	public static readonly RULE_expressionStatement = 59;
-	public static readonly RULE_variableDeclaration = 60;
-	public static readonly RULE_identifierOrIdentifiers = 61;
-	public static readonly RULE_branch = 62;
-	public static readonly RULE_conditionalStatement = 63;
-	public static readonly RULE_assignmentOperator = 64;
-	public static readonly RULE_assignmentStatement = 65;
-	public static readonly RULE_consoleStatement = 66;
-	public static readonly RULE_consoleCall = 67;
-	public static readonly RULE_assertCall = 68;
-	public static readonly RULE_assertEqualCall = 69;
-	public static readonly RULE_assertNotEqualCall = 70;
-	public static readonly RULE_functionDeclaration = 71;
-	public static readonly RULE_functionParameters = 72;
-	public static readonly RULE_functionParameter = 73;
-	public static readonly RULE_inlineDeclaration = 74;
-	public static readonly RULE_transitionDeclaration = 75;
-	public static readonly RULE_finalizer = 76;
-	public static readonly RULE_structDeclaration = 77;
-	public static readonly RULE_structComponentDeclarations = 78;
-	public static readonly RULE_structComponentDeclaration = 79;
-	public static readonly RULE_recordDeclaration = 80;
-	public static readonly RULE_mappingDeclaration = 81;
-	public static readonly RULE_file = 82;
-	public static readonly RULE_inputType = 83;
-	public static readonly RULE_inputExpression = 84;
-	public static readonly RULE_inputItem = 85;
-	public static readonly RULE_inputTitle = 86;
-	public static readonly RULE_inputSection = 87;
-	public static readonly RULE_inputFile = 88;
-	public static readonly RULE_outputExpression = 89;
-	public static readonly RULE_outputItem = 90;
-	public static readonly RULE_outputTitle = 91;
-	public static readonly RULE_outputSection = 92;
-	public static readonly RULE_outputFile = 93;
-	public static readonly literalNames: (string | null)[] = [ null, "'.'", 
-                                                            "'/'", "'import'", 
-                                                            "';'", "'program'", 
-                                                            "'{'", "'}'", 
-                                                            "'@'", "'(\" \")'", 
-                                                            "'record'", 
-                                                            "'('", "','", 
-                                                            "')'", "'::'", 
-                                                            "'BHP'", "'256'", 
-                                                            "'512'", "'768'", 
-                                                            "'1024'", "'Pedersen'", 
-                                                            "'64'", "'128'", 
+	public static readonly RULE_letter = 0;
+	public static readonly RULE_bhp = 1;
+	public static readonly RULE_pedersen = 2;
+	public static readonly RULE_poseidon = 3;
+	public static readonly RULE_identifier = 4;
+	public static readonly RULE_numeral = 5;
+	public static readonly RULE_unsigned_literal = 6;
+	public static readonly RULE_signed_literal = 7;
+	public static readonly RULE_field_literal = 8;
+	public static readonly RULE_product_group_literal = 9;
+	public static readonly RULE_scalar_literal = 10;
+	public static readonly RULE_address_literal = 11;
+	public static readonly RULE_addr_identifier = 12;
+	public static readonly RULE_integer_literal = 13;
+	public static readonly RULE_numeric_literal = 14;
+	public static readonly RULE_atomic_literal = 15;
+	public static readonly RULE_annotation = 16;
+	public static readonly RULE_program_id = 17;
+	public static readonly RULE_locator = 18;
+	public static readonly RULE_integer_type = 19;
+	public static readonly RULE_arithmetic_type = 20;
+	public static readonly RULE_named_primitive_type = 21;
+	public static readonly RULE_primitive_type = 22;
+	public static readonly RULE_named_type = 23;
+	public static readonly RULE_tuple_type = 24;
+	public static readonly RULE_type = 25;
+	public static readonly RULE_group_coordinate = 26;
+	public static readonly RULE_affine_group_literal = 27;
+	public static readonly RULE_literal = 28;
+	public static readonly RULE_group_literal = 29;
+	public static readonly RULE_primary_expression = 30;
+	public static readonly RULE_variable = 31;
+	public static readonly RULE_associated_constant = 32;
+	public static readonly RULE_free_function_call = 33;
+	public static readonly RULE_associated_function_call = 34;
+	public static readonly RULE_function_arguments = 35;
+	public static readonly RULE_tuple_expression = 36;
+	public static readonly RULE_struct_expression = 37;
+	public static readonly RULE_struct_component_initializer = 38;
+	public static readonly RULE_postfix_expression = 39;
+	public static readonly RULE_tuple_component_expression = 40;
+	public static readonly RULE_struct_component_expression = 41;
+	public static readonly RULE_method_call = 42;
+	public static readonly RULE_expression = 43;
+	public static readonly RULE_mappingAttributes = 44;
+	public static readonly RULE_useMapping = 45;
+	public static readonly RULE_chacha = 46;
+	public static readonly RULE_associatedFunctionCall = 47;
+	public static readonly RULE_statement = 48;
+	public static readonly RULE_block = 49;
+	public static readonly RULE_return_statement = 50;
+	public static readonly RULE_expression_statement = 51;
+	public static readonly RULE_variable_declaration = 52;
+	public static readonly RULE_identifier_or_identifiers = 53;
+	public static readonly RULE_branch = 54;
+	public static readonly RULE_conditional_statement = 55;
+	public static readonly RULE_loop_statement = 56;
+	public static readonly RULE_console_statement = 57;
+	public static readonly RULE_console_call = 58;
+	public static readonly RULE_assert_call = 59;
+	public static readonly RULE_assert_equal_call = 60;
+	public static readonly RULE_assert_not_equal_call = 61;
+	public static readonly RULE_function_declaration = 62;
+	public static readonly RULE_function_parameters = 63;
+	public static readonly RULE_function_parameter = 64;
+	public static readonly RULE_inline_declaration = 65;
+	public static readonly RULE_transition_declaration = 66;
+	public static readonly RULE_finalizer = 67;
+	public static readonly RULE_struct_declaration = 68;
+	public static readonly RULE_struct_component_declarations = 69;
+	public static readonly RULE_struct_component_declaration = 70;
+	public static readonly RULE_record_declaration = 71;
+	public static readonly RULE_mapping_declaration = 72;
+	public static readonly RULE_program_item = 73;
+	public static readonly RULE_program_declaration = 74;
+	public static readonly RULE_import_declaration = 75;
+	public static readonly RULE_sourceUnit = 76;
+	public static readonly RULE_input_type = 77;
+	public static readonly RULE_input_expression = 78;
+	public static readonly RULE_input_item = 79;
+	public static readonly RULE_input_section = 80;
+	public static readonly RULE_input_file = 81;
+	public static readonly RULE_output_expression = 82;
+	public static readonly RULE_output_item = 83;
+	public static readonly RULE_output_section = 84;
+	public static readonly RULE_output_file = 85;
+	public static readonly literalNames: (string | null)[] = [ null, "'BHP256'", 
+                                                            "'BHP512'", 
+                                                            "'BHP768'", 
+                                                            "'BHP1024'", 
+                                                            "'::'", "'Pedersen64'", 
+                                                            "'Pedersen128'", 
+                                                            "'Poseidon2'", 
+                                                            "'Poseidon4'", 
                                                             "'Poseidon8'", 
-                                                            "'2'", "'4'", 
-                                                            "'8'", "':'", 
-                                                            "'self'", "'caller'", 
-                                                            "'block'", "'height'", 
-                                                            "'!'", "'-'", 
-                                                            "'**'", "'*'", 
-                                                            "'%'", "'+'", 
+                                                            "'_'", "'aleo1'", 
+                                                            "'@'", "'.'", 
+                                                            "'/'", "'('", 
+                                                            "')'", "'record'", 
+                                                            "','", "'-'", 
+                                                            "'+'", "')group'", 
+                                                            "':'", "'{'", 
+                                                            "'}'", "'!'", 
+                                                            "'~'", "'**'", 
+                                                            "'*'", "'%'", 
                                                             "'<<'", "'>>'", 
-                                                            "'|'", "'^'", 
-                                                            "'<'", "'>'", 
-                                                            "'<='", "'>='", 
-                                                            "'=='", "'!='", 
-                                                            "'&&'", "'||'", 
-                                                            "'?'", "'for'", 
-                                                            "'in'", "'..'", 
-                                                            "'='", "'get_or_use'", 
-                                                            "'set'", "'get'", 
-                                                            "'Mapping::'", 
-                                                            "'return'", 
-                                                            "'then'", "'finalize'", 
-                                                            "'let'", "'if'", 
-                                                            "'else'", "'+='", 
+                                                            "'&'", "'|'", 
+                                                            "'^'", "'<'", 
+                                                            "'>'", "'<='", 
+                                                            "'>='", "'=='", 
+                                                            "'!='", "'&&'", 
+                                                            "'||'", "'?'", 
+                                                            "'='", "'+='", 
                                                             "'-='", "'*='", 
                                                             "'/='", "'%='", 
                                                             "'**='", "'<<='", 
                                                             "'>>='", "'&='", 
                                                             "'|='", "'^='", 
                                                             "'&&='", "'||='", 
+                                                            "'get_or_use'", 
+                                                            "'set'", "'get'", 
+                                                            "'Mapping::'", 
+                                                            "'ChaCha'", 
+                                                            "'return'", 
+                                                            "'finalize'", 
+                                                            "';'", "'let'", 
+                                                            "'if'", "'else'", 
+                                                            "'for'", "'in'", 
+                                                            "'console'", 
                                                             "'assert'", 
                                                             "'assert_eq'", 
                                                             "'assert_neq'", 
                                                             "'function'", 
-                                                            "'->'", "'public'", 
+                                                            "'public'", 
                                                             "'private'", 
                                                             "'constant'", 
                                                             "'inline'", 
                                                             "'transition'", 
                                                             "'struct'", 
                                                             "'mapping'", 
-                                                            "'=>'", "'['", 
-                                                            "']'", "'output'", 
+                                                            "'program'", 
+                                                            "'import'", 
+                                                            "'then'", null, 
                                                             null, null, 
-                                                            null, "'field'", 
-                                                            "'group'", "'scalar'", 
+                                                            null, null, 
+                                                            "'field'", "'group'", 
+                                                            "'scalar'", 
                                                             "'bool'", "'address'" ];
 	public static readonly symbolicNames: (string | null)[] = [ null, null, 
                                                              null, null, 
@@ -325,54 +312,44 @@ export default class LeoParser extends Parser {
                                                              null, null, 
                                                              null, null, 
                                                              null, null, 
-                                                             null, null, 
-                                                             null, null, 
-                                                             null, null, 
-                                                             null, null, 
-                                                             "Identifier", 
-                                                             "UnsignedType", 
-                                                             "SignedType", 
-                                                             "FieldType", 
-                                                             "GroupType", 
-                                                             "ScalarType", 
-                                                             "BooleanType", 
-                                                             "AddressType", 
-                                                             "Numeral", 
-                                                             "Nnsignedliteral", 
-                                                             "Signedliteral", 
-                                                             "Fieldliteral", 
-                                                             "ProductGroupliteral", 
-                                                             "Scalarliteral", 
-                                                             "Booleanliteral", 
-                                                             "Addressliteral", 
-                                                             "AffineGroupliteral", 
-                                                             "COMMENT", 
+                                                             "THEN", "Identifier", 
+                                                             "Digit", "BOOLEAN_LITERAL", 
+                                                             "UNSIGNED_TYPE", 
+                                                             "SIGNED_TYPE", 
+                                                             "FIELD_TYPE", 
+                                                             "GROUP_TYPE", 
+                                                             "SCALAR_TYPE", 
+                                                             "BOOLEAN_TYPE", 
+                                                             "ADDRESS_TYPE", 
+                                                             "SELF_CALLER", 
+                                                             "BLOCK_HEIGHT", 
+                                                             "INPUT_TITLE", 
+                                                             "OUTPUT_TITLE", 
+                                                             "WS", "COMMENT", 
                                                              "LINE_COMMENT" ];
 	// tslint:disable:no-trailing-whitespace
 	public static readonly ruleNames: string[] = [
-		"sourceUnit", "programId", "locator", "importDeclaration", "programDeclaration", 
-		"programItem", "identifier", "annotation", "integerType", "arithmeticType", 
-		"namedPrimitiveType", "unitType", "primitiveType", "namedType", "tupleType", 
-		"userDefinedTypeName", "type", "integerliteral", "numericliteral", "atomicliteral", 
-		"literal", "groupliteral", "primaryExpression", "variable", "associatedConstant", 
-		"freeFunctionCall", "associatedFunctionCall", "functionArguments", "unitExpression", 
-		"tupleExpression", "structExpression", "structComponentInitializer", "selfCaller", 
-		"blockHeight", "postfixExpression", "tupleComponentExpression", "structComponentExpression", 
-		"methodCall", "unaryExpression", "exponentialExpression", "multiplicativeExpression", 
-		"additiveExpression", "shiftExpression", "conjunctiveExpression", "disjunctiveExpression", 
-		"exclusiveDisjunctiveExpression", "orderingExpression", "equalityExpression", 
-		"conditionalConjunctiveExpression", "conditionalDisjunctiveExpression", 
-		"binaryExpression", "conditionalTernaryExpression", "expression", "loopStatement", 
-		"mappingAttributes", "useMapping", "statement", "block", "returnStatement", 
-		"expressionStatement", "variableDeclaration", "identifierOrIdentifiers", 
-		"branch", "conditionalStatement", "assignmentOperator", "assignmentStatement", 
-		"consoleStatement", "consoleCall", "assertCall", "assertEqualCall", "assertNotEqualCall", 
-		"functionDeclaration", "functionParameters", "functionParameter", "inlineDeclaration", 
-		"transitionDeclaration", "finalizer", "structDeclaration", "structComponentDeclarations", 
-		"structComponentDeclaration", "recordDeclaration", "mappingDeclaration", 
-		"file", "inputType", "inputExpression", "inputItem", "inputTitle", "inputSection", 
-		"inputFile", "outputExpression", "outputItem", "outputTitle", "outputSection", 
-		"outputFile",
+		"letter", "bhp", "pedersen", "poseidon", "identifier", "numeral", "unsigned_literal", 
+		"signed_literal", "field_literal", "product_group_literal", "scalar_literal", 
+		"address_literal", "addr_identifier", "integer_literal", "numeric_literal", 
+		"atomic_literal", "annotation", "program_id", "locator", "integer_type", 
+		"arithmetic_type", "named_primitive_type", "primitive_type", "named_type", 
+		"tuple_type", "type", "group_coordinate", "affine_group_literal", "literal", 
+		"group_literal", "primary_expression", "variable", "associated_constant", 
+		"free_function_call", "associated_function_call", "function_arguments", 
+		"tuple_expression", "struct_expression", "struct_component_initializer", 
+		"postfix_expression", "tuple_component_expression", "struct_component_expression", 
+		"method_call", "expression", "mappingAttributes", "useMapping", "chacha", 
+		"associatedFunctionCall", "statement", "block", "return_statement", "expression_statement", 
+		"variable_declaration", "identifier_or_identifiers", "branch", "conditional_statement", 
+		"loop_statement", "console_statement", "console_call", "assert_call", 
+		"assert_equal_call", "assert_not_equal_call", "function_declaration", 
+		"function_parameters", "function_parameter", "inline_declaration", "transition_declaration", 
+		"finalizer", "struct_declaration", "struct_component_declarations", "struct_component_declaration", 
+		"record_declaration", "mapping_declaration", "program_item", "program_declaration", 
+		"import_declaration", "sourceUnit", "input_type", "input_expression", 
+		"input_item", "input_section", "input_file", "output_expression", "output_item", 
+		"output_section", "output_file",
 	];
 	public get grammarFileName(): string { return "Leo.g4"; }
 	public get literalNames(): (string | null)[] { return LeoParser.literalNames; }
@@ -389,31 +366,14 @@ export default class LeoParser extends Parser {
 		this._interp = new ParserATNSimulator(this, LeoParser._ATN, LeoParser.DecisionsToDFA, new PredictionContextCache());
 	}
 	// @RuleVersion(0)
-	public sourceUnit(): SourceUnitContext {
-		let localctx: SourceUnitContext = new SourceUnitContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 0, LeoParser.RULE_sourceUnit);
-		let _la: number;
+	public letter(): LetterContext {
+		let localctx: LetterContext = new LetterContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 0, LeoParser.RULE_letter);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 191;
-			this._errHandler.sync(this);
-			_la = this._input.LA(1);
-			while (_la===3) {
-				{
-				{
-				this.state = 188;
-				this.importDeclaration();
-				}
-				}
-				this.state = 193;
-				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-			}
-			this.state = 194;
-			this.programDeclaration();
-			this.state = 195;
-			this.match(LeoParser.EOF);
+			this.state = 172;
+			this.match(LeoParser.Identifier);
 			}
 		}
 		catch (re) {
@@ -431,17 +391,579 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public programId(): ProgramIdContext {
-		let localctx: ProgramIdContext = new ProgramIdContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 2, LeoParser.RULE_programId);
+	public bhp(): BhpContext {
+		let localctx: BhpContext = new BhpContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 2, LeoParser.RULE_bhp);
+		let _la: number;
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 174;
+			_la = this._input.LA(1);
+			if(!((((_la) & ~0x1F) === 0 && ((1 << _la) & 30) !== 0))) {
+			this._errHandler.recoverInline(this);
+			}
+			else {
+				this._errHandler.reportMatch(this);
+			    this.consume();
+			}
+			this.state = 175;
+			this.match(LeoParser.T__4);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public pedersen(): PedersenContext {
+		let localctx: PedersenContext = new PedersenContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 4, LeoParser.RULE_pedersen);
+		let _la: number;
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 177;
+			_la = this._input.LA(1);
+			if(!(_la===6 || _la===7)) {
+			this._errHandler.recoverInline(this);
+			}
+			else {
+				this._errHandler.reportMatch(this);
+			    this.consume();
+			}
+			this.state = 178;
+			this.match(LeoParser.T__4);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public poseidon(): PoseidonContext {
+		let localctx: PoseidonContext = new PoseidonContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 6, LeoParser.RULE_poseidon);
+		let _la: number;
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 180;
+			_la = this._input.LA(1);
+			if(!((((_la) & ~0x1F) === 0 && ((1 << _la) & 1792) !== 0))) {
+			this._errHandler.recoverInline(this);
+			}
+			else {
+				this._errHandler.reportMatch(this);
+			    this.consume();
+			}
+			this.state = 181;
+			this.match(LeoParser.T__4);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public identifier(): IdentifierContext {
+		let localctx: IdentifierContext = new IdentifierContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 8, LeoParser.RULE_identifier);
+		try {
+			let _alt: number;
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 183;
+			this.letter();
+			this.state = 189;
+			this._errHandler.sync(this);
+			_alt = this._interp.adaptivePredict(this._input, 1, this._ctx);
+			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+				if (_alt === 1) {
+					{
+					this.state = 187;
+					this._errHandler.sync(this);
+					switch (this._input.LA(1)) {
+					case 87:
+						{
+						this.state = 184;
+						this.letter();
+						}
+						break;
+					case 88:
+						{
+						this.state = 185;
+						this.match(LeoParser.Digit);
+						}
+						break;
+					case 11:
+						{
+						this.state = 186;
+						this.match(LeoParser.T__10);
+						}
+						break;
+					default:
+						throw new NoViableAltException(this);
+					}
+					}
+				}
+				this.state = 191;
+				this._errHandler.sync(this);
+				_alt = this._interp.adaptivePredict(this._input, 1, this._ctx);
+			}
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public numeral(): NumeralContext {
+		let localctx: NumeralContext = new NumeralContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 10, LeoParser.RULE_numeral);
+		try {
+			let _alt: number;
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 193;
+			this._errHandler.sync(this);
+			_alt = 1;
+			do {
+				switch (_alt) {
+				case 1:
+					{
+					{
+					this.state = 192;
+					this.match(LeoParser.Digit);
+					}
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				this.state = 195;
+				this._errHandler.sync(this);
+				_alt = this._interp.adaptivePredict(this._input, 2, this._ctx);
+			} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public unsigned_literal(): Unsigned_literalContext {
+		let localctx: Unsigned_literalContext = new Unsigned_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 12, LeoParser.RULE_unsigned_literal);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
 			this.state = 197;
-			this.identifier();
+			this.numeral();
 			this.state = 198;
-			this.match(LeoParser.T__0);
-			this.state = 199;
+			this.match(LeoParser.UNSIGNED_TYPE);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public signed_literal(): Signed_literalContext {
+		let localctx: Signed_literalContext = new Signed_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 14, LeoParser.RULE_signed_literal);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 200;
+			this.numeral();
+			this.state = 201;
+			this.match(LeoParser.SIGNED_TYPE);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public field_literal(): Field_literalContext {
+		let localctx: Field_literalContext = new Field_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 16, LeoParser.RULE_field_literal);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 203;
+			this.numeral();
+			this.state = 204;
+			this.match(LeoParser.FIELD_TYPE);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public product_group_literal(): Product_group_literalContext {
+		let localctx: Product_group_literalContext = new Product_group_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 18, LeoParser.RULE_product_group_literal);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 206;
+			this.numeral();
+			this.state = 207;
+			this.match(LeoParser.GROUP_TYPE);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public scalar_literal(): Scalar_literalContext {
+		let localctx: Scalar_literalContext = new Scalar_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 20, LeoParser.RULE_scalar_literal);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 209;
+			this.numeral();
+			this.state = 210;
+			this.match(LeoParser.SCALAR_TYPE);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public address_literal(): Address_literalContext {
+		let localctx: Address_literalContext = new Address_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 22, LeoParser.RULE_address_literal);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 212;
+			this.addr_identifier();
+			this.state = 213;
+			this.match(LeoParser.Identifier);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public addr_identifier(): Addr_identifierContext {
+		let localctx: Addr_identifierContext = new Addr_identifierContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 24, LeoParser.RULE_addr_identifier);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 215;
+			this.match(LeoParser.T__11);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public integer_literal(): Integer_literalContext {
+		let localctx: Integer_literalContext = new Integer_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 26, LeoParser.RULE_integer_literal);
+		try {
+			this.state = 219;
+			this._errHandler.sync(this);
+			switch ( this._interp.adaptivePredict(this._input, 3, this._ctx) ) {
+			case 1:
+				this.enterOuterAlt(localctx, 1);
+				{
+				this.state = 217;
+				this.unsigned_literal();
+				}
+				break;
+			case 2:
+				this.enterOuterAlt(localctx, 2);
+				{
+				this.state = 218;
+				this.signed_literal();
+				}
+				break;
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public numeric_literal(): Numeric_literalContext {
+		let localctx: Numeric_literalContext = new Numeric_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 28, LeoParser.RULE_numeric_literal);
+		try {
+			this.state = 225;
+			this._errHandler.sync(this);
+			switch ( this._interp.adaptivePredict(this._input, 4, this._ctx) ) {
+			case 1:
+				this.enterOuterAlt(localctx, 1);
+				{
+				this.state = 221;
+				this.integer_literal();
+				}
+				break;
+			case 2:
+				this.enterOuterAlt(localctx, 2);
+				{
+				this.state = 222;
+				this.field_literal();
+				}
+				break;
+			case 3:
+				this.enterOuterAlt(localctx, 3);
+				{
+				this.state = 223;
+				this.product_group_literal();
+				}
+				break;
+			case 4:
+				this.enterOuterAlt(localctx, 4);
+				{
+				this.state = 224;
+				this.scalar_literal();
+				}
+				break;
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public atomic_literal(): Atomic_literalContext {
+		let localctx: Atomic_literalContext = new Atomic_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 30, LeoParser.RULE_atomic_literal);
+		try {
+			this.state = 230;
+			this._errHandler.sync(this);
+			switch (this._input.LA(1)) {
+			case 88:
+				this.enterOuterAlt(localctx, 1);
+				{
+				this.state = 227;
+				this.numeric_literal();
+				}
+				break;
+			case 89:
+				this.enterOuterAlt(localctx, 2);
+				{
+				this.state = 228;
+				this.match(LeoParser.BOOLEAN_LITERAL);
+				}
+				break;
+			case 12:
+				this.enterOuterAlt(localctx, 3);
+				{
+				this.state = 229;
+				this.address_literal();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public annotation(): AnnotationContext {
+		let localctx: AnnotationContext = new AnnotationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 32, LeoParser.RULE_annotation);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 232;
+			this.match(LeoParser.T__12);
+			this.state = 233;
+			this.identifier();
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public program_id(): Program_idContext {
+		let localctx: Program_idContext = new Program_idContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 34, LeoParser.RULE_program_id);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 235;
+			this.identifier();
+			this.state = 236;
+			this.match(LeoParser.T__13);
+			this.state = 237;
 			this.identifier();
 			}
 		}
@@ -462,15 +984,15 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public locator(): LocatorContext {
 		let localctx: LocatorContext = new LocatorContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 4, LeoParser.RULE_locator);
+		this.enterRule(localctx, 36, LeoParser.RULE_locator);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 201;
-			this.programId();
-			this.state = 202;
-			this.match(LeoParser.T__1);
-			this.state = 203;
+			this.state = 239;
+			this.program_id();
+			this.state = 240;
+			this.match(LeoParser.T__14);
+			this.state = 241;
 			this.identifier();
 			}
 		}
@@ -489,209 +1011,16 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public importDeclaration(): ImportDeclarationContext {
-		let localctx: ImportDeclarationContext = new ImportDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 6, LeoParser.RULE_importDeclaration);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 205;
-			this.match(LeoParser.T__2);
-			this.state = 206;
-			this.programId();
-			this.state = 207;
-			this.match(LeoParser.T__3);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public programDeclaration(): ProgramDeclarationContext {
-		let localctx: ProgramDeclarationContext = new ProgramDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 8, LeoParser.RULE_programDeclaration);
+	public integer_type(): Integer_typeContext {
+		let localctx: Integer_typeContext = new Integer_typeContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 38, LeoParser.RULE_integer_type);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 209;
-			this.match(LeoParser.T__4);
-			this.state = 210;
-			this.programId();
-			this.state = 211;
-			this.match(LeoParser.T__5);
-			this.state = 215;
-			this._errHandler.sync(this);
+			this.state = 243;
 			_la = this._input.LA(1);
-			while (_la===8 || _la===10 || ((((_la - 81)) & ~0x1F) === 0 && ((1 << (_la - 81)) & 481) !== 0)) {
-				{
-				{
-				this.state = 212;
-				this.programItem();
-				}
-				}
-				this.state = 217;
-				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-			}
-			this.state = 218;
-			this.match(LeoParser.T__6);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public programItem(): ProgramItemContext {
-		let localctx: ProgramItemContext = new ProgramItemContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 10, LeoParser.RULE_programItem);
-		try {
-			this.state = 226;
-			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 2, this._ctx) ) {
-			case 1:
-				this.enterOuterAlt(localctx, 1);
-				{
-				this.state = 220;
-				this.structDeclaration();
-				}
-				break;
-			case 2:
-				this.enterOuterAlt(localctx, 2);
-				{
-				this.state = 221;
-				this.recordDeclaration();
-				}
-				break;
-			case 3:
-				this.enterOuterAlt(localctx, 3);
-				{
-				this.state = 222;
-				this.mappingDeclaration();
-				}
-				break;
-			case 4:
-				this.enterOuterAlt(localctx, 4);
-				{
-				this.state = 223;
-				this.functionDeclaration();
-				}
-				break;
-			case 5:
-				this.enterOuterAlt(localctx, 5);
-				{
-				this.state = 224;
-				this.inlineDeclaration();
-				}
-				break;
-			case 6:
-				this.enterOuterAlt(localctx, 6);
-				{
-				this.state = 225;
-				this.transitionDeclaration();
-				}
-				break;
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public identifier(): IdentifierContext {
-		let localctx: IdentifierContext = new IdentifierContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 12, LeoParser.RULE_identifier);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 228;
-			this.match(LeoParser.Identifier);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public annotation(): AnnotationContext {
-		let localctx: AnnotationContext = new AnnotationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 14, LeoParser.RULE_annotation);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 230;
-			this.match(LeoParser.T__7);
-			this.state = 231;
-			this.match(LeoParser.Identifier);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public integerType(): IntegerTypeContext {
-		let localctx: IntegerTypeContext = new IntegerTypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 16, LeoParser.RULE_integerType);
-		let _la: number;
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 233;
-			_la = this._input.LA(1);
-			if(!(_la===95 || _la===96)) {
+			if(!(_la===90 || _la===91)) {
 			this._errHandler.recoverInline(this);
 			}
 			else {
@@ -715,40 +1044,40 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public arithmeticType(): ArithmeticTypeContext {
-		let localctx: ArithmeticTypeContext = new ArithmeticTypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 18, LeoParser.RULE_arithmeticType);
+	public arithmetic_type(): Arithmetic_typeContext {
+		let localctx: Arithmetic_typeContext = new Arithmetic_typeContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 40, LeoParser.RULE_arithmetic_type);
 		try {
-			this.state = 239;
+			this.state = 249;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case 95:
-			case 96:
+			case 90:
+			case 91:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 235;
-				this.integerType();
+				this.state = 245;
+				this.integer_type();
 				}
 				break;
-			case 97:
+			case 92:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 236;
-				this.match(LeoParser.FieldType);
+				this.state = 246;
+				this.match(LeoParser.FIELD_TYPE);
 				}
 				break;
-			case 98:
+			case 93:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 237;
-				this.match(LeoParser.GroupType);
+				this.state = 247;
+				this.match(LeoParser.GROUP_TYPE);
 				}
 				break;
-			case 99:
+			case 94:
 				this.enterOuterAlt(localctx, 4);
 				{
-				this.state = 238;
-				this.match(LeoParser.ScalarType);
+				this.state = 248;
+				this.match(LeoParser.SCALAR_TYPE);
 				}
 				break;
 			default:
@@ -770,36 +1099,36 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public namedPrimitiveType(): NamedPrimitiveTypeContext {
-		let localctx: NamedPrimitiveTypeContext = new NamedPrimitiveTypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 20, LeoParser.RULE_namedPrimitiveType);
+	public named_primitive_type(): Named_primitive_typeContext {
+		let localctx: Named_primitive_typeContext = new Named_primitive_typeContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 42, LeoParser.RULE_named_primitive_type);
 		try {
-			this.state = 244;
+			this.state = 254;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case 100:
+			case 95:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 241;
-				this.match(LeoParser.BooleanType);
+				this.state = 251;
+				this.match(LeoParser.BOOLEAN_TYPE);
 				}
 				break;
-			case 95:
-			case 96:
-			case 97:
-			case 98:
-			case 99:
+			case 90:
+			case 91:
+			case 92:
+			case 93:
+			case 94:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 242;
-				this.arithmeticType();
+				this.state = 252;
+				this.arithmetic_type();
 				}
 				break;
-			case 101:
+			case 96:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 243;
-				this.match(LeoParser.AddressType);
+				this.state = 253;
+				this.match(LeoParser.ADDRESS_TYPE);
 				}
 				break;
 			default:
@@ -821,56 +1150,33 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public unitType(): UnitTypeContext {
-		let localctx: UnitTypeContext = new UnitTypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 22, LeoParser.RULE_unitType);
+	public primitive_type(): Primitive_typeContext {
+		let localctx: Primitive_typeContext = new Primitive_typeContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 44, LeoParser.RULE_primitive_type);
 		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 246;
-			this.match(LeoParser.T__8);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public primitiveType(): PrimitiveTypeContext {
-		let localctx: PrimitiveTypeContext = new PrimitiveTypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 24, LeoParser.RULE_primitiveType);
-		try {
-			this.state = 250;
+			this.state = 259;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
+			case 90:
+			case 91:
+			case 92:
+			case 93:
+			case 94:
 			case 95:
 			case 96:
-			case 97:
-			case 98:
-			case 99:
-			case 100:
-			case 101:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 248;
-				this.namedPrimitiveType();
+				this.state = 256;
+				this.named_primitive_type();
 				}
 				break;
-			case 9:
+			case 16:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 249;
-				this.unitType();
+				this.state = 257;
+				this.match(LeoParser.T__15);
+				this.state = 258;
+				this.match(LeoParser.T__16);
 				}
 				break;
 			default:
@@ -892,57 +1198,61 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public namedType(): NamedTypeContext {
-		let localctx: NamedTypeContext = new NamedTypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 26, LeoParser.RULE_namedType);
+	public named_type(): Named_typeContext {
+		let localctx: Named_typeContext = new Named_typeContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 46, LeoParser.RULE_named_type);
 		let _la: number;
 		try {
-			this.state = 263;
+			this.state = 272;
 			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 8, this._ctx) ) {
+			switch ( this._interp.adaptivePredict(this._input, 11, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 252;
-				this.namedPrimitiveType();
+				this.state = 261;
+				this.named_primitive_type();
 				}
 				break;
 			case 2:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 253;
+				{
+				this.state = 262;
 				this.identifier();
-				this.state = 256;
+				this.state = 265;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (_la===1) {
+				if (_la===14) {
 					{
-					this.state = 254;
-					this.match(LeoParser.T__0);
-					this.state = 255;
-					this.match(LeoParser.T__9);
+					this.state = 263;
+					this.match(LeoParser.T__13);
+					this.state = 264;
+					this.match(LeoParser.T__17);
 					}
 				}
 
+				}
 				}
 				break;
 			case 3:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 258;
+				{
+				this.state = 267;
 				this.locator();
-				this.state = 261;
+				this.state = 270;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (_la===1) {
+				if (_la===14) {
 					{
-					this.state = 259;
-					this.match(LeoParser.T__0);
-					this.state = 260;
-					this.match(LeoParser.T__9);
+					this.state = 268;
+					this.match(LeoParser.T__13);
+					this.state = 269;
+					this.match(LeoParser.T__17);
 					}
 				}
 
+				}
 				}
 				break;
 			}
@@ -962,90 +1272,52 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public tupleType(): TupleTypeContext {
-		let localctx: TupleTypeContext = new TupleTypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 28, LeoParser.RULE_tupleType);
+	public tuple_type(): Tuple_typeContext {
+		let localctx: Tuple_typeContext = new Tuple_typeContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 48, LeoParser.RULE_tuple_type);
 		let _la: number;
 		try {
 			let _alt: number;
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 265;
-			this.match(LeoParser.T__10);
-			this.state = 266;
+			this.state = 274;
+			this.match(LeoParser.T__15);
+			this.state = 275;
 			this.type_();
-			this.state = 271;
+			this.state = 278;
 			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 9, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
+			_alt = 1;
+			do {
+				switch (_alt) {
+				case 1:
 					{
 					{
-					this.state = 267;
-					this.match(LeoParser.T__11);
-					this.state = 268;
+					this.state = 276;
+					this.match(LeoParser.T__18);
+					this.state = 277;
 					this.type_();
 					}
 					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-				this.state = 273;
+				this.state = 280;
 				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 9, this._ctx);
-			}
-			this.state = 275;
+				_alt = this._interp.adaptivePredict(this._input, 12, this._ctx);
+			} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
+			this.state = 283;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===12) {
+			if (_la===19) {
 				{
-				this.state = 274;
-				this.match(LeoParser.T__11);
+				this.state = 282;
+				this.match(LeoParser.T__18);
 				}
 			}
 
-			this.state = 277;
-			this.match(LeoParser.T__12);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public userDefinedTypeName(): UserDefinedTypeNameContext {
-		let localctx: UserDefinedTypeNameContext = new UserDefinedTypeNameContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 30, LeoParser.RULE_userDefinedTypeName);
-		let _la: number;
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 279;
-			this.identifier();
-			this.state = 284;
-			this._errHandler.sync(this);
-			_la = this._input.LA(1);
-			while (_la===1) {
-				{
-				{
-				this.state = 280;
-				this.match(LeoParser.T__0);
-				this.state = 281;
-				this.identifier();
-				}
-				}
-				this.state = 286;
-				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-			}
+			this.state = 285;
+			this.match(LeoParser.T__16);
 			}
 		}
 		catch (re) {
@@ -1065,37 +1337,97 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public type_(): TypeContext {
 		let localctx: TypeContext = new TypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 32, LeoParser.RULE_type);
+		this.enterRule(localctx, 50, LeoParser.RULE_type);
 		try {
 			this.state = 291;
 			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 12, this._ctx) ) {
+			switch ( this._interp.adaptivePredict(this._input, 14, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(localctx, 1);
 				{
 				this.state = 287;
-				this.namedType();
+				this.named_type();
 				}
 				break;
 			case 2:
 				this.enterOuterAlt(localctx, 2);
 				{
 				this.state = 288;
-				this.unitType();
+				this.match(LeoParser.T__15);
+				this.state = 289;
+				this.match(LeoParser.T__16);
 				}
 				break;
 			case 3:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 289;
-				this.tupleType();
+				this.state = 290;
+				this.tuple_type();
+				}
+				break;
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public group_coordinate(): Group_coordinateContext {
+		let localctx: Group_coordinateContext = new Group_coordinateContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 52, LeoParser.RULE_group_coordinate);
+		let _la: number;
+		try {
+			this.state = 300;
+			this._errHandler.sync(this);
+			switch ( this._interp.adaptivePredict(this._input, 16, this._ctx) ) {
+			case 1:
+				this.enterOuterAlt(localctx, 1);
+				{
+				{
+				this.state = 294;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
+				if (_la===20) {
+					{
+					this.state = 293;
+					this.match(LeoParser.T__19);
+					}
+				}
+
+				this.state = 296;
+				this.numeral();
+				}
+				}
+				break;
+			case 2:
+				this.enterOuterAlt(localctx, 2);
+				{
+				this.state = 297;
+				this.match(LeoParser.T__20);
+				}
+				break;
+			case 3:
+				this.enterOuterAlt(localctx, 3);
+				{
+				this.state = 298;
+				this.match(LeoParser.T__19);
 				}
 				break;
 			case 4:
 				this.enterOuterAlt(localctx, 4);
 				{
-				this.state = 290;
-				this.userDefinedTypeName();
+				this.state = 299;
+				this.match(LeoParser.T__10);
 				}
 				break;
 			}
@@ -1115,128 +1447,22 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public integerliteral(): IntegerliteralContext {
-		let localctx: IntegerliteralContext = new IntegerliteralContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 34, LeoParser.RULE_integerliteral);
-		let _la: number;
+	public affine_group_literal(): Affine_group_literalContext {
+		let localctx: Affine_group_literalContext = new Affine_group_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 54, LeoParser.RULE_affine_group_literal);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 293;
-			_la = this._input.LA(1);
-			if(!(_la===103 || _la===104)) {
-			this._errHandler.recoverInline(this);
-			}
-			else {
-				this._errHandler.reportMatch(this);
-			    this.consume();
-			}
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public numericliteral(): NumericliteralContext {
-		let localctx: NumericliteralContext = new NumericliteralContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 36, LeoParser.RULE_numericliteral);
-		try {
-			this.state = 299;
-			this._errHandler.sync(this);
-			switch (this._input.LA(1)) {
-			case 103:
-			case 104:
-				this.enterOuterAlt(localctx, 1);
-				{
-				this.state = 295;
-				this.integerliteral();
-				}
-				break;
-			case 105:
-				this.enterOuterAlt(localctx, 2);
-				{
-				this.state = 296;
-				this.match(LeoParser.Fieldliteral);
-				}
-				break;
-			case 106:
-				this.enterOuterAlt(localctx, 3);
-				{
-				this.state = 297;
-				this.match(LeoParser.ProductGroupliteral);
-				}
-				break;
-			case 107:
-				this.enterOuterAlt(localctx, 4);
-				{
-				this.state = 298;
-				this.match(LeoParser.Scalarliteral);
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public atomicliteral(): AtomicliteralContext {
-		let localctx: AtomicliteralContext = new AtomicliteralContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 38, LeoParser.RULE_atomicliteral);
-		try {
+			this.state = 302;
+			this.match(LeoParser.T__15);
+			this.state = 303;
+			this.group_coordinate();
 			this.state = 304;
-			this._errHandler.sync(this);
-			switch (this._input.LA(1)) {
-			case 103:
-			case 104:
-			case 105:
-			case 106:
-			case 107:
-				this.enterOuterAlt(localctx, 1);
-				{
-				this.state = 301;
-				this.numericliteral();
-				}
-				break;
-			case 108:
-				this.enterOuterAlt(localctx, 2);
-				{
-				this.state = 302;
-				this.match(LeoParser.Booleanliteral);
-				}
-				break;
-			case 109:
-				this.enterOuterAlt(localctx, 3);
-				{
-				this.state = 303;
-				this.match(LeoParser.Addressliteral);
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
+			this.match(LeoParser.T__18);
+			this.state = 305;
+			this.group_coordinate();
+			this.state = 306;
+			this.match(LeoParser.T__21);
 			}
 		}
 		catch (re) {
@@ -1256,29 +1482,25 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public literal(): LiteralContext {
 		let localctx: LiteralContext = new LiteralContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 40, LeoParser.RULE_literal);
+		this.enterRule(localctx, 56, LeoParser.RULE_literal);
 		try {
-			this.state = 308;
+			this.state = 310;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case 103:
-			case 104:
-			case 105:
-			case 106:
-			case 107:
-			case 108:
-			case 109:
+			case 12:
+			case 88:
+			case 89:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 306;
-				this.atomicliteral();
+				this.state = 308;
+				this.atomic_literal();
 				}
 				break;
-			case 110:
+			case 16:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 307;
-				this.match(LeoParser.AffineGroupliteral);
+				this.state = 309;
+				this.affine_group_literal();
 				}
 				break;
 			default:
@@ -1300,22 +1522,29 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public groupliteral(): GroupliteralContext {
-		let localctx: GroupliteralContext = new GroupliteralContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 42, LeoParser.RULE_groupliteral);
-		let _la: number;
+	public group_literal(): Group_literalContext {
+		let localctx: Group_literalContext = new Group_literalContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 58, LeoParser.RULE_group_literal);
 		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 310;
-			_la = this._input.LA(1);
-			if(!(_la===106 || _la===110)) {
-			this._errHandler.recoverInline(this);
-			}
-			else {
-				this._errHandler.reportMatch(this);
-			    this.consume();
-			}
+			this.state = 314;
+			this._errHandler.sync(this);
+			switch (this._input.LA(1)) {
+			case 88:
+				this.enterOuterAlt(localctx, 1);
+				{
+				this.state = 312;
+				this.product_group_literal();
+				}
+				break;
+			case 16:
+				this.enterOuterAlt(localctx, 2);
+				{
+				this.state = 313;
+				this.affine_group_literal();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (re) {
@@ -1333,92 +1562,96 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public primaryExpression(): PrimaryExpressionContext {
-		let localctx: PrimaryExpressionContext = new PrimaryExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 44, LeoParser.RULE_primaryExpression);
+	public primary_expression(): Primary_expressionContext {
+		let localctx: Primary_expressionContext = new Primary_expressionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 60, LeoParser.RULE_primary_expression);
 		try {
-			this.state = 326;
+			this.state = 331;
 			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 16, this._ctx) ) {
+			switch ( this._interp.adaptivePredict(this._input, 19, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 312;
+				this.state = 316;
 				this.literal();
 				}
 				break;
 			case 2:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 313;
+				this.state = 317;
 				this.variable();
 				}
 				break;
 			case 3:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 314;
-				this.associatedConstant();
+				this.state = 318;
+				this.associated_constant();
 				}
 				break;
 			case 4:
 				this.enterOuterAlt(localctx, 4);
 				{
-				this.state = 315;
-				this.match(LeoParser.T__10);
-				this.state = 316;
-				this.expression();
-				this.state = 317;
-				this.match(LeoParser.T__12);
+				{
+				this.state = 319;
+				this.match(LeoParser.T__15);
+				this.state = 320;
+				this.expression(0);
+				this.state = 321;
+				this.match(LeoParser.T__16);
+				}
 				}
 				break;
 			case 5:
 				this.enterOuterAlt(localctx, 5);
 				{
-				this.state = 319;
-				this.freeFunctionCall();
+				this.state = 323;
+				this.free_function_call();
 				}
 				break;
 			case 6:
 				this.enterOuterAlt(localctx, 6);
 				{
-				this.state = 320;
-				this.associatedFunctionCall();
+				this.state = 324;
+				this.associated_function_call();
 				}
 				break;
 			case 7:
 				this.enterOuterAlt(localctx, 7);
 				{
-				this.state = 321;
-				this.unitExpression();
+				this.state = 325;
+				this.match(LeoParser.T__15);
+				this.state = 326;
+				this.match(LeoParser.T__16);
 				}
 				break;
 			case 8:
 				this.enterOuterAlt(localctx, 8);
 				{
-				this.state = 322;
-				this.tupleExpression();
+				this.state = 327;
+				this.tuple_expression();
 				}
 				break;
 			case 9:
 				this.enterOuterAlt(localctx, 9);
 				{
-				this.state = 323;
-				this.structExpression();
+				this.state = 328;
+				this.struct_expression();
 				}
 				break;
 			case 10:
 				this.enterOuterAlt(localctx, 10);
 				{
-				this.state = 324;
-				this.selfCaller();
+				this.state = 329;
+				this.match(LeoParser.SELF_CALLER);
 				}
 				break;
 			case 11:
 				this.enterOuterAlt(localctx, 11);
 				{
-				this.state = 325;
-				this.blockHeight();
+				this.state = 330;
+				this.match(LeoParser.BLOCK_HEIGHT);
 				}
 				break;
 			}
@@ -1440,11 +1673,11 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public variable(): VariableContext {
 		let localctx: VariableContext = new VariableContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 46, LeoParser.RULE_variable);
+		this.enterRule(localctx, 62, LeoParser.RULE_variable);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 328;
+			this.state = 333;
 			this.identifier();
 			}
 		}
@@ -1463,17 +1696,21 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public associatedConstant(): AssociatedConstantContext {
-		let localctx: AssociatedConstantContext = new AssociatedConstantContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 48, LeoParser.RULE_associatedConstant);
+	public associated_constant(): Associated_constantContext {
+		let localctx: Associated_constantContext = new Associated_constantContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 64, LeoParser.RULE_associated_constant);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 330;
-			this.namedType();
-			this.state = 331;
-			this.match(LeoParser.T__13);
-			this.state = 332;
+			this.state = 335;
+			this.named_type();
+			{
+			this.state = 336;
+			this.match(LeoParser.T__22);
+			this.state = 337;
+			this.match(LeoParser.T__22);
+			}
+			this.state = 339;
 			this.identifier();
 			}
 		}
@@ -1492,29 +1729,33 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public freeFunctionCall(): FreeFunctionCallContext {
-		let localctx: FreeFunctionCallContext = new FreeFunctionCallContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 50, LeoParser.RULE_freeFunctionCall);
+	public free_function_call(): Free_function_callContext {
+		let localctx: Free_function_callContext = new Free_function_callContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 66, LeoParser.RULE_free_function_call);
 		try {
-			this.state = 340;
+			this.state = 347;
 			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 17, this._ctx) ) {
+			switch ( this._interp.adaptivePredict(this._input, 20, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 334;
+				{
+				this.state = 341;
 				this.identifier();
-				this.state = 335;
-				this.functionArguments();
+				this.state = 342;
+				this.function_arguments();
+				}
 				}
 				break;
 			case 2:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 337;
+				{
+				this.state = 344;
 				this.locator();
-				this.state = 338;
-				this.functionArguments();
+				this.state = 345;
+				this.function_arguments();
+				}
 				}
 				break;
 			}
@@ -1534,83 +1775,24 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public associatedFunctionCall(): AssociatedFunctionCallContext {
-		let localctx: AssociatedFunctionCallContext = new AssociatedFunctionCallContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 52, LeoParser.RULE_associatedFunctionCall);
-		let _la: number;
+	public associated_function_call(): Associated_function_callContext {
+		let localctx: Associated_function_callContext = new Associated_function_callContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 68, LeoParser.RULE_associated_function_call);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
 			this.state = 349;
-			this._errHandler.sync(this);
-			switch (this._input.LA(1)) {
-			case 15:
-				{
-				this.state = 342;
-				this.match(LeoParser.T__14);
-				this.state = 343;
-				_la = this._input.LA(1);
-				if(!((((_la) & ~0x1F) === 0 && ((1 << _la) & 983040) !== 0))) {
-				this._errHandler.recoverInline(this);
-				}
-				else {
-					this._errHandler.reportMatch(this);
-				    this.consume();
-				}
-				}
-				break;
-			case 20:
-				{
-				this.state = 344;
-				this.match(LeoParser.T__19);
-				this.state = 345;
-				_la = this._input.LA(1);
-				if(!(_la===21 || _la===22)) {
-				this._errHandler.recoverInline(this);
-				}
-				else {
-					this._errHandler.reportMatch(this);
-				    this.consume();
-				}
-				}
-				break;
-			case 23:
-				{
-				this.state = 346;
-				this.match(LeoParser.T__22);
-				this.state = 347;
-				_la = this._input.LA(1);
-				if(!((((_la) & ~0x1F) === 0 && ((1 << _la) & 117440512) !== 0))) {
-				this._errHandler.recoverInline(this);
-				}
-				else {
-					this._errHandler.reportMatch(this);
-				    this.consume();
-				}
-				}
-				break;
-			case 94:
-			case 95:
-			case 96:
-			case 97:
-			case 98:
-			case 99:
-			case 100:
-			case 101:
-				{
-				this.state = 348;
-				this.namedType();
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
-			}
+			this.named_type();
+			{
+			this.state = 350;
+			this.match(LeoParser.T__22);
 			this.state = 351;
-			this.match(LeoParser.T__13);
-			this.state = 352;
-			this.identifier();
+			this.match(LeoParser.T__22);
+			}
 			this.state = 353;
-			this.functionArguments();
+			this.identifier();
+			this.state = 354;
+			this.function_arguments();
 			}
 		}
 		catch (re) {
@@ -1628,129 +1810,65 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public functionArguments(): FunctionArgumentsContext {
-		let localctx: FunctionArgumentsContext = new FunctionArgumentsContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 54, LeoParser.RULE_functionArguments);
+	public function_arguments(): Function_argumentsContext {
+		let localctx: Function_argumentsContext = new Function_argumentsContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 70, LeoParser.RULE_function_arguments);
 		let _la: number;
 		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 355;
-			this.match(LeoParser.T__10);
-			this.state = 364;
+			let _alt: number;
+			this.state = 372;
 			this._errHandler.sync(this);
-			_la = this._input.LA(1);
-			if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1351649280) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 67108867) !== 0) || ((((_la - 94)) & ~0x1F) === 0 && ((1 << (_la - 94)) & 130815) !== 0)) {
+			switch ( this._interp.adaptivePredict(this._input, 23, this._ctx) ) {
+			case 1:
+				this.enterOuterAlt(localctx, 1);
 				{
 				this.state = 356;
-				this.expression();
-				this.state = 361;
-				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-				while (_la===12) {
-					{
-					{
-					this.state = 357;
-					this.match(LeoParser.T__11);
-					this.state = 358;
-					this.expression();
-					}
-					}
-					this.state = 363;
-					this._errHandler.sync(this);
-					_la = this._input.LA(1);
-				}
-				}
-			}
-
-			this.state = 366;
-			this.match(LeoParser.T__12);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public unitExpression(): UnitExpressionContext {
-		let localctx: UnitExpressionContext = new UnitExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 56, LeoParser.RULE_unitExpression);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 368;
-			this.match(LeoParser.T__10);
-			this.state = 369;
-			this.match(LeoParser.T__12);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public tupleExpression(): TupleExpressionContext {
-		let localctx: TupleExpressionContext = new TupleExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 58, LeoParser.RULE_tupleExpression);
-		let _la: number;
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 371;
-			this.match(LeoParser.T__10);
-			this.state = 372;
-			this.expression();
-			this.state = 377;
-			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 21, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
-					{
-					{
-					this.state = 373;
-					this.match(LeoParser.T__11);
-					this.state = 374;
-					this.expression();
-					}
-					}
-				}
-				this.state = 379;
+				this.match(LeoParser.T__15);
+				{
+				this.state = 357;
+				this.expression(0);
+				this.state = 362;
 				this._errHandler.sync(this);
 				_alt = this._interp.adaptivePredict(this._input, 21, this._ctx);
-			}
-			this.state = 381;
-			this._errHandler.sync(this);
-			_la = this._input.LA(1);
-			if (_la===12) {
-				{
-				this.state = 380;
-				this.match(LeoParser.T__11);
+				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+					if (_alt === 1) {
+						{
+						{
+						this.state = 358;
+						this.match(LeoParser.T__18);
+						this.state = 359;
+						this.expression(0);
+						}
+						}
+					}
+					this.state = 364;
+					this._errHandler.sync(this);
+					_alt = this._interp.adaptivePredict(this._input, 21, this._ctx);
 				}
-			}
+				this.state = 366;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
+				if (_la===19) {
+					{
+					this.state = 365;
+					this.match(LeoParser.T__18);
+					}
+				}
 
-			this.state = 383;
-			this.match(LeoParser.T__12);
+				}
+				this.state = 368;
+				this.match(LeoParser.T__16);
+				}
+				break;
+			case 2:
+				this.enterOuterAlt(localctx, 2);
+				{
+				this.state = 370;
+				this.match(LeoParser.T__15);
+				this.state = 371;
+				this.match(LeoParser.T__16);
+				}
+				break;
 			}
 		}
 		catch (re) {
@@ -1768,50 +1886,113 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public structExpression(): StructExpressionContext {
-		let localctx: StructExpressionContext = new StructExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 60, LeoParser.RULE_structExpression);
+	public tuple_expression(): Tuple_expressionContext {
+		let localctx: Tuple_expressionContext = new Tuple_expressionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 72, LeoParser.RULE_tuple_expression);
 		let _la: number;
 		try {
 			let _alt: number;
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 385;
-			this.identifier();
-			this.state = 386;
-			this.match(LeoParser.T__5);
-			this.state = 387;
-			this.structComponentInitializer();
-			this.state = 392;
+			this.state = 374;
+			this.match(LeoParser.T__15);
+			this.state = 375;
+			this.expression(0);
+			this.state = 378;
 			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 23, this._ctx);
+			_alt = 1;
+			do {
+				switch (_alt) {
+				case 1:
+					{
+					{
+					this.state = 376;
+					this.match(LeoParser.T__18);
+					this.state = 377;
+					this.expression(0);
+					}
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				this.state = 380;
+				this._errHandler.sync(this);
+				_alt = this._interp.adaptivePredict(this._input, 24, this._ctx);
+			} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
+			this.state = 383;
+			this._errHandler.sync(this);
+			_la = this._input.LA(1);
+			if (_la===19) {
+				{
+				this.state = 382;
+				this.match(LeoParser.T__18);
+				}
+			}
+
+			this.state = 385;
+			this.match(LeoParser.T__16);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public struct_expression(): Struct_expressionContext {
+		let localctx: Struct_expressionContext = new Struct_expressionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 74, LeoParser.RULE_struct_expression);
+		let _la: number;
+		try {
+			let _alt: number;
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 387;
+			this.identifier();
+			this.state = 388;
+			this.match(LeoParser.T__23);
+			this.state = 389;
+			this.struct_component_initializer();
+			this.state = 394;
+			this._errHandler.sync(this);
+			_alt = this._interp.adaptivePredict(this._input, 26, this._ctx);
 			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 				if (_alt === 1) {
 					{
 					{
-					this.state = 388;
-					this.match(LeoParser.T__11);
-					this.state = 389;
-					this.structComponentInitializer();
+					this.state = 390;
+					this.match(LeoParser.T__18);
+					this.state = 391;
+					this.struct_component_initializer();
 					}
 					}
 				}
-				this.state = 394;
+				this.state = 396;
 				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 23, this._ctx);
+				_alt = this._interp.adaptivePredict(this._input, 26, this._ctx);
 			}
-			this.state = 396;
+			this.state = 398;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===12) {
+			if (_la===19) {
 				{
-				this.state = 395;
-				this.match(LeoParser.T__11);
+				this.state = 397;
+				this.match(LeoParser.T__18);
 				}
 			}
 
-			this.state = 398;
-			this.match(LeoParser.T__6);
+			this.state = 400;
+			this.match(LeoParser.T__24);
 			}
 		}
 		catch (re) {
@@ -1829,146 +2010,104 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public structComponentInitializer(): StructComponentInitializerContext {
-		let localctx: StructComponentInitializerContext = new StructComponentInitializerContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 62, LeoParser.RULE_structComponentInitializer);
+	public struct_component_initializer(): Struct_component_initializerContext {
+		let localctx: Struct_component_initializerContext = new Struct_component_initializerContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 76, LeoParser.RULE_struct_component_initializer);
 		try {
-			this.state = 405;
-			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 25, this._ctx) ) {
-			case 1:
-				this.enterOuterAlt(localctx, 1);
-				{
-				this.state = 400;
-				this.identifier();
-				}
-				break;
-			case 2:
-				this.enterOuterAlt(localctx, 2);
-				{
-				this.state = 401;
-				this.identifier();
-				this.state = 402;
-				this.match(LeoParser.T__26);
-				this.state = 403;
-				this.expression();
-				}
-				break;
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public selfCaller(): SelfCallerContext {
-		let localctx: SelfCallerContext = new SelfCallerContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 64, LeoParser.RULE_selfCaller);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
 			this.state = 407;
-			this.match(LeoParser.T__27);
-			this.state = 408;
-			this.match(LeoParser.T__0);
-			this.state = 409;
-			this.match(LeoParser.T__28);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public blockHeight(): BlockHeightContext {
-		let localctx: BlockHeightContext = new BlockHeightContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 66, LeoParser.RULE_blockHeight);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 411;
-			this.match(LeoParser.T__29);
-			this.state = 412;
-			this.match(LeoParser.T__0);
-			this.state = 413;
-			this.match(LeoParser.T__30);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public postfixExpression(): PostfixExpressionContext {
-		let localctx: PostfixExpressionContext = new PostfixExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 68, LeoParser.RULE_postfixExpression);
-		try {
-			this.state = 420;
 			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 26, this._ctx) ) {
+			switch ( this._interp.adaptivePredict(this._input, 28, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 415;
-				this.primaryExpression();
+				this.state = 402;
+				this.identifier();
 				}
 				break;
 			case 2:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 416;
+				{
+				this.state = 403;
+				this.identifier();
+				this.state = 404;
+				this.match(LeoParser.T__22);
+				this.state = 405;
+				this.expression(0);
+				}
+				}
+				break;
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public postfix_expression(): Postfix_expressionContext {
+		let localctx: Postfix_expressionContext = new Postfix_expressionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 78, LeoParser.RULE_postfix_expression);
+		try {
+			this.state = 416;
+			this._errHandler.sync(this);
+			switch ( this._interp.adaptivePredict(this._input, 29, this._ctx) ) {
+			case 1:
+				this.enterOuterAlt(localctx, 1);
+				{
+				this.state = 409;
+				this.primary_expression();
+				}
+				break;
+			case 2:
+				this.enterOuterAlt(localctx, 2);
+				{
+				this.state = 410;
 				this.useMapping();
 				}
 				break;
 			case 3:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 417;
-				this.tupleComponentExpression();
+				this.state = 411;
+				this.chacha();
 				}
 				break;
 			case 4:
 				this.enterOuterAlt(localctx, 4);
 				{
-				this.state = 418;
-				this.structComponentExpression();
+				this.state = 412;
+				this.associatedFunctionCall();
 				}
 				break;
 			case 5:
 				this.enterOuterAlt(localctx, 5);
 				{
-				this.state = 419;
-				this.methodCall();
+				this.state = 413;
+				this.tuple_component_expression();
+				}
+				break;
+			case 6:
+				this.enterOuterAlt(localctx, 6);
+				{
+				this.state = 414;
+				this.struct_component_expression();
+				}
+				break;
+			case 7:
+				this.enterOuterAlt(localctx, 7);
+				{
+				this.state = 415;
+				this.method_call();
 				}
 				break;
 			}
@@ -1988,18 +2127,66 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public tupleComponentExpression(): TupleComponentExpressionContext {
-		let localctx: TupleComponentExpressionContext = new TupleComponentExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 70, LeoParser.RULE_tupleComponentExpression);
+	public tuple_component_expression(): Tuple_component_expressionContext {
+		let localctx: Tuple_component_expressionContext = new Tuple_component_expressionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 80, LeoParser.RULE_tuple_component_expression);
 		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 418;
+			this.identifier();
+			this.state = 419;
+			this.match(LeoParser.T__13);
+			this.state = 420;
+			this.numeral();
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public struct_component_expression(): Struct_component_expressionContext {
+		let localctx: Struct_component_expressionContext = new Struct_component_expressionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 82, LeoParser.RULE_struct_component_expression);
+		try {
+			let _alt: number;
 			this.enterOuterAlt(localctx, 1);
 			{
 			this.state = 422;
 			this.identifier();
-			this.state = 423;
-			this.match(LeoParser.T__0);
-			this.state = 424;
-			this.match(LeoParser.Numeral);
+			this.state = 425;
+			this._errHandler.sync(this);
+			_alt = 1;
+			do {
+				switch (_alt) {
+				case 1:
+					{
+					{
+					this.state = 423;
+					this.match(LeoParser.T__13);
+					this.state = 424;
+					this.identifier();
+					}
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				this.state = 427;
+				this._errHandler.sync(this);
+				_alt = this._interp.adaptivePredict(this._input, 30, this._ctx);
+			} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
 			}
 		}
 		catch (re) {
@@ -2017,49 +2204,33 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public structComponentExpression(): StructComponentExpressionContext {
-		let localctx: StructComponentExpressionContext = new StructComponentExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 72, LeoParser.RULE_structComponentExpression);
+	public method_call(): Method_callContext {
+		let localctx: Method_callContext = new Method_callContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 84, LeoParser.RULE_method_call);
+		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 426;
+			this.state = 429;
 			this.identifier();
-			this.state = 427;
-			this.match(LeoParser.T__0);
-			this.state = 428;
-			this.identifier();
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public methodCall(): MethodCallContext {
-		let localctx: MethodCallContext = new MethodCallContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 74, LeoParser.RULE_methodCall);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 430;
-			this.identifier();
-			this.state = 431;
-			this.match(LeoParser.T__0);
 			this.state = 432;
-			this.identifier();
-			this.state = 433;
-			this.functionArguments();
+			this._errHandler.sync(this);
+			_la = this._input.LA(1);
+			do {
+				{
+				{
+				this.state = 430;
+				this.match(LeoParser.T__13);
+				this.state = 431;
+				this.identifier();
+				}
+				}
+				this.state = 434;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
+			} while (_la===14);
+			this.state = 436;
+			this.function_arguments();
 			}
 		}
 		catch (re) {
@@ -2076,336 +2247,59 @@ export default class LeoParser extends Parser {
 		}
 		return localctx;
 	}
+
+	public expression(): ExpressionContext;
+	public expression(_p: number): ExpressionContext;
 	// @RuleVersion(0)
-	public unaryExpression(): UnaryExpressionContext {
-		let localctx: UnaryExpressionContext = new UnaryExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 76, LeoParser.RULE_unaryExpression);
+	public expression(_p?: number): ExpressionContext {
+		if (_p === undefined) {
+			_p = 0;
+		}
+
+		let _parentctx: ParserRuleContext = this._ctx;
+		let _parentState: number = this.state;
+		let localctx: ExpressionContext = new ExpressionContext(this, this._ctx, _parentState);
+		let _prevctx: ExpressionContext = localctx;
+		let _startState: number = 86;
+		this.enterRecursionRule(localctx, 86, LeoParser.RULE_expression, _p);
+		let _la: number;
 		try {
-			this.state = 440;
+			let _alt: number;
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 443;
 			this._errHandler.sync(this);
-			switch (this._input.LA(1)) {
-			case 11:
-			case 15:
-			case 20:
-			case 23:
-			case 28:
-			case 30:
-			case 58:
-			case 94:
-			case 95:
-			case 96:
-			case 97:
-			case 98:
-			case 99:
-			case 100:
-			case 101:
-			case 103:
-			case 104:
-			case 105:
-			case 106:
-			case 107:
-			case 108:
-			case 109:
-			case 110:
-				this.enterOuterAlt(localctx, 1);
-				{
-				this.state = 435;
-				this.postfixExpression();
-				}
-				break;
-			case 32:
-				this.enterOuterAlt(localctx, 2);
-				{
-				this.state = 436;
-				this.match(LeoParser.T__31);
-				this.state = 437;
-				this.unaryExpression();
-				}
-				break;
-			case 33:
-				this.enterOuterAlt(localctx, 3);
-				{
-				this.state = 438;
-				this.match(LeoParser.T__32);
-				this.state = 439;
-				this.unaryExpression();
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public exponentialExpression(): ExponentialExpressionContext {
-		let localctx: ExponentialExpressionContext = new ExponentialExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 78, LeoParser.RULE_exponentialExpression);
-		try {
-			this.state = 447;
-			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 28, this._ctx) ) {
+			switch ( this._interp.adaptivePredict(this._input, 32, this._ctx) ) {
 			case 1:
-				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 442;
-				this.unaryExpression();
+				this.state = 439;
+				this.postfix_expression();
 				}
 				break;
 			case 2:
-				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 443;
-				this.unaryExpression();
-				this.state = 444;
-				this.match(LeoParser.T__33);
-				this.state = 445;
-				this.exponentialExpression();
+				this.state = 440;
+				_la = this._input.LA(1);
+				if(!(_la===26 || _la===27)) {
+				this._errHandler.recoverInline(this);
+				}
+				else {
+					this._errHandler.reportMatch(this);
+				    this.consume();
+				}
+				this.state = 441;
+				this.expression(15);
+				}
+				break;
+			case 3:
+				{
+				this.state = 442;
+				this.primary_expression();
 				}
 				break;
 			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-
-	public multiplicativeExpression(): MultiplicativeExpressionContext;
-	public multiplicativeExpression(_p: number): MultiplicativeExpressionContext;
-	// @RuleVersion(0)
-	public multiplicativeExpression(_p?: number): MultiplicativeExpressionContext {
-		if (_p === undefined) {
-			_p = 0;
-		}
-
-		let _parentctx: ParserRuleContext = this._ctx;
-		let _parentState: number = this.state;
-		let localctx: MultiplicativeExpressionContext = new MultiplicativeExpressionContext(this, this._ctx, _parentState);
-		let _prevctx: MultiplicativeExpressionContext = localctx;
-		let _startState: number = 80;
-		this.enterRecursionRule(localctx, 80, LeoParser.RULE_multiplicativeExpression, _p);
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			{
-			this.state = 450;
-			this.exponentialExpression();
-			}
 			this._ctx.stop = this._input.LT(-1);
-			this.state = 463;
-			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 30, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
-					if (this._parseListeners != null) {
-						this.triggerExitRuleEvent();
-					}
-					_prevctx = localctx;
-					{
-					this.state = 461;
-					this._errHandler.sync(this);
-					switch ( this._interp.adaptivePredict(this._input, 29, this._ctx) ) {
-					case 1:
-						{
-						localctx = new MultiplicativeExpressionContext(this, _parentctx, _parentState);
-						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_multiplicativeExpression);
-						this.state = 452;
-						if (!(this.precpred(this._ctx, 3))) {
-							throw this.createFailedPredicateException("this.precpred(this._ctx, 3)");
-						}
-						this.state = 453;
-						this.match(LeoParser.T__34);
-						this.state = 454;
-						this.exponentialExpression();
-						}
-						break;
-					case 2:
-						{
-						localctx = new MultiplicativeExpressionContext(this, _parentctx, _parentState);
-						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_multiplicativeExpression);
-						this.state = 455;
-						if (!(this.precpred(this._ctx, 2))) {
-							throw this.createFailedPredicateException("this.precpred(this._ctx, 2)");
-						}
-						this.state = 456;
-						this.match(LeoParser.T__1);
-						this.state = 457;
-						this.exponentialExpression();
-						}
-						break;
-					case 3:
-						{
-						localctx = new MultiplicativeExpressionContext(this, _parentctx, _parentState);
-						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_multiplicativeExpression);
-						this.state = 458;
-						if (!(this.precpred(this._ctx, 1))) {
-							throw this.createFailedPredicateException("this.precpred(this._ctx, 1)");
-						}
-						this.state = 459;
-						this.match(LeoParser.T__35);
-						this.state = 460;
-						this.exponentialExpression();
-						}
-						break;
-					}
-					}
-				}
-				this.state = 465;
-				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 30, this._ctx);
-			}
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.unrollRecursionContexts(_parentctx);
-		}
-		return localctx;
-	}
-
-	public additiveExpression(): AdditiveExpressionContext;
-	public additiveExpression(_p: number): AdditiveExpressionContext;
-	// @RuleVersion(0)
-	public additiveExpression(_p?: number): AdditiveExpressionContext {
-		if (_p === undefined) {
-			_p = 0;
-		}
-
-		let _parentctx: ParserRuleContext = this._ctx;
-		let _parentState: number = this.state;
-		let localctx: AdditiveExpressionContext = new AdditiveExpressionContext(this, this._ctx, _parentState);
-		let _prevctx: AdditiveExpressionContext = localctx;
-		let _startState: number = 82;
-		this.enterRecursionRule(localctx, 82, LeoParser.RULE_additiveExpression, _p);
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			{
-			this.state = 467;
-			this.multiplicativeExpression(0);
-			}
-			this._ctx.stop = this._input.LT(-1);
-			this.state = 477;
-			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 32, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
-					if (this._parseListeners != null) {
-						this.triggerExitRuleEvent();
-					}
-					_prevctx = localctx;
-					{
-					this.state = 475;
-					this._errHandler.sync(this);
-					switch ( this._interp.adaptivePredict(this._input, 31, this._ctx) ) {
-					case 1:
-						{
-						localctx = new AdditiveExpressionContext(this, _parentctx, _parentState);
-						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_additiveExpression);
-						this.state = 469;
-						if (!(this.precpred(this._ctx, 2))) {
-							throw this.createFailedPredicateException("this.precpred(this._ctx, 2)");
-						}
-						this.state = 470;
-						this.match(LeoParser.T__36);
-						this.state = 471;
-						this.multiplicativeExpression(0);
-						}
-						break;
-					case 2:
-						{
-						localctx = new AdditiveExpressionContext(this, _parentctx, _parentState);
-						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_additiveExpression);
-						this.state = 472;
-						if (!(this.precpred(this._ctx, 1))) {
-							throw this.createFailedPredicateException("this.precpred(this._ctx, 1)");
-						}
-						this.state = 473;
-						this.match(LeoParser.T__32);
-						this.state = 474;
-						this.multiplicativeExpression(0);
-						}
-						break;
-					}
-					}
-				}
-				this.state = 479;
-				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 32, this._ctx);
-			}
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.unrollRecursionContexts(_parentctx);
-		}
-		return localctx;
-	}
-
-	public shiftExpression(): ShiftExpressionContext;
-	public shiftExpression(_p: number): ShiftExpressionContext;
-	// @RuleVersion(0)
-	public shiftExpression(_p?: number): ShiftExpressionContext {
-		if (_p === undefined) {
-			_p = 0;
-		}
-
-		let _parentctx: ParserRuleContext = this._ctx;
-		let _parentState: number = this.state;
-		let localctx: ShiftExpressionContext = new ShiftExpressionContext(this, this._ctx, _parentState);
-		let _prevctx: ShiftExpressionContext = localctx;
-		let _startState: number = 84;
-		this.enterRecursionRule(localctx, 84, LeoParser.RULE_shiftExpression, _p);
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			{
-			this.state = 481;
-			this.additiveExpression(0);
-			}
-			this._ctx.stop = this._input.LT(-1);
-			this.state = 491;
+			this.state = 489;
 			this._errHandler.sync(this);
 			_alt = this._interp.adaptivePredict(this._input, 34, this._ctx);
 			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
@@ -2415,41 +2309,241 @@ export default class LeoParser extends Parser {
 					}
 					_prevctx = localctx;
 					{
-					this.state = 489;
+					this.state = 487;
 					this._errHandler.sync(this);
 					switch ( this._interp.adaptivePredict(this._input, 33, this._ctx) ) {
 					case 1:
 						{
-						localctx = new ShiftExpressionContext(this, _parentctx, _parentState);
-						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_shiftExpression);
-						this.state = 483;
-						if (!(this.precpred(this._ctx, 2))) {
-							throw this.createFailedPredicateException("this.precpred(this._ctx, 2)");
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 445;
+						if (!(this.precpred(this._ctx, 14))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 14)");
 						}
-						this.state = 484;
-						this.match(LeoParser.T__37);
-						this.state = 485;
-						this.additiveExpression(0);
+						this.state = 446;
+						this.match(LeoParser.T__27);
+						this.state = 447;
+						this.expression(15);
 						}
 						break;
 					case 2:
 						{
-						localctx = new ShiftExpressionContext(this, _parentctx, _parentState);
-						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_shiftExpression);
-						this.state = 486;
-						if (!(this.precpred(this._ctx, 1))) {
-							throw this.createFailedPredicateException("this.precpred(this._ctx, 1)");
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 448;
+						if (!(this.precpred(this._ctx, 13))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 13)");
 						}
-						this.state = 487;
-						this.match(LeoParser.T__38);
-						this.state = 488;
-						this.additiveExpression(0);
+						this.state = 449;
+						_la = this._input.LA(1);
+						if(!((((_la) & ~0x1F) === 0 && ((1 << _la) & 1610645504) !== 0))) {
+						this._errHandler.recoverInline(this);
+						}
+						else {
+							this._errHandler.reportMatch(this);
+						    this.consume();
+						}
+						this.state = 450;
+						this.expression(14);
+						}
+						break;
+					case 3:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 451;
+						if (!(this.precpred(this._ctx, 12))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 12)");
+						}
+						this.state = 452;
+						_la = this._input.LA(1);
+						if(!(_la===20 || _la===21)) {
+						this._errHandler.recoverInline(this);
+						}
+						else {
+							this._errHandler.reportMatch(this);
+						    this.consume();
+						}
+						this.state = 453;
+						this.expression(13);
+						}
+						break;
+					case 4:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 454;
+						if (!(this.precpred(this._ctx, 11))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 11)");
+						}
+						this.state = 455;
+						_la = this._input.LA(1);
+						if(!(_la===31 || _la===32)) {
+						this._errHandler.recoverInline(this);
+						}
+						else {
+							this._errHandler.reportMatch(this);
+						    this.consume();
+						}
+						this.state = 456;
+						this.expression(12);
+						}
+						break;
+					case 5:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 457;
+						if (!(this.precpred(this._ctx, 10))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 10)");
+						}
+						this.state = 458;
+						this.match(LeoParser.T__32);
+						this.state = 459;
+						this.expression(11);
+						}
+						break;
+					case 6:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 460;
+						if (!(this.precpred(this._ctx, 9))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 9)");
+						}
+						this.state = 461;
+						this.match(LeoParser.T__33);
+						this.state = 462;
+						this.expression(10);
+						}
+						break;
+					case 7:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 463;
+						if (!(this.precpred(this._ctx, 8))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 8)");
+						}
+						this.state = 464;
+						this.match(LeoParser.T__34);
+						this.state = 465;
+						this.expression(9);
+						}
+						break;
+					case 8:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 466;
+						if (!(this.precpred(this._ctx, 7))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 7)");
+						}
+						this.state = 467;
+						_la = this._input.LA(1);
+						if(!(((((_la - 36)) & ~0x1F) === 0 && ((1 << (_la - 36)) & 15) !== 0))) {
+						this._errHandler.recoverInline(this);
+						}
+						else {
+							this._errHandler.reportMatch(this);
+						    this.consume();
+						}
+						this.state = 468;
+						this.expression(8);
+						}
+						break;
+					case 9:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 469;
+						if (!(this.precpred(this._ctx, 6))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 6)");
+						}
+						this.state = 470;
+						_la = this._input.LA(1);
+						if(!(_la===40 || _la===41)) {
+						this._errHandler.recoverInline(this);
+						}
+						else {
+							this._errHandler.reportMatch(this);
+						    this.consume();
+						}
+						this.state = 471;
+						this.expression(7);
+						}
+						break;
+					case 10:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 472;
+						if (!(this.precpred(this._ctx, 5))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 5)");
+						}
+						this.state = 473;
+						this.match(LeoParser.T__41);
+						this.state = 474;
+						this.expression(6);
+						}
+						break;
+					case 11:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 475;
+						if (!(this.precpred(this._ctx, 4))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 4)");
+						}
+						this.state = 476;
+						this.match(LeoParser.T__42);
+						this.state = 477;
+						this.expression(5);
+						}
+						break;
+					case 12:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 478;
+						if (!(this.precpred(this._ctx, 3))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 3)");
+						}
+						this.state = 479;
+						this.match(LeoParser.T__43);
+						this.state = 480;
+						this.expression(0);
+						this.state = 481;
+						this.match(LeoParser.T__22);
+						this.state = 482;
+						this.expression(4);
+						}
+						break;
+					case 13:
+						{
+						localctx = new ExpressionContext(this, _parentctx, _parentState);
+						this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_expression);
+						this.state = 484;
+						if (!(this.precpred(this._ctx, 2))) {
+							throw this.createFailedPredicateException("this.precpred(this._ctx, 2)");
+						}
+						this.state = 485;
+						_la = this._input.LA(1);
+						if(!(((((_la - 45)) & ~0x1F) === 0 && ((1 << (_la - 45)) & 16383) !== 0))) {
+						this._errHandler.recoverInline(this);
+						}
+						else {
+							this._errHandler.reportMatch(this);
+						    this.consume();
+						}
+						this.state = 486;
+						this.expression(3);
 						}
 						break;
 					}
 					}
 				}
-				this.state = 493;
+				this.state = 491;
 				this._errHandler.sync(this);
 				_alt = this._interp.adaptivePredict(this._input, 34, this._ctx);
 			}
@@ -2469,633 +2563,17 @@ export default class LeoParser extends Parser {
 		}
 		return localctx;
 	}
-
-	public conjunctiveExpression(): ConjunctiveExpressionContext;
-	public conjunctiveExpression(_p: number): ConjunctiveExpressionContext;
-	// @RuleVersion(0)
-	public conjunctiveExpression(_p?: number): ConjunctiveExpressionContext {
-		if (_p === undefined) {
-			_p = 0;
-		}
-
-		let _parentctx: ParserRuleContext = this._ctx;
-		let _parentState: number = this.state;
-		let localctx: ConjunctiveExpressionContext = new ConjunctiveExpressionContext(this, this._ctx, _parentState);
-		let _prevctx: ConjunctiveExpressionContext = localctx;
-		let _startState: number = 86;
-		this.enterRecursionRule(localctx, 86, LeoParser.RULE_conjunctiveExpression, _p);
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			{
-			this.state = 495;
-			this.shiftExpression(0);
-			}
-			this._ctx.stop = this._input.LT(-1);
-			this.state = 502;
-			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 35, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
-					if (this._parseListeners != null) {
-						this.triggerExitRuleEvent();
-					}
-					_prevctx = localctx;
-					{
-					{
-					localctx = new ConjunctiveExpressionContext(this, _parentctx, _parentState);
-					this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_conjunctiveExpression);
-					this.state = 497;
-					if (!(this.precpred(this._ctx, 1))) {
-						throw this.createFailedPredicateException("this.precpred(this._ctx, 1)");
-					}
-					this.state = 498;
-					this.match(LeoParser.T__39);
-					this.state = 499;
-					this.shiftExpression(0);
-					}
-					}
-				}
-				this.state = 504;
-				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 35, this._ctx);
-			}
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.unrollRecursionContexts(_parentctx);
-		}
-		return localctx;
-	}
-
-	public disjunctiveExpression(): DisjunctiveExpressionContext;
-	public disjunctiveExpression(_p: number): DisjunctiveExpressionContext;
-	// @RuleVersion(0)
-	public disjunctiveExpression(_p?: number): DisjunctiveExpressionContext {
-		if (_p === undefined) {
-			_p = 0;
-		}
-
-		let _parentctx: ParserRuleContext = this._ctx;
-		let _parentState: number = this.state;
-		let localctx: DisjunctiveExpressionContext = new DisjunctiveExpressionContext(this, this._ctx, _parentState);
-		let _prevctx: DisjunctiveExpressionContext = localctx;
-		let _startState: number = 88;
-		this.enterRecursionRule(localctx, 88, LeoParser.RULE_disjunctiveExpression, _p);
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			{
-			this.state = 506;
-			this.conjunctiveExpression(0);
-			}
-			this._ctx.stop = this._input.LT(-1);
-			this.state = 513;
-			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 36, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
-					if (this._parseListeners != null) {
-						this.triggerExitRuleEvent();
-					}
-					_prevctx = localctx;
-					{
-					{
-					localctx = new DisjunctiveExpressionContext(this, _parentctx, _parentState);
-					this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_disjunctiveExpression);
-					this.state = 508;
-					if (!(this.precpred(this._ctx, 1))) {
-						throw this.createFailedPredicateException("this.precpred(this._ctx, 1)");
-					}
-					this.state = 509;
-					this.match(LeoParser.T__39);
-					this.state = 510;
-					this.conjunctiveExpression(0);
-					}
-					}
-				}
-				this.state = 515;
-				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 36, this._ctx);
-			}
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.unrollRecursionContexts(_parentctx);
-		}
-		return localctx;
-	}
-
-	public exclusiveDisjunctiveExpression(): ExclusiveDisjunctiveExpressionContext;
-	public exclusiveDisjunctiveExpression(_p: number): ExclusiveDisjunctiveExpressionContext;
-	// @RuleVersion(0)
-	public exclusiveDisjunctiveExpression(_p?: number): ExclusiveDisjunctiveExpressionContext {
-		if (_p === undefined) {
-			_p = 0;
-		}
-
-		let _parentctx: ParserRuleContext = this._ctx;
-		let _parentState: number = this.state;
-		let localctx: ExclusiveDisjunctiveExpressionContext = new ExclusiveDisjunctiveExpressionContext(this, this._ctx, _parentState);
-		let _prevctx: ExclusiveDisjunctiveExpressionContext = localctx;
-		let _startState: number = 90;
-		this.enterRecursionRule(localctx, 90, LeoParser.RULE_exclusiveDisjunctiveExpression, _p);
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			{
-			this.state = 517;
-			this.disjunctiveExpression(0);
-			}
-			this._ctx.stop = this._input.LT(-1);
-			this.state = 524;
-			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 37, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
-					if (this._parseListeners != null) {
-						this.triggerExitRuleEvent();
-					}
-					_prevctx = localctx;
-					{
-					{
-					localctx = new ExclusiveDisjunctiveExpressionContext(this, _parentctx, _parentState);
-					this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_exclusiveDisjunctiveExpression);
-					this.state = 519;
-					if (!(this.precpred(this._ctx, 1))) {
-						throw this.createFailedPredicateException("this.precpred(this._ctx, 1)");
-					}
-					this.state = 520;
-					this.match(LeoParser.T__40);
-					this.state = 521;
-					this.disjunctiveExpression(0);
-					}
-					}
-				}
-				this.state = 526;
-				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 37, this._ctx);
-			}
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.unrollRecursionContexts(_parentctx);
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public orderingExpression(): OrderingExpressionContext {
-		let localctx: OrderingExpressionContext = new OrderingExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 92, LeoParser.RULE_orderingExpression);
-		try {
-			this.state = 544;
-			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 38, this._ctx) ) {
-			case 1:
-				this.enterOuterAlt(localctx, 1);
-				{
-				this.state = 527;
-				this.exclusiveDisjunctiveExpression(0);
-				}
-				break;
-			case 2:
-				this.enterOuterAlt(localctx, 2);
-				{
-				this.state = 528;
-				this.exclusiveDisjunctiveExpression(0);
-				this.state = 529;
-				this.match(LeoParser.T__41);
-				this.state = 530;
-				this.exclusiveDisjunctiveExpression(0);
-				}
-				break;
-			case 3:
-				this.enterOuterAlt(localctx, 3);
-				{
-				this.state = 532;
-				this.exclusiveDisjunctiveExpression(0);
-				this.state = 533;
-				this.match(LeoParser.T__42);
-				this.state = 534;
-				this.exclusiveDisjunctiveExpression(0);
-				}
-				break;
-			case 4:
-				this.enterOuterAlt(localctx, 4);
-				{
-				this.state = 536;
-				this.exclusiveDisjunctiveExpression(0);
-				this.state = 537;
-				this.match(LeoParser.T__43);
-				this.state = 538;
-				this.exclusiveDisjunctiveExpression(0);
-				}
-				break;
-			case 5:
-				this.enterOuterAlt(localctx, 5);
-				{
-				this.state = 540;
-				this.exclusiveDisjunctiveExpression(0);
-				this.state = 541;
-				this.match(LeoParser.T__44);
-				this.state = 542;
-				this.exclusiveDisjunctiveExpression(0);
-				}
-				break;
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public equalityExpression(): EqualityExpressionContext {
-		let localctx: EqualityExpressionContext = new EqualityExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 94, LeoParser.RULE_equalityExpression);
-		try {
-			this.state = 555;
-			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 39, this._ctx) ) {
-			case 1:
-				this.enterOuterAlt(localctx, 1);
-				{
-				this.state = 546;
-				this.orderingExpression();
-				}
-				break;
-			case 2:
-				this.enterOuterAlt(localctx, 2);
-				{
-				this.state = 547;
-				this.orderingExpression();
-				this.state = 548;
-				this.match(LeoParser.T__45);
-				this.state = 549;
-				this.orderingExpression();
-				}
-				break;
-			case 3:
-				this.enterOuterAlt(localctx, 3);
-				{
-				this.state = 551;
-				this.orderingExpression();
-				this.state = 552;
-				this.match(LeoParser.T__46);
-				this.state = 553;
-				this.orderingExpression();
-				}
-				break;
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-
-	public conditionalConjunctiveExpression(): ConditionalConjunctiveExpressionContext;
-	public conditionalConjunctiveExpression(_p: number): ConditionalConjunctiveExpressionContext;
-	// @RuleVersion(0)
-	public conditionalConjunctiveExpression(_p?: number): ConditionalConjunctiveExpressionContext {
-		if (_p === undefined) {
-			_p = 0;
-		}
-
-		let _parentctx: ParserRuleContext = this._ctx;
-		let _parentState: number = this.state;
-		let localctx: ConditionalConjunctiveExpressionContext = new ConditionalConjunctiveExpressionContext(this, this._ctx, _parentState);
-		let _prevctx: ConditionalConjunctiveExpressionContext = localctx;
-		let _startState: number = 96;
-		this.enterRecursionRule(localctx, 96, LeoParser.RULE_conditionalConjunctiveExpression, _p);
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			{
-			this.state = 558;
-			this.equalityExpression();
-			}
-			this._ctx.stop = this._input.LT(-1);
-			this.state = 565;
-			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 40, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
-					if (this._parseListeners != null) {
-						this.triggerExitRuleEvent();
-					}
-					_prevctx = localctx;
-					{
-					{
-					localctx = new ConditionalConjunctiveExpressionContext(this, _parentctx, _parentState);
-					this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_conditionalConjunctiveExpression);
-					this.state = 560;
-					if (!(this.precpred(this._ctx, 1))) {
-						throw this.createFailedPredicateException("this.precpred(this._ctx, 1)");
-					}
-					this.state = 561;
-					this.match(LeoParser.T__47);
-					this.state = 562;
-					this.equalityExpression();
-					}
-					}
-				}
-				this.state = 567;
-				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 40, this._ctx);
-			}
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.unrollRecursionContexts(_parentctx);
-		}
-		return localctx;
-	}
-
-	public conditionalDisjunctiveExpression(): ConditionalDisjunctiveExpressionContext;
-	public conditionalDisjunctiveExpression(_p: number): ConditionalDisjunctiveExpressionContext;
-	// @RuleVersion(0)
-	public conditionalDisjunctiveExpression(_p?: number): ConditionalDisjunctiveExpressionContext {
-		if (_p === undefined) {
-			_p = 0;
-		}
-
-		let _parentctx: ParserRuleContext = this._ctx;
-		let _parentState: number = this.state;
-		let localctx: ConditionalDisjunctiveExpressionContext = new ConditionalDisjunctiveExpressionContext(this, this._ctx, _parentState);
-		let _prevctx: ConditionalDisjunctiveExpressionContext = localctx;
-		let _startState: number = 98;
-		this.enterRecursionRule(localctx, 98, LeoParser.RULE_conditionalDisjunctiveExpression, _p);
-		try {
-			let _alt: number;
-			this.enterOuterAlt(localctx, 1);
-			{
-			{
-			this.state = 569;
-			this.conditionalConjunctiveExpression(0);
-			}
-			this._ctx.stop = this._input.LT(-1);
-			this.state = 576;
-			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 41, this._ctx);
-			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-				if (_alt === 1) {
-					if (this._parseListeners != null) {
-						this.triggerExitRuleEvent();
-					}
-					_prevctx = localctx;
-					{
-					{
-					localctx = new ConditionalDisjunctiveExpressionContext(this, _parentctx, _parentState);
-					this.pushNewRecursionContext(localctx, _startState, LeoParser.RULE_conditionalDisjunctiveExpression);
-					this.state = 571;
-					if (!(this.precpred(this._ctx, 1))) {
-						throw this.createFailedPredicateException("this.precpred(this._ctx, 1)");
-					}
-					this.state = 572;
-					this.match(LeoParser.T__48);
-					this.state = 573;
-					this.conditionalConjunctiveExpression(0);
-					}
-					}
-				}
-				this.state = 578;
-				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 41, this._ctx);
-			}
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.unrollRecursionContexts(_parentctx);
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public binaryExpression(): BinaryExpressionContext {
-		let localctx: BinaryExpressionContext = new BinaryExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 100, LeoParser.RULE_binaryExpression);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 579;
-			this.conditionalDisjunctiveExpression(0);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public conditionalTernaryExpression(): ConditionalTernaryExpressionContext {
-		let localctx: ConditionalTernaryExpressionContext = new ConditionalTernaryExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 102, LeoParser.RULE_conditionalTernaryExpression);
-		try {
-			this.state = 588;
-			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 42, this._ctx) ) {
-			case 1:
-				this.enterOuterAlt(localctx, 1);
-				{
-				this.state = 581;
-				this.binaryExpression();
-				}
-				break;
-			case 2:
-				this.enterOuterAlt(localctx, 2);
-				{
-				this.state = 582;
-				this.binaryExpression();
-				this.state = 583;
-				this.match(LeoParser.T__49);
-				this.state = 584;
-				this.expression();
-				this.state = 585;
-				this.match(LeoParser.T__26);
-				this.state = 586;
-				this.expression();
-				}
-				break;
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public expression(): ExpressionContext {
-		let localctx: ExpressionContext = new ExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 104, LeoParser.RULE_expression);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 590;
-			this.conditionalTernaryExpression();
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public loopStatement(): LoopStatementContext {
-		let localctx: LoopStatementContext = new LoopStatementContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 106, LeoParser.RULE_loopStatement);
-		let _la: number;
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 592;
-			this.match(LeoParser.T__50);
-			this.state = 593;
-			this.identifier();
-			this.state = 594;
-			this.match(LeoParser.T__26);
-			this.state = 595;
-			this.type_();
-			this.state = 596;
-			this.match(LeoParser.T__51);
-			this.state = 597;
-			this.expression();
-			this.state = 598;
-			this.match(LeoParser.T__52);
-			this.state = 600;
-			this._errHandler.sync(this);
-			_la = this._input.LA(1);
-			if (_la===54) {
-				{
-				this.state = 599;
-				this.match(LeoParser.T__53);
-				}
-			}
-
-			this.state = 602;
-			this.expression();
-			this.state = 603;
-			this.block();
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
 	// @RuleVersion(0)
 	public mappingAttributes(): MappingAttributesContext {
 		let localctx: MappingAttributesContext = new MappingAttributesContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 108, LeoParser.RULE_mappingAttributes);
+		this.enterRule(localctx, 88, LeoParser.RULE_mappingAttributes);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 605;
+			this.state = 492;
 			_la = this._input.LA(1);
-			if(!(((((_la - 55)) & ~0x1F) === 0 && ((1 << (_la - 55)) & 7) !== 0))) {
+			if(!(((((_la - 59)) & ~0x1F) === 0 && ((1 << (_la - 59)) & 7) !== 0))) {
 			this._errHandler.recoverInline(this);
 			}
 			else {
@@ -3121,16 +2599,104 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public useMapping(): UseMappingContext {
 		let localctx: UseMappingContext = new UseMappingContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 110, LeoParser.RULE_useMapping);
+		this.enterRule(localctx, 90, LeoParser.RULE_useMapping);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 607;
-			this.match(LeoParser.T__57);
-			this.state = 608;
+			this.state = 494;
+			this.match(LeoParser.T__61);
+			this.state = 495;
 			this.mappingAttributes();
-			this.state = 609;
-			this.functionArguments();
+			this.state = 496;
+			this.function_arguments();
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public chacha(): ChachaContext {
+		let localctx: ChachaContext = new ChachaContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 92, LeoParser.RULE_chacha);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 498;
+			this.match(LeoParser.T__62);
+			this.state = 499;
+			this.match(LeoParser.T__4);
+			this.state = 500;
+			this.identifier();
+			this.state = 501;
+			this.function_arguments();
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public associatedFunctionCall(): AssociatedFunctionCallContext {
+		let localctx: AssociatedFunctionCallContext = new AssociatedFunctionCallContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 94, LeoParser.RULE_associatedFunctionCall);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 506;
+			this._errHandler.sync(this);
+			switch (this._input.LA(1)) {
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+				{
+				this.state = 503;
+				this.bhp();
+				}
+				break;
+			case 6:
+			case 7:
+				{
+				this.state = 504;
+				this.pedersen();
+				}
+				break;
+			case 8:
+			case 9:
+			case 10:
+				{
+				this.state = 505;
+				this.poseidon();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			this.state = 508;
+			this.identifier();
+			this.state = 509;
+			this.function_arguments();
 			}
 		}
 		catch (re) {
@@ -3150,72 +2716,65 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public statement(): StatementContext {
 		let localctx: StatementContext = new StatementContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 112, LeoParser.RULE_statement);
+		this.enterRule(localctx, 96, LeoParser.RULE_statement);
 		try {
-			this.state = 620;
+			this.state = 519;
 			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 44, this._ctx) ) {
+			switch ( this._interp.adaptivePredict(this._input, 36, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 611;
+				this.state = 511;
 				this.useMapping();
 				}
 				break;
 			case 2:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 612;
-				this.expressionStatement();
+				this.state = 512;
+				this.expression_statement();
 				}
 				break;
 			case 3:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 613;
-				this.variableDeclaration();
+				this.state = 513;
+				this.variable_declaration();
 				}
 				break;
 			case 4:
 				this.enterOuterAlt(localctx, 4);
 				{
-				this.state = 614;
-				this.conditionalStatement();
+				this.state = 514;
+				this.conditional_statement();
 				}
 				break;
 			case 5:
 				this.enterOuterAlt(localctx, 5);
 				{
-				this.state = 615;
-				this.loopStatement();
+				this.state = 515;
+				this.loop_statement();
 				}
 				break;
 			case 6:
 				this.enterOuterAlt(localctx, 6);
 				{
-				this.state = 616;
-				this.assignmentStatement();
+				this.state = 516;
+				this.console_statement();
 				}
 				break;
 			case 7:
 				this.enterOuterAlt(localctx, 7);
 				{
-				this.state = 617;
-				this.consoleStatement();
+				this.state = 517;
+				this.return_statement();
 				}
 				break;
 			case 8:
 				this.enterOuterAlt(localctx, 8);
 				{
-				this.state = 618;
+				this.state = 518;
 				this.block();
-				}
-				break;
-			case 9:
-				this.enterOuterAlt(localctx, 9);
-				{
-				this.state = 619;
-				this.returnStatement();
 				}
 				break;
 			}
@@ -3237,29 +2796,29 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public block(): BlockContext {
 		let localctx: BlockContext = new BlockContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 114, LeoParser.RULE_block);
+		this.enterRule(localctx, 98, LeoParser.RULE_block);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 622;
-			this.match(LeoParser.T__5);
-			this.state = 626;
+			this.state = 521;
+			this.match(LeoParser.T__23);
+			this.state = 525;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (((((_la - 6)) & ~0x1F) === 0 && ((1 << (_la - 6)) & 222446113) !== 0) || ((((_la - 51)) & ~0x1F) === 0 && ((1 << (_la - 51)) & 939530625) !== 0) || ((((_la - 94)) & ~0x1F) === 0 && ((1 << (_la - 94)) & 130815) !== 0)) {
+			while ((((_la) & ~0x1F) === 0 && ((1 << _la) & 218175454) !== 0) || ((((_la - 62)) & ~0x1F) === 0 && ((1 << (_la - 62)) & 4261428583) !== 0) || ((((_la - 94)) & ~0x1F) === 0 && ((1 << (_la - 94)) & 31) !== 0)) {
 				{
 				{
-				this.state = 623;
+				this.state = 522;
 				this.statement();
 				}
 				}
-				this.state = 628;
+				this.state = 527;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 629;
-			this.match(LeoParser.T__6);
+			this.state = 528;
+			this.match(LeoParser.T__24);
 			}
 		}
 		catch (re) {
@@ -3277,41 +2836,45 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public returnStatement(): ReturnStatementContext {
-		let localctx: ReturnStatementContext = new ReturnStatementContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 116, LeoParser.RULE_returnStatement);
+	public return_statement(): Return_statementContext {
+		let localctx: Return_statementContext = new Return_statementContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 100, LeoParser.RULE_return_statement);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 631;
-			this.match(LeoParser.T__58);
-			this.state = 633;
+			this.state = 530;
+			this.match(LeoParser.T__63);
+			this.state = 534;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1351649280) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 67108867) !== 0) || ((((_la - 94)) & ~0x1F) === 0 && ((1 << (_la - 94)) & 130815) !== 0)) {
+			while ((((_la) & ~0x1F) === 0 && ((1 << _la) & 201398238) !== 0) || ((((_la - 62)) & ~0x1F) === 0 && ((1 << (_la - 62)) & 4261412867) !== 0) || ((((_la - 94)) & ~0x1F) === 0 && ((1 << (_la - 94)) & 31) !== 0)) {
 				{
-				this.state = 632;
-				this.expression();
+				{
+				this.state = 531;
+				this.expression(0);
+				}
+				}
+				this.state = 536;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
+			}
+			this.state = 540;
+			this._errHandler.sync(this);
+			_la = this._input.LA(1);
+			if (_la===86) {
+				{
+				this.state = 537;
+				this.match(LeoParser.THEN);
+				this.state = 538;
+				this.match(LeoParser.T__64);
+				this.state = 539;
+				this.function_arguments();
 				}
 			}
 
-			this.state = 638;
-			this._errHandler.sync(this);
-			_la = this._input.LA(1);
-			if (_la===60) {
-				{
-				this.state = 635;
-				this.match(LeoParser.T__59);
-				this.state = 636;
-				this.match(LeoParser.T__60);
-				this.state = 637;
-				this.functionArguments();
-				}
-			}
-
-			this.state = 640;
-			this.match(LeoParser.T__3);
+			this.state = 542;
+			this.match(LeoParser.T__65);
 			}
 		}
 		catch (re) {
@@ -3329,16 +2892,16 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public expressionStatement(): ExpressionStatementContext {
-		let localctx: ExpressionStatementContext = new ExpressionStatementContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 118, LeoParser.RULE_expressionStatement);
+	public expression_statement(): Expression_statementContext {
+		let localctx: Expression_statementContext = new Expression_statementContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 102, LeoParser.RULE_expression_statement);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 642;
-			this.expression();
-			this.state = 643;
-			this.match(LeoParser.T__3);
+			this.state = 544;
+			this.expression(0);
+			this.state = 545;
+			this.match(LeoParser.T__65);
 			}
 		}
 		catch (re) {
@@ -3356,35 +2919,26 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public variableDeclaration(): VariableDeclarationContext {
-		let localctx: VariableDeclarationContext = new VariableDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 120, LeoParser.RULE_variableDeclaration);
-		let _la: number;
+	public variable_declaration(): Variable_declarationContext {
+		let localctx: Variable_declarationContext = new Variable_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 104, LeoParser.RULE_variable_declaration);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 645;
-			this.match(LeoParser.T__61);
-			this.state = 646;
-			this.identifierOrIdentifiers();
-			this.state = 649;
-			this._errHandler.sync(this);
-			_la = this._input.LA(1);
-			if (_la===27) {
-				{
-				this.state = 647;
-				this.match(LeoParser.T__26);
-				this.state = 648;
-				this.type_();
-				}
-			}
-
-			this.state = 651;
-			this.match(LeoParser.T__53);
-			this.state = 652;
-			this.expression();
-			this.state = 653;
-			this.match(LeoParser.T__3);
+			this.state = 547;
+			this.match(LeoParser.T__66);
+			this.state = 548;
+			this.identifier_or_identifiers();
+			this.state = 549;
+			this.match(LeoParser.T__22);
+			this.state = 550;
+			this.type_();
+			this.state = 551;
+			this.match(LeoParser.T__44);
+			this.state = 552;
+			this.expression(0);
+			this.state = 553;
+			this.match(LeoParser.T__65);
 			}
 		}
 		catch (re) {
@@ -3402,52 +2956,65 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public identifierOrIdentifiers(): IdentifierOrIdentifiersContext {
-		let localctx: IdentifierOrIdentifiersContext = new IdentifierOrIdentifiersContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 122, LeoParser.RULE_identifierOrIdentifiers);
+	public identifier_or_identifiers(): Identifier_or_identifiersContext {
+		let localctx: Identifier_or_identifiersContext = new Identifier_or_identifiersContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 106, LeoParser.RULE_identifier_or_identifiers);
 		let _la: number;
 		try {
-			this.state = 667;
+			let _alt: number;
+			this.state = 569;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case 94:
+			case 87:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 655;
+				this.state = 555;
 				this.identifier();
 				}
 				break;
-			case 11:
+			case 16:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 656;
-				this.match(LeoParser.T__10);
-				this.state = 657;
+				{
+				this.state = 556;
+				this.match(LeoParser.T__15);
+				this.state = 557;
 				this.identifier();
-				this.state = 660;
+				this.state = 560;
 				this._errHandler.sync(this);
-				switch ( this._interp.adaptivePredict(this._input, 49, this._ctx) ) {
-				case 1:
-					{
-					this.state = 658;
-					this.match(LeoParser.T__11);
-					this.state = 659;
-					this.identifier();
+				_alt = 1;
+				do {
+					switch (_alt) {
+					case 1:
+						{
+						{
+						this.state = 558;
+						this.match(LeoParser.T__18);
+						this.state = 559;
+						this.identifier();
+						}
+						}
+						break;
+					default:
+						throw new NoViableAltException(this);
 					}
-					break;
-				}
-				this.state = 663;
+					this.state = 562;
+					this._errHandler.sync(this);
+					_alt = this._interp.adaptivePredict(this._input, 40, this._ctx);
+				} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
+				this.state = 565;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (_la===12) {
+				if (_la===19) {
 					{
-					this.state = 662;
-					this.match(LeoParser.T__11);
+					this.state = 564;
+					this.match(LeoParser.T__18);
 					}
 				}
 
-				this.state = 665;
-				this.match(LeoParser.T__12);
+				this.state = 567;
+				this.match(LeoParser.T__16);
+				}
 				}
 				break;
 			default:
@@ -3471,15 +3038,15 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public branch(): BranchContext {
 		let localctx: BranchContext = new BranchContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 124, LeoParser.RULE_branch);
+		this.enterRule(localctx, 108, LeoParser.RULE_branch);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 669;
-			this.match(LeoParser.T__62);
-			this.state = 670;
-			this.expression();
-			this.state = 671;
+			this.state = 571;
+			this.match(LeoParser.T__67);
+			this.state = 572;
+			this.expression(0);
+			this.state = 573;
 			this.block();
 			}
 		}
@@ -3498,40 +3065,44 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public conditionalStatement(): ConditionalStatementContext {
-		let localctx: ConditionalStatementContext = new ConditionalStatementContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 126, LeoParser.RULE_conditionalStatement);
+	public conditional_statement(): Conditional_statementContext {
+		let localctx: Conditional_statementContext = new Conditional_statementContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 110, LeoParser.RULE_conditional_statement);
 		try {
-			this.state = 682;
+			this.state = 584;
 			this._errHandler.sync(this);
-			switch ( this._interp.adaptivePredict(this._input, 52, this._ctx) ) {
+			switch ( this._interp.adaptivePredict(this._input, 43, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 673;
+				this.state = 575;
 				this.branch();
 				}
 				break;
 			case 2:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 674;
+				{
+				this.state = 576;
 				this.branch();
-				this.state = 675;
-				this.match(LeoParser.T__63);
-				this.state = 676;
+				this.state = 577;
+				this.match(LeoParser.T__68);
+				this.state = 578;
 				this.block();
+				}
 				}
 				break;
 			case 3:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 678;
+				{
+				this.state = 580;
 				this.branch();
-				this.state = 679;
-				this.match(LeoParser.T__63);
-				this.state = 680;
-				this.conditionalStatement();
+				this.state = 581;
+				this.match(LeoParser.T__68);
+				this.state = 582;
+				this.conditional_statement();
+				}
 				}
 				break;
 			}
@@ -3551,22 +3122,45 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public assignmentOperator(): AssignmentOperatorContext {
-		let localctx: AssignmentOperatorContext = new AssignmentOperatorContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 128, LeoParser.RULE_assignmentOperator);
+	public loop_statement(): Loop_statementContext {
+		let localctx: Loop_statementContext = new Loop_statementContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 112, LeoParser.RULE_loop_statement);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 684;
+			this.state = 586;
+			this.match(LeoParser.T__69);
+			this.state = 587;
+			this.identifier();
+			this.state = 588;
+			this.match(LeoParser.T__22);
+			this.state = 589;
+			this.type_();
+			this.state = 590;
+			this.match(LeoParser.T__70);
+			this.state = 591;
+			this.expression(0);
+			{
+			this.state = 592;
+			this.match(LeoParser.T__13);
+			this.state = 593;
+			this.match(LeoParser.T__13);
+			}
+			this.state = 596;
+			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if(!(((((_la - 54)) & ~0x1F) === 0 && ((1 << (_la - 54)) & 16775169) !== 0))) {
-			this._errHandler.recoverInline(this);
+			if (_la===45) {
+				{
+				this.state = 595;
+				this.match(LeoParser.T__44);
+				}
 			}
-			else {
-				this._errHandler.reportMatch(this);
-			    this.consume();
-			}
+
+			this.state = 598;
+			this.expression(0);
+			this.state = 599;
+			this.block();
 			}
 		}
 		catch (re) {
@@ -3584,20 +3178,29 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public assignmentStatement(): AssignmentStatementContext {
-		let localctx: AssignmentStatementContext = new AssignmentStatementContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 130, LeoParser.RULE_assignmentStatement);
+	public console_statement(): Console_statementContext {
+		let localctx: Console_statementContext = new Console_statementContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 114, LeoParser.RULE_console_statement);
+		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 686;
-			this.expression();
-			this.state = 687;
-			this.assignmentOperator();
-			this.state = 688;
-			this.expression();
-			this.state = 689;
-			this.match(LeoParser.T__3);
+			this.state = 603;
+			this._errHandler.sync(this);
+			_la = this._input.LA(1);
+			if (_la===72) {
+				{
+				this.state = 601;
+				this.match(LeoParser.T__71);
+				this.state = 602;
+				this.match(LeoParser.T__13);
+				}
+			}
+
+			this.state = 605;
+			this.console_call();
+			this.state = 606;
+			this.match(LeoParser.T__65);
 			}
 		}
 		catch (re) {
@@ -3615,59 +3218,32 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public consoleStatement(): ConsoleStatementContext {
-		let localctx: ConsoleStatementContext = new ConsoleStatementContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 132, LeoParser.RULE_consoleStatement);
+	public console_call(): Console_callContext {
+		let localctx: Console_callContext = new Console_callContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 116, LeoParser.RULE_console_call);
 		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 691;
-			this.consoleCall();
-			this.state = 692;
-			this.match(LeoParser.T__3);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public consoleCall(): ConsoleCallContext {
-		let localctx: ConsoleCallContext = new ConsoleCallContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 134, LeoParser.RULE_consoleCall);
-		try {
-			this.state = 697;
+			this.state = 611;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case 78:
+			case 73:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 694;
-				this.assertCall();
+				this.state = 608;
+				this.assert_call();
 				}
 				break;
-			case 79:
+			case 74:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 695;
-				this.assertEqualCall();
+				this.state = 609;
+				this.assert_equal_call();
 				}
 				break;
-			case 80:
+			case 75:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 696;
-				this.assertNotEqualCall();
+				this.state = 610;
+				this.assert_not_equal_call();
 				}
 				break;
 			default:
@@ -3689,20 +3265,20 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public assertCall(): AssertCallContext {
-		let localctx: AssertCallContext = new AssertCallContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 136, LeoParser.RULE_assertCall);
+	public assert_call(): Assert_callContext {
+		let localctx: Assert_callContext = new Assert_callContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 118, LeoParser.RULE_assert_call);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 699;
-			this.match(LeoParser.T__77);
-			this.state = 700;
-			this.match(LeoParser.T__10);
-			this.state = 701;
-			this.expression();
-			this.state = 702;
-			this.match(LeoParser.T__12);
+			this.state = 613;
+			this.match(LeoParser.T__72);
+			this.state = 614;
+			this.match(LeoParser.T__15);
+			this.state = 615;
+			this.expression(0);
+			this.state = 616;
+			this.match(LeoParser.T__16);
 			}
 		}
 		catch (re) {
@@ -3720,35 +3296,35 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public assertEqualCall(): AssertEqualCallContext {
-		let localctx: AssertEqualCallContext = new AssertEqualCallContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 138, LeoParser.RULE_assertEqualCall);
+	public assert_equal_call(): Assert_equal_callContext {
+		let localctx: Assert_equal_callContext = new Assert_equal_callContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 120, LeoParser.RULE_assert_equal_call);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 704;
-			this.match(LeoParser.T__78);
-			this.state = 705;
-			this.match(LeoParser.T__10);
-			this.state = 706;
-			this.expression();
-			this.state = 707;
-			this.match(LeoParser.T__11);
-			this.state = 708;
-			this.expression();
-			this.state = 710;
+			this.state = 618;
+			this.match(LeoParser.T__73);
+			this.state = 619;
+			this.match(LeoParser.T__15);
+			this.state = 620;
+			this.expression(0);
+			this.state = 621;
+			this.match(LeoParser.T__18);
+			this.state = 622;
+			this.expression(0);
+			this.state = 624;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===12) {
+			if (_la===19) {
 				{
-				this.state = 709;
-				this.match(LeoParser.T__11);
+				this.state = 623;
+				this.match(LeoParser.T__18);
 				}
 			}
 
-			this.state = 712;
-			this.match(LeoParser.T__12);
+			this.state = 626;
+			this.match(LeoParser.T__16);
 			}
 		}
 		catch (re) {
@@ -3766,35 +3342,35 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public assertNotEqualCall(): AssertNotEqualCallContext {
-		let localctx: AssertNotEqualCallContext = new AssertNotEqualCallContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 140, LeoParser.RULE_assertNotEqualCall);
+	public assert_not_equal_call(): Assert_not_equal_callContext {
+		let localctx: Assert_not_equal_callContext = new Assert_not_equal_callContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 122, LeoParser.RULE_assert_not_equal_call);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 714;
-			this.match(LeoParser.T__79);
-			this.state = 715;
-			this.match(LeoParser.T__10);
-			this.state = 716;
-			this.expression();
-			this.state = 717;
-			this.match(LeoParser.T__11);
-			this.state = 718;
-			this.expression();
-			this.state = 720;
+			this.state = 628;
+			this.match(LeoParser.T__74);
+			this.state = 629;
+			this.match(LeoParser.T__15);
+			this.state = 630;
+			this.expression(0);
+			this.state = 631;
+			this.match(LeoParser.T__18);
+			this.state = 632;
+			this.expression(0);
+			this.state = 634;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===12) {
+			if (_la===19) {
 				{
-				this.state = 719;
-				this.match(LeoParser.T__11);
+				this.state = 633;
+				this.match(LeoParser.T__18);
 				}
 			}
 
-			this.state = 722;
-			this.match(LeoParser.T__12);
+			this.state = 636;
+			this.match(LeoParser.T__16);
 			}
 		}
 		catch (re) {
@@ -3812,58 +3388,62 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public functionDeclaration(): FunctionDeclarationContext {
-		let localctx: FunctionDeclarationContext = new FunctionDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 142, LeoParser.RULE_functionDeclaration);
+	public function_declaration(): Function_declarationContext {
+		let localctx: Function_declarationContext = new Function_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 124, LeoParser.RULE_function_declaration);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 727;
+			this.state = 641;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===8) {
+			while (_la===13) {
 				{
 				{
-				this.state = 724;
+				this.state = 638;
 				this.annotation();
 				}
 				}
-				this.state = 729;
+				this.state = 643;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 730;
-			this.match(LeoParser.T__80);
-			this.state = 731;
+			this.state = 644;
+			this.match(LeoParser.T__75);
+			this.state = 645;
 			this.identifier();
-			this.state = 732;
-			this.match(LeoParser.T__10);
-			this.state = 734;
+			this.state = 646;
+			this.match(LeoParser.T__15);
+			this.state = 648;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 2055) !== 0)) {
+			if (((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 1031) !== 0)) {
 				{
-				this.state = 733;
-				this.functionParameters();
+				this.state = 647;
+				this.function_parameters();
 				}
 			}
 
-			this.state = 736;
-			this.match(LeoParser.T__12);
-			this.state = 739;
+			this.state = 650;
+			this.match(LeoParser.T__16);
+			this.state = 655;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===82) {
+			if (_la===20) {
 				{
-				this.state = 737;
-				this.match(LeoParser.T__81);
-				this.state = 738;
+				{
+				this.state = 651;
+				this.match(LeoParser.T__19);
+				this.state = 652;
+				this.match(LeoParser.T__36);
+				}
+				this.state = 654;
 				this.type_();
 				}
 			}
 
-			this.state = 741;
+			this.state = 657;
 			this.block();
 			}
 		}
@@ -3882,41 +3462,41 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public functionParameters(): FunctionParametersContext {
-		let localctx: FunctionParametersContext = new FunctionParametersContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 144, LeoParser.RULE_functionParameters);
+	public function_parameters(): Function_parametersContext {
+		let localctx: Function_parametersContext = new Function_parametersContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 126, LeoParser.RULE_function_parameters);
 		let _la: number;
 		try {
 			let _alt: number;
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 743;
-			this.functionParameter();
-			this.state = 748;
+			this.state = 659;
+			this.function_parameter();
+			this.state = 664;
 			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 59, this._ctx);
+			_alt = this._interp.adaptivePredict(this._input, 52, this._ctx);
 			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 				if (_alt === 1) {
 					{
 					{
-					this.state = 744;
-					this.match(LeoParser.T__11);
-					this.state = 745;
-					this.functionParameter();
+					this.state = 660;
+					this.match(LeoParser.T__18);
+					this.state = 661;
+					this.function_parameter();
 					}
 					}
 				}
-				this.state = 750;
+				this.state = 666;
 				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 59, this._ctx);
+				_alt = this._interp.adaptivePredict(this._input, 52, this._ctx);
 			}
-			this.state = 752;
+			this.state = 668;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===12) {
+			if (_la===19) {
 				{
-				this.state = 751;
-				this.match(LeoParser.T__11);
+				this.state = 667;
+				this.match(LeoParser.T__18);
 				}
 			}
 
@@ -3937,21 +3517,21 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public functionParameter(): FunctionParameterContext {
-		let localctx: FunctionParameterContext = new FunctionParameterContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 146, LeoParser.RULE_functionParameter);
+	public function_parameter(): Function_parameterContext {
+		let localctx: Function_parameterContext = new Function_parameterContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 128, LeoParser.RULE_function_parameter);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 755;
+			this.state = 671;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0)) {
+			if (((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 7) !== 0)) {
 				{
-				this.state = 754;
+				this.state = 670;
 				_la = this._input.LA(1);
-				if(!(((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0))) {
+				if(!(((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 7) !== 0))) {
 				this._errHandler.recoverInline(this);
 				}
 				else {
@@ -3961,11 +3541,11 @@ export default class LeoParser extends Parser {
 				}
 			}
 
-			this.state = 757;
+			this.state = 673;
 			this.identifier();
-			this.state = 758;
-			this.match(LeoParser.T__26);
-			this.state = 759;
+			this.state = 674;
+			this.match(LeoParser.T__22);
+			this.state = 675;
 			this.type_();
 			}
 		}
@@ -3984,58 +3564,62 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public inlineDeclaration(): InlineDeclarationContext {
-		let localctx: InlineDeclarationContext = new InlineDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 148, LeoParser.RULE_inlineDeclaration);
+	public inline_declaration(): Inline_declarationContext {
+		let localctx: Inline_declarationContext = new Inline_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 130, LeoParser.RULE_inline_declaration);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 764;
+			this.state = 680;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===8) {
+			while (_la===13) {
 				{
 				{
-				this.state = 761;
+				this.state = 677;
 				this.annotation();
 				}
 				}
-				this.state = 766;
+				this.state = 682;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 767;
-			this.match(LeoParser.T__85);
-			this.state = 768;
+			this.state = 683;
+			this.match(LeoParser.T__79);
+			this.state = 684;
 			this.identifier();
-			this.state = 769;
-			this.match(LeoParser.T__10);
-			this.state = 771;
+			this.state = 685;
+			this.match(LeoParser.T__15);
+			this.state = 687;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 2055) !== 0)) {
+			if (((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 1031) !== 0)) {
 				{
-				this.state = 770;
-				this.functionParameters();
+				this.state = 686;
+				this.function_parameters();
 				}
 			}
 
-			this.state = 773;
-			this.match(LeoParser.T__12);
-			this.state = 776;
+			this.state = 689;
+			this.match(LeoParser.T__16);
+			this.state = 694;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===82) {
+			if (_la===20) {
 				{
-				this.state = 774;
-				this.match(LeoParser.T__81);
-				this.state = 775;
+				{
+				this.state = 690;
+				this.match(LeoParser.T__19);
+				this.state = 691;
+				this.match(LeoParser.T__36);
+				}
+				this.state = 693;
 				this.type_();
 				}
 			}
 
-			this.state = 778;
+			this.state = 696;
 			this.block();
 			}
 		}
@@ -4054,60 +3638,64 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public transitionDeclaration(): TransitionDeclarationContext {
-		let localctx: TransitionDeclarationContext = new TransitionDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 150, LeoParser.RULE_transitionDeclaration);
+	public transition_declaration(): Transition_declarationContext {
+		let localctx: Transition_declarationContext = new Transition_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 132, LeoParser.RULE_transition_declaration);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 783;
+			this.state = 701;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===8) {
+			while (_la===13) {
 				{
 				{
-				this.state = 780;
+				this.state = 698;
 				this.annotation();
 				}
 				}
-				this.state = 785;
+				this.state = 703;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 786;
-			this.match(LeoParser.T__86);
-			this.state = 787;
+			this.state = 704;
+			this.match(LeoParser.T__80);
+			this.state = 705;
 			this.identifier();
-			this.state = 788;
-			this.match(LeoParser.T__10);
-			this.state = 790;
+			this.state = 706;
+			this.match(LeoParser.T__15);
+			this.state = 708;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 2055) !== 0)) {
+			if (((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 1031) !== 0)) {
 				{
-				this.state = 789;
-				this.functionParameters();
+				this.state = 707;
+				this.function_parameters();
 				}
 			}
 
-			this.state = 792;
-			this.match(LeoParser.T__12);
-			this.state = 798;
+			this.state = 710;
+			this.match(LeoParser.T__16);
+			this.state = 718;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===82) {
+			if (_la===20) {
 				{
-				this.state = 793;
-				this.match(LeoParser.T__81);
-				this.state = 795;
+				{
+				this.state = 711;
+				this.match(LeoParser.T__19);
+				this.state = 712;
+				this.match(LeoParser.T__36);
+				}
+				this.state = 715;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0)) {
+				if (((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 7) !== 0)) {
 					{
-					this.state = 794;
+					this.state = 714;
 					_la = this._input.LA(1);
-					if(!(((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0))) {
+					if(!(((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 7) !== 0))) {
 					this._errHandler.recoverInline(this);
 					}
 					else {
@@ -4117,19 +3705,19 @@ export default class LeoParser extends Parser {
 					}
 				}
 
-				this.state = 797;
+				this.state = 717;
 				this.type_();
 				}
 			}
 
-			this.state = 800;
+			this.state = 720;
 			this.block();
-			this.state = 802;
+			this.state = 722;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===61) {
+			if (_la===65) {
 				{
-				this.state = 801;
+				this.state = 721;
 				this.finalizer();
 				}
 			}
@@ -4153,43 +3741,63 @@ export default class LeoParser extends Parser {
 	// @RuleVersion(0)
 	public finalizer(): FinalizerContext {
 		let localctx: FinalizerContext = new FinalizerContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 152, LeoParser.RULE_finalizer);
+		this.enterRule(localctx, 134, LeoParser.RULE_finalizer);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 804;
-			this.match(LeoParser.T__60);
-			this.state = 805;
+			this.state = 724;
+			this.match(LeoParser.T__64);
+			this.state = 725;
 			this.identifier();
-			this.state = 806;
-			this.match(LeoParser.T__10);
-			this.state = 807;
-			this.functionParameters();
-			this.state = 808;
-			this.match(LeoParser.T__12);
-			this.state = 812;
+			this.state = 726;
+			this.match(LeoParser.T__15);
+			this.state = 728;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===82) {
+			if (((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 1031) !== 0)) {
 				{
-				this.state = 809;
-				this.match(LeoParser.T__81);
-				this.state = 810;
+				this.state = 727;
+				this.function_parameters();
+				}
+			}
+
+			this.state = 730;
+			this.match(LeoParser.T__16);
+			this.state = 738;
+			this._errHandler.sync(this);
+			_la = this._input.LA(1);
+			if (_la===20) {
+				{
+				{
+				this.state = 731;
+				this.match(LeoParser.T__19);
+				this.state = 732;
+				this.match(LeoParser.T__36);
+				}
+				this.state = 735;
+				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if(!(((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0))) {
-				this._errHandler.recoverInline(this);
+				if (((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 7) !== 0)) {
+					{
+					this.state = 734;
+					_la = this._input.LA(1);
+					if(!(((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 7) !== 0))) {
+					this._errHandler.recoverInline(this);
+					}
+					else {
+						this._errHandler.reportMatch(this);
+					    this.consume();
+					}
+					}
 				}
-				else {
-					this._errHandler.reportMatch(this);
-				    this.consume();
-				}
-				this.state = 811;
+
+				this.state = 737;
 				this.type_();
 				}
 			}
 
-			this.state = 814;
+			this.state = 740;
 			this.block();
 			}
 		}
@@ -4208,22 +3816,22 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public structDeclaration(): StructDeclarationContext {
-		let localctx: StructDeclarationContext = new StructDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 154, LeoParser.RULE_structDeclaration);
+	public struct_declaration(): Struct_declarationContext {
+		let localctx: Struct_declarationContext = new Struct_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 136, LeoParser.RULE_struct_declaration);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 816;
-			this.match(LeoParser.T__87);
-			this.state = 817;
+			this.state = 742;
+			this.match(LeoParser.T__81);
+			this.state = 743;
 			this.identifier();
-			this.state = 818;
-			this.match(LeoParser.T__5);
-			this.state = 819;
-			this.structComponentDeclarations();
-			this.state = 820;
-			this.match(LeoParser.T__6);
+			this.state = 744;
+			this.match(LeoParser.T__23);
+			this.state = 745;
+			this.struct_component_declarations();
+			this.state = 746;
+			this.match(LeoParser.T__24);
 			}
 		}
 		catch (re) {
@@ -4241,41 +3849,41 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public structComponentDeclarations(): StructComponentDeclarationsContext {
-		let localctx: StructComponentDeclarationsContext = new StructComponentDeclarationsContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 156, LeoParser.RULE_structComponentDeclarations);
+	public struct_component_declarations(): Struct_component_declarationsContext {
+		let localctx: Struct_component_declarationsContext = new Struct_component_declarationsContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 138, LeoParser.RULE_struct_component_declarations);
 		let _la: number;
 		try {
 			let _alt: number;
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 822;
-			this.structComponentDeclaration();
-			this.state = 827;
+			this.state = 748;
+			this.struct_component_declaration();
+			this.state = 753;
 			this._errHandler.sync(this);
-			_alt = this._interp.adaptivePredict(this._input, 71, this._ctx);
+			_alt = this._interp.adaptivePredict(this._input, 66, this._ctx);
 			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 				if (_alt === 1) {
 					{
 					{
-					this.state = 823;
-					this.match(LeoParser.T__11);
-					this.state = 824;
-					this.structComponentDeclaration();
+					this.state = 749;
+					this.match(LeoParser.T__18);
+					this.state = 750;
+					this.struct_component_declaration();
 					}
 					}
 				}
-				this.state = 829;
+				this.state = 755;
 				this._errHandler.sync(this);
-				_alt = this._interp.adaptivePredict(this._input, 71, this._ctx);
+				_alt = this._interp.adaptivePredict(this._input, 66, this._ctx);
 			}
-			this.state = 831;
+			this.state = 757;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===12) {
+			if (_la===19) {
 				{
-				this.state = 830;
-				this.match(LeoParser.T__11);
+				this.state = 756;
+				this.match(LeoParser.T__18);
 				}
 			}
 
@@ -4296,21 +3904,21 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public structComponentDeclaration(): StructComponentDeclarationContext {
-		let localctx: StructComponentDeclarationContext = new StructComponentDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 158, LeoParser.RULE_structComponentDeclaration);
+	public struct_component_declaration(): Struct_component_declarationContext {
+		let localctx: Struct_component_declarationContext = new Struct_component_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 140, LeoParser.RULE_struct_component_declaration);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 834;
+			this.state = 760;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0)) {
+			if (((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 7) !== 0)) {
 				{
-				this.state = 833;
+				this.state = 759;
 				_la = this._input.LA(1);
-				if(!(((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0))) {
+				if(!(((((_la - 77)) & ~0x1F) === 0 && ((1 << (_la - 77)) & 7) !== 0))) {
 				this._errHandler.recoverInline(this);
 				}
 				else {
@@ -4320,11 +3928,11 @@ export default class LeoParser extends Parser {
 				}
 			}
 
-			this.state = 836;
+			this.state = 762;
 			this.identifier();
-			this.state = 837;
-			this.match(LeoParser.T__26);
-			this.state = 838;
+			this.state = 763;
+			this.match(LeoParser.T__22);
+			this.state = 764;
 			this.type_();
 			}
 		}
@@ -4343,22 +3951,22 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public recordDeclaration(): RecordDeclarationContext {
-		let localctx: RecordDeclarationContext = new RecordDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 160, LeoParser.RULE_recordDeclaration);
+	public record_declaration(): Record_declarationContext {
+		let localctx: Record_declarationContext = new Record_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 142, LeoParser.RULE_record_declaration);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 840;
-			this.match(LeoParser.T__9);
-			this.state = 841;
+			this.state = 766;
+			this.match(LeoParser.T__17);
+			this.state = 767;
 			this.identifier();
-			this.state = 842;
-			this.match(LeoParser.T__5);
-			this.state = 843;
-			this.structComponentDeclarations();
-			this.state = 844;
-			this.match(LeoParser.T__6);
+			this.state = 768;
+			this.match(LeoParser.T__23);
+			this.state = 769;
+			this.struct_component_declarations();
+			this.state = 770;
+			this.match(LeoParser.T__24);
 			}
 		}
 		catch (re) {
@@ -4376,26 +3984,30 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public mappingDeclaration(): MappingDeclarationContext {
-		let localctx: MappingDeclarationContext = new MappingDeclarationContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 162, LeoParser.RULE_mappingDeclaration);
+	public mapping_declaration(): Mapping_declarationContext {
+		let localctx: Mapping_declarationContext = new Mapping_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 144, LeoParser.RULE_mapping_declaration);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 846;
-			this.match(LeoParser.T__88);
-			this.state = 847;
+			this.state = 772;
+			this.match(LeoParser.T__82);
+			this.state = 773;
 			this.identifier();
-			this.state = 848;
-			this.match(LeoParser.T__26);
-			this.state = 849;
+			this.state = 774;
+			this.match(LeoParser.T__22);
+			this.state = 775;
 			this.type_();
-			this.state = 850;
-			this.match(LeoParser.T__89);
-			this.state = 851;
+			{
+			this.state = 776;
+			this.match(LeoParser.T__44);
+			this.state = 777;
+			this.match(LeoParser.T__36);
+			}
+			this.state = 779;
 			this.type_();
-			this.state = 852;
-			this.match(LeoParser.T__3);
+			this.state = 780;
+			this.match(LeoParser.T__65);
 			}
 		}
 		catch (re) {
@@ -4413,16 +4025,55 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public file(): FileContext {
-		let localctx: FileContext = new FileContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 164, LeoParser.RULE_file);
+	public program_item(): Program_itemContext {
+		let localctx: Program_itemContext = new Program_itemContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 146, LeoParser.RULE_program_item);
 		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 854;
-			this.importDeclaration();
-			this.state = 855;
-			this.programDeclaration();
+			this.state = 788;
+			this._errHandler.sync(this);
+			switch ( this._interp.adaptivePredict(this._input, 69, this._ctx) ) {
+			case 1:
+				this.enterOuterAlt(localctx, 1);
+				{
+				this.state = 782;
+				this.function_declaration();
+				}
+				break;
+			case 2:
+				this.enterOuterAlt(localctx, 2);
+				{
+				this.state = 783;
+				this.inline_declaration();
+				}
+				break;
+			case 3:
+				this.enterOuterAlt(localctx, 3);
+				{
+				this.state = 784;
+				this.transition_declaration();
+				}
+				break;
+			case 4:
+				this.enterOuterAlt(localctx, 4);
+				{
+				this.state = 785;
+				this.struct_declaration();
+				}
+				break;
+			case 5:
+				this.enterOuterAlt(localctx, 5);
+				{
+				this.state = 786;
+				this.record_declaration();
+				}
+				break;
+			case 6:
+				this.enterOuterAlt(localctx, 6);
+				{
+				this.state = 787;
+				this.mapping_declaration();
+				}
+				break;
 			}
 		}
 		catch (re) {
@@ -4440,138 +4091,35 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public inputType(): InputTypeContext {
-		let localctx: InputTypeContext = new InputTypeContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 166, LeoParser.RULE_inputType);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 857;
-			this.type_();
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public inputExpression(): InputExpressionContext {
-		let localctx: InputExpressionContext = new InputExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 168, LeoParser.RULE_inputExpression);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 859;
-			this.expression();
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public inputItem(): InputItemContext {
-		let localctx: InputItemContext = new InputItemContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 170, LeoParser.RULE_inputItem);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 861;
-			this.identifier();
-			this.state = 862;
-			this.match(LeoParser.T__26);
-			this.state = 863;
-			this.inputType();
-			this.state = 864;
-			this.match(LeoParser.T__53);
-			this.state = 865;
-			this.inputExpression();
-			this.state = 866;
-			this.match(LeoParser.T__3);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public inputTitle(): InputTitleContext {
-		let localctx: InputTitleContext = new InputTitleContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 172, LeoParser.RULE_inputTitle);
+	public program_declaration(): Program_declarationContext {
+		let localctx: Program_declarationContext = new Program_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 148, LeoParser.RULE_program_declaration);
 		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 868;
-			this.match(LeoParser.T__90);
-			this.state = 869;
+			this.state = 790;
+			this.match(LeoParser.T__83);
+			this.state = 791;
+			this.program_id();
+			this.state = 792;
+			this.match(LeoParser.T__23);
+			this.state = 796;
+			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if(!(((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0))) {
-			this._errHandler.recoverInline(this);
+			while (_la===13 || _la===18 || ((((_la - 76)) & ~0x1F) === 0 && ((1 << (_la - 76)) & 241) !== 0)) {
+				{
+				{
+				this.state = 793;
+				this.program_item();
+				}
+				}
+				this.state = 798;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
 			}
-			else {
-				this._errHandler.reportMatch(this);
-			    this.consume();
-			}
-			this.state = 870;
-			this.match(LeoParser.T__91);
-			}
-		}
-		catch (re) {
-			if (re instanceof RecognitionException) {
-				localctx.exception = re;
-				this._errHandler.reportError(this, re);
-				this._errHandler.recover(this, re);
-			} else {
-				throw re;
-			}
-		}
-		finally {
-			this.exitRule();
-		}
-		return localctx;
-	}
-	// @RuleVersion(0)
-	public inputSection(): InputSectionContext {
-		let localctx: InputSectionContext = new InputSectionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 174, LeoParser.RULE_inputSection);
-		try {
-			this.enterOuterAlt(localctx, 1);
-			{
-			this.state = 872;
-			this.inputTitle();
-			this.state = 873;
-			this.inputItem();
+			this.state = 799;
+			this.match(LeoParser.T__24);
 			}
 		}
 		catch (re) {
@@ -4589,14 +4137,18 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public inputFile(): InputFileContext {
-		let localctx: InputFileContext = new InputFileContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 176, LeoParser.RULE_inputFile);
+	public import_declaration(): Import_declarationContext {
+		let localctx: Import_declarationContext = new Import_declarationContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 150, LeoParser.RULE_import_declaration);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 875;
-			this.inputSection();
+			this.state = 801;
+			this.match(LeoParser.T__84);
+			this.state = 802;
+			this.program_id();
+			this.state = 803;
+			this.match(LeoParser.T__65);
 			}
 		}
 		catch (re) {
@@ -4614,14 +4166,29 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public outputExpression(): OutputExpressionContext {
-		let localctx: OutputExpressionContext = new OutputExpressionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 178, LeoParser.RULE_outputExpression);
+	public sourceUnit(): SourceUnitContext {
+		let localctx: SourceUnitContext = new SourceUnitContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 152, LeoParser.RULE_sourceUnit);
+		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 877;
-			this.expression();
+			this.state = 808;
+			this._errHandler.sync(this);
+			_la = this._input.LA(1);
+			while (_la===85) {
+				{
+				{
+				this.state = 805;
+				this.import_declaration();
+				}
+				}
+				this.state = 810;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
+			}
+			this.state = 811;
+			this.program_declaration();
 			}
 		}
 		catch (re) {
@@ -4639,16 +4206,14 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public outputItem(): OutputItemContext {
-		let localctx: OutputItemContext = new OutputItemContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 180, LeoParser.RULE_outputItem);
+	public input_type(): Input_typeContext {
+		let localctx: Input_typeContext = new Input_typeContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 154, LeoParser.RULE_input_type);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 879;
-			this.outputExpression();
-			this.state = 880;
-			this.match(LeoParser.T__3);
+			this.state = 813;
+			this.type_();
 			}
 		}
 		catch (re) {
@@ -4666,18 +4231,14 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public outputTitle(): OutputTitleContext {
-		let localctx: OutputTitleContext = new OutputTitleContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 182, LeoParser.RULE_outputTitle);
+	public input_expression(): Input_expressionContext {
+		let localctx: Input_expressionContext = new Input_expressionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 156, LeoParser.RULE_input_expression);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 882;
-			this.match(LeoParser.T__90);
-			this.state = 883;
-			this.match(LeoParser.T__92);
-			this.state = 884;
-			this.match(LeoParser.T__91);
+			this.state = 815;
+			this.expression(0);
 			}
 		}
 		catch (re) {
@@ -4695,16 +4256,24 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public outputSection(): OutputSectionContext {
-		let localctx: OutputSectionContext = new OutputSectionContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 184, LeoParser.RULE_outputSection);
+	public input_item(): Input_itemContext {
+		let localctx: Input_itemContext = new Input_itemContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 158, LeoParser.RULE_input_item);
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 886;
-			this.outputTitle();
-			this.state = 887;
-			this.outputItem();
+			this.state = 817;
+			this.identifier();
+			this.state = 818;
+			this.match(LeoParser.T__22);
+			this.state = 819;
+			this.input_type();
+			this.state = 820;
+			this.match(LeoParser.T__44);
+			this.state = 821;
+			this.input_expression();
+			this.state = 822;
+			this.match(LeoParser.T__65);
 			}
 		}
 		catch (re) {
@@ -4722,14 +4291,171 @@ export default class LeoParser extends Parser {
 		return localctx;
 	}
 	// @RuleVersion(0)
-	public outputFile(): OutputFileContext {
-		let localctx: OutputFileContext = new OutputFileContext(this, this._ctx, this.state);
-		this.enterRule(localctx, 186, LeoParser.RULE_outputFile);
+	public input_section(): Input_sectionContext {
+		let localctx: Input_sectionContext = new Input_sectionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 160, LeoParser.RULE_input_section);
+		let _la: number;
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 889;
-			this.outputSection();
+			this.state = 824;
+			this.match(LeoParser.INPUT_TITLE);
+			this.state = 828;
+			this._errHandler.sync(this);
+			_la = this._input.LA(1);
+			while (_la===87) {
+				{
+				{
+				this.state = 825;
+				this.input_item();
+				}
+				}
+				this.state = 830;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
+			}
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public input_file(): Input_fileContext {
+		let localctx: Input_fileContext = new Input_fileContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 162, LeoParser.RULE_input_file);
+		let _la: number;
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 834;
+			this._errHandler.sync(this);
+			_la = this._input.LA(1);
+			while (_la===99) {
+				{
+				{
+				this.state = 831;
+				this.input_section();
+				}
+				}
+				this.state = 836;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
+			}
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public output_expression(): Output_expressionContext {
+		let localctx: Output_expressionContext = new Output_expressionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 164, LeoParser.RULE_output_expression);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 837;
+			this.expression(0);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public output_item(): Output_itemContext {
+		let localctx: Output_itemContext = new Output_itemContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 166, LeoParser.RULE_output_item);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 839;
+			this.output_expression();
+			this.state = 840;
+			this.match(LeoParser.T__65);
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public output_section(): Output_sectionContext {
+		let localctx: Output_sectionContext = new Output_sectionContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 168, LeoParser.RULE_output_section);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 842;
+			this.match(LeoParser.OUTPUT_TITLE);
+			this.state = 843;
+			this.output_item();
+			}
+		}
+		catch (re) {
+			if (re instanceof RecognitionException) {
+				localctx.exception = re;
+				this._errHandler.reportError(this, re);
+				this._errHandler.recover(this, re);
+			} else {
+				throw re;
+			}
+		}
+		finally {
+			this.exitRule();
+		}
+		return localctx;
+	}
+	// @RuleVersion(0)
+	public output_file(): Output_fileContext {
+		let localctx: Output_fileContext = new Output_fileContext(this, this._ctx, this.state);
+		this.enterRule(localctx, 170, LeoParser.RULE_output_file);
+		try {
+			this.enterOuterAlt(localctx, 1);
+			{
+			this.state = 845;
+			this.output_section();
 			}
 		}
 		catch (re) {
@@ -4749,91 +4475,44 @@ export default class LeoParser extends Parser {
 
 	public sempred(localctx: RuleContext, ruleIndex: number, predIndex: number): boolean {
 		switch (ruleIndex) {
-		case 40:
-			return this.multiplicativeExpression_sempred(localctx as MultiplicativeExpressionContext, predIndex);
-		case 41:
-			return this.additiveExpression_sempred(localctx as AdditiveExpressionContext, predIndex);
-		case 42:
-			return this.shiftExpression_sempred(localctx as ShiftExpressionContext, predIndex);
 		case 43:
-			return this.conjunctiveExpression_sempred(localctx as ConjunctiveExpressionContext, predIndex);
-		case 44:
-			return this.disjunctiveExpression_sempred(localctx as DisjunctiveExpressionContext, predIndex);
-		case 45:
-			return this.exclusiveDisjunctiveExpression_sempred(localctx as ExclusiveDisjunctiveExpressionContext, predIndex);
-		case 48:
-			return this.conditionalConjunctiveExpression_sempred(localctx as ConditionalConjunctiveExpressionContext, predIndex);
-		case 49:
-			return this.conditionalDisjunctiveExpression_sempred(localctx as ConditionalDisjunctiveExpressionContext, predIndex);
+			return this.expression_sempred(localctx as ExpressionContext, predIndex);
 		}
 		return true;
 	}
-	private multiplicativeExpression_sempred(localctx: MultiplicativeExpressionContext, predIndex: number): boolean {
+	private expression_sempred(localctx: ExpressionContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 0:
-			return this.precpred(this._ctx, 3);
+			return this.precpred(this._ctx, 14);
 		case 1:
-			return this.precpred(this._ctx, 2);
+			return this.precpred(this._ctx, 13);
 		case 2:
-			return this.precpred(this._ctx, 1);
-		}
-		return true;
-	}
-	private additiveExpression_sempred(localctx: AdditiveExpressionContext, predIndex: number): boolean {
-		switch (predIndex) {
+			return this.precpred(this._ctx, 12);
 		case 3:
-			return this.precpred(this._ctx, 2);
+			return this.precpred(this._ctx, 11);
 		case 4:
-			return this.precpred(this._ctx, 1);
-		}
-		return true;
-	}
-	private shiftExpression_sempred(localctx: ShiftExpressionContext, predIndex: number): boolean {
-		switch (predIndex) {
+			return this.precpred(this._ctx, 10);
 		case 5:
-			return this.precpred(this._ctx, 2);
+			return this.precpred(this._ctx, 9);
 		case 6:
-			return this.precpred(this._ctx, 1);
-		}
-		return true;
-	}
-	private conjunctiveExpression_sempred(localctx: ConjunctiveExpressionContext, predIndex: number): boolean {
-		switch (predIndex) {
+			return this.precpred(this._ctx, 8);
 		case 7:
-			return this.precpred(this._ctx, 1);
-		}
-		return true;
-	}
-	private disjunctiveExpression_sempred(localctx: DisjunctiveExpressionContext, predIndex: number): boolean {
-		switch (predIndex) {
+			return this.precpred(this._ctx, 7);
 		case 8:
-			return this.precpred(this._ctx, 1);
-		}
-		return true;
-	}
-	private exclusiveDisjunctiveExpression_sempred(localctx: ExclusiveDisjunctiveExpressionContext, predIndex: number): boolean {
-		switch (predIndex) {
+			return this.precpred(this._ctx, 6);
 		case 9:
-			return this.precpred(this._ctx, 1);
-		}
-		return true;
-	}
-	private conditionalConjunctiveExpression_sempred(localctx: ConditionalConjunctiveExpressionContext, predIndex: number): boolean {
-		switch (predIndex) {
+			return this.precpred(this._ctx, 5);
 		case 10:
-			return this.precpred(this._ctx, 1);
-		}
-		return true;
-	}
-	private conditionalDisjunctiveExpression_sempred(localctx: ConditionalDisjunctiveExpressionContext, predIndex: number): boolean {
-		switch (predIndex) {
+			return this.precpred(this._ctx, 4);
 		case 11:
-			return this.precpred(this._ctx, 1);
+			return this.precpred(this._ctx, 3);
+		case 12:
+			return this.precpred(this._ctx, 2);
 		}
 		return true;
 	}
 
-	public static readonly _serializedATN: number[] = [4,1,112,892,2,0,7,0,
+	public static readonly _serializedATN: number[] = [4,1,103,848,2,0,7,0,
 	2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,7,7,2,8,7,8,2,9,7,9,
 	2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,14,2,15,7,15,2,16,7,16,2,
 	17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,
@@ -4845,283 +4524,272 @@ export default class LeoParser extends Parser {
 	60,2,61,7,61,2,62,7,62,2,63,7,63,2,64,7,64,2,65,7,65,2,66,7,66,2,67,7,67,
 	2,68,7,68,2,69,7,69,2,70,7,70,2,71,7,71,2,72,7,72,2,73,7,73,2,74,7,74,2,
 	75,7,75,2,76,7,76,2,77,7,77,2,78,7,78,2,79,7,79,2,80,7,80,2,81,7,81,2,82,
-	7,82,2,83,7,83,2,84,7,84,2,85,7,85,2,86,7,86,2,87,7,87,2,88,7,88,2,89,7,
-	89,2,90,7,90,2,91,7,91,2,92,7,92,2,93,7,93,1,0,5,0,190,8,0,10,0,12,0,193,
-	9,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,3,1,4,1,4,
-	1,4,1,4,5,4,214,8,4,10,4,12,4,217,9,4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,5,3,
-	5,227,8,5,1,6,1,6,1,7,1,7,1,7,1,8,1,8,1,9,1,9,1,9,1,9,3,9,240,8,9,1,10,
-	1,10,1,10,3,10,245,8,10,1,11,1,11,1,12,1,12,3,12,251,8,12,1,13,1,13,1,13,
-	1,13,3,13,257,8,13,1,13,1,13,1,13,3,13,262,8,13,3,13,264,8,13,1,14,1,14,
-	1,14,1,14,5,14,270,8,14,10,14,12,14,273,9,14,1,14,3,14,276,8,14,1,14,1,
-	14,1,15,1,15,1,15,5,15,283,8,15,10,15,12,15,286,9,15,1,16,1,16,1,16,1,16,
-	3,16,292,8,16,1,17,1,17,1,18,1,18,1,18,1,18,3,18,300,8,18,1,19,1,19,1,19,
-	3,19,305,8,19,1,20,1,20,3,20,309,8,20,1,21,1,21,1,22,1,22,1,22,1,22,1,22,
-	1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,3,22,327,8,22,1,23,1,23,1,
-	24,1,24,1,24,1,24,1,25,1,25,1,25,1,25,1,25,1,25,3,25,341,8,25,1,26,1,26,
-	1,26,1,26,1,26,1,26,1,26,3,26,350,8,26,1,26,1,26,1,26,1,26,1,27,1,27,1,
-	27,1,27,5,27,360,8,27,10,27,12,27,363,9,27,3,27,365,8,27,1,27,1,27,1,28,
-	1,28,1,28,1,29,1,29,1,29,1,29,5,29,376,8,29,10,29,12,29,379,9,29,1,29,3,
-	29,382,8,29,1,29,1,29,1,30,1,30,1,30,1,30,1,30,5,30,391,8,30,10,30,12,30,
-	394,9,30,1,30,3,30,397,8,30,1,30,1,30,1,31,1,31,1,31,1,31,1,31,3,31,406,
-	8,31,1,32,1,32,1,32,1,32,1,33,1,33,1,33,1,33,1,34,1,34,1,34,1,34,1,34,3,
-	34,421,8,34,1,35,1,35,1,35,1,35,1,36,1,36,1,36,1,36,1,37,1,37,1,37,1,37,
-	1,37,1,38,1,38,1,38,1,38,1,38,3,38,441,8,38,1,39,1,39,1,39,1,39,1,39,3,
-	39,448,8,39,1,40,1,40,1,40,1,40,1,40,1,40,1,40,1,40,1,40,1,40,1,40,1,40,
-	5,40,462,8,40,10,40,12,40,465,9,40,1,41,1,41,1,41,1,41,1,41,1,41,1,41,1,
-	41,1,41,5,41,476,8,41,10,41,12,41,479,9,41,1,42,1,42,1,42,1,42,1,42,1,42,
-	1,42,1,42,1,42,5,42,490,8,42,10,42,12,42,493,9,42,1,43,1,43,1,43,1,43,1,
-	43,1,43,5,43,501,8,43,10,43,12,43,504,9,43,1,44,1,44,1,44,1,44,1,44,1,44,
-	5,44,512,8,44,10,44,12,44,515,9,44,1,45,1,45,1,45,1,45,1,45,1,45,5,45,523,
-	8,45,10,45,12,45,526,9,45,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,
-	1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,3,46,545,8,46,1,47,1,47,1,47,1,
-	47,1,47,1,47,1,47,1,47,1,47,3,47,556,8,47,1,48,1,48,1,48,1,48,1,48,1,48,
-	5,48,564,8,48,10,48,12,48,567,9,48,1,49,1,49,1,49,1,49,1,49,1,49,5,49,575,
-	8,49,10,49,12,49,578,9,49,1,50,1,50,1,51,1,51,1,51,1,51,1,51,1,51,1,51,
-	3,51,589,8,51,1,52,1,52,1,53,1,53,1,53,1,53,1,53,1,53,1,53,1,53,3,53,601,
-	8,53,1,53,1,53,1,53,1,54,1,54,1,55,1,55,1,55,1,55,1,56,1,56,1,56,1,56,1,
-	56,1,56,1,56,1,56,1,56,3,56,621,8,56,1,57,1,57,5,57,625,8,57,10,57,12,57,
-	628,9,57,1,57,1,57,1,58,1,58,3,58,634,8,58,1,58,1,58,1,58,3,58,639,8,58,
-	1,58,1,58,1,59,1,59,1,59,1,60,1,60,1,60,1,60,3,60,650,8,60,1,60,1,60,1,
-	60,1,60,1,61,1,61,1,61,1,61,1,61,3,61,661,8,61,1,61,3,61,664,8,61,1,61,
-	1,61,3,61,668,8,61,1,62,1,62,1,62,1,62,1,63,1,63,1,63,1,63,1,63,1,63,1,
-	63,1,63,1,63,3,63,683,8,63,1,64,1,64,1,65,1,65,1,65,1,65,1,65,1,66,1,66,
-	1,66,1,67,1,67,1,67,3,67,698,8,67,1,68,1,68,1,68,1,68,1,68,1,69,1,69,1,
-	69,1,69,1,69,1,69,3,69,711,8,69,1,69,1,69,1,70,1,70,1,70,1,70,1,70,1,70,
-	3,70,721,8,70,1,70,1,70,1,71,5,71,726,8,71,10,71,12,71,729,9,71,1,71,1,
-	71,1,71,1,71,3,71,735,8,71,1,71,1,71,1,71,3,71,740,8,71,1,71,1,71,1,72,
-	1,72,1,72,5,72,747,8,72,10,72,12,72,750,9,72,1,72,3,72,753,8,72,1,73,3,
-	73,756,8,73,1,73,1,73,1,73,1,73,1,74,5,74,763,8,74,10,74,12,74,766,9,74,
-	1,74,1,74,1,74,1,74,3,74,772,8,74,1,74,1,74,1,74,3,74,777,8,74,1,74,1,74,
-	1,75,5,75,782,8,75,10,75,12,75,785,9,75,1,75,1,75,1,75,1,75,3,75,791,8,
-	75,1,75,1,75,1,75,3,75,796,8,75,1,75,3,75,799,8,75,1,75,1,75,3,75,803,8,
-	75,1,76,1,76,1,76,1,76,1,76,1,76,1,76,1,76,3,76,813,8,76,1,76,1,76,1,77,
-	1,77,1,77,1,77,1,77,1,77,1,78,1,78,1,78,5,78,826,8,78,10,78,12,78,829,9,
-	78,1,78,3,78,832,8,78,1,79,3,79,835,8,79,1,79,1,79,1,79,1,79,1,80,1,80,
-	1,80,1,80,1,80,1,80,1,81,1,81,1,81,1,81,1,81,1,81,1,81,1,81,1,82,1,82,1,
-	82,1,83,1,83,1,84,1,84,1,85,1,85,1,85,1,85,1,85,1,85,1,85,1,86,1,86,1,86,
-	1,86,1,87,1,87,1,87,1,88,1,88,1,89,1,89,1,90,1,90,1,90,1,91,1,91,1,91,1,
-	91,1,92,1,92,1,92,1,93,1,93,1,93,0,8,80,82,84,86,88,90,96,98,94,0,2,4,6,
-	8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,
-	56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,
-	104,106,108,110,112,114,116,118,120,122,124,126,128,130,132,134,136,138,
-	140,142,144,146,148,150,152,154,156,158,160,162,164,166,168,170,172,174,
-	176,178,180,182,184,186,0,9,1,0,95,96,1,0,103,104,2,0,106,106,110,110,1,
-	0,16,19,1,0,21,22,1,0,24,26,1,0,55,57,2,0,54,54,65,77,1,0,83,85,913,0,191,
-	1,0,0,0,2,197,1,0,0,0,4,201,1,0,0,0,6,205,1,0,0,0,8,209,1,0,0,0,10,226,
-	1,0,0,0,12,228,1,0,0,0,14,230,1,0,0,0,16,233,1,0,0,0,18,239,1,0,0,0,20,
-	244,1,0,0,0,22,246,1,0,0,0,24,250,1,0,0,0,26,263,1,0,0,0,28,265,1,0,0,0,
-	30,279,1,0,0,0,32,291,1,0,0,0,34,293,1,0,0,0,36,299,1,0,0,0,38,304,1,0,
-	0,0,40,308,1,0,0,0,42,310,1,0,0,0,44,326,1,0,0,0,46,328,1,0,0,0,48,330,
-	1,0,0,0,50,340,1,0,0,0,52,349,1,0,0,0,54,355,1,0,0,0,56,368,1,0,0,0,58,
-	371,1,0,0,0,60,385,1,0,0,0,62,405,1,0,0,0,64,407,1,0,0,0,66,411,1,0,0,0,
-	68,420,1,0,0,0,70,422,1,0,0,0,72,426,1,0,0,0,74,430,1,0,0,0,76,440,1,0,
-	0,0,78,447,1,0,0,0,80,449,1,0,0,0,82,466,1,0,0,0,84,480,1,0,0,0,86,494,
-	1,0,0,0,88,505,1,0,0,0,90,516,1,0,0,0,92,544,1,0,0,0,94,555,1,0,0,0,96,
-	557,1,0,0,0,98,568,1,0,0,0,100,579,1,0,0,0,102,588,1,0,0,0,104,590,1,0,
-	0,0,106,592,1,0,0,0,108,605,1,0,0,0,110,607,1,0,0,0,112,620,1,0,0,0,114,
-	622,1,0,0,0,116,631,1,0,0,0,118,642,1,0,0,0,120,645,1,0,0,0,122,667,1,0,
-	0,0,124,669,1,0,0,0,126,682,1,0,0,0,128,684,1,0,0,0,130,686,1,0,0,0,132,
-	691,1,0,0,0,134,697,1,0,0,0,136,699,1,0,0,0,138,704,1,0,0,0,140,714,1,0,
-	0,0,142,727,1,0,0,0,144,743,1,0,0,0,146,755,1,0,0,0,148,764,1,0,0,0,150,
-	783,1,0,0,0,152,804,1,0,0,0,154,816,1,0,0,0,156,822,1,0,0,0,158,834,1,0,
-	0,0,160,840,1,0,0,0,162,846,1,0,0,0,164,854,1,0,0,0,166,857,1,0,0,0,168,
-	859,1,0,0,0,170,861,1,0,0,0,172,868,1,0,0,0,174,872,1,0,0,0,176,875,1,0,
-	0,0,178,877,1,0,0,0,180,879,1,0,0,0,182,882,1,0,0,0,184,886,1,0,0,0,186,
-	889,1,0,0,0,188,190,3,6,3,0,189,188,1,0,0,0,190,193,1,0,0,0,191,189,1,0,
-	0,0,191,192,1,0,0,0,192,194,1,0,0,0,193,191,1,0,0,0,194,195,3,8,4,0,195,
-	196,5,0,0,1,196,1,1,0,0,0,197,198,3,12,6,0,198,199,5,1,0,0,199,200,3,12,
-	6,0,200,3,1,0,0,0,201,202,3,2,1,0,202,203,5,2,0,0,203,204,3,12,6,0,204,
-	5,1,0,0,0,205,206,5,3,0,0,206,207,3,2,1,0,207,208,5,4,0,0,208,7,1,0,0,0,
-	209,210,5,5,0,0,210,211,3,2,1,0,211,215,5,6,0,0,212,214,3,10,5,0,213,212,
-	1,0,0,0,214,217,1,0,0,0,215,213,1,0,0,0,215,216,1,0,0,0,216,218,1,0,0,0,
-	217,215,1,0,0,0,218,219,5,7,0,0,219,9,1,0,0,0,220,227,3,154,77,0,221,227,
-	3,160,80,0,222,227,3,162,81,0,223,227,3,142,71,0,224,227,3,148,74,0,225,
-	227,3,150,75,0,226,220,1,0,0,0,226,221,1,0,0,0,226,222,1,0,0,0,226,223,
-	1,0,0,0,226,224,1,0,0,0,226,225,1,0,0,0,227,11,1,0,0,0,228,229,5,94,0,0,
-	229,13,1,0,0,0,230,231,5,8,0,0,231,232,5,94,0,0,232,15,1,0,0,0,233,234,
-	7,0,0,0,234,17,1,0,0,0,235,240,3,16,8,0,236,240,5,97,0,0,237,240,5,98,0,
-	0,238,240,5,99,0,0,239,235,1,0,0,0,239,236,1,0,0,0,239,237,1,0,0,0,239,
-	238,1,0,0,0,240,19,1,0,0,0,241,245,5,100,0,0,242,245,3,18,9,0,243,245,5,
-	101,0,0,244,241,1,0,0,0,244,242,1,0,0,0,244,243,1,0,0,0,245,21,1,0,0,0,
-	246,247,5,9,0,0,247,23,1,0,0,0,248,251,3,20,10,0,249,251,3,22,11,0,250,
-	248,1,0,0,0,250,249,1,0,0,0,251,25,1,0,0,0,252,264,3,20,10,0,253,256,3,
-	12,6,0,254,255,5,1,0,0,255,257,5,10,0,0,256,254,1,0,0,0,256,257,1,0,0,0,
-	257,264,1,0,0,0,258,261,3,4,2,0,259,260,5,1,0,0,260,262,5,10,0,0,261,259,
-	1,0,0,0,261,262,1,0,0,0,262,264,1,0,0,0,263,252,1,0,0,0,263,253,1,0,0,0,
-	263,258,1,0,0,0,264,27,1,0,0,0,265,266,5,11,0,0,266,271,3,32,16,0,267,268,
-	5,12,0,0,268,270,3,32,16,0,269,267,1,0,0,0,270,273,1,0,0,0,271,269,1,0,
-	0,0,271,272,1,0,0,0,272,275,1,0,0,0,273,271,1,0,0,0,274,276,5,12,0,0,275,
-	274,1,0,0,0,275,276,1,0,0,0,276,277,1,0,0,0,277,278,5,13,0,0,278,29,1,0,
-	0,0,279,284,3,12,6,0,280,281,5,1,0,0,281,283,3,12,6,0,282,280,1,0,0,0,283,
-	286,1,0,0,0,284,282,1,0,0,0,284,285,1,0,0,0,285,31,1,0,0,0,286,284,1,0,
-	0,0,287,292,3,26,13,0,288,292,3,22,11,0,289,292,3,28,14,0,290,292,3,30,
-	15,0,291,287,1,0,0,0,291,288,1,0,0,0,291,289,1,0,0,0,291,290,1,0,0,0,292,
-	33,1,0,0,0,293,294,7,1,0,0,294,35,1,0,0,0,295,300,3,34,17,0,296,300,5,105,
-	0,0,297,300,5,106,0,0,298,300,5,107,0,0,299,295,1,0,0,0,299,296,1,0,0,0,
-	299,297,1,0,0,0,299,298,1,0,0,0,300,37,1,0,0,0,301,305,3,36,18,0,302,305,
-	5,108,0,0,303,305,5,109,0,0,304,301,1,0,0,0,304,302,1,0,0,0,304,303,1,0,
-	0,0,305,39,1,0,0,0,306,309,3,38,19,0,307,309,5,110,0,0,308,306,1,0,0,0,
-	308,307,1,0,0,0,309,41,1,0,0,0,310,311,7,2,0,0,311,43,1,0,0,0,312,327,3,
-	40,20,0,313,327,3,46,23,0,314,327,3,48,24,0,315,316,5,11,0,0,316,317,3,
-	104,52,0,317,318,5,13,0,0,318,327,1,0,0,0,319,327,3,50,25,0,320,327,3,52,
-	26,0,321,327,3,56,28,0,322,327,3,58,29,0,323,327,3,60,30,0,324,327,3,64,
-	32,0,325,327,3,66,33,0,326,312,1,0,0,0,326,313,1,0,0,0,326,314,1,0,0,0,
-	326,315,1,0,0,0,326,319,1,0,0,0,326,320,1,0,0,0,326,321,1,0,0,0,326,322,
-	1,0,0,0,326,323,1,0,0,0,326,324,1,0,0,0,326,325,1,0,0,0,327,45,1,0,0,0,
-	328,329,3,12,6,0,329,47,1,0,0,0,330,331,3,26,13,0,331,332,5,14,0,0,332,
-	333,3,12,6,0,333,49,1,0,0,0,334,335,3,12,6,0,335,336,3,54,27,0,336,341,
-	1,0,0,0,337,338,3,4,2,0,338,339,3,54,27,0,339,341,1,0,0,0,340,334,1,0,0,
-	0,340,337,1,0,0,0,341,51,1,0,0,0,342,343,5,15,0,0,343,350,7,3,0,0,344,345,
-	5,20,0,0,345,350,7,4,0,0,346,347,5,23,0,0,347,350,7,5,0,0,348,350,3,26,
-	13,0,349,342,1,0,0,0,349,344,1,0,0,0,349,346,1,0,0,0,349,348,1,0,0,0,350,
-	351,1,0,0,0,351,352,5,14,0,0,352,353,3,12,6,0,353,354,3,54,27,0,354,53,
-	1,0,0,0,355,364,5,11,0,0,356,361,3,104,52,0,357,358,5,12,0,0,358,360,3,
-	104,52,0,359,357,1,0,0,0,360,363,1,0,0,0,361,359,1,0,0,0,361,362,1,0,0,
-	0,362,365,1,0,0,0,363,361,1,0,0,0,364,356,1,0,0,0,364,365,1,0,0,0,365,366,
-	1,0,0,0,366,367,5,13,0,0,367,55,1,0,0,0,368,369,5,11,0,0,369,370,5,13,0,
-	0,370,57,1,0,0,0,371,372,5,11,0,0,372,377,3,104,52,0,373,374,5,12,0,0,374,
-	376,3,104,52,0,375,373,1,0,0,0,376,379,1,0,0,0,377,375,1,0,0,0,377,378,
-	1,0,0,0,378,381,1,0,0,0,379,377,1,0,0,0,380,382,5,12,0,0,381,380,1,0,0,
-	0,381,382,1,0,0,0,382,383,1,0,0,0,383,384,5,13,0,0,384,59,1,0,0,0,385,386,
-	3,12,6,0,386,387,5,6,0,0,387,392,3,62,31,0,388,389,5,12,0,0,389,391,3,62,
-	31,0,390,388,1,0,0,0,391,394,1,0,0,0,392,390,1,0,0,0,392,393,1,0,0,0,393,
-	396,1,0,0,0,394,392,1,0,0,0,395,397,5,12,0,0,396,395,1,0,0,0,396,397,1,
-	0,0,0,397,398,1,0,0,0,398,399,5,7,0,0,399,61,1,0,0,0,400,406,3,12,6,0,401,
-	402,3,12,6,0,402,403,5,27,0,0,403,404,3,104,52,0,404,406,1,0,0,0,405,400,
-	1,0,0,0,405,401,1,0,0,0,406,63,1,0,0,0,407,408,5,28,0,0,408,409,5,1,0,0,
-	409,410,5,29,0,0,410,65,1,0,0,0,411,412,5,30,0,0,412,413,5,1,0,0,413,414,
-	5,31,0,0,414,67,1,0,0,0,415,421,3,44,22,0,416,421,3,110,55,0,417,421,3,
-	70,35,0,418,421,3,72,36,0,419,421,3,74,37,0,420,415,1,0,0,0,420,416,1,0,
-	0,0,420,417,1,0,0,0,420,418,1,0,0,0,420,419,1,0,0,0,421,69,1,0,0,0,422,
-	423,3,12,6,0,423,424,5,1,0,0,424,425,5,102,0,0,425,71,1,0,0,0,426,427,3,
-	12,6,0,427,428,5,1,0,0,428,429,3,12,6,0,429,73,1,0,0,0,430,431,3,12,6,0,
-	431,432,5,1,0,0,432,433,3,12,6,0,433,434,3,54,27,0,434,75,1,0,0,0,435,441,
-	3,68,34,0,436,437,5,32,0,0,437,441,3,76,38,0,438,439,5,33,0,0,439,441,3,
-	76,38,0,440,435,1,0,0,0,440,436,1,0,0,0,440,438,1,0,0,0,441,77,1,0,0,0,
-	442,448,3,76,38,0,443,444,3,76,38,0,444,445,5,34,0,0,445,446,3,78,39,0,
-	446,448,1,0,0,0,447,442,1,0,0,0,447,443,1,0,0,0,448,79,1,0,0,0,449,450,
-	6,40,-1,0,450,451,3,78,39,0,451,463,1,0,0,0,452,453,10,3,0,0,453,454,5,
-	35,0,0,454,462,3,78,39,0,455,456,10,2,0,0,456,457,5,2,0,0,457,462,3,78,
-	39,0,458,459,10,1,0,0,459,460,5,36,0,0,460,462,3,78,39,0,461,452,1,0,0,
-	0,461,455,1,0,0,0,461,458,1,0,0,0,462,465,1,0,0,0,463,461,1,0,0,0,463,464,
-	1,0,0,0,464,81,1,0,0,0,465,463,1,0,0,0,466,467,6,41,-1,0,467,468,3,80,40,
-	0,468,477,1,0,0,0,469,470,10,2,0,0,470,471,5,37,0,0,471,476,3,80,40,0,472,
-	473,10,1,0,0,473,474,5,33,0,0,474,476,3,80,40,0,475,469,1,0,0,0,475,472,
-	1,0,0,0,476,479,1,0,0,0,477,475,1,0,0,0,477,478,1,0,0,0,478,83,1,0,0,0,
-	479,477,1,0,0,0,480,481,6,42,-1,0,481,482,3,82,41,0,482,491,1,0,0,0,483,
-	484,10,2,0,0,484,485,5,38,0,0,485,490,3,82,41,0,486,487,10,1,0,0,487,488,
-	5,39,0,0,488,490,3,82,41,0,489,483,1,0,0,0,489,486,1,0,0,0,490,493,1,0,
-	0,0,491,489,1,0,0,0,491,492,1,0,0,0,492,85,1,0,0,0,493,491,1,0,0,0,494,
-	495,6,43,-1,0,495,496,3,84,42,0,496,502,1,0,0,0,497,498,10,1,0,0,498,499,
-	5,40,0,0,499,501,3,84,42,0,500,497,1,0,0,0,501,504,1,0,0,0,502,500,1,0,
-	0,0,502,503,1,0,0,0,503,87,1,0,0,0,504,502,1,0,0,0,505,506,6,44,-1,0,506,
-	507,3,86,43,0,507,513,1,0,0,0,508,509,10,1,0,0,509,510,5,40,0,0,510,512,
-	3,86,43,0,511,508,1,0,0,0,512,515,1,0,0,0,513,511,1,0,0,0,513,514,1,0,0,
-	0,514,89,1,0,0,0,515,513,1,0,0,0,516,517,6,45,-1,0,517,518,3,88,44,0,518,
-	524,1,0,0,0,519,520,10,1,0,0,520,521,5,41,0,0,521,523,3,88,44,0,522,519,
-	1,0,0,0,523,526,1,0,0,0,524,522,1,0,0,0,524,525,1,0,0,0,525,91,1,0,0,0,
-	526,524,1,0,0,0,527,545,3,90,45,0,528,529,3,90,45,0,529,530,5,42,0,0,530,
-	531,3,90,45,0,531,545,1,0,0,0,532,533,3,90,45,0,533,534,5,43,0,0,534,535,
-	3,90,45,0,535,545,1,0,0,0,536,537,3,90,45,0,537,538,5,44,0,0,538,539,3,
-	90,45,0,539,545,1,0,0,0,540,541,3,90,45,0,541,542,5,45,0,0,542,543,3,90,
-	45,0,543,545,1,0,0,0,544,527,1,0,0,0,544,528,1,0,0,0,544,532,1,0,0,0,544,
-	536,1,0,0,0,544,540,1,0,0,0,545,93,1,0,0,0,546,556,3,92,46,0,547,548,3,
-	92,46,0,548,549,5,46,0,0,549,550,3,92,46,0,550,556,1,0,0,0,551,552,3,92,
-	46,0,552,553,5,47,0,0,553,554,3,92,46,0,554,556,1,0,0,0,555,546,1,0,0,0,
-	555,547,1,0,0,0,555,551,1,0,0,0,556,95,1,0,0,0,557,558,6,48,-1,0,558,559,
-	3,94,47,0,559,565,1,0,0,0,560,561,10,1,0,0,561,562,5,48,0,0,562,564,3,94,
-	47,0,563,560,1,0,0,0,564,567,1,0,0,0,565,563,1,0,0,0,565,566,1,0,0,0,566,
-	97,1,0,0,0,567,565,1,0,0,0,568,569,6,49,-1,0,569,570,3,96,48,0,570,576,
-	1,0,0,0,571,572,10,1,0,0,572,573,5,49,0,0,573,575,3,96,48,0,574,571,1,0,
-	0,0,575,578,1,0,0,0,576,574,1,0,0,0,576,577,1,0,0,0,577,99,1,0,0,0,578,
-	576,1,0,0,0,579,580,3,98,49,0,580,101,1,0,0,0,581,589,3,100,50,0,582,583,
-	3,100,50,0,583,584,5,50,0,0,584,585,3,104,52,0,585,586,5,27,0,0,586,587,
-	3,104,52,0,587,589,1,0,0,0,588,581,1,0,0,0,588,582,1,0,0,0,589,103,1,0,
-	0,0,590,591,3,102,51,0,591,105,1,0,0,0,592,593,5,51,0,0,593,594,3,12,6,
-	0,594,595,5,27,0,0,595,596,3,32,16,0,596,597,5,52,0,0,597,598,3,104,52,
-	0,598,600,5,53,0,0,599,601,5,54,0,0,600,599,1,0,0,0,600,601,1,0,0,0,601,
-	602,1,0,0,0,602,603,3,104,52,0,603,604,3,114,57,0,604,107,1,0,0,0,605,606,
-	7,6,0,0,606,109,1,0,0,0,607,608,5,58,0,0,608,609,3,108,54,0,609,610,3,54,
-	27,0,610,111,1,0,0,0,611,621,3,110,55,0,612,621,3,118,59,0,613,621,3,120,
-	60,0,614,621,3,126,63,0,615,621,3,106,53,0,616,621,3,130,65,0,617,621,3,
-	132,66,0,618,621,3,114,57,0,619,621,3,116,58,0,620,611,1,0,0,0,620,612,
-	1,0,0,0,620,613,1,0,0,0,620,614,1,0,0,0,620,615,1,0,0,0,620,616,1,0,0,0,
-	620,617,1,0,0,0,620,618,1,0,0,0,620,619,1,0,0,0,621,113,1,0,0,0,622,626,
-	5,6,0,0,623,625,3,112,56,0,624,623,1,0,0,0,625,628,1,0,0,0,626,624,1,0,
-	0,0,626,627,1,0,0,0,627,629,1,0,0,0,628,626,1,0,0,0,629,630,5,7,0,0,630,
-	115,1,0,0,0,631,633,5,59,0,0,632,634,3,104,52,0,633,632,1,0,0,0,633,634,
-	1,0,0,0,634,638,1,0,0,0,635,636,5,60,0,0,636,637,5,61,0,0,637,639,3,54,
-	27,0,638,635,1,0,0,0,638,639,1,0,0,0,639,640,1,0,0,0,640,641,5,4,0,0,641,
-	117,1,0,0,0,642,643,3,104,52,0,643,644,5,4,0,0,644,119,1,0,0,0,645,646,
-	5,62,0,0,646,649,3,122,61,0,647,648,5,27,0,0,648,650,3,32,16,0,649,647,
-	1,0,0,0,649,650,1,0,0,0,650,651,1,0,0,0,651,652,5,54,0,0,652,653,3,104,
-	52,0,653,654,5,4,0,0,654,121,1,0,0,0,655,668,3,12,6,0,656,657,5,11,0,0,
-	657,660,3,12,6,0,658,659,5,12,0,0,659,661,3,12,6,0,660,658,1,0,0,0,660,
-	661,1,0,0,0,661,663,1,0,0,0,662,664,5,12,0,0,663,662,1,0,0,0,663,664,1,
-	0,0,0,664,665,1,0,0,0,665,666,5,13,0,0,666,668,1,0,0,0,667,655,1,0,0,0,
-	667,656,1,0,0,0,668,123,1,0,0,0,669,670,5,63,0,0,670,671,3,104,52,0,671,
-	672,3,114,57,0,672,125,1,0,0,0,673,683,3,124,62,0,674,675,3,124,62,0,675,
-	676,5,64,0,0,676,677,3,114,57,0,677,683,1,0,0,0,678,679,3,124,62,0,679,
-	680,5,64,0,0,680,681,3,126,63,0,681,683,1,0,0,0,682,673,1,0,0,0,682,674,
-	1,0,0,0,682,678,1,0,0,0,683,127,1,0,0,0,684,685,7,7,0,0,685,129,1,0,0,0,
-	686,687,3,104,52,0,687,688,3,128,64,0,688,689,3,104,52,0,689,690,5,4,0,
-	0,690,131,1,0,0,0,691,692,3,134,67,0,692,693,5,4,0,0,693,133,1,0,0,0,694,
-	698,3,136,68,0,695,698,3,138,69,0,696,698,3,140,70,0,697,694,1,0,0,0,697,
-	695,1,0,0,0,697,696,1,0,0,0,698,135,1,0,0,0,699,700,5,78,0,0,700,701,5,
-	11,0,0,701,702,3,104,52,0,702,703,5,13,0,0,703,137,1,0,0,0,704,705,5,79,
-	0,0,705,706,5,11,0,0,706,707,3,104,52,0,707,708,5,12,0,0,708,710,3,104,
-	52,0,709,711,5,12,0,0,710,709,1,0,0,0,710,711,1,0,0,0,711,712,1,0,0,0,712,
-	713,5,13,0,0,713,139,1,0,0,0,714,715,5,80,0,0,715,716,5,11,0,0,716,717,
-	3,104,52,0,717,718,5,12,0,0,718,720,3,104,52,0,719,721,5,12,0,0,720,719,
-	1,0,0,0,720,721,1,0,0,0,721,722,1,0,0,0,722,723,5,13,0,0,723,141,1,0,0,
-	0,724,726,3,14,7,0,725,724,1,0,0,0,726,729,1,0,0,0,727,725,1,0,0,0,727,
-	728,1,0,0,0,728,730,1,0,0,0,729,727,1,0,0,0,730,731,5,81,0,0,731,732,3,
-	12,6,0,732,734,5,11,0,0,733,735,3,144,72,0,734,733,1,0,0,0,734,735,1,0,
-	0,0,735,736,1,0,0,0,736,739,5,13,0,0,737,738,5,82,0,0,738,740,3,32,16,0,
-	739,737,1,0,0,0,739,740,1,0,0,0,740,741,1,0,0,0,741,742,3,114,57,0,742,
-	143,1,0,0,0,743,748,3,146,73,0,744,745,5,12,0,0,745,747,3,146,73,0,746,
-	744,1,0,0,0,747,750,1,0,0,0,748,746,1,0,0,0,748,749,1,0,0,0,749,752,1,0,
-	0,0,750,748,1,0,0,0,751,753,5,12,0,0,752,751,1,0,0,0,752,753,1,0,0,0,753,
-	145,1,0,0,0,754,756,7,8,0,0,755,754,1,0,0,0,755,756,1,0,0,0,756,757,1,0,
-	0,0,757,758,3,12,6,0,758,759,5,27,0,0,759,760,3,32,16,0,760,147,1,0,0,0,
-	761,763,3,14,7,0,762,761,1,0,0,0,763,766,1,0,0,0,764,762,1,0,0,0,764,765,
-	1,0,0,0,765,767,1,0,0,0,766,764,1,0,0,0,767,768,5,86,0,0,768,769,3,12,6,
-	0,769,771,5,11,0,0,770,772,3,144,72,0,771,770,1,0,0,0,771,772,1,0,0,0,772,
-	773,1,0,0,0,773,776,5,13,0,0,774,775,5,82,0,0,775,777,3,32,16,0,776,774,
-	1,0,0,0,776,777,1,0,0,0,777,778,1,0,0,0,778,779,3,114,57,0,779,149,1,0,
-	0,0,780,782,3,14,7,0,781,780,1,0,0,0,782,785,1,0,0,0,783,781,1,0,0,0,783,
-	784,1,0,0,0,784,786,1,0,0,0,785,783,1,0,0,0,786,787,5,87,0,0,787,788,3,
-	12,6,0,788,790,5,11,0,0,789,791,3,144,72,0,790,789,1,0,0,0,790,791,1,0,
-	0,0,791,792,1,0,0,0,792,798,5,13,0,0,793,795,5,82,0,0,794,796,7,8,0,0,795,
-	794,1,0,0,0,795,796,1,0,0,0,796,797,1,0,0,0,797,799,3,32,16,0,798,793,1,
-	0,0,0,798,799,1,0,0,0,799,800,1,0,0,0,800,802,3,114,57,0,801,803,3,152,
-	76,0,802,801,1,0,0,0,802,803,1,0,0,0,803,151,1,0,0,0,804,805,5,61,0,0,805,
-	806,3,12,6,0,806,807,5,11,0,0,807,808,3,144,72,0,808,812,5,13,0,0,809,810,
-	5,82,0,0,810,811,7,8,0,0,811,813,3,32,16,0,812,809,1,0,0,0,812,813,1,0,
-	0,0,813,814,1,0,0,0,814,815,3,114,57,0,815,153,1,0,0,0,816,817,5,88,0,0,
-	817,818,3,12,6,0,818,819,5,6,0,0,819,820,3,156,78,0,820,821,5,7,0,0,821,
-	155,1,0,0,0,822,827,3,158,79,0,823,824,5,12,0,0,824,826,3,158,79,0,825,
-	823,1,0,0,0,826,829,1,0,0,0,827,825,1,0,0,0,827,828,1,0,0,0,828,831,1,0,
-	0,0,829,827,1,0,0,0,830,832,5,12,0,0,831,830,1,0,0,0,831,832,1,0,0,0,832,
-	157,1,0,0,0,833,835,7,8,0,0,834,833,1,0,0,0,834,835,1,0,0,0,835,836,1,0,
-	0,0,836,837,3,12,6,0,837,838,5,27,0,0,838,839,3,32,16,0,839,159,1,0,0,0,
-	840,841,5,10,0,0,841,842,3,12,6,0,842,843,5,6,0,0,843,844,3,156,78,0,844,
-	845,5,7,0,0,845,161,1,0,0,0,846,847,5,89,0,0,847,848,3,12,6,0,848,849,5,
-	27,0,0,849,850,3,32,16,0,850,851,5,90,0,0,851,852,3,32,16,0,852,853,5,4,
-	0,0,853,163,1,0,0,0,854,855,3,6,3,0,855,856,3,8,4,0,856,165,1,0,0,0,857,
-	858,3,32,16,0,858,167,1,0,0,0,859,860,3,104,52,0,860,169,1,0,0,0,861,862,
-	3,12,6,0,862,863,5,27,0,0,863,864,3,166,83,0,864,865,5,54,0,0,865,866,3,
-	168,84,0,866,867,5,4,0,0,867,171,1,0,0,0,868,869,5,91,0,0,869,870,7,8,0,
-	0,870,871,5,92,0,0,871,173,1,0,0,0,872,873,3,172,86,0,873,874,3,170,85,
-	0,874,175,1,0,0,0,875,876,3,174,87,0,876,177,1,0,0,0,877,878,3,104,52,0,
-	878,179,1,0,0,0,879,880,3,178,89,0,880,881,5,4,0,0,881,181,1,0,0,0,882,
-	883,5,91,0,0,883,884,5,93,0,0,884,885,5,92,0,0,885,183,1,0,0,0,886,887,
-	3,182,91,0,887,888,3,180,90,0,888,185,1,0,0,0,889,890,3,184,92,0,890,187,
-	1,0,0,0,74,191,215,226,239,244,250,256,261,263,271,275,284,291,299,304,
-	308,326,340,349,361,364,377,381,392,396,405,420,440,447,461,463,475,477,
-	489,491,502,513,524,544,555,565,576,588,600,620,626,633,638,649,660,663,
-	667,682,697,710,720,727,734,739,748,752,755,764,771,776,783,790,795,798,
-	802,812,827,831,834];
+	7,82,2,83,7,83,2,84,7,84,2,85,7,85,1,0,1,0,1,1,1,1,1,1,1,2,1,2,1,2,1,3,
+	1,3,1,3,1,4,1,4,1,4,1,4,5,4,188,8,4,10,4,12,4,191,9,4,1,5,4,5,194,8,5,11,
+	5,12,5,195,1,6,1,6,1,6,1,7,1,7,1,7,1,8,1,8,1,8,1,9,1,9,1,9,1,10,1,10,1,
+	10,1,11,1,11,1,11,1,12,1,12,1,13,1,13,3,13,220,8,13,1,14,1,14,1,14,1,14,
+	3,14,226,8,14,1,15,1,15,1,15,3,15,231,8,15,1,16,1,16,1,16,1,17,1,17,1,17,
+	1,17,1,18,1,18,1,18,1,18,1,19,1,19,1,20,1,20,1,20,1,20,3,20,250,8,20,1,
+	21,1,21,1,21,3,21,255,8,21,1,22,1,22,1,22,3,22,260,8,22,1,23,1,23,1,23,
+	1,23,3,23,266,8,23,1,23,1,23,1,23,3,23,271,8,23,3,23,273,8,23,1,24,1,24,
+	1,24,1,24,4,24,279,8,24,11,24,12,24,280,1,24,3,24,284,8,24,1,24,1,24,1,
+	25,1,25,1,25,1,25,3,25,292,8,25,1,26,3,26,295,8,26,1,26,1,26,1,26,1,26,
+	3,26,301,8,26,1,27,1,27,1,27,1,27,1,27,1,27,1,28,1,28,3,28,311,8,28,1,29,
+	1,29,3,29,315,8,29,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,
+	30,1,30,1,30,1,30,1,30,3,30,332,8,30,1,31,1,31,1,32,1,32,1,32,1,32,1,32,
+	1,32,1,33,1,33,1,33,1,33,1,33,1,33,3,33,348,8,33,1,34,1,34,1,34,1,34,1,
+	34,1,34,1,34,1,35,1,35,1,35,1,35,5,35,361,8,35,10,35,12,35,364,9,35,1,35,
+	3,35,367,8,35,1,35,1,35,1,35,1,35,3,35,373,8,35,1,36,1,36,1,36,1,36,4,36,
+	379,8,36,11,36,12,36,380,1,36,3,36,384,8,36,1,36,1,36,1,37,1,37,1,37,1,
+	37,1,37,5,37,393,8,37,10,37,12,37,396,9,37,1,37,3,37,399,8,37,1,37,1,37,
+	1,38,1,38,1,38,1,38,1,38,3,38,408,8,38,1,39,1,39,1,39,1,39,1,39,1,39,1,
+	39,3,39,417,8,39,1,40,1,40,1,40,1,40,1,41,1,41,1,41,4,41,426,8,41,11,41,
+	12,41,427,1,42,1,42,1,42,4,42,433,8,42,11,42,12,42,434,1,42,1,42,1,43,1,
+	43,1,43,1,43,1,43,3,43,444,8,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,
+	1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,
+	43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,
+	1,43,1,43,1,43,1,43,1,43,5,43,488,8,43,10,43,12,43,491,9,43,1,44,1,44,1,
+	45,1,45,1,45,1,45,1,46,1,46,1,46,1,46,1,46,1,47,1,47,1,47,3,47,507,8,47,
+	1,47,1,47,1,47,1,48,1,48,1,48,1,48,1,48,1,48,1,48,1,48,3,48,520,8,48,1,
+	49,1,49,5,49,524,8,49,10,49,12,49,527,9,49,1,49,1,49,1,50,1,50,5,50,533,
+	8,50,10,50,12,50,536,9,50,1,50,1,50,1,50,3,50,541,8,50,1,50,1,50,1,51,1,
+	51,1,51,1,52,1,52,1,52,1,52,1,52,1,52,1,52,1,52,1,53,1,53,1,53,1,53,1,53,
+	4,53,561,8,53,11,53,12,53,562,1,53,3,53,566,8,53,1,53,1,53,3,53,570,8,53,
+	1,54,1,54,1,54,1,54,1,55,1,55,1,55,1,55,1,55,1,55,1,55,1,55,1,55,3,55,585,
+	8,55,1,56,1,56,1,56,1,56,1,56,1,56,1,56,1,56,1,56,1,56,3,56,597,8,56,1,
+	56,1,56,1,56,1,57,1,57,3,57,604,8,57,1,57,1,57,1,57,1,58,1,58,1,58,3,58,
+	612,8,58,1,59,1,59,1,59,1,59,1,59,1,60,1,60,1,60,1,60,1,60,1,60,3,60,625,
+	8,60,1,60,1,60,1,61,1,61,1,61,1,61,1,61,1,61,3,61,635,8,61,1,61,1,61,1,
+	62,5,62,640,8,62,10,62,12,62,643,9,62,1,62,1,62,1,62,1,62,3,62,649,8,62,
+	1,62,1,62,1,62,1,62,1,62,3,62,656,8,62,1,62,1,62,1,63,1,63,1,63,5,63,663,
+	8,63,10,63,12,63,666,9,63,1,63,3,63,669,8,63,1,64,3,64,672,8,64,1,64,1,
+	64,1,64,1,64,1,65,5,65,679,8,65,10,65,12,65,682,9,65,1,65,1,65,1,65,1,65,
+	3,65,688,8,65,1,65,1,65,1,65,1,65,1,65,3,65,695,8,65,1,65,1,65,1,66,5,66,
+	700,8,66,10,66,12,66,703,9,66,1,66,1,66,1,66,1,66,3,66,709,8,66,1,66,1,
+	66,1,66,1,66,1,66,3,66,716,8,66,1,66,3,66,719,8,66,1,66,1,66,3,66,723,8,
+	66,1,67,1,67,1,67,1,67,3,67,729,8,67,1,67,1,67,1,67,1,67,1,67,3,67,736,
+	8,67,1,67,3,67,739,8,67,1,67,1,67,1,68,1,68,1,68,1,68,1,68,1,68,1,69,1,
+	69,1,69,5,69,752,8,69,10,69,12,69,755,9,69,1,69,3,69,758,8,69,1,70,3,70,
+	761,8,70,1,70,1,70,1,70,1,70,1,71,1,71,1,71,1,71,1,71,1,71,1,72,1,72,1,
+	72,1,72,1,72,1,72,1,72,1,72,1,72,1,72,1,73,1,73,1,73,1,73,1,73,1,73,3,73,
+	789,8,73,1,74,1,74,1,74,1,74,5,74,795,8,74,10,74,12,74,798,9,74,1,74,1,
+	74,1,75,1,75,1,75,1,75,1,76,5,76,807,8,76,10,76,12,76,810,9,76,1,76,1,76,
+	1,77,1,77,1,78,1,78,1,79,1,79,1,79,1,79,1,79,1,79,1,79,1,80,1,80,5,80,827,
+	8,80,10,80,12,80,830,9,80,1,81,5,81,833,8,81,10,81,12,81,836,9,81,1,82,
+	1,82,1,83,1,83,1,83,1,84,1,84,1,84,1,85,1,85,1,85,0,1,86,86,0,2,4,6,8,10,
+	12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,
+	60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,
+	106,108,110,112,114,116,118,120,122,124,126,128,130,132,134,136,138,140,
+	142,144,146,148,150,152,154,156,158,160,162,164,166,168,170,0,13,1,0,1,
+	4,1,0,6,7,1,0,8,10,1,0,90,91,1,0,26,27,2,0,15,15,29,30,1,0,20,21,1,0,31,
+	32,1,0,36,39,1,0,40,41,1,0,45,58,1,0,59,61,1,0,77,79,885,0,172,1,0,0,0,
+	2,174,1,0,0,0,4,177,1,0,0,0,6,180,1,0,0,0,8,183,1,0,0,0,10,193,1,0,0,0,
+	12,197,1,0,0,0,14,200,1,0,0,0,16,203,1,0,0,0,18,206,1,0,0,0,20,209,1,0,
+	0,0,22,212,1,0,0,0,24,215,1,0,0,0,26,219,1,0,0,0,28,225,1,0,0,0,30,230,
+	1,0,0,0,32,232,1,0,0,0,34,235,1,0,0,0,36,239,1,0,0,0,38,243,1,0,0,0,40,
+	249,1,0,0,0,42,254,1,0,0,0,44,259,1,0,0,0,46,272,1,0,0,0,48,274,1,0,0,0,
+	50,291,1,0,0,0,52,300,1,0,0,0,54,302,1,0,0,0,56,310,1,0,0,0,58,314,1,0,
+	0,0,60,331,1,0,0,0,62,333,1,0,0,0,64,335,1,0,0,0,66,347,1,0,0,0,68,349,
+	1,0,0,0,70,372,1,0,0,0,72,374,1,0,0,0,74,387,1,0,0,0,76,407,1,0,0,0,78,
+	416,1,0,0,0,80,418,1,0,0,0,82,422,1,0,0,0,84,429,1,0,0,0,86,443,1,0,0,0,
+	88,492,1,0,0,0,90,494,1,0,0,0,92,498,1,0,0,0,94,506,1,0,0,0,96,519,1,0,
+	0,0,98,521,1,0,0,0,100,530,1,0,0,0,102,544,1,0,0,0,104,547,1,0,0,0,106,
+	569,1,0,0,0,108,571,1,0,0,0,110,584,1,0,0,0,112,586,1,0,0,0,114,603,1,0,
+	0,0,116,611,1,0,0,0,118,613,1,0,0,0,120,618,1,0,0,0,122,628,1,0,0,0,124,
+	641,1,0,0,0,126,659,1,0,0,0,128,671,1,0,0,0,130,680,1,0,0,0,132,701,1,0,
+	0,0,134,724,1,0,0,0,136,742,1,0,0,0,138,748,1,0,0,0,140,760,1,0,0,0,142,
+	766,1,0,0,0,144,772,1,0,0,0,146,788,1,0,0,0,148,790,1,0,0,0,150,801,1,0,
+	0,0,152,808,1,0,0,0,154,813,1,0,0,0,156,815,1,0,0,0,158,817,1,0,0,0,160,
+	824,1,0,0,0,162,834,1,0,0,0,164,837,1,0,0,0,166,839,1,0,0,0,168,842,1,0,
+	0,0,170,845,1,0,0,0,172,173,5,87,0,0,173,1,1,0,0,0,174,175,7,0,0,0,175,
+	176,5,5,0,0,176,3,1,0,0,0,177,178,7,1,0,0,178,179,5,5,0,0,179,5,1,0,0,0,
+	180,181,7,2,0,0,181,182,5,5,0,0,182,7,1,0,0,0,183,189,3,0,0,0,184,188,3,
+	0,0,0,185,188,5,88,0,0,186,188,5,11,0,0,187,184,1,0,0,0,187,185,1,0,0,0,
+	187,186,1,0,0,0,188,191,1,0,0,0,189,187,1,0,0,0,189,190,1,0,0,0,190,9,1,
+	0,0,0,191,189,1,0,0,0,192,194,5,88,0,0,193,192,1,0,0,0,194,195,1,0,0,0,
+	195,193,1,0,0,0,195,196,1,0,0,0,196,11,1,0,0,0,197,198,3,10,5,0,198,199,
+	5,90,0,0,199,13,1,0,0,0,200,201,3,10,5,0,201,202,5,91,0,0,202,15,1,0,0,
+	0,203,204,3,10,5,0,204,205,5,92,0,0,205,17,1,0,0,0,206,207,3,10,5,0,207,
+	208,5,93,0,0,208,19,1,0,0,0,209,210,3,10,5,0,210,211,5,94,0,0,211,21,1,
+	0,0,0,212,213,3,24,12,0,213,214,5,87,0,0,214,23,1,0,0,0,215,216,5,12,0,
+	0,216,25,1,0,0,0,217,220,3,12,6,0,218,220,3,14,7,0,219,217,1,0,0,0,219,
+	218,1,0,0,0,220,27,1,0,0,0,221,226,3,26,13,0,222,226,3,16,8,0,223,226,3,
+	18,9,0,224,226,3,20,10,0,225,221,1,0,0,0,225,222,1,0,0,0,225,223,1,0,0,
+	0,225,224,1,0,0,0,226,29,1,0,0,0,227,231,3,28,14,0,228,231,5,89,0,0,229,
+	231,3,22,11,0,230,227,1,0,0,0,230,228,1,0,0,0,230,229,1,0,0,0,231,31,1,
+	0,0,0,232,233,5,13,0,0,233,234,3,8,4,0,234,33,1,0,0,0,235,236,3,8,4,0,236,
+	237,5,14,0,0,237,238,3,8,4,0,238,35,1,0,0,0,239,240,3,34,17,0,240,241,5,
+	15,0,0,241,242,3,8,4,0,242,37,1,0,0,0,243,244,7,3,0,0,244,39,1,0,0,0,245,
+	250,3,38,19,0,246,250,5,92,0,0,247,250,5,93,0,0,248,250,5,94,0,0,249,245,
+	1,0,0,0,249,246,1,0,0,0,249,247,1,0,0,0,249,248,1,0,0,0,250,41,1,0,0,0,
+	251,255,5,95,0,0,252,255,3,40,20,0,253,255,5,96,0,0,254,251,1,0,0,0,254,
+	252,1,0,0,0,254,253,1,0,0,0,255,43,1,0,0,0,256,260,3,42,21,0,257,258,5,
+	16,0,0,258,260,5,17,0,0,259,256,1,0,0,0,259,257,1,0,0,0,260,45,1,0,0,0,
+	261,273,3,42,21,0,262,265,3,8,4,0,263,264,5,14,0,0,264,266,5,18,0,0,265,
+	263,1,0,0,0,265,266,1,0,0,0,266,273,1,0,0,0,267,270,3,36,18,0,268,269,5,
+	14,0,0,269,271,5,18,0,0,270,268,1,0,0,0,270,271,1,0,0,0,271,273,1,0,0,0,
+	272,261,1,0,0,0,272,262,1,0,0,0,272,267,1,0,0,0,273,47,1,0,0,0,274,275,
+	5,16,0,0,275,278,3,50,25,0,276,277,5,19,0,0,277,279,3,50,25,0,278,276,1,
+	0,0,0,279,280,1,0,0,0,280,278,1,0,0,0,280,281,1,0,0,0,281,283,1,0,0,0,282,
+	284,5,19,0,0,283,282,1,0,0,0,283,284,1,0,0,0,284,285,1,0,0,0,285,286,5,
+	17,0,0,286,49,1,0,0,0,287,292,3,46,23,0,288,289,5,16,0,0,289,292,5,17,0,
+	0,290,292,3,48,24,0,291,287,1,0,0,0,291,288,1,0,0,0,291,290,1,0,0,0,292,
+	51,1,0,0,0,293,295,5,20,0,0,294,293,1,0,0,0,294,295,1,0,0,0,295,296,1,0,
+	0,0,296,301,3,10,5,0,297,301,5,21,0,0,298,301,5,20,0,0,299,301,5,11,0,0,
+	300,294,1,0,0,0,300,297,1,0,0,0,300,298,1,0,0,0,300,299,1,0,0,0,301,53,
+	1,0,0,0,302,303,5,16,0,0,303,304,3,52,26,0,304,305,5,19,0,0,305,306,3,52,
+	26,0,306,307,5,22,0,0,307,55,1,0,0,0,308,311,3,30,15,0,309,311,3,54,27,
+	0,310,308,1,0,0,0,310,309,1,0,0,0,311,57,1,0,0,0,312,315,3,18,9,0,313,315,
+	3,54,27,0,314,312,1,0,0,0,314,313,1,0,0,0,315,59,1,0,0,0,316,332,3,56,28,
+	0,317,332,3,62,31,0,318,332,3,64,32,0,319,320,5,16,0,0,320,321,3,86,43,
+	0,321,322,5,17,0,0,322,332,1,0,0,0,323,332,3,66,33,0,324,332,3,68,34,0,
+	325,326,5,16,0,0,326,332,5,17,0,0,327,332,3,72,36,0,328,332,3,74,37,0,329,
+	332,5,97,0,0,330,332,5,98,0,0,331,316,1,0,0,0,331,317,1,0,0,0,331,318,1,
+	0,0,0,331,319,1,0,0,0,331,323,1,0,0,0,331,324,1,0,0,0,331,325,1,0,0,0,331,
+	327,1,0,0,0,331,328,1,0,0,0,331,329,1,0,0,0,331,330,1,0,0,0,332,61,1,0,
+	0,0,333,334,3,8,4,0,334,63,1,0,0,0,335,336,3,46,23,0,336,337,5,23,0,0,337,
+	338,5,23,0,0,338,339,1,0,0,0,339,340,3,8,4,0,340,65,1,0,0,0,341,342,3,8,
+	4,0,342,343,3,70,35,0,343,348,1,0,0,0,344,345,3,36,18,0,345,346,3,70,35,
+	0,346,348,1,0,0,0,347,341,1,0,0,0,347,344,1,0,0,0,348,67,1,0,0,0,349,350,
+	3,46,23,0,350,351,5,23,0,0,351,352,5,23,0,0,352,353,1,0,0,0,353,354,3,8,
+	4,0,354,355,3,70,35,0,355,69,1,0,0,0,356,357,5,16,0,0,357,362,3,86,43,0,
+	358,359,5,19,0,0,359,361,3,86,43,0,360,358,1,0,0,0,361,364,1,0,0,0,362,
+	360,1,0,0,0,362,363,1,0,0,0,363,366,1,0,0,0,364,362,1,0,0,0,365,367,5,19,
+	0,0,366,365,1,0,0,0,366,367,1,0,0,0,367,368,1,0,0,0,368,369,5,17,0,0,369,
+	373,1,0,0,0,370,371,5,16,0,0,371,373,5,17,0,0,372,356,1,0,0,0,372,370,1,
+	0,0,0,373,71,1,0,0,0,374,375,5,16,0,0,375,378,3,86,43,0,376,377,5,19,0,
+	0,377,379,3,86,43,0,378,376,1,0,0,0,379,380,1,0,0,0,380,378,1,0,0,0,380,
+	381,1,0,0,0,381,383,1,0,0,0,382,384,5,19,0,0,383,382,1,0,0,0,383,384,1,
+	0,0,0,384,385,1,0,0,0,385,386,5,17,0,0,386,73,1,0,0,0,387,388,3,8,4,0,388,
+	389,5,24,0,0,389,394,3,76,38,0,390,391,5,19,0,0,391,393,3,76,38,0,392,390,
+	1,0,0,0,393,396,1,0,0,0,394,392,1,0,0,0,394,395,1,0,0,0,395,398,1,0,0,0,
+	396,394,1,0,0,0,397,399,5,19,0,0,398,397,1,0,0,0,398,399,1,0,0,0,399,400,
+	1,0,0,0,400,401,5,25,0,0,401,75,1,0,0,0,402,408,3,8,4,0,403,404,3,8,4,0,
+	404,405,5,23,0,0,405,406,3,86,43,0,406,408,1,0,0,0,407,402,1,0,0,0,407,
+	403,1,0,0,0,408,77,1,0,0,0,409,417,3,60,30,0,410,417,3,90,45,0,411,417,
+	3,92,46,0,412,417,3,94,47,0,413,417,3,80,40,0,414,417,3,82,41,0,415,417,
+	3,84,42,0,416,409,1,0,0,0,416,410,1,0,0,0,416,411,1,0,0,0,416,412,1,0,0,
+	0,416,413,1,0,0,0,416,414,1,0,0,0,416,415,1,0,0,0,417,79,1,0,0,0,418,419,
+	3,8,4,0,419,420,5,14,0,0,420,421,3,10,5,0,421,81,1,0,0,0,422,425,3,8,4,
+	0,423,424,5,14,0,0,424,426,3,8,4,0,425,423,1,0,0,0,426,427,1,0,0,0,427,
+	425,1,0,0,0,427,428,1,0,0,0,428,83,1,0,0,0,429,432,3,8,4,0,430,431,5,14,
+	0,0,431,433,3,8,4,0,432,430,1,0,0,0,433,434,1,0,0,0,434,432,1,0,0,0,434,
+	435,1,0,0,0,435,436,1,0,0,0,436,437,3,70,35,0,437,85,1,0,0,0,438,439,6,
+	43,-1,0,439,444,3,78,39,0,440,441,7,4,0,0,441,444,3,86,43,15,442,444,3,
+	60,30,0,443,438,1,0,0,0,443,440,1,0,0,0,443,442,1,0,0,0,444,489,1,0,0,0,
+	445,446,10,14,0,0,446,447,5,28,0,0,447,488,3,86,43,15,448,449,10,13,0,0,
+	449,450,7,5,0,0,450,488,3,86,43,14,451,452,10,12,0,0,452,453,7,6,0,0,453,
+	488,3,86,43,13,454,455,10,11,0,0,455,456,7,7,0,0,456,488,3,86,43,12,457,
+	458,10,10,0,0,458,459,5,33,0,0,459,488,3,86,43,11,460,461,10,9,0,0,461,
+	462,5,34,0,0,462,488,3,86,43,10,463,464,10,8,0,0,464,465,5,35,0,0,465,488,
+	3,86,43,9,466,467,10,7,0,0,467,468,7,8,0,0,468,488,3,86,43,8,469,470,10,
+	6,0,0,470,471,7,9,0,0,471,488,3,86,43,7,472,473,10,5,0,0,473,474,5,42,0,
+	0,474,488,3,86,43,6,475,476,10,4,0,0,476,477,5,43,0,0,477,488,3,86,43,5,
+	478,479,10,3,0,0,479,480,5,44,0,0,480,481,3,86,43,0,481,482,5,23,0,0,482,
+	483,3,86,43,4,483,488,1,0,0,0,484,485,10,2,0,0,485,486,7,10,0,0,486,488,
+	3,86,43,3,487,445,1,0,0,0,487,448,1,0,0,0,487,451,1,0,0,0,487,454,1,0,0,
+	0,487,457,1,0,0,0,487,460,1,0,0,0,487,463,1,0,0,0,487,466,1,0,0,0,487,469,
+	1,0,0,0,487,472,1,0,0,0,487,475,1,0,0,0,487,478,1,0,0,0,487,484,1,0,0,0,
+	488,491,1,0,0,0,489,487,1,0,0,0,489,490,1,0,0,0,490,87,1,0,0,0,491,489,
+	1,0,0,0,492,493,7,11,0,0,493,89,1,0,0,0,494,495,5,62,0,0,495,496,3,88,44,
+	0,496,497,3,70,35,0,497,91,1,0,0,0,498,499,5,63,0,0,499,500,5,5,0,0,500,
+	501,3,8,4,0,501,502,3,70,35,0,502,93,1,0,0,0,503,507,3,2,1,0,504,507,3,
+	4,2,0,505,507,3,6,3,0,506,503,1,0,0,0,506,504,1,0,0,0,506,505,1,0,0,0,507,
+	508,1,0,0,0,508,509,3,8,4,0,509,510,3,70,35,0,510,95,1,0,0,0,511,520,3,
+	90,45,0,512,520,3,102,51,0,513,520,3,104,52,0,514,520,3,110,55,0,515,520,
+	3,112,56,0,516,520,3,114,57,0,517,520,3,100,50,0,518,520,3,98,49,0,519,
+	511,1,0,0,0,519,512,1,0,0,0,519,513,1,0,0,0,519,514,1,0,0,0,519,515,1,0,
+	0,0,519,516,1,0,0,0,519,517,1,0,0,0,519,518,1,0,0,0,520,97,1,0,0,0,521,
+	525,5,24,0,0,522,524,3,96,48,0,523,522,1,0,0,0,524,527,1,0,0,0,525,523,
+	1,0,0,0,525,526,1,0,0,0,526,528,1,0,0,0,527,525,1,0,0,0,528,529,5,25,0,
+	0,529,99,1,0,0,0,530,534,5,64,0,0,531,533,3,86,43,0,532,531,1,0,0,0,533,
+	536,1,0,0,0,534,532,1,0,0,0,534,535,1,0,0,0,535,540,1,0,0,0,536,534,1,0,
+	0,0,537,538,5,86,0,0,538,539,5,65,0,0,539,541,3,70,35,0,540,537,1,0,0,0,
+	540,541,1,0,0,0,541,542,1,0,0,0,542,543,5,66,0,0,543,101,1,0,0,0,544,545,
+	3,86,43,0,545,546,5,66,0,0,546,103,1,0,0,0,547,548,5,67,0,0,548,549,3,106,
+	53,0,549,550,5,23,0,0,550,551,3,50,25,0,551,552,5,45,0,0,552,553,3,86,43,
+	0,553,554,5,66,0,0,554,105,1,0,0,0,555,570,3,8,4,0,556,557,5,16,0,0,557,
+	560,3,8,4,0,558,559,5,19,0,0,559,561,3,8,4,0,560,558,1,0,0,0,561,562,1,
+	0,0,0,562,560,1,0,0,0,562,563,1,0,0,0,563,565,1,0,0,0,564,566,5,19,0,0,
+	565,564,1,0,0,0,565,566,1,0,0,0,566,567,1,0,0,0,567,568,5,17,0,0,568,570,
+	1,0,0,0,569,555,1,0,0,0,569,556,1,0,0,0,570,107,1,0,0,0,571,572,5,68,0,
+	0,572,573,3,86,43,0,573,574,3,98,49,0,574,109,1,0,0,0,575,585,3,108,54,
+	0,576,577,3,108,54,0,577,578,5,69,0,0,578,579,3,98,49,0,579,585,1,0,0,0,
+	580,581,3,108,54,0,581,582,5,69,0,0,582,583,3,110,55,0,583,585,1,0,0,0,
+	584,575,1,0,0,0,584,576,1,0,0,0,584,580,1,0,0,0,585,111,1,0,0,0,586,587,
+	5,70,0,0,587,588,3,8,4,0,588,589,5,23,0,0,589,590,3,50,25,0,590,591,5,71,
+	0,0,591,592,3,86,43,0,592,593,5,14,0,0,593,594,5,14,0,0,594,596,1,0,0,0,
+	595,597,5,45,0,0,596,595,1,0,0,0,596,597,1,0,0,0,597,598,1,0,0,0,598,599,
+	3,86,43,0,599,600,3,98,49,0,600,113,1,0,0,0,601,602,5,72,0,0,602,604,5,
+	14,0,0,603,601,1,0,0,0,603,604,1,0,0,0,604,605,1,0,0,0,605,606,3,116,58,
+	0,606,607,5,66,0,0,607,115,1,0,0,0,608,612,3,118,59,0,609,612,3,120,60,
+	0,610,612,3,122,61,0,611,608,1,0,0,0,611,609,1,0,0,0,611,610,1,0,0,0,612,
+	117,1,0,0,0,613,614,5,73,0,0,614,615,5,16,0,0,615,616,3,86,43,0,616,617,
+	5,17,0,0,617,119,1,0,0,0,618,619,5,74,0,0,619,620,5,16,0,0,620,621,3,86,
+	43,0,621,622,5,19,0,0,622,624,3,86,43,0,623,625,5,19,0,0,624,623,1,0,0,
+	0,624,625,1,0,0,0,625,626,1,0,0,0,626,627,5,17,0,0,627,121,1,0,0,0,628,
+	629,5,75,0,0,629,630,5,16,0,0,630,631,3,86,43,0,631,632,5,19,0,0,632,634,
+	3,86,43,0,633,635,5,19,0,0,634,633,1,0,0,0,634,635,1,0,0,0,635,636,1,0,
+	0,0,636,637,5,17,0,0,637,123,1,0,0,0,638,640,3,32,16,0,639,638,1,0,0,0,
+	640,643,1,0,0,0,641,639,1,0,0,0,641,642,1,0,0,0,642,644,1,0,0,0,643,641,
+	1,0,0,0,644,645,5,76,0,0,645,646,3,8,4,0,646,648,5,16,0,0,647,649,3,126,
+	63,0,648,647,1,0,0,0,648,649,1,0,0,0,649,650,1,0,0,0,650,655,5,17,0,0,651,
+	652,5,20,0,0,652,653,5,37,0,0,653,654,1,0,0,0,654,656,3,50,25,0,655,651,
+	1,0,0,0,655,656,1,0,0,0,656,657,1,0,0,0,657,658,3,98,49,0,658,125,1,0,0,
+	0,659,664,3,128,64,0,660,661,5,19,0,0,661,663,3,128,64,0,662,660,1,0,0,
+	0,663,666,1,0,0,0,664,662,1,0,0,0,664,665,1,0,0,0,665,668,1,0,0,0,666,664,
+	1,0,0,0,667,669,5,19,0,0,668,667,1,0,0,0,668,669,1,0,0,0,669,127,1,0,0,
+	0,670,672,7,12,0,0,671,670,1,0,0,0,671,672,1,0,0,0,672,673,1,0,0,0,673,
+	674,3,8,4,0,674,675,5,23,0,0,675,676,3,50,25,0,676,129,1,0,0,0,677,679,
+	3,32,16,0,678,677,1,0,0,0,679,682,1,0,0,0,680,678,1,0,0,0,680,681,1,0,0,
+	0,681,683,1,0,0,0,682,680,1,0,0,0,683,684,5,80,0,0,684,685,3,8,4,0,685,
+	687,5,16,0,0,686,688,3,126,63,0,687,686,1,0,0,0,687,688,1,0,0,0,688,689,
+	1,0,0,0,689,694,5,17,0,0,690,691,5,20,0,0,691,692,5,37,0,0,692,693,1,0,
+	0,0,693,695,3,50,25,0,694,690,1,0,0,0,694,695,1,0,0,0,695,696,1,0,0,0,696,
+	697,3,98,49,0,697,131,1,0,0,0,698,700,3,32,16,0,699,698,1,0,0,0,700,703,
+	1,0,0,0,701,699,1,0,0,0,701,702,1,0,0,0,702,704,1,0,0,0,703,701,1,0,0,0,
+	704,705,5,81,0,0,705,706,3,8,4,0,706,708,5,16,0,0,707,709,3,126,63,0,708,
+	707,1,0,0,0,708,709,1,0,0,0,709,710,1,0,0,0,710,718,5,17,0,0,711,712,5,
+	20,0,0,712,713,5,37,0,0,713,715,1,0,0,0,714,716,7,12,0,0,715,714,1,0,0,
+	0,715,716,1,0,0,0,716,717,1,0,0,0,717,719,3,50,25,0,718,711,1,0,0,0,718,
+	719,1,0,0,0,719,720,1,0,0,0,720,722,3,98,49,0,721,723,3,134,67,0,722,721,
+	1,0,0,0,722,723,1,0,0,0,723,133,1,0,0,0,724,725,5,65,0,0,725,726,3,8,4,
+	0,726,728,5,16,0,0,727,729,3,126,63,0,728,727,1,0,0,0,728,729,1,0,0,0,729,
+	730,1,0,0,0,730,738,5,17,0,0,731,732,5,20,0,0,732,733,5,37,0,0,733,735,
+	1,0,0,0,734,736,7,12,0,0,735,734,1,0,0,0,735,736,1,0,0,0,736,737,1,0,0,
+	0,737,739,3,50,25,0,738,731,1,0,0,0,738,739,1,0,0,0,739,740,1,0,0,0,740,
+	741,3,98,49,0,741,135,1,0,0,0,742,743,5,82,0,0,743,744,3,8,4,0,744,745,
+	5,24,0,0,745,746,3,138,69,0,746,747,5,25,0,0,747,137,1,0,0,0,748,753,3,
+	140,70,0,749,750,5,19,0,0,750,752,3,140,70,0,751,749,1,0,0,0,752,755,1,
+	0,0,0,753,751,1,0,0,0,753,754,1,0,0,0,754,757,1,0,0,0,755,753,1,0,0,0,756,
+	758,5,19,0,0,757,756,1,0,0,0,757,758,1,0,0,0,758,139,1,0,0,0,759,761,7,
+	12,0,0,760,759,1,0,0,0,760,761,1,0,0,0,761,762,1,0,0,0,762,763,3,8,4,0,
+	763,764,5,23,0,0,764,765,3,50,25,0,765,141,1,0,0,0,766,767,5,18,0,0,767,
+	768,3,8,4,0,768,769,5,24,0,0,769,770,3,138,69,0,770,771,5,25,0,0,771,143,
+	1,0,0,0,772,773,5,83,0,0,773,774,3,8,4,0,774,775,5,23,0,0,775,776,3,50,
+	25,0,776,777,5,45,0,0,777,778,5,37,0,0,778,779,1,0,0,0,779,780,3,50,25,
+	0,780,781,5,66,0,0,781,145,1,0,0,0,782,789,3,124,62,0,783,789,3,130,65,
+	0,784,789,3,132,66,0,785,789,3,136,68,0,786,789,3,142,71,0,787,789,3,144,
+	72,0,788,782,1,0,0,0,788,783,1,0,0,0,788,784,1,0,0,0,788,785,1,0,0,0,788,
+	786,1,0,0,0,788,787,1,0,0,0,789,147,1,0,0,0,790,791,5,84,0,0,791,792,3,
+	34,17,0,792,796,5,24,0,0,793,795,3,146,73,0,794,793,1,0,0,0,795,798,1,0,
+	0,0,796,794,1,0,0,0,796,797,1,0,0,0,797,799,1,0,0,0,798,796,1,0,0,0,799,
+	800,5,25,0,0,800,149,1,0,0,0,801,802,5,85,0,0,802,803,3,34,17,0,803,804,
+	5,66,0,0,804,151,1,0,0,0,805,807,3,150,75,0,806,805,1,0,0,0,807,810,1,0,
+	0,0,808,806,1,0,0,0,808,809,1,0,0,0,809,811,1,0,0,0,810,808,1,0,0,0,811,
+	812,3,148,74,0,812,153,1,0,0,0,813,814,3,50,25,0,814,155,1,0,0,0,815,816,
+	3,86,43,0,816,157,1,0,0,0,817,818,3,8,4,0,818,819,5,23,0,0,819,820,3,154,
+	77,0,820,821,5,45,0,0,821,822,3,156,78,0,822,823,5,66,0,0,823,159,1,0,0,
+	0,824,828,5,99,0,0,825,827,3,158,79,0,826,825,1,0,0,0,827,830,1,0,0,0,828,
+	826,1,0,0,0,828,829,1,0,0,0,829,161,1,0,0,0,830,828,1,0,0,0,831,833,3,160,
+	80,0,832,831,1,0,0,0,833,836,1,0,0,0,834,832,1,0,0,0,834,835,1,0,0,0,835,
+	163,1,0,0,0,836,834,1,0,0,0,837,838,3,86,43,0,838,165,1,0,0,0,839,840,3,
+	164,82,0,840,841,5,66,0,0,841,167,1,0,0,0,842,843,5,100,0,0,843,844,3,166,
+	83,0,844,169,1,0,0,0,845,846,3,168,84,0,846,171,1,0,0,0,74,187,189,195,
+	219,225,230,249,254,259,265,270,272,280,283,291,294,300,310,314,331,347,
+	362,366,372,380,383,394,398,407,416,427,434,443,487,489,506,519,525,534,
+	540,562,565,569,584,596,603,611,624,634,641,648,655,664,668,671,680,687,
+	694,701,708,715,718,722,728,735,738,753,757,760,788,796,808,828,834];
 
 	private static __ATN: ATN;
 	public static get _ATN(): ATN {
@@ -5137,40 +4805,451 @@ export default class LeoParser extends Parser {
 
 }
 
-export class SourceUnitContext extends ParserRuleContext {
+export class LetterContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public programDeclaration(): ProgramDeclarationContext {
-		return this.getTypedRuleContext(ProgramDeclarationContext, 0) as ProgramDeclarationContext;
-	}
-	public EOF(): TerminalNode {
-		return this.getToken(LeoParser.EOF, 0);
-	}
-	public importDeclaration_list(): ImportDeclarationContext[] {
-		return this.getTypedRuleContexts(ImportDeclarationContext) as ImportDeclarationContext[];
-	}
-	public importDeclaration(i: number): ImportDeclarationContext {
-		return this.getTypedRuleContext(ImportDeclarationContext, i) as ImportDeclarationContext;
+	public Identifier(): TerminalNode {
+		return this.getToken(LeoParser.Identifier, 0);
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_sourceUnit;
+    	return LeoParser.RULE_letter;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterSourceUnit) {
-	 		listener.enterSourceUnit(this);
+	    if(listener.enterLetter) {
+	 		listener.enterLetter(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitSourceUnit) {
-	 		listener.exitSourceUnit(this);
+	    if(listener.exitLetter) {
+	 		listener.exitLetter(this);
 		}
 	}
 }
 
 
-export class ProgramIdContext extends ParserRuleContext {
+export class BhpContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_bhp;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterBhp) {
+	 		listener.enterBhp(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitBhp) {
+	 		listener.exitBhp(this);
+		}
+	}
+}
+
+
+export class PedersenContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_pedersen;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterPedersen) {
+	 		listener.enterPedersen(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitPedersen) {
+	 		listener.exitPedersen(this);
+		}
+	}
+}
+
+
+export class PoseidonContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_poseidon;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterPoseidon) {
+	 		listener.enterPoseidon(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitPoseidon) {
+	 		listener.exitPoseidon(this);
+		}
+	}
+}
+
+
+export class IdentifierContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public letter_list(): LetterContext[] {
+		return this.getTypedRuleContexts(LetterContext) as LetterContext[];
+	}
+	public letter(i: number): LetterContext {
+		return this.getTypedRuleContext(LetterContext, i) as LetterContext;
+	}
+	public Digit_list(): TerminalNode[] {
+	    	return this.getTokens(LeoParser.Digit);
+	}
+	public Digit(i: number): TerminalNode {
+		return this.getToken(LeoParser.Digit, i);
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_identifier;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterIdentifier) {
+	 		listener.enterIdentifier(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitIdentifier) {
+	 		listener.exitIdentifier(this);
+		}
+	}
+}
+
+
+export class NumeralContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public Digit_list(): TerminalNode[] {
+	    	return this.getTokens(LeoParser.Digit);
+	}
+	public Digit(i: number): TerminalNode {
+		return this.getToken(LeoParser.Digit, i);
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_numeral;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterNumeral) {
+	 		listener.enterNumeral(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitNumeral) {
+	 		listener.exitNumeral(this);
+		}
+	}
+}
+
+
+export class Unsigned_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public numeral(): NumeralContext {
+		return this.getTypedRuleContext(NumeralContext, 0) as NumeralContext;
+	}
+	public UNSIGNED_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.UNSIGNED_TYPE, 0);
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_unsigned_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterUnsigned_literal) {
+	 		listener.enterUnsigned_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitUnsigned_literal) {
+	 		listener.exitUnsigned_literal(this);
+		}
+	}
+}
+
+
+export class Signed_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public numeral(): NumeralContext {
+		return this.getTypedRuleContext(NumeralContext, 0) as NumeralContext;
+	}
+	public SIGNED_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.SIGNED_TYPE, 0);
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_signed_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterSigned_literal) {
+	 		listener.enterSigned_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitSigned_literal) {
+	 		listener.exitSigned_literal(this);
+		}
+	}
+}
+
+
+export class Field_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public numeral(): NumeralContext {
+		return this.getTypedRuleContext(NumeralContext, 0) as NumeralContext;
+	}
+	public FIELD_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.FIELD_TYPE, 0);
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_field_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterField_literal) {
+	 		listener.enterField_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitField_literal) {
+	 		listener.exitField_literal(this);
+		}
+	}
+}
+
+
+export class Product_group_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public numeral(): NumeralContext {
+		return this.getTypedRuleContext(NumeralContext, 0) as NumeralContext;
+	}
+	public GROUP_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.GROUP_TYPE, 0);
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_product_group_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterProduct_group_literal) {
+	 		listener.enterProduct_group_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitProduct_group_literal) {
+	 		listener.exitProduct_group_literal(this);
+		}
+	}
+}
+
+
+export class Scalar_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public numeral(): NumeralContext {
+		return this.getTypedRuleContext(NumeralContext, 0) as NumeralContext;
+	}
+	public SCALAR_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.SCALAR_TYPE, 0);
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_scalar_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterScalar_literal) {
+	 		listener.enterScalar_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitScalar_literal) {
+	 		listener.exitScalar_literal(this);
+		}
+	}
+}
+
+
+export class Address_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public addr_identifier(): Addr_identifierContext {
+		return this.getTypedRuleContext(Addr_identifierContext, 0) as Addr_identifierContext;
+	}
+	public Identifier(): TerminalNode {
+		return this.getToken(LeoParser.Identifier, 0);
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_address_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterAddress_literal) {
+	 		listener.enterAddress_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitAddress_literal) {
+	 		listener.exitAddress_literal(this);
+		}
+	}
+}
+
+
+export class Addr_identifierContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_addr_identifier;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterAddr_identifier) {
+	 		listener.enterAddr_identifier(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitAddr_identifier) {
+	 		listener.exitAddr_identifier(this);
+		}
+	}
+}
+
+
+export class Integer_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public unsigned_literal(): Unsigned_literalContext {
+		return this.getTypedRuleContext(Unsigned_literalContext, 0) as Unsigned_literalContext;
+	}
+	public signed_literal(): Signed_literalContext {
+		return this.getTypedRuleContext(Signed_literalContext, 0) as Signed_literalContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_integer_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterInteger_literal) {
+	 		listener.enterInteger_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitInteger_literal) {
+	 		listener.exitInteger_literal(this);
+		}
+	}
+}
+
+
+export class Numeric_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public integer_literal(): Integer_literalContext {
+		return this.getTypedRuleContext(Integer_literalContext, 0) as Integer_literalContext;
+	}
+	public field_literal(): Field_literalContext {
+		return this.getTypedRuleContext(Field_literalContext, 0) as Field_literalContext;
+	}
+	public product_group_literal(): Product_group_literalContext {
+		return this.getTypedRuleContext(Product_group_literalContext, 0) as Product_group_literalContext;
+	}
+	public scalar_literal(): Scalar_literalContext {
+		return this.getTypedRuleContext(Scalar_literalContext, 0) as Scalar_literalContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_numeric_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterNumeric_literal) {
+	 		listener.enterNumeric_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitNumeric_literal) {
+	 		listener.exitNumeric_literal(this);
+		}
+	}
+}
+
+
+export class Atomic_literalContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public numeric_literal(): Numeric_literalContext {
+		return this.getTypedRuleContext(Numeric_literalContext, 0) as Numeric_literalContext;
+	}
+	public BOOLEAN_LITERAL(): TerminalNode {
+		return this.getToken(LeoParser.BOOLEAN_LITERAL, 0);
+	}
+	public address_literal(): Address_literalContext {
+		return this.getTypedRuleContext(Address_literalContext, 0) as Address_literalContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_atomic_literal;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterAtomic_literal) {
+	 		listener.enterAtomic_literal(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitAtomic_literal) {
+	 		listener.exitAtomic_literal(this);
+		}
+	}
+}
+
+
+export class AnnotationContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public identifier(): IdentifierContext {
+		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_annotation;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterAnnotation) {
+	 		listener.enterAnnotation(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitAnnotation) {
+	 		listener.exitAnnotation(this);
+		}
+	}
+}
+
+
+export class Program_idContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -5182,16 +5261,16 @@ export class ProgramIdContext extends ParserRuleContext {
 		return this.getTypedRuleContext(IdentifierContext, i) as IdentifierContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_programId;
+    	return LeoParser.RULE_program_id;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterProgramId) {
-	 		listener.enterProgramId(this);
+	    if(listener.enterProgram_id) {
+	 		listener.enterProgram_id(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitProgramId) {
-	 		listener.exitProgramId(this);
+	    if(listener.exitProgram_id) {
+	 		listener.exitProgram_id(this);
 		}
 	}
 }
@@ -5202,8 +5281,8 @@ export class LocatorContext extends ParserRuleContext {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public programId(): ProgramIdContext {
-		return this.getTypedRuleContext(ProgramIdContext, 0) as ProgramIdContext;
+	public program_id(): Program_idContext {
+		return this.getTypedRuleContext(Program_idContext, 0) as Program_idContext;
 	}
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
@@ -5224,292 +5303,127 @@ export class LocatorContext extends ParserRuleContext {
 }
 
 
-export class ImportDeclarationContext extends ParserRuleContext {
+export class Integer_typeContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public programId(): ProgramIdContext {
-		return this.getTypedRuleContext(ProgramIdContext, 0) as ProgramIdContext;
+	public UNSIGNED_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.UNSIGNED_TYPE, 0);
+	}
+	public SIGNED_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.SIGNED_TYPE, 0);
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_importDeclaration;
+    	return LeoParser.RULE_integer_type;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterImportDeclaration) {
-	 		listener.enterImportDeclaration(this);
+	    if(listener.enterInteger_type) {
+	 		listener.enterInteger_type(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitImportDeclaration) {
-	 		listener.exitImportDeclaration(this);
+	    if(listener.exitInteger_type) {
+	 		listener.exitInteger_type(this);
 		}
 	}
 }
 
 
-export class ProgramDeclarationContext extends ParserRuleContext {
+export class Arithmetic_typeContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public programId(): ProgramIdContext {
-		return this.getTypedRuleContext(ProgramIdContext, 0) as ProgramIdContext;
+	public integer_type(): Integer_typeContext {
+		return this.getTypedRuleContext(Integer_typeContext, 0) as Integer_typeContext;
 	}
-	public programItem_list(): ProgramItemContext[] {
-		return this.getTypedRuleContexts(ProgramItemContext) as ProgramItemContext[];
+	public FIELD_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.FIELD_TYPE, 0);
 	}
-	public programItem(i: number): ProgramItemContext {
-		return this.getTypedRuleContext(ProgramItemContext, i) as ProgramItemContext;
+	public GROUP_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.GROUP_TYPE, 0);
+	}
+	public SCALAR_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.SCALAR_TYPE, 0);
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_programDeclaration;
+    	return LeoParser.RULE_arithmetic_type;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterProgramDeclaration) {
-	 		listener.enterProgramDeclaration(this);
+	    if(listener.enterArithmetic_type) {
+	 		listener.enterArithmetic_type(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitProgramDeclaration) {
-	 		listener.exitProgramDeclaration(this);
+	    if(listener.exitArithmetic_type) {
+	 		listener.exitArithmetic_type(this);
 		}
 	}
 }
 
 
-export class ProgramItemContext extends ParserRuleContext {
+export class Named_primitive_typeContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public structDeclaration(): StructDeclarationContext {
-		return this.getTypedRuleContext(StructDeclarationContext, 0) as StructDeclarationContext;
+	public BOOLEAN_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.BOOLEAN_TYPE, 0);
 	}
-	public recordDeclaration(): RecordDeclarationContext {
-		return this.getTypedRuleContext(RecordDeclarationContext, 0) as RecordDeclarationContext;
+	public arithmetic_type(): Arithmetic_typeContext {
+		return this.getTypedRuleContext(Arithmetic_typeContext, 0) as Arithmetic_typeContext;
 	}
-	public mappingDeclaration(): MappingDeclarationContext {
-		return this.getTypedRuleContext(MappingDeclarationContext, 0) as MappingDeclarationContext;
-	}
-	public functionDeclaration(): FunctionDeclarationContext {
-		return this.getTypedRuleContext(FunctionDeclarationContext, 0) as FunctionDeclarationContext;
-	}
-	public inlineDeclaration(): InlineDeclarationContext {
-		return this.getTypedRuleContext(InlineDeclarationContext, 0) as InlineDeclarationContext;
-	}
-	public transitionDeclaration(): TransitionDeclarationContext {
-		return this.getTypedRuleContext(TransitionDeclarationContext, 0) as TransitionDeclarationContext;
+	public ADDRESS_TYPE(): TerminalNode {
+		return this.getToken(LeoParser.ADDRESS_TYPE, 0);
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_programItem;
+    	return LeoParser.RULE_named_primitive_type;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterProgramItem) {
-	 		listener.enterProgramItem(this);
+	    if(listener.enterNamed_primitive_type) {
+	 		listener.enterNamed_primitive_type(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitProgramItem) {
-	 		listener.exitProgramItem(this);
+	    if(listener.exitNamed_primitive_type) {
+	 		listener.exitNamed_primitive_type(this);
 		}
 	}
 }
 
 
-export class IdentifierContext extends ParserRuleContext {
+export class Primitive_typeContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public Identifier(): TerminalNode {
-		return this.getToken(LeoParser.Identifier, 0);
+	public named_primitive_type(): Named_primitive_typeContext {
+		return this.getTypedRuleContext(Named_primitive_typeContext, 0) as Named_primitive_typeContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_identifier;
+    	return LeoParser.RULE_primitive_type;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterIdentifier) {
-	 		listener.enterIdentifier(this);
+	    if(listener.enterPrimitive_type) {
+	 		listener.enterPrimitive_type(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitIdentifier) {
-	 		listener.exitIdentifier(this);
+	    if(listener.exitPrimitive_type) {
+	 		listener.exitPrimitive_type(this);
 		}
 	}
 }
 
 
-export class AnnotationContext extends ParserRuleContext {
+export class Named_typeContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public Identifier(): TerminalNode {
-		return this.getToken(LeoParser.Identifier, 0);
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_annotation;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAnnotation) {
-	 		listener.enterAnnotation(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAnnotation) {
-	 		listener.exitAnnotation(this);
-		}
-	}
-}
-
-
-export class IntegerTypeContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public UnsignedType(): TerminalNode {
-		return this.getToken(LeoParser.UnsignedType, 0);
-	}
-	public SignedType(): TerminalNode {
-		return this.getToken(LeoParser.SignedType, 0);
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_integerType;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterIntegerType) {
-	 		listener.enterIntegerType(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitIntegerType) {
-	 		listener.exitIntegerType(this);
-		}
-	}
-}
-
-
-export class ArithmeticTypeContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public integerType(): IntegerTypeContext {
-		return this.getTypedRuleContext(IntegerTypeContext, 0) as IntegerTypeContext;
-	}
-	public FieldType(): TerminalNode {
-		return this.getToken(LeoParser.FieldType, 0);
-	}
-	public GroupType(): TerminalNode {
-		return this.getToken(LeoParser.GroupType, 0);
-	}
-	public ScalarType(): TerminalNode {
-		return this.getToken(LeoParser.ScalarType, 0);
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_arithmeticType;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterArithmeticType) {
-	 		listener.enterArithmeticType(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitArithmeticType) {
-	 		listener.exitArithmeticType(this);
-		}
-	}
-}
-
-
-export class NamedPrimitiveTypeContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public BooleanType(): TerminalNode {
-		return this.getToken(LeoParser.BooleanType, 0);
-	}
-	public arithmeticType(): ArithmeticTypeContext {
-		return this.getTypedRuleContext(ArithmeticTypeContext, 0) as ArithmeticTypeContext;
-	}
-	public AddressType(): TerminalNode {
-		return this.getToken(LeoParser.AddressType, 0);
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_namedPrimitiveType;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterNamedPrimitiveType) {
-	 		listener.enterNamedPrimitiveType(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitNamedPrimitiveType) {
-	 		listener.exitNamedPrimitiveType(this);
-		}
-	}
-}
-
-
-export class UnitTypeContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_unitType;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterUnitType) {
-	 		listener.enterUnitType(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitUnitType) {
-	 		listener.exitUnitType(this);
-		}
-	}
-}
-
-
-export class PrimitiveTypeContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public namedPrimitiveType(): NamedPrimitiveTypeContext {
-		return this.getTypedRuleContext(NamedPrimitiveTypeContext, 0) as NamedPrimitiveTypeContext;
-	}
-	public unitType(): UnitTypeContext {
-		return this.getTypedRuleContext(UnitTypeContext, 0) as UnitTypeContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_primitiveType;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterPrimitiveType) {
-	 		listener.enterPrimitiveType(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitPrimitiveType) {
-	 		listener.exitPrimitiveType(this);
-		}
-	}
-}
-
-
-export class NamedTypeContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public namedPrimitiveType(): NamedPrimitiveTypeContext {
-		return this.getTypedRuleContext(NamedPrimitiveTypeContext, 0) as NamedPrimitiveTypeContext;
+	public named_primitive_type(): Named_primitive_typeContext {
+		return this.getTypedRuleContext(Named_primitive_typeContext, 0) as Named_primitive_typeContext;
 	}
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
@@ -5518,22 +5432,22 @@ export class NamedTypeContext extends ParserRuleContext {
 		return this.getTypedRuleContext(LocatorContext, 0) as LocatorContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_namedType;
+    	return LeoParser.RULE_named_type;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterNamedType) {
-	 		listener.enterNamedType(this);
+	    if(listener.enterNamed_type) {
+	 		listener.enterNamed_type(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitNamedType) {
-	 		listener.exitNamedType(this);
+	    if(listener.exitNamed_type) {
+	 		listener.exitNamed_type(this);
 		}
 	}
 }
 
 
-export class TupleTypeContext extends ParserRuleContext {
+export class Tuple_typeContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -5545,43 +5459,16 @@ export class TupleTypeContext extends ParserRuleContext {
 		return this.getTypedRuleContext(TypeContext, i) as TypeContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_tupleType;
+    	return LeoParser.RULE_tuple_type;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterTupleType) {
-	 		listener.enterTupleType(this);
+	    if(listener.enterTuple_type) {
+	 		listener.enterTuple_type(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitTupleType) {
-	 		listener.exitTupleType(this);
-		}
-	}
-}
-
-
-export class UserDefinedTypeNameContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public identifier_list(): IdentifierContext[] {
-		return this.getTypedRuleContexts(IdentifierContext) as IdentifierContext[];
-	}
-	public identifier(i: number): IdentifierContext {
-		return this.getTypedRuleContext(IdentifierContext, i) as IdentifierContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_userDefinedTypeName;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterUserDefinedTypeName) {
-	 		listener.enterUserDefinedTypeName(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitUserDefinedTypeName) {
-	 		listener.exitUserDefinedTypeName(this);
+	    if(listener.exitTuple_type) {
+	 		listener.exitTuple_type(this);
 		}
 	}
 }
@@ -5592,17 +5479,11 @@ export class TypeContext extends ParserRuleContext {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public namedType(): NamedTypeContext {
-		return this.getTypedRuleContext(NamedTypeContext, 0) as NamedTypeContext;
+	public named_type(): Named_typeContext {
+		return this.getTypedRuleContext(Named_typeContext, 0) as Named_typeContext;
 	}
-	public unitType(): UnitTypeContext {
-		return this.getTypedRuleContext(UnitTypeContext, 0) as UnitTypeContext;
-	}
-	public tupleType(): TupleTypeContext {
-		return this.getTypedRuleContext(TupleTypeContext, 0) as TupleTypeContext;
-	}
-	public userDefinedTypeName(): UserDefinedTypeNameContext {
-		return this.getTypedRuleContext(UserDefinedTypeNameContext, 0) as UserDefinedTypeNameContext;
+	public tuple_type(): Tuple_typeContext {
+		return this.getTypedRuleContext(Tuple_typeContext, 0) as Tuple_typeContext;
 	}
     public get ruleIndex(): number {
     	return LeoParser.RULE_type;
@@ -5620,91 +5501,52 @@ export class TypeContext extends ParserRuleContext {
 }
 
 
-export class IntegerliteralContext extends ParserRuleContext {
+export class Group_coordinateContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public Nnsignedliteral(): TerminalNode {
-		return this.getToken(LeoParser.Nnsignedliteral, 0);
-	}
-	public Signedliteral(): TerminalNode {
-		return this.getToken(LeoParser.Signedliteral, 0);
+	public numeral(): NumeralContext {
+		return this.getTypedRuleContext(NumeralContext, 0) as NumeralContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_integerliteral;
+    	return LeoParser.RULE_group_coordinate;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterIntegerliteral) {
-	 		listener.enterIntegerliteral(this);
+	    if(listener.enterGroup_coordinate) {
+	 		listener.enterGroup_coordinate(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitIntegerliteral) {
-	 		listener.exitIntegerliteral(this);
+	    if(listener.exitGroup_coordinate) {
+	 		listener.exitGroup_coordinate(this);
 		}
 	}
 }
 
 
-export class NumericliteralContext extends ParserRuleContext {
+export class Affine_group_literalContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public integerliteral(): IntegerliteralContext {
-		return this.getTypedRuleContext(IntegerliteralContext, 0) as IntegerliteralContext;
+	public group_coordinate_list(): Group_coordinateContext[] {
+		return this.getTypedRuleContexts(Group_coordinateContext) as Group_coordinateContext[];
 	}
-	public Fieldliteral(): TerminalNode {
-		return this.getToken(LeoParser.Fieldliteral, 0);
-	}
-	public ProductGroupliteral(): TerminalNode {
-		return this.getToken(LeoParser.ProductGroupliteral, 0);
-	}
-	public Scalarliteral(): TerminalNode {
-		return this.getToken(LeoParser.Scalarliteral, 0);
+	public group_coordinate(i: number): Group_coordinateContext {
+		return this.getTypedRuleContext(Group_coordinateContext, i) as Group_coordinateContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_numericliteral;
+    	return LeoParser.RULE_affine_group_literal;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterNumericliteral) {
-	 		listener.enterNumericliteral(this);
+	    if(listener.enterAffine_group_literal) {
+	 		listener.enterAffine_group_literal(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitNumericliteral) {
-	 		listener.exitNumericliteral(this);
-		}
-	}
-}
-
-
-export class AtomicliteralContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public numericliteral(): NumericliteralContext {
-		return this.getTypedRuleContext(NumericliteralContext, 0) as NumericliteralContext;
-	}
-	public Booleanliteral(): TerminalNode {
-		return this.getToken(LeoParser.Booleanliteral, 0);
-	}
-	public Addressliteral(): TerminalNode {
-		return this.getToken(LeoParser.Addressliteral, 0);
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_atomicliteral;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAtomicliteral) {
-	 		listener.enterAtomicliteral(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAtomicliteral) {
-	 		listener.exitAtomicliteral(this);
+	    if(listener.exitAffine_group_literal) {
+	 		listener.exitAffine_group_literal(this);
 		}
 	}
 }
@@ -5715,11 +5557,11 @@ export class LiteralContext extends ParserRuleContext {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public atomicliteral(): AtomicliteralContext {
-		return this.getTypedRuleContext(AtomicliteralContext, 0) as AtomicliteralContext;
+	public atomic_literal(): Atomic_literalContext {
+		return this.getTypedRuleContext(Atomic_literalContext, 0) as Atomic_literalContext;
 	}
-	public AffineGroupliteral(): TerminalNode {
-		return this.getToken(LeoParser.AffineGroupliteral, 0);
+	public affine_group_literal(): Affine_group_literalContext {
+		return this.getTypedRuleContext(Affine_group_literalContext, 0) as Affine_group_literalContext;
 	}
     public get ruleIndex(): number {
     	return LeoParser.RULE_literal;
@@ -5737,34 +5579,34 @@ export class LiteralContext extends ParserRuleContext {
 }
 
 
-export class GroupliteralContext extends ParserRuleContext {
+export class Group_literalContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public ProductGroupliteral(): TerminalNode {
-		return this.getToken(LeoParser.ProductGroupliteral, 0);
+	public product_group_literal(): Product_group_literalContext {
+		return this.getTypedRuleContext(Product_group_literalContext, 0) as Product_group_literalContext;
 	}
-	public AffineGroupliteral(): TerminalNode {
-		return this.getToken(LeoParser.AffineGroupliteral, 0);
+	public affine_group_literal(): Affine_group_literalContext {
+		return this.getTypedRuleContext(Affine_group_literalContext, 0) as Affine_group_literalContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_groupliteral;
+    	return LeoParser.RULE_group_literal;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterGroupliteral) {
-	 		listener.enterGroupliteral(this);
+	    if(listener.enterGroup_literal) {
+	 		listener.enterGroup_literal(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitGroupliteral) {
-	 		listener.exitGroupliteral(this);
+	    if(listener.exitGroup_literal) {
+	 		listener.exitGroup_literal(this);
 		}
 	}
 }
 
 
-export class PrimaryExpressionContext extends ParserRuleContext {
+export class Primary_expressionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -5775,44 +5617,41 @@ export class PrimaryExpressionContext extends ParserRuleContext {
 	public variable(): VariableContext {
 		return this.getTypedRuleContext(VariableContext, 0) as VariableContext;
 	}
-	public associatedConstant(): AssociatedConstantContext {
-		return this.getTypedRuleContext(AssociatedConstantContext, 0) as AssociatedConstantContext;
+	public associated_constant(): Associated_constantContext {
+		return this.getTypedRuleContext(Associated_constantContext, 0) as Associated_constantContext;
 	}
 	public expression(): ExpressionContext {
 		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
 	}
-	public freeFunctionCall(): FreeFunctionCallContext {
-		return this.getTypedRuleContext(FreeFunctionCallContext, 0) as FreeFunctionCallContext;
+	public free_function_call(): Free_function_callContext {
+		return this.getTypedRuleContext(Free_function_callContext, 0) as Free_function_callContext;
 	}
-	public associatedFunctionCall(): AssociatedFunctionCallContext {
-		return this.getTypedRuleContext(AssociatedFunctionCallContext, 0) as AssociatedFunctionCallContext;
+	public associated_function_call(): Associated_function_callContext {
+		return this.getTypedRuleContext(Associated_function_callContext, 0) as Associated_function_callContext;
 	}
-	public unitExpression(): UnitExpressionContext {
-		return this.getTypedRuleContext(UnitExpressionContext, 0) as UnitExpressionContext;
+	public tuple_expression(): Tuple_expressionContext {
+		return this.getTypedRuleContext(Tuple_expressionContext, 0) as Tuple_expressionContext;
 	}
-	public tupleExpression(): TupleExpressionContext {
-		return this.getTypedRuleContext(TupleExpressionContext, 0) as TupleExpressionContext;
+	public struct_expression(): Struct_expressionContext {
+		return this.getTypedRuleContext(Struct_expressionContext, 0) as Struct_expressionContext;
 	}
-	public structExpression(): StructExpressionContext {
-		return this.getTypedRuleContext(StructExpressionContext, 0) as StructExpressionContext;
+	public SELF_CALLER(): TerminalNode {
+		return this.getToken(LeoParser.SELF_CALLER, 0);
 	}
-	public selfCaller(): SelfCallerContext {
-		return this.getTypedRuleContext(SelfCallerContext, 0) as SelfCallerContext;
-	}
-	public blockHeight(): BlockHeightContext {
-		return this.getTypedRuleContext(BlockHeightContext, 0) as BlockHeightContext;
+	public BLOCK_HEIGHT(): TerminalNode {
+		return this.getToken(LeoParser.BLOCK_HEIGHT, 0);
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_primaryExpression;
+    	return LeoParser.RULE_primary_expression;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterPrimaryExpression) {
-	 		listener.enterPrimaryExpression(this);
+	    if(listener.enterPrimary_expression) {
+	 		listener.enterPrimary_expression(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitPrimaryExpression) {
-	 		listener.exitPrimaryExpression(this);
+	    if(listener.exitPrimary_expression) {
+	 		listener.exitPrimary_expression(this);
 		}
 	}
 }
@@ -5842,34 +5681,34 @@ export class VariableContext extends ParserRuleContext {
 }
 
 
-export class AssociatedConstantContext extends ParserRuleContext {
+export class Associated_constantContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public namedType(): NamedTypeContext {
-		return this.getTypedRuleContext(NamedTypeContext, 0) as NamedTypeContext;
+	public named_type(): Named_typeContext {
+		return this.getTypedRuleContext(Named_typeContext, 0) as Named_typeContext;
 	}
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_associatedConstant;
+    	return LeoParser.RULE_associated_constant;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAssociatedConstant) {
-	 		listener.enterAssociatedConstant(this);
+	    if(listener.enterAssociated_constant) {
+	 		listener.enterAssociated_constant(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAssociatedConstant) {
-	 		listener.exitAssociatedConstant(this);
+	    if(listener.exitAssociated_constant) {
+	 		listener.exitAssociated_constant(this);
 		}
 	}
 }
 
 
-export class FreeFunctionCallContext extends ParserRuleContext {
+export class Free_function_callContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -5877,59 +5716,59 @@ export class FreeFunctionCallContext extends ParserRuleContext {
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public functionArguments(): FunctionArgumentsContext {
-		return this.getTypedRuleContext(FunctionArgumentsContext, 0) as FunctionArgumentsContext;
+	public function_arguments(): Function_argumentsContext {
+		return this.getTypedRuleContext(Function_argumentsContext, 0) as Function_argumentsContext;
 	}
 	public locator(): LocatorContext {
 		return this.getTypedRuleContext(LocatorContext, 0) as LocatorContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_freeFunctionCall;
+    	return LeoParser.RULE_free_function_call;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterFreeFunctionCall) {
-	 		listener.enterFreeFunctionCall(this);
+	    if(listener.enterFree_function_call) {
+	 		listener.enterFree_function_call(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitFreeFunctionCall) {
-	 		listener.exitFreeFunctionCall(this);
+	    if(listener.exitFree_function_call) {
+	 		listener.exitFree_function_call(this);
 		}
 	}
 }
 
 
-export class AssociatedFunctionCallContext extends ParserRuleContext {
+export class Associated_function_callContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
+	public named_type(): Named_typeContext {
+		return this.getTypedRuleContext(Named_typeContext, 0) as Named_typeContext;
+	}
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public functionArguments(): FunctionArgumentsContext {
-		return this.getTypedRuleContext(FunctionArgumentsContext, 0) as FunctionArgumentsContext;
-	}
-	public namedType(): NamedTypeContext {
-		return this.getTypedRuleContext(NamedTypeContext, 0) as NamedTypeContext;
+	public function_arguments(): Function_argumentsContext {
+		return this.getTypedRuleContext(Function_argumentsContext, 0) as Function_argumentsContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_associatedFunctionCall;
+    	return LeoParser.RULE_associated_function_call;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAssociatedFunctionCall) {
-	 		listener.enterAssociatedFunctionCall(this);
+	    if(listener.enterAssociated_function_call) {
+	 		listener.enterAssociated_function_call(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAssociatedFunctionCall) {
-	 		listener.exitAssociatedFunctionCall(this);
+	    if(listener.exitAssociated_function_call) {
+	 		listener.exitAssociated_function_call(this);
 		}
 	}
 }
 
 
-export class FunctionArgumentsContext extends ParserRuleContext {
+export class Function_argumentsContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -5941,43 +5780,22 @@ export class FunctionArgumentsContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_functionArguments;
+    	return LeoParser.RULE_function_arguments;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterFunctionArguments) {
-	 		listener.enterFunctionArguments(this);
+	    if(listener.enterFunction_arguments) {
+	 		listener.enterFunction_arguments(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitFunctionArguments) {
-	 		listener.exitFunctionArguments(this);
+	    if(listener.exitFunction_arguments) {
+	 		listener.exitFunction_arguments(this);
 		}
 	}
 }
 
 
-export class UnitExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_unitExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterUnitExpression) {
-	 		listener.enterUnitExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitUnitExpression) {
-	 		listener.exitUnitExpression(this);
-		}
-	}
-}
-
-
-export class TupleExpressionContext extends ParserRuleContext {
+export class Tuple_expressionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -5989,22 +5807,22 @@ export class TupleExpressionContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_tupleExpression;
+    	return LeoParser.RULE_tuple_expression;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterTupleExpression) {
-	 		listener.enterTupleExpression(this);
+	    if(listener.enterTuple_expression) {
+	 		listener.enterTuple_expression(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitTupleExpression) {
-	 		listener.exitTupleExpression(this);
+	    if(listener.exitTuple_expression) {
+	 		listener.exitTuple_expression(this);
 		}
 	}
 }
 
 
-export class StructExpressionContext extends ParserRuleContext {
+export class Struct_expressionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -6012,29 +5830,29 @@ export class StructExpressionContext extends ParserRuleContext {
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public structComponentInitializer_list(): StructComponentInitializerContext[] {
-		return this.getTypedRuleContexts(StructComponentInitializerContext) as StructComponentInitializerContext[];
+	public struct_component_initializer_list(): Struct_component_initializerContext[] {
+		return this.getTypedRuleContexts(Struct_component_initializerContext) as Struct_component_initializerContext[];
 	}
-	public structComponentInitializer(i: number): StructComponentInitializerContext {
-		return this.getTypedRuleContext(StructComponentInitializerContext, i) as StructComponentInitializerContext;
+	public struct_component_initializer(i: number): Struct_component_initializerContext {
+		return this.getTypedRuleContext(Struct_component_initializerContext, i) as Struct_component_initializerContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_structExpression;
+    	return LeoParser.RULE_struct_expression;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterStructExpression) {
-	 		listener.enterStructExpression(this);
+	    if(listener.enterStruct_expression) {
+	 		listener.enterStruct_expression(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitStructExpression) {
-	 		listener.exitStructExpression(this);
+	    if(listener.exitStruct_expression) {
+	 		listener.exitStruct_expression(this);
 		}
 	}
 }
 
 
-export class StructComponentInitializerContext extends ParserRuleContext {
+export class Struct_component_initializerContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -6046,100 +5864,64 @@ export class StructComponentInitializerContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_structComponentInitializer;
+    	return LeoParser.RULE_struct_component_initializer;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterStructComponentInitializer) {
-	 		listener.enterStructComponentInitializer(this);
+	    if(listener.enterStruct_component_initializer) {
+	 		listener.enterStruct_component_initializer(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitStructComponentInitializer) {
-	 		listener.exitStructComponentInitializer(this);
+	    if(listener.exitStruct_component_initializer) {
+	 		listener.exitStruct_component_initializer(this);
 		}
 	}
 }
 
 
-export class SelfCallerContext extends ParserRuleContext {
+export class Postfix_expressionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_selfCaller;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterSelfCaller) {
-	 		listener.enterSelfCaller(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitSelfCaller) {
-	 		listener.exitSelfCaller(this);
-		}
-	}
-}
-
-
-export class BlockHeightContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_blockHeight;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterBlockHeight) {
-	 		listener.enterBlockHeight(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitBlockHeight) {
-	 		listener.exitBlockHeight(this);
-		}
-	}
-}
-
-
-export class PostfixExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public primaryExpression(): PrimaryExpressionContext {
-		return this.getTypedRuleContext(PrimaryExpressionContext, 0) as PrimaryExpressionContext;
+	public primary_expression(): Primary_expressionContext {
+		return this.getTypedRuleContext(Primary_expressionContext, 0) as Primary_expressionContext;
 	}
 	public useMapping(): UseMappingContext {
 		return this.getTypedRuleContext(UseMappingContext, 0) as UseMappingContext;
 	}
-	public tupleComponentExpression(): TupleComponentExpressionContext {
-		return this.getTypedRuleContext(TupleComponentExpressionContext, 0) as TupleComponentExpressionContext;
+	public chacha(): ChachaContext {
+		return this.getTypedRuleContext(ChachaContext, 0) as ChachaContext;
 	}
-	public structComponentExpression(): StructComponentExpressionContext {
-		return this.getTypedRuleContext(StructComponentExpressionContext, 0) as StructComponentExpressionContext;
+	public associatedFunctionCall(): AssociatedFunctionCallContext {
+		return this.getTypedRuleContext(AssociatedFunctionCallContext, 0) as AssociatedFunctionCallContext;
 	}
-	public methodCall(): MethodCallContext {
-		return this.getTypedRuleContext(MethodCallContext, 0) as MethodCallContext;
+	public tuple_component_expression(): Tuple_component_expressionContext {
+		return this.getTypedRuleContext(Tuple_component_expressionContext, 0) as Tuple_component_expressionContext;
+	}
+	public struct_component_expression(): Struct_component_expressionContext {
+		return this.getTypedRuleContext(Struct_component_expressionContext, 0) as Struct_component_expressionContext;
+	}
+	public method_call(): Method_callContext {
+		return this.getTypedRuleContext(Method_callContext, 0) as Method_callContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_postfixExpression;
+    	return LeoParser.RULE_postfix_expression;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterPostfixExpression) {
-	 		listener.enterPostfixExpression(this);
+	    if(listener.enterPostfix_expression) {
+	 		listener.enterPostfix_expression(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitPostfixExpression) {
-	 		listener.exitPostfixExpression(this);
+	    if(listener.exitPostfix_expression) {
+	 		listener.exitPostfix_expression(this);
 		}
 	}
 }
 
 
-export class TupleComponentExpressionContext extends ParserRuleContext {
+export class Tuple_component_expressionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -6147,26 +5929,26 @@ export class TupleComponentExpressionContext extends ParserRuleContext {
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public Numeral(): TerminalNode {
-		return this.getToken(LeoParser.Numeral, 0);
+	public numeral(): NumeralContext {
+		return this.getTypedRuleContext(NumeralContext, 0) as NumeralContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_tupleComponentExpression;
+    	return LeoParser.RULE_tuple_component_expression;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterTupleComponentExpression) {
-	 		listener.enterTupleComponentExpression(this);
+	    if(listener.enterTuple_component_expression) {
+	 		listener.enterTuple_component_expression(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitTupleComponentExpression) {
-	 		listener.exitTupleComponentExpression(this);
+	    if(listener.exitTuple_component_expression) {
+	 		listener.exitTuple_component_expression(this);
 		}
 	}
 }
 
 
-export class StructComponentExpressionContext extends ParserRuleContext {
+export class Struct_component_expressionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -6178,22 +5960,22 @@ export class StructComponentExpressionContext extends ParserRuleContext {
 		return this.getTypedRuleContext(IdentifierContext, i) as IdentifierContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_structComponentExpression;
+    	return LeoParser.RULE_struct_component_expression;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterStructComponentExpression) {
-	 		listener.enterStructComponentExpression(this);
+	    if(listener.enterStruct_component_expression) {
+	 		listener.enterStruct_component_expression(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitStructComponentExpression) {
-	 		listener.exitStructComponentExpression(this);
+	    if(listener.exitStruct_component_expression) {
+	 		listener.exitStruct_component_expression(this);
 		}
 	}
 }
 
 
-export class MethodCallContext extends ParserRuleContext {
+export class Method_callContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -6204,398 +5986,20 @@ export class MethodCallContext extends ParserRuleContext {
 	public identifier(i: number): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, i) as IdentifierContext;
 	}
-	public functionArguments(): FunctionArgumentsContext {
-		return this.getTypedRuleContext(FunctionArgumentsContext, 0) as FunctionArgumentsContext;
+	public function_arguments(): Function_argumentsContext {
+		return this.getTypedRuleContext(Function_argumentsContext, 0) as Function_argumentsContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_methodCall;
+    	return LeoParser.RULE_method_call;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterMethodCall) {
-	 		listener.enterMethodCall(this);
+	    if(listener.enterMethod_call) {
+	 		listener.enterMethod_call(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitMethodCall) {
-	 		listener.exitMethodCall(this);
-		}
-	}
-}
-
-
-export class UnaryExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public postfixExpression(): PostfixExpressionContext {
-		return this.getTypedRuleContext(PostfixExpressionContext, 0) as PostfixExpressionContext;
-	}
-	public unaryExpression(): UnaryExpressionContext {
-		return this.getTypedRuleContext(UnaryExpressionContext, 0) as UnaryExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_unaryExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterUnaryExpression) {
-	 		listener.enterUnaryExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitUnaryExpression) {
-	 		listener.exitUnaryExpression(this);
-		}
-	}
-}
-
-
-export class ExponentialExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public unaryExpression(): UnaryExpressionContext {
-		return this.getTypedRuleContext(UnaryExpressionContext, 0) as UnaryExpressionContext;
-	}
-	public exponentialExpression(): ExponentialExpressionContext {
-		return this.getTypedRuleContext(ExponentialExpressionContext, 0) as ExponentialExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_exponentialExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterExponentialExpression) {
-	 		listener.enterExponentialExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitExponentialExpression) {
-	 		listener.exitExponentialExpression(this);
-		}
-	}
-}
-
-
-export class MultiplicativeExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public exponentialExpression(): ExponentialExpressionContext {
-		return this.getTypedRuleContext(ExponentialExpressionContext, 0) as ExponentialExpressionContext;
-	}
-	public multiplicativeExpression(): MultiplicativeExpressionContext {
-		return this.getTypedRuleContext(MultiplicativeExpressionContext, 0) as MultiplicativeExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_multiplicativeExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterMultiplicativeExpression) {
-	 		listener.enterMultiplicativeExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitMultiplicativeExpression) {
-	 		listener.exitMultiplicativeExpression(this);
-		}
-	}
-}
-
-
-export class AdditiveExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public multiplicativeExpression(): MultiplicativeExpressionContext {
-		return this.getTypedRuleContext(MultiplicativeExpressionContext, 0) as MultiplicativeExpressionContext;
-	}
-	public additiveExpression(): AdditiveExpressionContext {
-		return this.getTypedRuleContext(AdditiveExpressionContext, 0) as AdditiveExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_additiveExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAdditiveExpression) {
-	 		listener.enterAdditiveExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAdditiveExpression) {
-	 		listener.exitAdditiveExpression(this);
-		}
-	}
-}
-
-
-export class ShiftExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public additiveExpression(): AdditiveExpressionContext {
-		return this.getTypedRuleContext(AdditiveExpressionContext, 0) as AdditiveExpressionContext;
-	}
-	public shiftExpression(): ShiftExpressionContext {
-		return this.getTypedRuleContext(ShiftExpressionContext, 0) as ShiftExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_shiftExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterShiftExpression) {
-	 		listener.enterShiftExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitShiftExpression) {
-	 		listener.exitShiftExpression(this);
-		}
-	}
-}
-
-
-export class ConjunctiveExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public shiftExpression(): ShiftExpressionContext {
-		return this.getTypedRuleContext(ShiftExpressionContext, 0) as ShiftExpressionContext;
-	}
-	public conjunctiveExpression(): ConjunctiveExpressionContext {
-		return this.getTypedRuleContext(ConjunctiveExpressionContext, 0) as ConjunctiveExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_conjunctiveExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterConjunctiveExpression) {
-	 		listener.enterConjunctiveExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitConjunctiveExpression) {
-	 		listener.exitConjunctiveExpression(this);
-		}
-	}
-}
-
-
-export class DisjunctiveExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public conjunctiveExpression(): ConjunctiveExpressionContext {
-		return this.getTypedRuleContext(ConjunctiveExpressionContext, 0) as ConjunctiveExpressionContext;
-	}
-	public disjunctiveExpression(): DisjunctiveExpressionContext {
-		return this.getTypedRuleContext(DisjunctiveExpressionContext, 0) as DisjunctiveExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_disjunctiveExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterDisjunctiveExpression) {
-	 		listener.enterDisjunctiveExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitDisjunctiveExpression) {
-	 		listener.exitDisjunctiveExpression(this);
-		}
-	}
-}
-
-
-export class ExclusiveDisjunctiveExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public disjunctiveExpression(): DisjunctiveExpressionContext {
-		return this.getTypedRuleContext(DisjunctiveExpressionContext, 0) as DisjunctiveExpressionContext;
-	}
-	public exclusiveDisjunctiveExpression(): ExclusiveDisjunctiveExpressionContext {
-		return this.getTypedRuleContext(ExclusiveDisjunctiveExpressionContext, 0) as ExclusiveDisjunctiveExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_exclusiveDisjunctiveExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterExclusiveDisjunctiveExpression) {
-	 		listener.enterExclusiveDisjunctiveExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitExclusiveDisjunctiveExpression) {
-	 		listener.exitExclusiveDisjunctiveExpression(this);
-		}
-	}
-}
-
-
-export class OrderingExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public exclusiveDisjunctiveExpression_list(): ExclusiveDisjunctiveExpressionContext[] {
-		return this.getTypedRuleContexts(ExclusiveDisjunctiveExpressionContext) as ExclusiveDisjunctiveExpressionContext[];
-	}
-	public exclusiveDisjunctiveExpression(i: number): ExclusiveDisjunctiveExpressionContext {
-		return this.getTypedRuleContext(ExclusiveDisjunctiveExpressionContext, i) as ExclusiveDisjunctiveExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_orderingExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterOrderingExpression) {
-	 		listener.enterOrderingExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitOrderingExpression) {
-	 		listener.exitOrderingExpression(this);
-		}
-	}
-}
-
-
-export class EqualityExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public orderingExpression_list(): OrderingExpressionContext[] {
-		return this.getTypedRuleContexts(OrderingExpressionContext) as OrderingExpressionContext[];
-	}
-	public orderingExpression(i: number): OrderingExpressionContext {
-		return this.getTypedRuleContext(OrderingExpressionContext, i) as OrderingExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_equalityExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterEqualityExpression) {
-	 		listener.enterEqualityExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitEqualityExpression) {
-	 		listener.exitEqualityExpression(this);
-		}
-	}
-}
-
-
-export class ConditionalConjunctiveExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public equalityExpression(): EqualityExpressionContext {
-		return this.getTypedRuleContext(EqualityExpressionContext, 0) as EqualityExpressionContext;
-	}
-	public conditionalConjunctiveExpression(): ConditionalConjunctiveExpressionContext {
-		return this.getTypedRuleContext(ConditionalConjunctiveExpressionContext, 0) as ConditionalConjunctiveExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_conditionalConjunctiveExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterConditionalConjunctiveExpression) {
-	 		listener.enterConditionalConjunctiveExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitConditionalConjunctiveExpression) {
-	 		listener.exitConditionalConjunctiveExpression(this);
-		}
-	}
-}
-
-
-export class ConditionalDisjunctiveExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public conditionalConjunctiveExpression(): ConditionalConjunctiveExpressionContext {
-		return this.getTypedRuleContext(ConditionalConjunctiveExpressionContext, 0) as ConditionalConjunctiveExpressionContext;
-	}
-	public conditionalDisjunctiveExpression(): ConditionalDisjunctiveExpressionContext {
-		return this.getTypedRuleContext(ConditionalDisjunctiveExpressionContext, 0) as ConditionalDisjunctiveExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_conditionalDisjunctiveExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterConditionalDisjunctiveExpression) {
-	 		listener.enterConditionalDisjunctiveExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitConditionalDisjunctiveExpression) {
-	 		listener.exitConditionalDisjunctiveExpression(this);
-		}
-	}
-}
-
-
-export class BinaryExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public conditionalDisjunctiveExpression(): ConditionalDisjunctiveExpressionContext {
-		return this.getTypedRuleContext(ConditionalDisjunctiveExpressionContext, 0) as ConditionalDisjunctiveExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_binaryExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterBinaryExpression) {
-	 		listener.enterBinaryExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitBinaryExpression) {
-	 		listener.exitBinaryExpression(this);
-		}
-	}
-}
-
-
-export class ConditionalTernaryExpressionContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public binaryExpression(): BinaryExpressionContext {
-		return this.getTypedRuleContext(BinaryExpressionContext, 0) as BinaryExpressionContext;
-	}
-	public expression_list(): ExpressionContext[] {
-		return this.getTypedRuleContexts(ExpressionContext) as ExpressionContext[];
-	}
-	public expression(i: number): ExpressionContext {
-		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_conditionalTernaryExpression;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterConditionalTernaryExpression) {
-	 		listener.enterConditionalTernaryExpression(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitConditionalTernaryExpression) {
-	 		listener.exitConditionalTernaryExpression(this);
+	    if(listener.exitMethod_call) {
+	 		listener.exitMethod_call(this);
 		}
 	}
 }
@@ -6606,8 +6010,17 @@ export class ExpressionContext extends ParserRuleContext {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public conditionalTernaryExpression(): ConditionalTernaryExpressionContext {
-		return this.getTypedRuleContext(ConditionalTernaryExpressionContext, 0) as ConditionalTernaryExpressionContext;
+	public postfix_expression(): Postfix_expressionContext {
+		return this.getTypedRuleContext(Postfix_expressionContext, 0) as Postfix_expressionContext;
+	}
+	public expression_list(): ExpressionContext[] {
+		return this.getTypedRuleContexts(ExpressionContext) as ExpressionContext[];
+	}
+	public expression(i: number): ExpressionContext {
+		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
+	}
+	public primary_expression(): Primary_expressionContext {
+		return this.getTypedRuleContext(Primary_expressionContext, 0) as Primary_expressionContext;
 	}
     public get ruleIndex(): number {
     	return LeoParser.RULE_expression;
@@ -6620,42 +6033,6 @@ export class ExpressionContext extends ParserRuleContext {
 	public exitRule(listener: LeoListener): void {
 	    if(listener.exitExpression) {
 	 		listener.exitExpression(this);
-		}
-	}
-}
-
-
-export class LoopStatementContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public identifier(): IdentifierContext {
-		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
-	}
-	public type_(): TypeContext {
-		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
-	}
-	public expression_list(): ExpressionContext[] {
-		return this.getTypedRuleContexts(ExpressionContext) as ExpressionContext[];
-	}
-	public expression(i: number): ExpressionContext {
-		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
-	}
-	public block(): BlockContext {
-		return this.getTypedRuleContext(BlockContext, 0) as BlockContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_loopStatement;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterLoopStatement) {
-	 		listener.enterLoopStatement(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitLoopStatement) {
-	 		listener.exitLoopStatement(this);
 		}
 	}
 }
@@ -6690,8 +6067,8 @@ export class UseMappingContext extends ParserRuleContext {
 	public mappingAttributes(): MappingAttributesContext {
 		return this.getTypedRuleContext(MappingAttributesContext, 0) as MappingAttributesContext;
 	}
-	public functionArguments(): FunctionArgumentsContext {
-		return this.getTypedRuleContext(FunctionArgumentsContext, 0) as FunctionArgumentsContext;
+	public function_arguments(): Function_argumentsContext {
+		return this.getTypedRuleContext(Function_argumentsContext, 0) as Function_argumentsContext;
 	}
     public get ruleIndex(): number {
     	return LeoParser.RULE_useMapping;
@@ -6709,6 +6086,69 @@ export class UseMappingContext extends ParserRuleContext {
 }
 
 
+export class ChachaContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public identifier(): IdentifierContext {
+		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
+	}
+	public function_arguments(): Function_argumentsContext {
+		return this.getTypedRuleContext(Function_argumentsContext, 0) as Function_argumentsContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_chacha;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterChacha) {
+	 		listener.enterChacha(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitChacha) {
+	 		listener.exitChacha(this);
+		}
+	}
+}
+
+
+export class AssociatedFunctionCallContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public identifier(): IdentifierContext {
+		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
+	}
+	public function_arguments(): Function_argumentsContext {
+		return this.getTypedRuleContext(Function_argumentsContext, 0) as Function_argumentsContext;
+	}
+	public bhp(): BhpContext {
+		return this.getTypedRuleContext(BhpContext, 0) as BhpContext;
+	}
+	public pedersen(): PedersenContext {
+		return this.getTypedRuleContext(PedersenContext, 0) as PedersenContext;
+	}
+	public poseidon(): PoseidonContext {
+		return this.getTypedRuleContext(PoseidonContext, 0) as PoseidonContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_associatedFunctionCall;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterAssociatedFunctionCall) {
+	 		listener.enterAssociatedFunctionCall(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitAssociatedFunctionCall) {
+	 		listener.exitAssociatedFunctionCall(this);
+		}
+	}
+}
+
+
 export class StatementContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
@@ -6717,29 +6157,26 @@ export class StatementContext extends ParserRuleContext {
 	public useMapping(): UseMappingContext {
 		return this.getTypedRuleContext(UseMappingContext, 0) as UseMappingContext;
 	}
-	public expressionStatement(): ExpressionStatementContext {
-		return this.getTypedRuleContext(ExpressionStatementContext, 0) as ExpressionStatementContext;
+	public expression_statement(): Expression_statementContext {
+		return this.getTypedRuleContext(Expression_statementContext, 0) as Expression_statementContext;
 	}
-	public variableDeclaration(): VariableDeclarationContext {
-		return this.getTypedRuleContext(VariableDeclarationContext, 0) as VariableDeclarationContext;
+	public variable_declaration(): Variable_declarationContext {
+		return this.getTypedRuleContext(Variable_declarationContext, 0) as Variable_declarationContext;
 	}
-	public conditionalStatement(): ConditionalStatementContext {
-		return this.getTypedRuleContext(ConditionalStatementContext, 0) as ConditionalStatementContext;
+	public conditional_statement(): Conditional_statementContext {
+		return this.getTypedRuleContext(Conditional_statementContext, 0) as Conditional_statementContext;
 	}
-	public loopStatement(): LoopStatementContext {
-		return this.getTypedRuleContext(LoopStatementContext, 0) as LoopStatementContext;
+	public loop_statement(): Loop_statementContext {
+		return this.getTypedRuleContext(Loop_statementContext, 0) as Loop_statementContext;
 	}
-	public assignmentStatement(): AssignmentStatementContext {
-		return this.getTypedRuleContext(AssignmentStatementContext, 0) as AssignmentStatementContext;
+	public console_statement(): Console_statementContext {
+		return this.getTypedRuleContext(Console_statementContext, 0) as Console_statementContext;
 	}
-	public consoleStatement(): ConsoleStatementContext {
-		return this.getTypedRuleContext(ConsoleStatementContext, 0) as ConsoleStatementContext;
+	public return_statement(): Return_statementContext {
+		return this.getTypedRuleContext(Return_statementContext, 0) as Return_statementContext;
 	}
 	public block(): BlockContext {
 		return this.getTypedRuleContext(BlockContext, 0) as BlockContext;
-	}
-	public returnStatement(): ReturnStatementContext {
-		return this.getTypedRuleContext(ReturnStatementContext, 0) as ReturnStatementContext;
 	}
     public get ruleIndex(): number {
     	return LeoParser.RULE_statement;
@@ -6784,34 +6221,40 @@ export class BlockContext extends ParserRuleContext {
 }
 
 
-export class ReturnStatementContext extends ParserRuleContext {
+export class Return_statementContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public expression(): ExpressionContext {
-		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
+	public expression_list(): ExpressionContext[] {
+		return this.getTypedRuleContexts(ExpressionContext) as ExpressionContext[];
 	}
-	public functionArguments(): FunctionArgumentsContext {
-		return this.getTypedRuleContext(FunctionArgumentsContext, 0) as FunctionArgumentsContext;
+	public expression(i: number): ExpressionContext {
+		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
+	}
+	public THEN(): TerminalNode {
+		return this.getToken(LeoParser.THEN, 0);
+	}
+	public function_arguments(): Function_argumentsContext {
+		return this.getTypedRuleContext(Function_argumentsContext, 0) as Function_argumentsContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_returnStatement;
+    	return LeoParser.RULE_return_statement;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterReturnStatement) {
-	 		listener.enterReturnStatement(this);
+	    if(listener.enterReturn_statement) {
+	 		listener.enterReturn_statement(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitReturnStatement) {
-	 		listener.exitReturnStatement(this);
+	    if(listener.exitReturn_statement) {
+	 		listener.exitReturn_statement(this);
 		}
 	}
 }
 
 
-export class ExpressionStatementContext extends ParserRuleContext {
+export class Expression_statementContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -6820,52 +6263,52 @@ export class ExpressionStatementContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_expressionStatement;
+    	return LeoParser.RULE_expression_statement;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterExpressionStatement) {
-	 		listener.enterExpressionStatement(this);
+	    if(listener.enterExpression_statement) {
+	 		listener.enterExpression_statement(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitExpressionStatement) {
-	 		listener.exitExpressionStatement(this);
+	    if(listener.exitExpression_statement) {
+	 		listener.exitExpression_statement(this);
 		}
 	}
 }
 
 
-export class VariableDeclarationContext extends ParserRuleContext {
+export class Variable_declarationContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public identifierOrIdentifiers(): IdentifierOrIdentifiersContext {
-		return this.getTypedRuleContext(IdentifierOrIdentifiersContext, 0) as IdentifierOrIdentifiersContext;
-	}
-	public expression(): ExpressionContext {
-		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
+	public identifier_or_identifiers(): Identifier_or_identifiersContext {
+		return this.getTypedRuleContext(Identifier_or_identifiersContext, 0) as Identifier_or_identifiersContext;
 	}
 	public type_(): TypeContext {
 		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
 	}
+	public expression(): ExpressionContext {
+		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
+	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_variableDeclaration;
+    	return LeoParser.RULE_variable_declaration;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterVariableDeclaration) {
-	 		listener.enterVariableDeclaration(this);
+	    if(listener.enterVariable_declaration) {
+	 		listener.enterVariable_declaration(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitVariableDeclaration) {
-	 		listener.exitVariableDeclaration(this);
+	    if(listener.exitVariable_declaration) {
+	 		listener.exitVariable_declaration(this);
 		}
 	}
 }
 
 
-export class IdentifierOrIdentifiersContext extends ParserRuleContext {
+export class Identifier_or_identifiersContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -6877,16 +6320,16 @@ export class IdentifierOrIdentifiersContext extends ParserRuleContext {
 		return this.getTypedRuleContext(IdentifierContext, i) as IdentifierContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_identifierOrIdentifiers;
+    	return LeoParser.RULE_identifier_or_identifiers;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterIdentifierOrIdentifiers) {
-	 		listener.enterIdentifierOrIdentifiers(this);
+	    if(listener.enterIdentifier_or_identifiers) {
+	 		listener.enterIdentifier_or_identifiers(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitIdentifierOrIdentifiers) {
-	 		listener.exitIdentifierOrIdentifiers(this);
+	    if(listener.exitIdentifier_or_identifiers) {
+	 		listener.exitIdentifier_or_identifiers(this);
 		}
 	}
 }
@@ -6919,7 +6362,7 @@ export class BranchContext extends ParserRuleContext {
 }
 
 
-export class ConditionalStatementContext extends ParserRuleContext {
+export class Conditional_statementContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -6930,50 +6373,35 @@ export class ConditionalStatementContext extends ParserRuleContext {
 	public block(): BlockContext {
 		return this.getTypedRuleContext(BlockContext, 0) as BlockContext;
 	}
-	public conditionalStatement(): ConditionalStatementContext {
-		return this.getTypedRuleContext(ConditionalStatementContext, 0) as ConditionalStatementContext;
+	public conditional_statement(): Conditional_statementContext {
+		return this.getTypedRuleContext(Conditional_statementContext, 0) as Conditional_statementContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_conditionalStatement;
+    	return LeoParser.RULE_conditional_statement;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterConditionalStatement) {
-	 		listener.enterConditionalStatement(this);
+	    if(listener.enterConditional_statement) {
+	 		listener.enterConditional_statement(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitConditionalStatement) {
-	 		listener.exitConditionalStatement(this);
+	    if(listener.exitConditional_statement) {
+	 		listener.exitConditional_statement(this);
 		}
 	}
 }
 
 
-export class AssignmentOperatorContext extends ParserRuleContext {
+export class Loop_statementContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_assignmentOperator;
+	public identifier(): IdentifierContext {
+		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAssignmentOperator) {
-	 		listener.enterAssignmentOperator(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAssignmentOperator) {
-	 		listener.exitAssignmentOperator(this);
-		}
-	}
-}
-
-
-export class AssignmentStatementContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
+	public type_(): TypeContext {
+		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
 	}
 	public expression_list(): ExpressionContext[] {
 		return this.getTypedRuleContexts(ExpressionContext) as ExpressionContext[];
@@ -6981,80 +6409,80 @@ export class AssignmentStatementContext extends ParserRuleContext {
 	public expression(i: number): ExpressionContext {
 		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
 	}
-	public assignmentOperator(): AssignmentOperatorContext {
-		return this.getTypedRuleContext(AssignmentOperatorContext, 0) as AssignmentOperatorContext;
+	public block(): BlockContext {
+		return this.getTypedRuleContext(BlockContext, 0) as BlockContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_assignmentStatement;
+    	return LeoParser.RULE_loop_statement;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAssignmentStatement) {
-	 		listener.enterAssignmentStatement(this);
+	    if(listener.enterLoop_statement) {
+	 		listener.enterLoop_statement(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAssignmentStatement) {
-	 		listener.exitAssignmentStatement(this);
+	    if(listener.exitLoop_statement) {
+	 		listener.exitLoop_statement(this);
 		}
 	}
 }
 
 
-export class ConsoleStatementContext extends ParserRuleContext {
+export class Console_statementContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public consoleCall(): ConsoleCallContext {
-		return this.getTypedRuleContext(ConsoleCallContext, 0) as ConsoleCallContext;
+	public console_call(): Console_callContext {
+		return this.getTypedRuleContext(Console_callContext, 0) as Console_callContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_consoleStatement;
+    	return LeoParser.RULE_console_statement;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterConsoleStatement) {
-	 		listener.enterConsoleStatement(this);
+	    if(listener.enterConsole_statement) {
+	 		listener.enterConsole_statement(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitConsoleStatement) {
-	 		listener.exitConsoleStatement(this);
+	    if(listener.exitConsole_statement) {
+	 		listener.exitConsole_statement(this);
 		}
 	}
 }
 
 
-export class ConsoleCallContext extends ParserRuleContext {
+export class Console_callContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public assertCall(): AssertCallContext {
-		return this.getTypedRuleContext(AssertCallContext, 0) as AssertCallContext;
+	public assert_call(): Assert_callContext {
+		return this.getTypedRuleContext(Assert_callContext, 0) as Assert_callContext;
 	}
-	public assertEqualCall(): AssertEqualCallContext {
-		return this.getTypedRuleContext(AssertEqualCallContext, 0) as AssertEqualCallContext;
+	public assert_equal_call(): Assert_equal_callContext {
+		return this.getTypedRuleContext(Assert_equal_callContext, 0) as Assert_equal_callContext;
 	}
-	public assertNotEqualCall(): AssertNotEqualCallContext {
-		return this.getTypedRuleContext(AssertNotEqualCallContext, 0) as AssertNotEqualCallContext;
+	public assert_not_equal_call(): Assert_not_equal_callContext {
+		return this.getTypedRuleContext(Assert_not_equal_callContext, 0) as Assert_not_equal_callContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_consoleCall;
+    	return LeoParser.RULE_console_call;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterConsoleCall) {
-	 		listener.enterConsoleCall(this);
+	    if(listener.enterConsole_call) {
+	 		listener.enterConsole_call(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitConsoleCall) {
-	 		listener.exitConsoleCall(this);
+	    if(listener.exitConsole_call) {
+	 		listener.exitConsole_call(this);
 		}
 	}
 }
 
 
-export class AssertCallContext extends ParserRuleContext {
+export class Assert_callContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7063,22 +6491,22 @@ export class AssertCallContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_assertCall;
+    	return LeoParser.RULE_assert_call;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAssertCall) {
-	 		listener.enterAssertCall(this);
+	    if(listener.enterAssert_call) {
+	 		listener.enterAssert_call(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAssertCall) {
-	 		listener.exitAssertCall(this);
+	    if(listener.exitAssert_call) {
+	 		listener.exitAssert_call(this);
 		}
 	}
 }
 
 
-export class AssertEqualCallContext extends ParserRuleContext {
+export class Assert_equal_callContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7090,22 +6518,22 @@ export class AssertEqualCallContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_assertEqualCall;
+    	return LeoParser.RULE_assert_equal_call;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAssertEqualCall) {
-	 		listener.enterAssertEqualCall(this);
+	    if(listener.enterAssert_equal_call) {
+	 		listener.enterAssert_equal_call(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAssertEqualCall) {
-	 		listener.exitAssertEqualCall(this);
+	    if(listener.exitAssert_equal_call) {
+	 		listener.exitAssert_equal_call(this);
 		}
 	}
 }
 
 
-export class AssertNotEqualCallContext extends ParserRuleContext {
+export class Assert_not_equal_callContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7117,22 +6545,22 @@ export class AssertNotEqualCallContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, i) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_assertNotEqualCall;
+    	return LeoParser.RULE_assert_not_equal_call;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterAssertNotEqualCall) {
-	 		listener.enterAssertNotEqualCall(this);
+	    if(listener.enterAssert_not_equal_call) {
+	 		listener.enterAssert_not_equal_call(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitAssertNotEqualCall) {
-	 		listener.exitAssertNotEqualCall(this);
+	    if(listener.exitAssert_not_equal_call) {
+	 		listener.exitAssert_not_equal_call(this);
 		}
 	}
 }
 
 
-export class FunctionDeclarationContext extends ParserRuleContext {
+export class Function_declarationContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7149,83 +6577,56 @@ export class FunctionDeclarationContext extends ParserRuleContext {
 	public annotation(i: number): AnnotationContext {
 		return this.getTypedRuleContext(AnnotationContext, i) as AnnotationContext;
 	}
-	public functionParameters(): FunctionParametersContext {
-		return this.getTypedRuleContext(FunctionParametersContext, 0) as FunctionParametersContext;
+	public function_parameters(): Function_parametersContext {
+		return this.getTypedRuleContext(Function_parametersContext, 0) as Function_parametersContext;
 	}
 	public type_(): TypeContext {
 		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_functionDeclaration;
+    	return LeoParser.RULE_function_declaration;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterFunctionDeclaration) {
-	 		listener.enterFunctionDeclaration(this);
+	    if(listener.enterFunction_declaration) {
+	 		listener.enterFunction_declaration(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitFunctionDeclaration) {
-	 		listener.exitFunctionDeclaration(this);
+	    if(listener.exitFunction_declaration) {
+	 		listener.exitFunction_declaration(this);
 		}
 	}
 }
 
 
-export class FunctionParametersContext extends ParserRuleContext {
+export class Function_parametersContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public functionParameter_list(): FunctionParameterContext[] {
-		return this.getTypedRuleContexts(FunctionParameterContext) as FunctionParameterContext[];
+	public function_parameter_list(): Function_parameterContext[] {
+		return this.getTypedRuleContexts(Function_parameterContext) as Function_parameterContext[];
 	}
-	public functionParameter(i: number): FunctionParameterContext {
-		return this.getTypedRuleContext(FunctionParameterContext, i) as FunctionParameterContext;
+	public function_parameter(i: number): Function_parameterContext {
+		return this.getTypedRuleContext(Function_parameterContext, i) as Function_parameterContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_functionParameters;
+    	return LeoParser.RULE_function_parameters;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterFunctionParameters) {
-	 		listener.enterFunctionParameters(this);
+	    if(listener.enterFunction_parameters) {
+	 		listener.enterFunction_parameters(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitFunctionParameters) {
-	 		listener.exitFunctionParameters(this);
+	    if(listener.exitFunction_parameters) {
+	 		listener.exitFunction_parameters(this);
 		}
 	}
 }
 
 
-export class FunctionParameterContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public identifier(): IdentifierContext {
-		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
-	}
-	public type_(): TypeContext {
-		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_functionParameter;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterFunctionParameter) {
-	 		listener.enterFunctionParameter(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitFunctionParameter) {
-	 		listener.exitFunctionParameter(this);
-		}
-	}
-}
-
-
-export class InlineDeclarationContext extends ParserRuleContext {
+export class Function_parameterContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7233,38 +6634,26 @@ export class InlineDeclarationContext extends ParserRuleContext {
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public block(): BlockContext {
-		return this.getTypedRuleContext(BlockContext, 0) as BlockContext;
-	}
-	public annotation_list(): AnnotationContext[] {
-		return this.getTypedRuleContexts(AnnotationContext) as AnnotationContext[];
-	}
-	public annotation(i: number): AnnotationContext {
-		return this.getTypedRuleContext(AnnotationContext, i) as AnnotationContext;
-	}
-	public functionParameters(): FunctionParametersContext {
-		return this.getTypedRuleContext(FunctionParametersContext, 0) as FunctionParametersContext;
-	}
 	public type_(): TypeContext {
 		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_inlineDeclaration;
+    	return LeoParser.RULE_function_parameter;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterInlineDeclaration) {
-	 		listener.enterInlineDeclaration(this);
+	    if(listener.enterFunction_parameter) {
+	 		listener.enterFunction_parameter(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitInlineDeclaration) {
-	 		listener.exitInlineDeclaration(this);
+	    if(listener.exitFunction_parameter) {
+	 		listener.exitFunction_parameter(this);
 		}
 	}
 }
 
 
-export class TransitionDeclarationContext extends ParserRuleContext {
+export class Inline_declarationContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7281,8 +6670,47 @@ export class TransitionDeclarationContext extends ParserRuleContext {
 	public annotation(i: number): AnnotationContext {
 		return this.getTypedRuleContext(AnnotationContext, i) as AnnotationContext;
 	}
-	public functionParameters(): FunctionParametersContext {
-		return this.getTypedRuleContext(FunctionParametersContext, 0) as FunctionParametersContext;
+	public function_parameters(): Function_parametersContext {
+		return this.getTypedRuleContext(Function_parametersContext, 0) as Function_parametersContext;
+	}
+	public type_(): TypeContext {
+		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_inline_declaration;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterInline_declaration) {
+	 		listener.enterInline_declaration(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitInline_declaration) {
+	 		listener.exitInline_declaration(this);
+		}
+	}
+}
+
+
+export class Transition_declarationContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public identifier(): IdentifierContext {
+		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
+	}
+	public block(): BlockContext {
+		return this.getTypedRuleContext(BlockContext, 0) as BlockContext;
+	}
+	public annotation_list(): AnnotationContext[] {
+		return this.getTypedRuleContexts(AnnotationContext) as AnnotationContext[];
+	}
+	public annotation(i: number): AnnotationContext {
+		return this.getTypedRuleContext(AnnotationContext, i) as AnnotationContext;
+	}
+	public function_parameters(): Function_parametersContext {
+		return this.getTypedRuleContext(Function_parametersContext, 0) as Function_parametersContext;
 	}
 	public type_(): TypeContext {
 		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
@@ -7291,16 +6719,16 @@ export class TransitionDeclarationContext extends ParserRuleContext {
 		return this.getTypedRuleContext(FinalizerContext, 0) as FinalizerContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_transitionDeclaration;
+    	return LeoParser.RULE_transition_declaration;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterTransitionDeclaration) {
-	 		listener.enterTransitionDeclaration(this);
+	    if(listener.enterTransition_declaration) {
+	 		listener.enterTransition_declaration(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitTransitionDeclaration) {
-	 		listener.exitTransitionDeclaration(this);
+	    if(listener.exitTransition_declaration) {
+	 		listener.exitTransition_declaration(this);
 		}
 	}
 }
@@ -7314,11 +6742,11 @@ export class FinalizerContext extends ParserRuleContext {
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public functionParameters(): FunctionParametersContext {
-		return this.getTypedRuleContext(FunctionParametersContext, 0) as FunctionParametersContext;
-	}
 	public block(): BlockContext {
 		return this.getTypedRuleContext(BlockContext, 0) as BlockContext;
+	}
+	public function_parameters(): Function_parametersContext {
+		return this.getTypedRuleContext(Function_parametersContext, 0) as Function_parametersContext;
 	}
 	public type_(): TypeContext {
 		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
@@ -7339,7 +6767,7 @@ export class FinalizerContext extends ParserRuleContext {
 }
 
 
-export class StructDeclarationContext extends ParserRuleContext {
+export class Struct_declarationContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7347,53 +6775,53 @@ export class StructDeclarationContext extends ParserRuleContext {
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public structComponentDeclarations(): StructComponentDeclarationsContext {
-		return this.getTypedRuleContext(StructComponentDeclarationsContext, 0) as StructComponentDeclarationsContext;
+	public struct_component_declarations(): Struct_component_declarationsContext {
+		return this.getTypedRuleContext(Struct_component_declarationsContext, 0) as Struct_component_declarationsContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_structDeclaration;
+    	return LeoParser.RULE_struct_declaration;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterStructDeclaration) {
-	 		listener.enterStructDeclaration(this);
+	    if(listener.enterStruct_declaration) {
+	 		listener.enterStruct_declaration(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitStructDeclaration) {
-	 		listener.exitStructDeclaration(this);
+	    if(listener.exitStruct_declaration) {
+	 		listener.exitStruct_declaration(this);
 		}
 	}
 }
 
 
-export class StructComponentDeclarationsContext extends ParserRuleContext {
+export class Struct_component_declarationsContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public structComponentDeclaration_list(): StructComponentDeclarationContext[] {
-		return this.getTypedRuleContexts(StructComponentDeclarationContext) as StructComponentDeclarationContext[];
+	public struct_component_declaration_list(): Struct_component_declarationContext[] {
+		return this.getTypedRuleContexts(Struct_component_declarationContext) as Struct_component_declarationContext[];
 	}
-	public structComponentDeclaration(i: number): StructComponentDeclarationContext {
-		return this.getTypedRuleContext(StructComponentDeclarationContext, i) as StructComponentDeclarationContext;
+	public struct_component_declaration(i: number): Struct_component_declarationContext {
+		return this.getTypedRuleContext(Struct_component_declarationContext, i) as Struct_component_declarationContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_structComponentDeclarations;
+    	return LeoParser.RULE_struct_component_declarations;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterStructComponentDeclarations) {
-	 		listener.enterStructComponentDeclarations(this);
+	    if(listener.enterStruct_component_declarations) {
+	 		listener.enterStruct_component_declarations(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitStructComponentDeclarations) {
-	 		listener.exitStructComponentDeclarations(this);
+	    if(listener.exitStruct_component_declarations) {
+	 		listener.exitStruct_component_declarations(this);
 		}
 	}
 }
 
 
-export class StructComponentDeclarationContext extends ParserRuleContext {
+export class Struct_component_declarationContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7405,22 +6833,22 @@ export class StructComponentDeclarationContext extends ParserRuleContext {
 		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_structComponentDeclaration;
+    	return LeoParser.RULE_struct_component_declaration;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterStructComponentDeclaration) {
-	 		listener.enterStructComponentDeclaration(this);
+	    if(listener.enterStruct_component_declaration) {
+	 		listener.enterStruct_component_declaration(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitStructComponentDeclaration) {
-	 		listener.exitStructComponentDeclaration(this);
+	    if(listener.exitStruct_component_declaration) {
+	 		listener.exitStruct_component_declaration(this);
 		}
 	}
 }
 
 
-export class RecordDeclarationContext extends ParserRuleContext {
+export class Record_declarationContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7428,26 +6856,26 @@ export class RecordDeclarationContext extends ParserRuleContext {
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public structComponentDeclarations(): StructComponentDeclarationsContext {
-		return this.getTypedRuleContext(StructComponentDeclarationsContext, 0) as StructComponentDeclarationsContext;
+	public struct_component_declarations(): Struct_component_declarationsContext {
+		return this.getTypedRuleContext(Struct_component_declarationsContext, 0) as Struct_component_declarationsContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_recordDeclaration;
+    	return LeoParser.RULE_record_declaration;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterRecordDeclaration) {
-	 		listener.enterRecordDeclaration(this);
+	    if(listener.enterRecord_declaration) {
+	 		listener.enterRecord_declaration(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitRecordDeclaration) {
-	 		listener.exitRecordDeclaration(this);
+	    if(listener.exitRecord_declaration) {
+	 		listener.exitRecord_declaration(this);
 		}
 	}
 }
 
 
-export class MappingDeclarationContext extends ParserRuleContext {
+export class Mapping_declarationContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7462,49 +6890,145 @@ export class MappingDeclarationContext extends ParserRuleContext {
 		return this.getTypedRuleContext(TypeContext, i) as TypeContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_mappingDeclaration;
+    	return LeoParser.RULE_mapping_declaration;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterMappingDeclaration) {
-	 		listener.enterMappingDeclaration(this);
+	    if(listener.enterMapping_declaration) {
+	 		listener.enterMapping_declaration(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitMappingDeclaration) {
-	 		listener.exitMappingDeclaration(this);
+	    if(listener.exitMapping_declaration) {
+	 		listener.exitMapping_declaration(this);
 		}
 	}
 }
 
 
-export class FileContext extends ParserRuleContext {
+export class Program_itemContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public importDeclaration(): ImportDeclarationContext {
-		return this.getTypedRuleContext(ImportDeclarationContext, 0) as ImportDeclarationContext;
+	public function_declaration(): Function_declarationContext {
+		return this.getTypedRuleContext(Function_declarationContext, 0) as Function_declarationContext;
 	}
-	public programDeclaration(): ProgramDeclarationContext {
-		return this.getTypedRuleContext(ProgramDeclarationContext, 0) as ProgramDeclarationContext;
+	public inline_declaration(): Inline_declarationContext {
+		return this.getTypedRuleContext(Inline_declarationContext, 0) as Inline_declarationContext;
+	}
+	public transition_declaration(): Transition_declarationContext {
+		return this.getTypedRuleContext(Transition_declarationContext, 0) as Transition_declarationContext;
+	}
+	public struct_declaration(): Struct_declarationContext {
+		return this.getTypedRuleContext(Struct_declarationContext, 0) as Struct_declarationContext;
+	}
+	public record_declaration(): Record_declarationContext {
+		return this.getTypedRuleContext(Record_declarationContext, 0) as Record_declarationContext;
+	}
+	public mapping_declaration(): Mapping_declarationContext {
+		return this.getTypedRuleContext(Mapping_declarationContext, 0) as Mapping_declarationContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_file;
+    	return LeoParser.RULE_program_item;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterFile) {
-	 		listener.enterFile(this);
+	    if(listener.enterProgram_item) {
+	 		listener.enterProgram_item(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitFile) {
-	 		listener.exitFile(this);
+	    if(listener.exitProgram_item) {
+	 		listener.exitProgram_item(this);
 		}
 	}
 }
 
 
-export class InputTypeContext extends ParserRuleContext {
+export class Program_declarationContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public program_id(): Program_idContext {
+		return this.getTypedRuleContext(Program_idContext, 0) as Program_idContext;
+	}
+	public program_item_list(): Program_itemContext[] {
+		return this.getTypedRuleContexts(Program_itemContext) as Program_itemContext[];
+	}
+	public program_item(i: number): Program_itemContext {
+		return this.getTypedRuleContext(Program_itemContext, i) as Program_itemContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_program_declaration;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterProgram_declaration) {
+	 		listener.enterProgram_declaration(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitProgram_declaration) {
+	 		listener.exitProgram_declaration(this);
+		}
+	}
+}
+
+
+export class Import_declarationContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public program_id(): Program_idContext {
+		return this.getTypedRuleContext(Program_idContext, 0) as Program_idContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_import_declaration;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterImport_declaration) {
+	 		listener.enterImport_declaration(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitImport_declaration) {
+	 		listener.exitImport_declaration(this);
+		}
+	}
+}
+
+
+export class SourceUnitContext extends ParserRuleContext {
+	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
+		super(parent, invokingState);
+    	this.parser = parser;
+	}
+	public program_declaration(): Program_declarationContext {
+		return this.getTypedRuleContext(Program_declarationContext, 0) as Program_declarationContext;
+	}
+	public import_declaration_list(): Import_declarationContext[] {
+		return this.getTypedRuleContexts(Import_declarationContext) as Import_declarationContext[];
+	}
+	public import_declaration(i: number): Import_declarationContext {
+		return this.getTypedRuleContext(Import_declarationContext, i) as Import_declarationContext;
+	}
+    public get ruleIndex(): number {
+    	return LeoParser.RULE_sourceUnit;
+	}
+	public enterRule(listener: LeoListener): void {
+	    if(listener.enterSourceUnit) {
+	 		listener.enterSourceUnit(this);
+		}
+	}
+	public exitRule(listener: LeoListener): void {
+	    if(listener.exitSourceUnit) {
+	 		listener.exitSourceUnit(this);
+		}
+	}
+}
+
+
+export class Input_typeContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7513,22 +7037,22 @@ export class InputTypeContext extends ParserRuleContext {
 		return this.getTypedRuleContext(TypeContext, 0) as TypeContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_inputType;
+    	return LeoParser.RULE_input_type;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterInputType) {
-	 		listener.enterInputType(this);
+	    if(listener.enterInput_type) {
+	 		listener.enterInput_type(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitInputType) {
-	 		listener.exitInputType(this);
+	    if(listener.exitInput_type) {
+	 		listener.exitInput_type(this);
 		}
 	}
 }
 
 
-export class InputExpressionContext extends ParserRuleContext {
+export class Input_expressionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7537,22 +7061,22 @@ export class InputExpressionContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_inputExpression;
+    	return LeoParser.RULE_input_expression;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterInputExpression) {
-	 		listener.enterInputExpression(this);
+	    if(listener.enterInput_expression) {
+	 		listener.enterInput_expression(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitInputExpression) {
-	 		listener.exitInputExpression(this);
+	    if(listener.exitInput_expression) {
+	 		listener.exitInput_expression(this);
 		}
 	}
 }
 
 
-export class InputItemContext extends ParserRuleContext {
+export class Input_itemContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7560,101 +7084,86 @@ export class InputItemContext extends ParserRuleContext {
 	public identifier(): IdentifierContext {
 		return this.getTypedRuleContext(IdentifierContext, 0) as IdentifierContext;
 	}
-	public inputType(): InputTypeContext {
-		return this.getTypedRuleContext(InputTypeContext, 0) as InputTypeContext;
+	public input_type(): Input_typeContext {
+		return this.getTypedRuleContext(Input_typeContext, 0) as Input_typeContext;
 	}
-	public inputExpression(): InputExpressionContext {
-		return this.getTypedRuleContext(InputExpressionContext, 0) as InputExpressionContext;
+	public input_expression(): Input_expressionContext {
+		return this.getTypedRuleContext(Input_expressionContext, 0) as Input_expressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_inputItem;
+    	return LeoParser.RULE_input_item;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterInputItem) {
-	 		listener.enterInputItem(this);
+	    if(listener.enterInput_item) {
+	 		listener.enterInput_item(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitInputItem) {
-	 		listener.exitInputItem(this);
+	    if(listener.exitInput_item) {
+	 		listener.exitInput_item(this);
 		}
 	}
 }
 
 
-export class InputTitleContext extends ParserRuleContext {
+export class Input_sectionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
+	public INPUT_TITLE(): TerminalNode {
+		return this.getToken(LeoParser.INPUT_TITLE, 0);
+	}
+	public input_item_list(): Input_itemContext[] {
+		return this.getTypedRuleContexts(Input_itemContext) as Input_itemContext[];
+	}
+	public input_item(i: number): Input_itemContext {
+		return this.getTypedRuleContext(Input_itemContext, i) as Input_itemContext;
+	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_inputTitle;
+    	return LeoParser.RULE_input_section;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterInputTitle) {
-	 		listener.enterInputTitle(this);
+	    if(listener.enterInput_section) {
+	 		listener.enterInput_section(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitInputTitle) {
-	 		listener.exitInputTitle(this);
+	    if(listener.exitInput_section) {
+	 		listener.exitInput_section(this);
 		}
 	}
 }
 
 
-export class InputSectionContext extends ParserRuleContext {
+export class Input_fileContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public inputTitle(): InputTitleContext {
-		return this.getTypedRuleContext(InputTitleContext, 0) as InputTitleContext;
+	public input_section_list(): Input_sectionContext[] {
+		return this.getTypedRuleContexts(Input_sectionContext) as Input_sectionContext[];
 	}
-	public inputItem(): InputItemContext {
-		return this.getTypedRuleContext(InputItemContext, 0) as InputItemContext;
+	public input_section(i: number): Input_sectionContext {
+		return this.getTypedRuleContext(Input_sectionContext, i) as Input_sectionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_inputSection;
+    	return LeoParser.RULE_input_file;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterInputSection) {
-	 		listener.enterInputSection(this);
+	    if(listener.enterInput_file) {
+	 		listener.enterInput_file(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitInputSection) {
-	 		listener.exitInputSection(this);
+	    if(listener.exitInput_file) {
+	 		listener.exitInput_file(this);
 		}
 	}
 }
 
 
-export class InputFileContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public inputSection(): InputSectionContext {
-		return this.getTypedRuleContext(InputSectionContext, 0) as InputSectionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_inputFile;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterInputFile) {
-	 		listener.enterInputFile(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitInputFile) {
-	 		listener.exitInputFile(this);
-		}
-	}
-}
-
-
-export class OutputExpressionContext extends ParserRuleContext {
+export class Output_expressionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
@@ -7663,112 +7172,91 @@ export class OutputExpressionContext extends ParserRuleContext {
 		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_outputExpression;
+    	return LeoParser.RULE_output_expression;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterOutputExpression) {
-	 		listener.enterOutputExpression(this);
+	    if(listener.enterOutput_expression) {
+	 		listener.enterOutput_expression(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitOutputExpression) {
-	 		listener.exitOutputExpression(this);
+	    if(listener.exitOutput_expression) {
+	 		listener.exitOutput_expression(this);
 		}
 	}
 }
 
 
-export class OutputItemContext extends ParserRuleContext {
+export class Output_itemContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public outputExpression(): OutputExpressionContext {
-		return this.getTypedRuleContext(OutputExpressionContext, 0) as OutputExpressionContext;
+	public output_expression(): Output_expressionContext {
+		return this.getTypedRuleContext(Output_expressionContext, 0) as Output_expressionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_outputItem;
+    	return LeoParser.RULE_output_item;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterOutputItem) {
-	 		listener.enterOutputItem(this);
+	    if(listener.enterOutput_item) {
+	 		listener.enterOutput_item(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitOutputItem) {
-	 		listener.exitOutputItem(this);
+	    if(listener.exitOutput_item) {
+	 		listener.exitOutput_item(this);
 		}
 	}
 }
 
 
-export class OutputTitleContext extends ParserRuleContext {
+export class Output_sectionContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
+	public OUTPUT_TITLE(): TerminalNode {
+		return this.getToken(LeoParser.OUTPUT_TITLE, 0);
+	}
+	public output_item(): Output_itemContext {
+		return this.getTypedRuleContext(Output_itemContext, 0) as Output_itemContext;
+	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_outputTitle;
+    	return LeoParser.RULE_output_section;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterOutputTitle) {
-	 		listener.enterOutputTitle(this);
+	    if(listener.enterOutput_section) {
+	 		listener.enterOutput_section(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitOutputTitle) {
-	 		listener.exitOutputTitle(this);
+	    if(listener.exitOutput_section) {
+	 		listener.exitOutput_section(this);
 		}
 	}
 }
 
 
-export class OutputSectionContext extends ParserRuleContext {
+export class Output_fileContext extends ParserRuleContext {
 	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
 		super(parent, invokingState);
     	this.parser = parser;
 	}
-	public outputTitle(): OutputTitleContext {
-		return this.getTypedRuleContext(OutputTitleContext, 0) as OutputTitleContext;
-	}
-	public outputItem(): OutputItemContext {
-		return this.getTypedRuleContext(OutputItemContext, 0) as OutputItemContext;
+	public output_section(): Output_sectionContext {
+		return this.getTypedRuleContext(Output_sectionContext, 0) as Output_sectionContext;
 	}
     public get ruleIndex(): number {
-    	return LeoParser.RULE_outputSection;
+    	return LeoParser.RULE_output_file;
 	}
 	public enterRule(listener: LeoListener): void {
-	    if(listener.enterOutputSection) {
-	 		listener.enterOutputSection(this);
+	    if(listener.enterOutput_file) {
+	 		listener.enterOutput_file(this);
 		}
 	}
 	public exitRule(listener: LeoListener): void {
-	    if(listener.exitOutputSection) {
-	 		listener.exitOutputSection(this);
-		}
-	}
-}
-
-
-export class OutputFileContext extends ParserRuleContext {
-	constructor(parser?: LeoParser, parent?: ParserRuleContext, invokingState?: number) {
-		super(parent, invokingState);
-    	this.parser = parser;
-	}
-	public outputSection(): OutputSectionContext {
-		return this.getTypedRuleContext(OutputSectionContext, 0) as OutputSectionContext;
-	}
-    public get ruleIndex(): number {
-    	return LeoParser.RULE_outputFile;
-	}
-	public enterRule(listener: LeoListener): void {
-	    if(listener.enterOutputFile) {
-	 		listener.enterOutputFile(this);
-		}
-	}
-	public exitRule(listener: LeoListener): void {
-	    if(listener.exitOutputFile) {
-	 		listener.exitOutputFile(this);
+	    if(listener.exitOutput_file) {
+	 		listener.exitOutput_file(this);
 		}
 	}
 }

@@ -33,6 +33,7 @@ documents.onDidChangeContent(async (changeEvt) => {
 	const textDocument = changeEvt.document;
 
 	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
+	
 });
 
 

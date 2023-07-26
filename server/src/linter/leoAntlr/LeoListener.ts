@@ -3,100 +3,92 @@
 import {ParseTreeListener} from "antlr4";
 
 
-import { SourceUnitContext } from "./LeoParser";
-import { ProgramIdContext } from "./LeoParser";
-import { LocatorContext } from "./LeoParser";
-import { ImportDeclarationContext } from "./LeoParser";
-import { ProgramDeclarationContext } from "./LeoParser";
-import { ProgramItemContext } from "./LeoParser";
+import { LetterContext } from "./LeoParser";
+import { BhpContext } from "./LeoParser";
+import { PedersenContext } from "./LeoParser";
+import { PoseidonContext } from "./LeoParser";
 import { IdentifierContext } from "./LeoParser";
+import { NumeralContext } from "./LeoParser";
+import { Unsigned_literalContext } from "./LeoParser";
+import { Signed_literalContext } from "./LeoParser";
+import { Field_literalContext } from "./LeoParser";
+import { Product_group_literalContext } from "./LeoParser";
+import { Scalar_literalContext } from "./LeoParser";
+import { Address_literalContext } from "./LeoParser";
+import { Addr_identifierContext } from "./LeoParser";
+import { Integer_literalContext } from "./LeoParser";
+import { Numeric_literalContext } from "./LeoParser";
+import { Atomic_literalContext } from "./LeoParser";
 import { AnnotationContext } from "./LeoParser";
-import { IntegerTypeContext } from "./LeoParser";
-import { ArithmeticTypeContext } from "./LeoParser";
-import { NamedPrimitiveTypeContext } from "./LeoParser";
-import { UnitTypeContext } from "./LeoParser";
-import { PrimitiveTypeContext } from "./LeoParser";
-import { NamedTypeContext } from "./LeoParser";
-import { TupleTypeContext } from "./LeoParser";
-import { UserDefinedTypeNameContext } from "./LeoParser";
+import { Program_idContext } from "./LeoParser";
+import { LocatorContext } from "./LeoParser";
+import { Integer_typeContext } from "./LeoParser";
+import { Arithmetic_typeContext } from "./LeoParser";
+import { Named_primitive_typeContext } from "./LeoParser";
+import { Primitive_typeContext } from "./LeoParser";
+import { Named_typeContext } from "./LeoParser";
+import { Tuple_typeContext } from "./LeoParser";
 import { TypeContext } from "./LeoParser";
-import { IntegerliteralContext } from "./LeoParser";
-import { NumericliteralContext } from "./LeoParser";
-import { AtomicliteralContext } from "./LeoParser";
+import { Group_coordinateContext } from "./LeoParser";
+import { Affine_group_literalContext } from "./LeoParser";
 import { LiteralContext } from "./LeoParser";
-import { GroupliteralContext } from "./LeoParser";
-import { PrimaryExpressionContext } from "./LeoParser";
+import { Group_literalContext } from "./LeoParser";
+import { Primary_expressionContext } from "./LeoParser";
 import { VariableContext } from "./LeoParser";
-import { AssociatedConstantContext } from "./LeoParser";
-import { FreeFunctionCallContext } from "./LeoParser";
-import { AssociatedFunctionCallContext } from "./LeoParser";
-import { FunctionArgumentsContext } from "./LeoParser";
-import { UnitExpressionContext } from "./LeoParser";
-import { TupleExpressionContext } from "./LeoParser";
-import { StructExpressionContext } from "./LeoParser";
-import { StructComponentInitializerContext } from "./LeoParser";
-import { SelfCallerContext } from "./LeoParser";
-import { BlockHeightContext } from "./LeoParser";
-import { PostfixExpressionContext } from "./LeoParser";
-import { TupleComponentExpressionContext } from "./LeoParser";
-import { StructComponentExpressionContext } from "./LeoParser";
-import { MethodCallContext } from "./LeoParser";
-import { UnaryExpressionContext } from "./LeoParser";
-import { ExponentialExpressionContext } from "./LeoParser";
-import { MultiplicativeExpressionContext } from "./LeoParser";
-import { AdditiveExpressionContext } from "./LeoParser";
-import { ShiftExpressionContext } from "./LeoParser";
-import { ConjunctiveExpressionContext } from "./LeoParser";
-import { DisjunctiveExpressionContext } from "./LeoParser";
-import { ExclusiveDisjunctiveExpressionContext } from "./LeoParser";
-import { OrderingExpressionContext } from "./LeoParser";
-import { EqualityExpressionContext } from "./LeoParser";
-import { ConditionalConjunctiveExpressionContext } from "./LeoParser";
-import { ConditionalDisjunctiveExpressionContext } from "./LeoParser";
-import { BinaryExpressionContext } from "./LeoParser";
-import { ConditionalTernaryExpressionContext } from "./LeoParser";
+import { Associated_constantContext } from "./LeoParser";
+import { Free_function_callContext } from "./LeoParser";
+import { Associated_function_callContext } from "./LeoParser";
+import { Function_argumentsContext } from "./LeoParser";
+import { Tuple_expressionContext } from "./LeoParser";
+import { Struct_expressionContext } from "./LeoParser";
+import { Struct_component_initializerContext } from "./LeoParser";
+import { Postfix_expressionContext } from "./LeoParser";
+import { Tuple_component_expressionContext } from "./LeoParser";
+import { Struct_component_expressionContext } from "./LeoParser";
+import { Method_callContext } from "./LeoParser";
 import { ExpressionContext } from "./LeoParser";
-import { LoopStatementContext } from "./LeoParser";
 import { MappingAttributesContext } from "./LeoParser";
 import { UseMappingContext } from "./LeoParser";
+import { ChachaContext } from "./LeoParser";
+import { AssociatedFunctionCallContext } from "./LeoParser";
 import { StatementContext } from "./LeoParser";
 import { BlockContext } from "./LeoParser";
-import { ReturnStatementContext } from "./LeoParser";
-import { ExpressionStatementContext } from "./LeoParser";
-import { VariableDeclarationContext } from "./LeoParser";
-import { IdentifierOrIdentifiersContext } from "./LeoParser";
+import { Return_statementContext } from "./LeoParser";
+import { Expression_statementContext } from "./LeoParser";
+import { Variable_declarationContext } from "./LeoParser";
+import { Identifier_or_identifiersContext } from "./LeoParser";
 import { BranchContext } from "./LeoParser";
-import { ConditionalStatementContext } from "./LeoParser";
-import { AssignmentOperatorContext } from "./LeoParser";
-import { AssignmentStatementContext } from "./LeoParser";
-import { ConsoleStatementContext } from "./LeoParser";
-import { ConsoleCallContext } from "./LeoParser";
-import { AssertCallContext } from "./LeoParser";
-import { AssertEqualCallContext } from "./LeoParser";
-import { AssertNotEqualCallContext } from "./LeoParser";
-import { FunctionDeclarationContext } from "./LeoParser";
-import { FunctionParametersContext } from "./LeoParser";
-import { FunctionParameterContext } from "./LeoParser";
-import { InlineDeclarationContext } from "./LeoParser";
-import { TransitionDeclarationContext } from "./LeoParser";
+import { Conditional_statementContext } from "./LeoParser";
+import { Loop_statementContext } from "./LeoParser";
+import { Console_statementContext } from "./LeoParser";
+import { Console_callContext } from "./LeoParser";
+import { Assert_callContext } from "./LeoParser";
+import { Assert_equal_callContext } from "./LeoParser";
+import { Assert_not_equal_callContext } from "./LeoParser";
+import { Function_declarationContext } from "./LeoParser";
+import { Function_parametersContext } from "./LeoParser";
+import { Function_parameterContext } from "./LeoParser";
+import { Inline_declarationContext } from "./LeoParser";
+import { Transition_declarationContext } from "./LeoParser";
 import { FinalizerContext } from "./LeoParser";
-import { StructDeclarationContext } from "./LeoParser";
-import { StructComponentDeclarationsContext } from "./LeoParser";
-import { StructComponentDeclarationContext } from "./LeoParser";
-import { RecordDeclarationContext } from "./LeoParser";
-import { MappingDeclarationContext } from "./LeoParser";
-import { FileContext } from "./LeoParser";
-import { InputTypeContext } from "./LeoParser";
-import { InputExpressionContext } from "./LeoParser";
-import { InputItemContext } from "./LeoParser";
-import { InputTitleContext } from "./LeoParser";
-import { InputSectionContext } from "./LeoParser";
-import { InputFileContext } from "./LeoParser";
-import { OutputExpressionContext } from "./LeoParser";
-import { OutputItemContext } from "./LeoParser";
-import { OutputTitleContext } from "./LeoParser";
-import { OutputSectionContext } from "./LeoParser";
-import { OutputFileContext } from "./LeoParser";
+import { Struct_declarationContext } from "./LeoParser";
+import { Struct_component_declarationsContext } from "./LeoParser";
+import { Struct_component_declarationContext } from "./LeoParser";
+import { Record_declarationContext } from "./LeoParser";
+import { Mapping_declarationContext } from "./LeoParser";
+import { Program_itemContext } from "./LeoParser";
+import { Program_declarationContext } from "./LeoParser";
+import { Import_declarationContext } from "./LeoParser";
+import { SourceUnitContext } from "./LeoParser";
+import { Input_typeContext } from "./LeoParser";
+import { Input_expressionContext } from "./LeoParser";
+import { Input_itemContext } from "./LeoParser";
+import { Input_sectionContext } from "./LeoParser";
+import { Input_fileContext } from "./LeoParser";
+import { Output_expressionContext } from "./LeoParser";
+import { Output_itemContext } from "./LeoParser";
+import { Output_sectionContext } from "./LeoParser";
+import { Output_fileContext } from "./LeoParser";
 
 
 /**
@@ -105,65 +97,45 @@ import { OutputFileContext } from "./LeoParser";
  */
 export default class LeoListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by `LeoParser.sourceUnit`.
+	 * Enter a parse tree produced by `LeoParser.letter`.
 	 * @param ctx the parse tree
 	 */
-	enterSourceUnit?: (ctx: SourceUnitContext) => void;
+	enterLetter?: (ctx: LetterContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.sourceUnit`.
+	 * Exit a parse tree produced by `LeoParser.letter`.
 	 * @param ctx the parse tree
 	 */
-	exitSourceUnit?: (ctx: SourceUnitContext) => void;
+	exitLetter?: (ctx: LetterContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.programId`.
+	 * Enter a parse tree produced by `LeoParser.bhp`.
 	 * @param ctx the parse tree
 	 */
-	enterProgramId?: (ctx: ProgramIdContext) => void;
+	enterBhp?: (ctx: BhpContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.programId`.
+	 * Exit a parse tree produced by `LeoParser.bhp`.
 	 * @param ctx the parse tree
 	 */
-	exitProgramId?: (ctx: ProgramIdContext) => void;
+	exitBhp?: (ctx: BhpContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.locator`.
+	 * Enter a parse tree produced by `LeoParser.pedersen`.
 	 * @param ctx the parse tree
 	 */
-	enterLocator?: (ctx: LocatorContext) => void;
+	enterPedersen?: (ctx: PedersenContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.locator`.
+	 * Exit a parse tree produced by `LeoParser.pedersen`.
 	 * @param ctx the parse tree
 	 */
-	exitLocator?: (ctx: LocatorContext) => void;
+	exitPedersen?: (ctx: PedersenContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.importDeclaration`.
+	 * Enter a parse tree produced by `LeoParser.poseidon`.
 	 * @param ctx the parse tree
 	 */
-	enterImportDeclaration?: (ctx: ImportDeclarationContext) => void;
+	enterPoseidon?: (ctx: PoseidonContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.importDeclaration`.
+	 * Exit a parse tree produced by `LeoParser.poseidon`.
 	 * @param ctx the parse tree
 	 */
-	exitImportDeclaration?: (ctx: ImportDeclarationContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.programDeclaration`.
-	 * @param ctx the parse tree
-	 */
-	enterProgramDeclaration?: (ctx: ProgramDeclarationContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.programDeclaration`.
-	 * @param ctx the parse tree
-	 */
-	exitProgramDeclaration?: (ctx: ProgramDeclarationContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.programItem`.
-	 * @param ctx the parse tree
-	 */
-	enterProgramItem?: (ctx: ProgramItemContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.programItem`.
-	 * @param ctx the parse tree
-	 */
-	exitProgramItem?: (ctx: ProgramItemContext) => void;
+	exitPoseidon?: (ctx: PoseidonContext) => void;
 	/**
 	 * Enter a parse tree produced by `LeoParser.identifier`.
 	 * @param ctx the parse tree
@@ -175,6 +147,116 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitIdentifier?: (ctx: IdentifierContext) => void;
 	/**
+	 * Enter a parse tree produced by `LeoParser.numeral`.
+	 * @param ctx the parse tree
+	 */
+	enterNumeral?: (ctx: NumeralContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.numeral`.
+	 * @param ctx the parse tree
+	 */
+	exitNumeral?: (ctx: NumeralContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.unsigned_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterUnsigned_literal?: (ctx: Unsigned_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.unsigned_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitUnsigned_literal?: (ctx: Unsigned_literalContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.signed_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterSigned_literal?: (ctx: Signed_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.signed_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitSigned_literal?: (ctx: Signed_literalContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.field_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterField_literal?: (ctx: Field_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.field_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitField_literal?: (ctx: Field_literalContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.product_group_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterProduct_group_literal?: (ctx: Product_group_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.product_group_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitProduct_group_literal?: (ctx: Product_group_literalContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.scalar_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterScalar_literal?: (ctx: Scalar_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.scalar_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitScalar_literal?: (ctx: Scalar_literalContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.address_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterAddress_literal?: (ctx: Address_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.address_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitAddress_literal?: (ctx: Address_literalContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.addr_identifier`.
+	 * @param ctx the parse tree
+	 */
+	enterAddr_identifier?: (ctx: Addr_identifierContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.addr_identifier`.
+	 * @param ctx the parse tree
+	 */
+	exitAddr_identifier?: (ctx: Addr_identifierContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.integer_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterInteger_literal?: (ctx: Integer_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.integer_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitInteger_literal?: (ctx: Integer_literalContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.numeric_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterNumeric_literal?: (ctx: Numeric_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.numeric_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitNumeric_literal?: (ctx: Numeric_literalContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.atomic_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterAtomic_literal?: (ctx: Atomic_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.atomic_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitAtomic_literal?: (ctx: Atomic_literalContext) => void;
+	/**
 	 * Enter a parse tree produced by `LeoParser.annotation`.
 	 * @param ctx the parse tree
 	 */
@@ -185,85 +267,85 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitAnnotation?: (ctx: AnnotationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.integerType`.
+	 * Enter a parse tree produced by `LeoParser.program_id`.
 	 * @param ctx the parse tree
 	 */
-	enterIntegerType?: (ctx: IntegerTypeContext) => void;
+	enterProgram_id?: (ctx: Program_idContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.integerType`.
+	 * Exit a parse tree produced by `LeoParser.program_id`.
 	 * @param ctx the parse tree
 	 */
-	exitIntegerType?: (ctx: IntegerTypeContext) => void;
+	exitProgram_id?: (ctx: Program_idContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.arithmeticType`.
+	 * Enter a parse tree produced by `LeoParser.locator`.
 	 * @param ctx the parse tree
 	 */
-	enterArithmeticType?: (ctx: ArithmeticTypeContext) => void;
+	enterLocator?: (ctx: LocatorContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.arithmeticType`.
+	 * Exit a parse tree produced by `LeoParser.locator`.
 	 * @param ctx the parse tree
 	 */
-	exitArithmeticType?: (ctx: ArithmeticTypeContext) => void;
+	exitLocator?: (ctx: LocatorContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.namedPrimitiveType`.
+	 * Enter a parse tree produced by `LeoParser.integer_type`.
 	 * @param ctx the parse tree
 	 */
-	enterNamedPrimitiveType?: (ctx: NamedPrimitiveTypeContext) => void;
+	enterInteger_type?: (ctx: Integer_typeContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.namedPrimitiveType`.
+	 * Exit a parse tree produced by `LeoParser.integer_type`.
 	 * @param ctx the parse tree
 	 */
-	exitNamedPrimitiveType?: (ctx: NamedPrimitiveTypeContext) => void;
+	exitInteger_type?: (ctx: Integer_typeContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.unitType`.
+	 * Enter a parse tree produced by `LeoParser.arithmetic_type`.
 	 * @param ctx the parse tree
 	 */
-	enterUnitType?: (ctx: UnitTypeContext) => void;
+	enterArithmetic_type?: (ctx: Arithmetic_typeContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.unitType`.
+	 * Exit a parse tree produced by `LeoParser.arithmetic_type`.
 	 * @param ctx the parse tree
 	 */
-	exitUnitType?: (ctx: UnitTypeContext) => void;
+	exitArithmetic_type?: (ctx: Arithmetic_typeContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.primitiveType`.
+	 * Enter a parse tree produced by `LeoParser.named_primitive_type`.
 	 * @param ctx the parse tree
 	 */
-	enterPrimitiveType?: (ctx: PrimitiveTypeContext) => void;
+	enterNamed_primitive_type?: (ctx: Named_primitive_typeContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.primitiveType`.
+	 * Exit a parse tree produced by `LeoParser.named_primitive_type`.
 	 * @param ctx the parse tree
 	 */
-	exitPrimitiveType?: (ctx: PrimitiveTypeContext) => void;
+	exitNamed_primitive_type?: (ctx: Named_primitive_typeContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.namedType`.
+	 * Enter a parse tree produced by `LeoParser.primitive_type`.
 	 * @param ctx the parse tree
 	 */
-	enterNamedType?: (ctx: NamedTypeContext) => void;
+	enterPrimitive_type?: (ctx: Primitive_typeContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.namedType`.
+	 * Exit a parse tree produced by `LeoParser.primitive_type`.
 	 * @param ctx the parse tree
 	 */
-	exitNamedType?: (ctx: NamedTypeContext) => void;
+	exitPrimitive_type?: (ctx: Primitive_typeContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.tupleType`.
+	 * Enter a parse tree produced by `LeoParser.named_type`.
 	 * @param ctx the parse tree
 	 */
-	enterTupleType?: (ctx: TupleTypeContext) => void;
+	enterNamed_type?: (ctx: Named_typeContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.tupleType`.
+	 * Exit a parse tree produced by `LeoParser.named_type`.
 	 * @param ctx the parse tree
 	 */
-	exitTupleType?: (ctx: TupleTypeContext) => void;
+	exitNamed_type?: (ctx: Named_typeContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.userDefinedTypeName`.
+	 * Enter a parse tree produced by `LeoParser.tuple_type`.
 	 * @param ctx the parse tree
 	 */
-	enterUserDefinedTypeName?: (ctx: UserDefinedTypeNameContext) => void;
+	enterTuple_type?: (ctx: Tuple_typeContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.userDefinedTypeName`.
+	 * Exit a parse tree produced by `LeoParser.tuple_type`.
 	 * @param ctx the parse tree
 	 */
-	exitUserDefinedTypeName?: (ctx: UserDefinedTypeNameContext) => void;
+	exitTuple_type?: (ctx: Tuple_typeContext) => void;
 	/**
 	 * Enter a parse tree produced by `LeoParser.type`.
 	 * @param ctx the parse tree
@@ -275,35 +357,25 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitType?: (ctx: TypeContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.integerliteral`.
+	 * Enter a parse tree produced by `LeoParser.group_coordinate`.
 	 * @param ctx the parse tree
 	 */
-	enterIntegerliteral?: (ctx: IntegerliteralContext) => void;
+	enterGroup_coordinate?: (ctx: Group_coordinateContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.integerliteral`.
+	 * Exit a parse tree produced by `LeoParser.group_coordinate`.
 	 * @param ctx the parse tree
 	 */
-	exitIntegerliteral?: (ctx: IntegerliteralContext) => void;
+	exitGroup_coordinate?: (ctx: Group_coordinateContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.numericliteral`.
+	 * Enter a parse tree produced by `LeoParser.affine_group_literal`.
 	 * @param ctx the parse tree
 	 */
-	enterNumericliteral?: (ctx: NumericliteralContext) => void;
+	enterAffine_group_literal?: (ctx: Affine_group_literalContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.numericliteral`.
+	 * Exit a parse tree produced by `LeoParser.affine_group_literal`.
 	 * @param ctx the parse tree
 	 */
-	exitNumericliteral?: (ctx: NumericliteralContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.atomicliteral`.
-	 * @param ctx the parse tree
-	 */
-	enterAtomicliteral?: (ctx: AtomicliteralContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.atomicliteral`.
-	 * @param ctx the parse tree
-	 */
-	exitAtomicliteral?: (ctx: AtomicliteralContext) => void;
+	exitAffine_group_literal?: (ctx: Affine_group_literalContext) => void;
 	/**
 	 * Enter a parse tree produced by `LeoParser.literal`.
 	 * @param ctx the parse tree
@@ -315,25 +387,25 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitLiteral?: (ctx: LiteralContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.groupliteral`.
+	 * Enter a parse tree produced by `LeoParser.group_literal`.
 	 * @param ctx the parse tree
 	 */
-	enterGroupliteral?: (ctx: GroupliteralContext) => void;
+	enterGroup_literal?: (ctx: Group_literalContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.groupliteral`.
+	 * Exit a parse tree produced by `LeoParser.group_literal`.
 	 * @param ctx the parse tree
 	 */
-	exitGroupliteral?: (ctx: GroupliteralContext) => void;
+	exitGroup_literal?: (ctx: Group_literalContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.primaryExpression`.
+	 * Enter a parse tree produced by `LeoParser.primary_expression`.
 	 * @param ctx the parse tree
 	 */
-	enterPrimaryExpression?: (ctx: PrimaryExpressionContext) => void;
+	enterPrimary_expression?: (ctx: Primary_expressionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.primaryExpression`.
+	 * Exit a parse tree produced by `LeoParser.primary_expression`.
 	 * @param ctx the parse tree
 	 */
-	exitPrimaryExpression?: (ctx: PrimaryExpressionContext) => void;
+	exitPrimary_expression?: (ctx: Primary_expressionContext) => void;
 	/**
 	 * Enter a parse tree produced by `LeoParser.variable`.
 	 * @param ctx the parse tree
@@ -345,285 +417,115 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitVariable?: (ctx: VariableContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.associatedConstant`.
+	 * Enter a parse tree produced by `LeoParser.associated_constant`.
 	 * @param ctx the parse tree
 	 */
-	enterAssociatedConstant?: (ctx: AssociatedConstantContext) => void;
+	enterAssociated_constant?: (ctx: Associated_constantContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.associatedConstant`.
+	 * Exit a parse tree produced by `LeoParser.associated_constant`.
 	 * @param ctx the parse tree
 	 */
-	exitAssociatedConstant?: (ctx: AssociatedConstantContext) => void;
+	exitAssociated_constant?: (ctx: Associated_constantContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.freeFunctionCall`.
+	 * Enter a parse tree produced by `LeoParser.free_function_call`.
 	 * @param ctx the parse tree
 	 */
-	enterFreeFunctionCall?: (ctx: FreeFunctionCallContext) => void;
+	enterFree_function_call?: (ctx: Free_function_callContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.freeFunctionCall`.
+	 * Exit a parse tree produced by `LeoParser.free_function_call`.
 	 * @param ctx the parse tree
 	 */
-	exitFreeFunctionCall?: (ctx: FreeFunctionCallContext) => void;
+	exitFree_function_call?: (ctx: Free_function_callContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.associatedFunctionCall`.
+	 * Enter a parse tree produced by `LeoParser.associated_function_call`.
 	 * @param ctx the parse tree
 	 */
-	enterAssociatedFunctionCall?: (ctx: AssociatedFunctionCallContext) => void;
+	enterAssociated_function_call?: (ctx: Associated_function_callContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.associatedFunctionCall`.
+	 * Exit a parse tree produced by `LeoParser.associated_function_call`.
 	 * @param ctx the parse tree
 	 */
-	exitAssociatedFunctionCall?: (ctx: AssociatedFunctionCallContext) => void;
+	exitAssociated_function_call?: (ctx: Associated_function_callContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.functionArguments`.
+	 * Enter a parse tree produced by `LeoParser.function_arguments`.
 	 * @param ctx the parse tree
 	 */
-	enterFunctionArguments?: (ctx: FunctionArgumentsContext) => void;
+	enterFunction_arguments?: (ctx: Function_argumentsContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.functionArguments`.
+	 * Exit a parse tree produced by `LeoParser.function_arguments`.
 	 * @param ctx the parse tree
 	 */
-	exitFunctionArguments?: (ctx: FunctionArgumentsContext) => void;
+	exitFunction_arguments?: (ctx: Function_argumentsContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.unitExpression`.
+	 * Enter a parse tree produced by `LeoParser.tuple_expression`.
 	 * @param ctx the parse tree
 	 */
-	enterUnitExpression?: (ctx: UnitExpressionContext) => void;
+	enterTuple_expression?: (ctx: Tuple_expressionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.unitExpression`.
+	 * Exit a parse tree produced by `LeoParser.tuple_expression`.
 	 * @param ctx the parse tree
 	 */
-	exitUnitExpression?: (ctx: UnitExpressionContext) => void;
+	exitTuple_expression?: (ctx: Tuple_expressionContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.tupleExpression`.
+	 * Enter a parse tree produced by `LeoParser.struct_expression`.
 	 * @param ctx the parse tree
 	 */
-	enterTupleExpression?: (ctx: TupleExpressionContext) => void;
+	enterStruct_expression?: (ctx: Struct_expressionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.tupleExpression`.
+	 * Exit a parse tree produced by `LeoParser.struct_expression`.
 	 * @param ctx the parse tree
 	 */
-	exitTupleExpression?: (ctx: TupleExpressionContext) => void;
+	exitStruct_expression?: (ctx: Struct_expressionContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.structExpression`.
+	 * Enter a parse tree produced by `LeoParser.struct_component_initializer`.
 	 * @param ctx the parse tree
 	 */
-	enterStructExpression?: (ctx: StructExpressionContext) => void;
+	enterStruct_component_initializer?: (ctx: Struct_component_initializerContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.structExpression`.
+	 * Exit a parse tree produced by `LeoParser.struct_component_initializer`.
 	 * @param ctx the parse tree
 	 */
-	exitStructExpression?: (ctx: StructExpressionContext) => void;
+	exitStruct_component_initializer?: (ctx: Struct_component_initializerContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.structComponentInitializer`.
+	 * Enter a parse tree produced by `LeoParser.postfix_expression`.
 	 * @param ctx the parse tree
 	 */
-	enterStructComponentInitializer?: (ctx: StructComponentInitializerContext) => void;
+	enterPostfix_expression?: (ctx: Postfix_expressionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.structComponentInitializer`.
+	 * Exit a parse tree produced by `LeoParser.postfix_expression`.
 	 * @param ctx the parse tree
 	 */
-	exitStructComponentInitializer?: (ctx: StructComponentInitializerContext) => void;
+	exitPostfix_expression?: (ctx: Postfix_expressionContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.selfCaller`.
+	 * Enter a parse tree produced by `LeoParser.tuple_component_expression`.
 	 * @param ctx the parse tree
 	 */
-	enterSelfCaller?: (ctx: SelfCallerContext) => void;
+	enterTuple_component_expression?: (ctx: Tuple_component_expressionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.selfCaller`.
+	 * Exit a parse tree produced by `LeoParser.tuple_component_expression`.
 	 * @param ctx the parse tree
 	 */
-	exitSelfCaller?: (ctx: SelfCallerContext) => void;
+	exitTuple_component_expression?: (ctx: Tuple_component_expressionContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.blockHeight`.
+	 * Enter a parse tree produced by `LeoParser.struct_component_expression`.
 	 * @param ctx the parse tree
 	 */
-	enterBlockHeight?: (ctx: BlockHeightContext) => void;
+	enterStruct_component_expression?: (ctx: Struct_component_expressionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.blockHeight`.
+	 * Exit a parse tree produced by `LeoParser.struct_component_expression`.
 	 * @param ctx the parse tree
 	 */
-	exitBlockHeight?: (ctx: BlockHeightContext) => void;
+	exitStruct_component_expression?: (ctx: Struct_component_expressionContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.postfixExpression`.
+	 * Enter a parse tree produced by `LeoParser.method_call`.
 	 * @param ctx the parse tree
 	 */
-	enterPostfixExpression?: (ctx: PostfixExpressionContext) => void;
+	enterMethod_call?: (ctx: Method_callContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.postfixExpression`.
+	 * Exit a parse tree produced by `LeoParser.method_call`.
 	 * @param ctx the parse tree
 	 */
-	exitPostfixExpression?: (ctx: PostfixExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.tupleComponentExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterTupleComponentExpression?: (ctx: TupleComponentExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.tupleComponentExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitTupleComponentExpression?: (ctx: TupleComponentExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.structComponentExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterStructComponentExpression?: (ctx: StructComponentExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.structComponentExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitStructComponentExpression?: (ctx: StructComponentExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.methodCall`.
-	 * @param ctx the parse tree
-	 */
-	enterMethodCall?: (ctx: MethodCallContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.methodCall`.
-	 * @param ctx the parse tree
-	 */
-	exitMethodCall?: (ctx: MethodCallContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.unaryExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterUnaryExpression?: (ctx: UnaryExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.unaryExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitUnaryExpression?: (ctx: UnaryExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.exponentialExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterExponentialExpression?: (ctx: ExponentialExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.exponentialExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitExponentialExpression?: (ctx: ExponentialExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.multiplicativeExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterMultiplicativeExpression?: (ctx: MultiplicativeExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.multiplicativeExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitMultiplicativeExpression?: (ctx: MultiplicativeExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.additiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterAdditiveExpression?: (ctx: AdditiveExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.additiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitAdditiveExpression?: (ctx: AdditiveExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.shiftExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterShiftExpression?: (ctx: ShiftExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.shiftExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitShiftExpression?: (ctx: ShiftExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.conjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterConjunctiveExpression?: (ctx: ConjunctiveExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.conjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitConjunctiveExpression?: (ctx: ConjunctiveExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.disjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterDisjunctiveExpression?: (ctx: DisjunctiveExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.disjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitDisjunctiveExpression?: (ctx: DisjunctiveExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.exclusiveDisjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterExclusiveDisjunctiveExpression?: (ctx: ExclusiveDisjunctiveExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.exclusiveDisjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitExclusiveDisjunctiveExpression?: (ctx: ExclusiveDisjunctiveExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.orderingExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterOrderingExpression?: (ctx: OrderingExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.orderingExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitOrderingExpression?: (ctx: OrderingExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.equalityExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterEqualityExpression?: (ctx: EqualityExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.equalityExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitEqualityExpression?: (ctx: EqualityExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.conditionalConjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterConditionalConjunctiveExpression?: (ctx: ConditionalConjunctiveExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.conditionalConjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitConditionalConjunctiveExpression?: (ctx: ConditionalConjunctiveExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.conditionalDisjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterConditionalDisjunctiveExpression?: (ctx: ConditionalDisjunctiveExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.conditionalDisjunctiveExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitConditionalDisjunctiveExpression?: (ctx: ConditionalDisjunctiveExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.binaryExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterBinaryExpression?: (ctx: BinaryExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.binaryExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitBinaryExpression?: (ctx: BinaryExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.conditionalTernaryExpression`.
-	 * @param ctx the parse tree
-	 */
-	enterConditionalTernaryExpression?: (ctx: ConditionalTernaryExpressionContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.conditionalTernaryExpression`.
-	 * @param ctx the parse tree
-	 */
-	exitConditionalTernaryExpression?: (ctx: ConditionalTernaryExpressionContext) => void;
+	exitMethod_call?: (ctx: Method_callContext) => void;
 	/**
 	 * Enter a parse tree produced by `LeoParser.expression`.
 	 * @param ctx the parse tree
@@ -634,16 +536,6 @@ export default class LeoListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitExpression?: (ctx: ExpressionContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.loopStatement`.
-	 * @param ctx the parse tree
-	 */
-	enterLoopStatement?: (ctx: LoopStatementContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.loopStatement`.
-	 * @param ctx the parse tree
-	 */
-	exitLoopStatement?: (ctx: LoopStatementContext) => void;
 	/**
 	 * Enter a parse tree produced by `LeoParser.mappingAttributes`.
 	 * @param ctx the parse tree
@@ -665,6 +557,26 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitUseMapping?: (ctx: UseMappingContext) => void;
 	/**
+	 * Enter a parse tree produced by `LeoParser.chacha`.
+	 * @param ctx the parse tree
+	 */
+	enterChacha?: (ctx: ChachaContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.chacha`.
+	 * @param ctx the parse tree
+	 */
+	exitChacha?: (ctx: ChachaContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.associatedFunctionCall`.
+	 * @param ctx the parse tree
+	 */
+	enterAssociatedFunctionCall?: (ctx: AssociatedFunctionCallContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.associatedFunctionCall`.
+	 * @param ctx the parse tree
+	 */
+	exitAssociatedFunctionCall?: (ctx: AssociatedFunctionCallContext) => void;
+	/**
 	 * Enter a parse tree produced by `LeoParser.statement`.
 	 * @param ctx the parse tree
 	 */
@@ -685,45 +597,45 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitBlock?: (ctx: BlockContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.returnStatement`.
+	 * Enter a parse tree produced by `LeoParser.return_statement`.
 	 * @param ctx the parse tree
 	 */
-	enterReturnStatement?: (ctx: ReturnStatementContext) => void;
+	enterReturn_statement?: (ctx: Return_statementContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.returnStatement`.
+	 * Exit a parse tree produced by `LeoParser.return_statement`.
 	 * @param ctx the parse tree
 	 */
-	exitReturnStatement?: (ctx: ReturnStatementContext) => void;
+	exitReturn_statement?: (ctx: Return_statementContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.expressionStatement`.
+	 * Enter a parse tree produced by `LeoParser.expression_statement`.
 	 * @param ctx the parse tree
 	 */
-	enterExpressionStatement?: (ctx: ExpressionStatementContext) => void;
+	enterExpression_statement?: (ctx: Expression_statementContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.expressionStatement`.
+	 * Exit a parse tree produced by `LeoParser.expression_statement`.
 	 * @param ctx the parse tree
 	 */
-	exitExpressionStatement?: (ctx: ExpressionStatementContext) => void;
+	exitExpression_statement?: (ctx: Expression_statementContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.variableDeclaration`.
+	 * Enter a parse tree produced by `LeoParser.variable_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterVariableDeclaration?: (ctx: VariableDeclarationContext) => void;
+	enterVariable_declaration?: (ctx: Variable_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.variableDeclaration`.
+	 * Exit a parse tree produced by `LeoParser.variable_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitVariableDeclaration?: (ctx: VariableDeclarationContext) => void;
+	exitVariable_declaration?: (ctx: Variable_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.identifierOrIdentifiers`.
+	 * Enter a parse tree produced by `LeoParser.identifier_or_identifiers`.
 	 * @param ctx the parse tree
 	 */
-	enterIdentifierOrIdentifiers?: (ctx: IdentifierOrIdentifiersContext) => void;
+	enterIdentifier_or_identifiers?: (ctx: Identifier_or_identifiersContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.identifierOrIdentifiers`.
+	 * Exit a parse tree produced by `LeoParser.identifier_or_identifiers`.
 	 * @param ctx the parse tree
 	 */
-	exitIdentifierOrIdentifiers?: (ctx: IdentifierOrIdentifiersContext) => void;
+	exitIdentifier_or_identifiers?: (ctx: Identifier_or_identifiersContext) => void;
 	/**
 	 * Enter a parse tree produced by `LeoParser.branch`.
 	 * @param ctx the parse tree
@@ -735,135 +647,125 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitBranch?: (ctx: BranchContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.conditionalStatement`.
+	 * Enter a parse tree produced by `LeoParser.conditional_statement`.
 	 * @param ctx the parse tree
 	 */
-	enterConditionalStatement?: (ctx: ConditionalStatementContext) => void;
+	enterConditional_statement?: (ctx: Conditional_statementContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.conditionalStatement`.
+	 * Exit a parse tree produced by `LeoParser.conditional_statement`.
 	 * @param ctx the parse tree
 	 */
-	exitConditionalStatement?: (ctx: ConditionalStatementContext) => void;
+	exitConditional_statement?: (ctx: Conditional_statementContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.assignmentOperator`.
+	 * Enter a parse tree produced by `LeoParser.loop_statement`.
 	 * @param ctx the parse tree
 	 */
-	enterAssignmentOperator?: (ctx: AssignmentOperatorContext) => void;
+	enterLoop_statement?: (ctx: Loop_statementContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.assignmentOperator`.
+	 * Exit a parse tree produced by `LeoParser.loop_statement`.
 	 * @param ctx the parse tree
 	 */
-	exitAssignmentOperator?: (ctx: AssignmentOperatorContext) => void;
+	exitLoop_statement?: (ctx: Loop_statementContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.assignmentStatement`.
+	 * Enter a parse tree produced by `LeoParser.console_statement`.
 	 * @param ctx the parse tree
 	 */
-	enterAssignmentStatement?: (ctx: AssignmentStatementContext) => void;
+	enterConsole_statement?: (ctx: Console_statementContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.assignmentStatement`.
+	 * Exit a parse tree produced by `LeoParser.console_statement`.
 	 * @param ctx the parse tree
 	 */
-	exitAssignmentStatement?: (ctx: AssignmentStatementContext) => void;
+	exitConsole_statement?: (ctx: Console_statementContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.consoleStatement`.
+	 * Enter a parse tree produced by `LeoParser.console_call`.
 	 * @param ctx the parse tree
 	 */
-	enterConsoleStatement?: (ctx: ConsoleStatementContext) => void;
+	enterConsole_call?: (ctx: Console_callContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.consoleStatement`.
+	 * Exit a parse tree produced by `LeoParser.console_call`.
 	 * @param ctx the parse tree
 	 */
-	exitConsoleStatement?: (ctx: ConsoleStatementContext) => void;
+	exitConsole_call?: (ctx: Console_callContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.consoleCall`.
+	 * Enter a parse tree produced by `LeoParser.assert_call`.
 	 * @param ctx the parse tree
 	 */
-	enterConsoleCall?: (ctx: ConsoleCallContext) => void;
+	enterAssert_call?: (ctx: Assert_callContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.consoleCall`.
+	 * Exit a parse tree produced by `LeoParser.assert_call`.
 	 * @param ctx the parse tree
 	 */
-	exitConsoleCall?: (ctx: ConsoleCallContext) => void;
+	exitAssert_call?: (ctx: Assert_callContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.assertCall`.
+	 * Enter a parse tree produced by `LeoParser.assert_equal_call`.
 	 * @param ctx the parse tree
 	 */
-	enterAssertCall?: (ctx: AssertCallContext) => void;
+	enterAssert_equal_call?: (ctx: Assert_equal_callContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.assertCall`.
+	 * Exit a parse tree produced by `LeoParser.assert_equal_call`.
 	 * @param ctx the parse tree
 	 */
-	exitAssertCall?: (ctx: AssertCallContext) => void;
+	exitAssert_equal_call?: (ctx: Assert_equal_callContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.assertEqualCall`.
+	 * Enter a parse tree produced by `LeoParser.assert_not_equal_call`.
 	 * @param ctx the parse tree
 	 */
-	enterAssertEqualCall?: (ctx: AssertEqualCallContext) => void;
+	enterAssert_not_equal_call?: (ctx: Assert_not_equal_callContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.assertEqualCall`.
+	 * Exit a parse tree produced by `LeoParser.assert_not_equal_call`.
 	 * @param ctx the parse tree
 	 */
-	exitAssertEqualCall?: (ctx: AssertEqualCallContext) => void;
+	exitAssert_not_equal_call?: (ctx: Assert_not_equal_callContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.assertNotEqualCall`.
+	 * Enter a parse tree produced by `LeoParser.function_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterAssertNotEqualCall?: (ctx: AssertNotEqualCallContext) => void;
+	enterFunction_declaration?: (ctx: Function_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.assertNotEqualCall`.
+	 * Exit a parse tree produced by `LeoParser.function_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitAssertNotEqualCall?: (ctx: AssertNotEqualCallContext) => void;
+	exitFunction_declaration?: (ctx: Function_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.functionDeclaration`.
+	 * Enter a parse tree produced by `LeoParser.function_parameters`.
 	 * @param ctx the parse tree
 	 */
-	enterFunctionDeclaration?: (ctx: FunctionDeclarationContext) => void;
+	enterFunction_parameters?: (ctx: Function_parametersContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.functionDeclaration`.
+	 * Exit a parse tree produced by `LeoParser.function_parameters`.
 	 * @param ctx the parse tree
 	 */
-	exitFunctionDeclaration?: (ctx: FunctionDeclarationContext) => void;
+	exitFunction_parameters?: (ctx: Function_parametersContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.functionParameters`.
+	 * Enter a parse tree produced by `LeoParser.function_parameter`.
 	 * @param ctx the parse tree
 	 */
-	enterFunctionParameters?: (ctx: FunctionParametersContext) => void;
+	enterFunction_parameter?: (ctx: Function_parameterContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.functionParameters`.
+	 * Exit a parse tree produced by `LeoParser.function_parameter`.
 	 * @param ctx the parse tree
 	 */
-	exitFunctionParameters?: (ctx: FunctionParametersContext) => void;
+	exitFunction_parameter?: (ctx: Function_parameterContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.functionParameter`.
+	 * Enter a parse tree produced by `LeoParser.inline_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterFunctionParameter?: (ctx: FunctionParameterContext) => void;
+	enterInline_declaration?: (ctx: Inline_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.functionParameter`.
+	 * Exit a parse tree produced by `LeoParser.inline_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitFunctionParameter?: (ctx: FunctionParameterContext) => void;
+	exitInline_declaration?: (ctx: Inline_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.inlineDeclaration`.
+	 * Enter a parse tree produced by `LeoParser.transition_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterInlineDeclaration?: (ctx: InlineDeclarationContext) => void;
+	enterTransition_declaration?: (ctx: Transition_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.inlineDeclaration`.
+	 * Exit a parse tree produced by `LeoParser.transition_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitInlineDeclaration?: (ctx: InlineDeclarationContext) => void;
-	/**
-	 * Enter a parse tree produced by `LeoParser.transitionDeclaration`.
-	 * @param ctx the parse tree
-	 */
-	enterTransitionDeclaration?: (ctx: TransitionDeclarationContext) => void;
-	/**
-	 * Exit a parse tree produced by `LeoParser.transitionDeclaration`.
-	 * @param ctx the parse tree
-	 */
-	exitTransitionDeclaration?: (ctx: TransitionDeclarationContext) => void;
+	exitTransition_declaration?: (ctx: Transition_declarationContext) => void;
 	/**
 	 * Enter a parse tree produced by `LeoParser.finalizer`.
 	 * @param ctx the parse tree
@@ -875,174 +777,184 @@ export default class LeoListener extends ParseTreeListener {
 	 */
 	exitFinalizer?: (ctx: FinalizerContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.structDeclaration`.
+	 * Enter a parse tree produced by `LeoParser.struct_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterStructDeclaration?: (ctx: StructDeclarationContext) => void;
+	enterStruct_declaration?: (ctx: Struct_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.structDeclaration`.
+	 * Exit a parse tree produced by `LeoParser.struct_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitStructDeclaration?: (ctx: StructDeclarationContext) => void;
+	exitStruct_declaration?: (ctx: Struct_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.structComponentDeclarations`.
+	 * Enter a parse tree produced by `LeoParser.struct_component_declarations`.
 	 * @param ctx the parse tree
 	 */
-	enterStructComponentDeclarations?: (ctx: StructComponentDeclarationsContext) => void;
+	enterStruct_component_declarations?: (ctx: Struct_component_declarationsContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.structComponentDeclarations`.
+	 * Exit a parse tree produced by `LeoParser.struct_component_declarations`.
 	 * @param ctx the parse tree
 	 */
-	exitStructComponentDeclarations?: (ctx: StructComponentDeclarationsContext) => void;
+	exitStruct_component_declarations?: (ctx: Struct_component_declarationsContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.structComponentDeclaration`.
+	 * Enter a parse tree produced by `LeoParser.struct_component_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterStructComponentDeclaration?: (ctx: StructComponentDeclarationContext) => void;
+	enterStruct_component_declaration?: (ctx: Struct_component_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.structComponentDeclaration`.
+	 * Exit a parse tree produced by `LeoParser.struct_component_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitStructComponentDeclaration?: (ctx: StructComponentDeclarationContext) => void;
+	exitStruct_component_declaration?: (ctx: Struct_component_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.recordDeclaration`.
+	 * Enter a parse tree produced by `LeoParser.record_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterRecordDeclaration?: (ctx: RecordDeclarationContext) => void;
+	enterRecord_declaration?: (ctx: Record_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.recordDeclaration`.
+	 * Exit a parse tree produced by `LeoParser.record_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitRecordDeclaration?: (ctx: RecordDeclarationContext) => void;
+	exitRecord_declaration?: (ctx: Record_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.mappingDeclaration`.
+	 * Enter a parse tree produced by `LeoParser.mapping_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterMappingDeclaration?: (ctx: MappingDeclarationContext) => void;
+	enterMapping_declaration?: (ctx: Mapping_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.mappingDeclaration`.
+	 * Exit a parse tree produced by `LeoParser.mapping_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitMappingDeclaration?: (ctx: MappingDeclarationContext) => void;
+	exitMapping_declaration?: (ctx: Mapping_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.file`.
+	 * Enter a parse tree produced by `LeoParser.program_item`.
 	 * @param ctx the parse tree
 	 */
-	enterFile?: (ctx: FileContext) => void;
+	enterProgram_item?: (ctx: Program_itemContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.file`.
+	 * Exit a parse tree produced by `LeoParser.program_item`.
 	 * @param ctx the parse tree
 	 */
-	exitFile?: (ctx: FileContext) => void;
+	exitProgram_item?: (ctx: Program_itemContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.inputType`.
+	 * Enter a parse tree produced by `LeoParser.program_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterInputType?: (ctx: InputTypeContext) => void;
+	enterProgram_declaration?: (ctx: Program_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.inputType`.
+	 * Exit a parse tree produced by `LeoParser.program_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitInputType?: (ctx: InputTypeContext) => void;
+	exitProgram_declaration?: (ctx: Program_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.inputExpression`.
+	 * Enter a parse tree produced by `LeoParser.import_declaration`.
 	 * @param ctx the parse tree
 	 */
-	enterInputExpression?: (ctx: InputExpressionContext) => void;
+	enterImport_declaration?: (ctx: Import_declarationContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.inputExpression`.
+	 * Exit a parse tree produced by `LeoParser.import_declaration`.
 	 * @param ctx the parse tree
 	 */
-	exitInputExpression?: (ctx: InputExpressionContext) => void;
+	exitImport_declaration?: (ctx: Import_declarationContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.inputItem`.
+	 * Enter a parse tree produced by `LeoParser.sourceUnit`.
 	 * @param ctx the parse tree
 	 */
-	enterInputItem?: (ctx: InputItemContext) => void;
+	enterSourceUnit?: (ctx: SourceUnitContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.inputItem`.
+	 * Exit a parse tree produced by `LeoParser.sourceUnit`.
 	 * @param ctx the parse tree
 	 */
-	exitInputItem?: (ctx: InputItemContext) => void;
+	exitSourceUnit?: (ctx: SourceUnitContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.inputTitle`.
+	 * Enter a parse tree produced by `LeoParser.input_type`.
 	 * @param ctx the parse tree
 	 */
-	enterInputTitle?: (ctx: InputTitleContext) => void;
+	enterInput_type?: (ctx: Input_typeContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.inputTitle`.
+	 * Exit a parse tree produced by `LeoParser.input_type`.
 	 * @param ctx the parse tree
 	 */
-	exitInputTitle?: (ctx: InputTitleContext) => void;
+	exitInput_type?: (ctx: Input_typeContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.inputSection`.
+	 * Enter a parse tree produced by `LeoParser.input_expression`.
 	 * @param ctx the parse tree
 	 */
-	enterInputSection?: (ctx: InputSectionContext) => void;
+	enterInput_expression?: (ctx: Input_expressionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.inputSection`.
+	 * Exit a parse tree produced by `LeoParser.input_expression`.
 	 * @param ctx the parse tree
 	 */
-	exitInputSection?: (ctx: InputSectionContext) => void;
+	exitInput_expression?: (ctx: Input_expressionContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.inputFile`.
+	 * Enter a parse tree produced by `LeoParser.input_item`.
 	 * @param ctx the parse tree
 	 */
-	enterInputFile?: (ctx: InputFileContext) => void;
+	enterInput_item?: (ctx: Input_itemContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.inputFile`.
+	 * Exit a parse tree produced by `LeoParser.input_item`.
 	 * @param ctx the parse tree
 	 */
-	exitInputFile?: (ctx: InputFileContext) => void;
+	exitInput_item?: (ctx: Input_itemContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.outputExpression`.
+	 * Enter a parse tree produced by `LeoParser.input_section`.
 	 * @param ctx the parse tree
 	 */
-	enterOutputExpression?: (ctx: OutputExpressionContext) => void;
+	enterInput_section?: (ctx: Input_sectionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.outputExpression`.
+	 * Exit a parse tree produced by `LeoParser.input_section`.
 	 * @param ctx the parse tree
 	 */
-	exitOutputExpression?: (ctx: OutputExpressionContext) => void;
+	exitInput_section?: (ctx: Input_sectionContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.outputItem`.
+	 * Enter a parse tree produced by `LeoParser.input_file`.
 	 * @param ctx the parse tree
 	 */
-	enterOutputItem?: (ctx: OutputItemContext) => void;
+	enterInput_file?: (ctx: Input_fileContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.outputItem`.
+	 * Exit a parse tree produced by `LeoParser.input_file`.
 	 * @param ctx the parse tree
 	 */
-	exitOutputItem?: (ctx: OutputItemContext) => void;
+	exitInput_file?: (ctx: Input_fileContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.outputTitle`.
+	 * Enter a parse tree produced by `LeoParser.output_expression`.
 	 * @param ctx the parse tree
 	 */
-	enterOutputTitle?: (ctx: OutputTitleContext) => void;
+	enterOutput_expression?: (ctx: Output_expressionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.outputTitle`.
+	 * Exit a parse tree produced by `LeoParser.output_expression`.
 	 * @param ctx the parse tree
 	 */
-	exitOutputTitle?: (ctx: OutputTitleContext) => void;
+	exitOutput_expression?: (ctx: Output_expressionContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.outputSection`.
+	 * Enter a parse tree produced by `LeoParser.output_item`.
 	 * @param ctx the parse tree
 	 */
-	enterOutputSection?: (ctx: OutputSectionContext) => void;
+	enterOutput_item?: (ctx: Output_itemContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.outputSection`.
+	 * Exit a parse tree produced by `LeoParser.output_item`.
 	 * @param ctx the parse tree
 	 */
-	exitOutputSection?: (ctx: OutputSectionContext) => void;
+	exitOutput_item?: (ctx: Output_itemContext) => void;
 	/**
-	 * Enter a parse tree produced by `LeoParser.outputFile`.
+	 * Enter a parse tree produced by `LeoParser.output_section`.
 	 * @param ctx the parse tree
 	 */
-	enterOutputFile?: (ctx: OutputFileContext) => void;
+	enterOutput_section?: (ctx: Output_sectionContext) => void;
 	/**
-	 * Exit a parse tree produced by `LeoParser.outputFile`.
+	 * Exit a parse tree produced by `LeoParser.output_section`.
 	 * @param ctx the parse tree
 	 */
-	exitOutputFile?: (ctx: OutputFileContext) => void;
+	exitOutput_section?: (ctx: Output_sectionContext) => void;
+	/**
+	 * Enter a parse tree produced by `LeoParser.output_file`.
+	 * @param ctx the parse tree
+	 */
+	enterOutput_file?: (ctx: Output_fileContext) => void;
+	/**
+	 * Exit a parse tree produced by `LeoParser.output_file`.
+	 * @param ctx the parse tree
+	 */
+	exitOutput_file?: (ctx: Output_fileContext) => void;
 }
 

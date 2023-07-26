@@ -9,6 +9,7 @@ import {
 } from 'vscode-languageclient/node';
 import { CLProvider, execCode } from './runCode';
 import { Formatter } from './format';
+import { DocumentSemanticTokensProvider, legend } from './tokens';
 
 
 let client: LanguageClient;
@@ -18,10 +19,15 @@ const docSelection = [
 ];
 
 export function activate(context: vscode.ExtensionContext) {
-	let disposable = vscode.commands.registerCommand('leo-aleo-plugin.executeCode', execCode);
-	context.subscriptions.push(disposable);
-	disposable = vscode.languages.registerCodeLensProvider(docSelection, new CLProvider());
-	context.subscriptions.push(disposable);
+	//  Executes the Run command
+	context.subscriptions.push(
+		vscode.commands.registerCommand('leo-aleo-plugin.executeCode', execCode)
+	);
+	// Handle click Codelens
+	context.subscriptions.push(
+		vscode.languages.registerCodeLensProvider(docSelection, new CLProvider())
+	);
+	// code formatter
 	context.subscriptions.push(
 		vscode.languages.registerDocumentFormattingEditProvider(docSelection, new Formatter())
 	);
@@ -57,11 +63,11 @@ export function activate(context: vscode.ExtensionContext) {
 	client.start();
 }
 
-export function deactivate(): Thenable<void> | undefined {
+export async function deactivate(): Promise<Thenable<void> | undefined> {
 	const promises: Thenable<void>[] = [];
 	if (client) {
 		promises.push(client.stop());
 	}
 
-	return Promise.all(promises).then(() => undefined);
+	return await Promise.all(promises).then(() => undefined);
 }

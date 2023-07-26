@@ -2,8 +2,8 @@ import { TextDocument } from "vscode-languageserver-textdocument";
 import { Diagnostic, DiagnosticRelatedInformation, Location, Position, Range } from "vscode-languageserver/node";
 import "vscode-languageserver-protocol";
 import {  CharStreams, CommonTokenStream, ErrorListener,  RecognitionException, Recognizer } from "antlr4";
-import LeoParser from "./leoAntlr/LeoParser";
-import LeoLexer from "./leoAntlr/LeoLexer";
+import LeoParser from "./LeoAntlr/LeoParser";
+import LeoLexer from "./LeoAntlr/LeoLexer";
 
 import AleoLexer from "./AleoAntlr/AleoLexer";
 import AleoParser from "./AleoAntlr/AleoParser";

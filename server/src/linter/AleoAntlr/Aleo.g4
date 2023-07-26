@@ -281,7 +281,7 @@ record:
 	'record' identifier ':' 'owner' 'as' ADDRESS_TYPE (
 		'.public'
 		| '.private'
-	) ';' ('gates' 'as' ('u64.public' | 'u64.private') ';')* entry+;
+	) ';' ('gates' 'as' value_type ';')* entry+;
 
 entry: identifier 'as' entry_type ';';
 

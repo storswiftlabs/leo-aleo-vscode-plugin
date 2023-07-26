@@ -95,33 +95,31 @@ export default class AleoParser extends Parser {
 	public static readonly T__75 = 76;
 	public static readonly T__76 = 77;
 	public static readonly T__77 = 78;
-	public static readonly T__78 = 79;
-	public static readonly T__79 = 80;
-	public static readonly DIGIT = 81;
-	public static readonly Addressliteral = 82;
-	public static readonly ADDRESS_TYPE = 83;
-	public static readonly FIELD_TYPE = 84;
-	public static readonly GROUP_TYPE = 85;
-	public static readonly SCALAR_TYPE = 86;
-	public static readonly BRANCH_OP = 87;
-	public static readonly UNSIGNED_TYPE = 88;
-	public static readonly SIGNED_TYPE = 89;
-	public static readonly BOOLEAN_TYPE = 90;
-	public static readonly STRING_TYPE = 91;
-	public static readonly Ternary_op = 92;
-	public static readonly Commit_op = 93;
-	public static readonly Hash_op = 94;
-	public static readonly CAST_OP = 95;
-	public static readonly Identifier = 96;
-	public static readonly Signed_literal = 97;
-	public static readonly Unsigned_literal = 98;
-	public static readonly Field_literal = 99;
-	public static readonly Group_literal = 100;
-	public static readonly Scalar_literal = 101;
-	public static readonly BOOLEAN_LITERAL = 102;
-	public static readonly WS = 103;
-	public static readonly COMMENT = 104;
-	public static readonly LINE_COMMENT = 105;
+	public static readonly DIGIT = 79;
+	public static readonly Addressliteral = 80;
+	public static readonly ADDRESS_TYPE = 81;
+	public static readonly FIELD_TYPE = 82;
+	public static readonly GROUP_TYPE = 83;
+	public static readonly SCALAR_TYPE = 84;
+	public static readonly BRANCH_OP = 85;
+	public static readonly UNSIGNED_TYPE = 86;
+	public static readonly SIGNED_TYPE = 87;
+	public static readonly BOOLEAN_TYPE = 88;
+	public static readonly STRING_TYPE = 89;
+	public static readonly Ternary_op = 90;
+	public static readonly Commit_op = 91;
+	public static readonly Hash_op = 92;
+	public static readonly CAST_OP = 93;
+	public static readonly Identifier = 94;
+	public static readonly Signed_literal = 95;
+	public static readonly Unsigned_literal = 96;
+	public static readonly Field_literal = 97;
+	public static readonly Group_literal = 98;
+	public static readonly Scalar_literal = 99;
+	public static readonly BOOLEAN_LITERAL = 100;
+	public static readonly WS = 101;
+	public static readonly COMMENT = 102;
+	public static readonly LINE_COMMENT = 103;
 	public static readonly EOF = Token.EOF;
 	public static readonly RULE_unarp_op = 0;
 	public static readonly RULE_binary_op = 1;
@@ -223,9 +221,7 @@ export default class AleoParser extends Parser {
                                                             "'as'", "'value'", 
                                                             "'struct'", 
                                                             "'record'", 
-                                                            "'gates'", "'u64.public'", 
-                                                            "'u64.private'", 
-                                                            "'group.x'", 
+                                                            "'gates'", "'group.x'", 
                                                             "'group.y'", 
                                                             "'into'", "'call'", 
                                                             "'contains'", 
@@ -250,7 +246,6 @@ export default class AleoParser extends Parser {
                                                             null, null, 
                                                             "'cast'" ];
 	public static readonly symbolicNames: (string | null)[] = [ null, null, 
-                                                             null, null, 
                                                              null, null, 
                                                              null, null, 
                                                              null, null, 
@@ -550,7 +545,7 @@ export default class AleoParser extends Parser {
 					this.match(AleoParser.T__39);
 					}
 					break;
-				case 96:
+				case 94:
 					{
 					this.state = 143;
 					this.identifier();
@@ -600,13 +595,13 @@ export default class AleoParser extends Parser {
 					this.state = 155;
 					this._errHandler.sync(this);
 					switch (this._input.LA(1)) {
-					case 96:
+					case 94:
 						{
 						this.state = 152;
 						this.letter();
 						}
 						break;
-					case 81:
+					case 79:
 						{
 						this.state = 153;
 						this.match(AleoParser.DIGIT);
@@ -761,7 +756,7 @@ export default class AleoParser extends Parser {
 			{
 			this.state = 172;
 			_la = this._input.LA(1);
-			if(!(_la===97 || _la===98)) {
+			if(!(_la===95 || _la===96)) {
 			this._errHandler.recoverInline(this);
 			}
 			else {
@@ -792,29 +787,29 @@ export default class AleoParser extends Parser {
 			this.state = 178;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case 97:
-			case 98:
+			case 95:
+			case 96:
 				this.enterOuterAlt(localctx, 1);
 				{
 				this.state = 174;
 				this.integer_literal();
 				}
 				break;
-			case 99:
+			case 97:
 				this.enterOuterAlt(localctx, 2);
 				{
 				this.state = 175;
 				this.match(AleoParser.Field_literal);
 				}
 				break;
-			case 100:
+			case 98:
 				this.enterOuterAlt(localctx, 3);
 				{
 				this.state = 176;
 				this.match(AleoParser.Group_literal);
 				}
 				break;
-			case 101:
+			case 99:
 				this.enterOuterAlt(localctx, 4);
 				{
 				this.state = 177;
@@ -847,25 +842,25 @@ export default class AleoParser extends Parser {
 			this.state = 183;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
+			case 95:
+			case 96:
 			case 97:
 			case 98:
 			case 99:
-			case 100:
-			case 101:
 				this.enterOuterAlt(localctx, 1);
 				{
 				this.state = 180;
 				this.arithmetic_literal();
 				}
 				break;
-			case 82:
+			case 80:
 				this.enterOuterAlt(localctx, 2);
 				{
 				this.state = 181;
 				this.match(AleoParser.Addressliteral);
 				}
 				break;
-			case 102:
+			case 100:
 				this.enterOuterAlt(localctx, 3);
 				{
 				this.state = 182;
@@ -966,7 +961,7 @@ export default class AleoParser extends Parser {
 			{
 			this.state = 193;
 			_la = this._input.LA(1);
-			if(!(_la===88 || _la===89)) {
+			if(!(_la===86 || _la===87)) {
 			this._errHandler.recoverInline(this);
 			}
 			else {
@@ -997,29 +992,29 @@ export default class AleoParser extends Parser {
 			this.state = 199;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case 88:
-			case 89:
+			case 86:
+			case 87:
 				this.enterOuterAlt(localctx, 1);
 				{
 				this.state = 195;
 				this.integer_type();
 				}
 				break;
-			case 84:
+			case 82:
 				this.enterOuterAlt(localctx, 2);
 				{
 				this.state = 196;
 				this.match(AleoParser.FIELD_TYPE);
 				}
 				break;
-			case 85:
+			case 83:
 				this.enterOuterAlt(localctx, 3);
 				{
 				this.state = 197;
 				this.match(AleoParser.GROUP_TYPE);
 				}
 				break;
-			case 86:
+			case 84:
 				this.enterOuterAlt(localctx, 4);
 				{
 				this.state = 198;
@@ -1052,32 +1047,32 @@ export default class AleoParser extends Parser {
 			this.state = 205;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
+			case 82:
+			case 83:
 			case 84:
-			case 85:
 			case 86:
-			case 88:
-			case 89:
+			case 87:
 				this.enterOuterAlt(localctx, 1);
 				{
 				this.state = 201;
 				this.arithmetic_type();
 				}
 				break;
-			case 83:
+			case 81:
 				this.enterOuterAlt(localctx, 2);
 				{
 				this.state = 202;
 				this.match(AleoParser.ADDRESS_TYPE);
 				}
 				break;
-			case 90:
+			case 88:
 				this.enterOuterAlt(localctx, 3);
 				{
 				this.state = 203;
 				this.match(AleoParser.BOOLEAN_TYPE);
 				}
 				break;
-			case 91:
+			case 89:
 				this.enterOuterAlt(localctx, 4);
 				{
 				this.state = 204;
@@ -1110,21 +1105,21 @@ export default class AleoParser extends Parser {
 			this.state = 209;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
+			case 81:
+			case 82:
 			case 83:
 			case 84:
-			case 85:
 			case 86:
+			case 87:
 			case 88:
 			case 89:
-			case 90:
-			case 91:
 				this.enterOuterAlt(localctx, 1);
 				{
 				this.state = 207;
 				this.literal_type();
 				}
 				break;
-			case 96:
+			case 94:
 				this.enterOuterAlt(localctx, 2);
 				{
 				this.state = 208;
@@ -1528,7 +1523,7 @@ export default class AleoParser extends Parser {
 				this.state = 279;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-			} while (_la===96);
+			} while (_la===94);
 			}
 		}
 		catch (re) {
@@ -1607,7 +1602,7 @@ export default class AleoParser extends Parser {
 			}
 			this.state = 293;
 			this.match(AleoParser.T__50);
-			this.state = 300;
+			this.state = 301;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			while (_la===59) {
@@ -1618,36 +1613,29 @@ export default class AleoParser extends Parser {
 				this.state = 295;
 				this.match(AleoParser.T__54);
 				this.state = 296;
-				_la = this._input.LA(1);
-				if(!(_la===60 || _la===61)) {
-				this._errHandler.recoverInline(this);
-				}
-				else {
-					this._errHandler.reportMatch(this);
-				    this.consume();
-				}
+				this.value_type();
 				this.state = 297;
 				this.match(AleoParser.T__50);
 				}
 				}
-				this.state = 302;
+				this.state = 303;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 304;
+			this.state = 305;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 303;
+				this.state = 304;
 				this.entry();
 				}
 				}
-				this.state = 306;
+				this.state = 307;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-			} while (_la===96);
+			} while (_la===94);
 			}
 		}
 		catch (re) {
@@ -1671,13 +1659,13 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 308;
-			this.identifier();
 			this.state = 309;
-			this.match(AleoParser.T__54);
+			this.identifier();
 			this.state = 310;
-			this.entry_type();
+			this.match(AleoParser.T__54);
 			this.state = 311;
+			this.entry_type();
+			this.state = 312;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -1700,36 +1688,36 @@ export default class AleoParser extends Parser {
 		let localctx: Cast_destinationContext = new Cast_destinationContext(this, this._ctx, this.state);
 		this.enterRule(localctx, 64, AleoParser.RULE_cast_destination);
 		try {
-			this.state = 316;
+			this.state = 317;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
+			case 81:
+			case 82:
 			case 83:
 			case 84:
-			case 85:
 			case 86:
+			case 87:
 			case 88:
 			case 89:
-			case 90:
-			case 91:
-			case 96:
+			case 94:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 313;
+				this.state = 314;
 				this.register_type();
 				}
 				break;
-			case 62:
+			case 60:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 314;
-				this.match(AleoParser.T__61);
+				this.state = 315;
+				this.match(AleoParser.T__59);
 				}
 				break;
-			case 63:
+			case 61:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 315;
-				this.match(AleoParser.T__62);
+				this.state = 316;
+				this.match(AleoParser.T__60);
 				}
 				break;
 			default:
@@ -1757,15 +1745,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 318;
+			this.state = 319;
 			this.unarp_op();
 			{
-			this.state = 319;
+			this.state = 320;
 			this.operand();
 			}
-			this.state = 320;
-			this.match(AleoParser.T__63);
 			this.state = 321;
+			this.match(AleoParser.T__61);
+			this.state = 322;
 			this.register();
 			}
 		}
@@ -1790,21 +1778,21 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 323;
+			this.state = 324;
 			this.binary_op();
 			{
-			{
-			this.state = 324;
-			this.operand();
-			}
 			{
 			this.state = 325;
 			this.operand();
 			}
+			{
+			this.state = 326;
+			this.operand();
 			}
-			this.state = 327;
-			this.match(AleoParser.T__63);
+			}
 			this.state = 328;
+			this.match(AleoParser.T__61);
+			this.state = 329;
 			this.register();
 			}
 		}
@@ -1829,13 +1817,9 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 330;
+			this.state = 331;
 			this.match(AleoParser.Ternary_op);
 			{
-			{
-			this.state = 331;
-			this.operand();
-			}
 			{
 			this.state = 332;
 			this.operand();
@@ -1844,10 +1828,14 @@ export default class AleoParser extends Parser {
 			this.state = 333;
 			this.operand();
 			}
+			{
+			this.state = 334;
+			this.operand();
 			}
-			this.state = 335;
-			this.match(AleoParser.T__63);
+			}
 			this.state = 336;
+			this.match(AleoParser.T__61);
+			this.state = 337;
 			this.register();
 			}
 		}
@@ -1872,15 +1860,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 338;
-			this.is_op();
 			this.state = 339;
-			this.operand();
+			this.is_op();
 			this.state = 340;
 			this.operand();
 			this.state = 341;
-			this.match(AleoParser.T__63);
+			this.operand();
 			this.state = 342;
+			this.match(AleoParser.T__61);
+			this.state = 343;
 			this.register();
 			}
 		}
@@ -1905,11 +1893,11 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 344;
-			this.assert_op();
 			this.state = 345;
-			this.operand();
+			this.assert_op();
 			this.state = 346;
+			this.operand();
+			this.state = 347;
 			this.operand();
 			}
 		}
@@ -1935,21 +1923,21 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 348;
-			this.match(AleoParser.Commit_op);
 			this.state = 349;
-			this.operand();
+			this.match(AleoParser.Commit_op);
 			this.state = 350;
 			this.operand();
 			this.state = 351;
-			this.match(AleoParser.T__63);
+			this.operand();
 			this.state = 352;
-			this.register();
+			this.match(AleoParser.T__61);
 			this.state = 353;
-			this.match(AleoParser.T__54);
+			this.register();
 			this.state = 354;
+			this.match(AleoParser.T__54);
+			this.state = 355;
 			_la = this._input.LA(1);
-			if(!(((((_la - 83)) & ~0x1F) === 0 && ((1 << (_la - 83)) & 7) !== 0))) {
+			if(!(((((_la - 81)) & ~0x1F) === 0 && ((1 << (_la - 81)) & 7) !== 0))) {
 			this._errHandler.recoverInline(this);
 			}
 			else {
@@ -1979,32 +1967,32 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 356;
-			this.match(AleoParser.Hash_op);
 			this.state = 357;
-			this.operand();
+			this.match(AleoParser.Hash_op);
 			this.state = 358;
-			this.match(AleoParser.T__63);
+			this.operand();
 			this.state = 359;
-			this.register();
+			this.match(AleoParser.T__61);
 			this.state = 360;
+			this.register();
+			this.state = 361;
 			this.match(AleoParser.T__54);
-			this.state = 363;
+			this.state = 364;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
+			case 82:
+			case 83:
 			case 84:
-			case 85:
 			case 86:
-			case 88:
-			case 89:
+			case 87:
 				{
-				this.state = 361;
+				this.state = 362;
 				this.arithmetic_type();
 				}
 				break;
-			case 83:
+			case 81:
 				{
-				this.state = 362;
+				this.state = 363;
 				this.match(AleoParser.ADDRESS_TYPE);
 				}
 				break;
@@ -2035,29 +2023,29 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 365;
+			this.state = 366;
 			this.match(AleoParser.CAST_OP);
-			this.state = 367;
+			this.state = 368;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 366;
+				this.state = 367;
 				this.operand();
 				}
 				}
-				this.state = 369;
+				this.state = 370;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-			} while (((((_la - 43)) & ~0x1F) === 0 && ((1 << (_la - 43)) & 7) !== 0) || ((((_la - 82)) & ~0x1F) === 0 && ((1 << (_la - 82)) & 2080769) !== 0));
-			this.state = 371;
-			this.match(AleoParser.T__63);
+			} while (((((_la - 43)) & ~0x1F) === 0 && ((1 << (_la - 43)) & 7) !== 0) || ((((_la - 80)) & ~0x1F) === 0 && ((1 << (_la - 80)) & 2080769) !== 0));
 			this.state = 372;
-			this.register();
+			this.match(AleoParser.T__61);
 			this.state = 373;
-			this.match(AleoParser.T__54);
+			this.register();
 			this.state = 374;
+			this.match(AleoParser.T__54);
+			this.state = 375;
 			this.cast_destination();
 			}
 		}
@@ -2083,54 +2071,54 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 376;
-			this.match(AleoParser.T__64);
-			this.state = 379;
+			this.state = 377;
+			this.match(AleoParser.T__62);
+			this.state = 380;
 			this._errHandler.sync(this);
 			switch ( this._interp.adaptivePredict(this._input, 19, this._ctx) ) {
 			case 1:
 				{
-				this.state = 377;
+				this.state = 378;
 				this.locator();
 				}
 				break;
 			case 2:
 				{
-				this.state = 378;
+				this.state = 379;
 				this.identifier();
 				}
 				break;
 			}
-			this.state = 384;
+			this.state = 385;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (((((_la - 43)) & ~0x1F) === 0 && ((1 << (_la - 43)) & 7) !== 0) || ((((_la - 82)) & ~0x1F) === 0 && ((1 << (_la - 82)) & 2080769) !== 0)) {
+			while (((((_la - 43)) & ~0x1F) === 0 && ((1 << (_la - 43)) & 7) !== 0) || ((((_la - 80)) & ~0x1F) === 0 && ((1 << (_la - 80)) & 2080769) !== 0)) {
 				{
 				{
-				this.state = 381;
+				this.state = 382;
 				this.operand();
 				}
 				}
-				this.state = 386;
+				this.state = 387;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 387;
-			this.match(AleoParser.T__63);
-			this.state = 389;
+			this.state = 388;
+			this.match(AleoParser.T__61);
+			this.state = 390;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 388;
+				this.state = 389;
 				this.register();
 				}
 				}
-				this.state = 391;
+				this.state = 392;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-			} while (_la===96);
+			} while (_la===94);
 			}
 		}
 		catch (re) {
@@ -2154,7 +2142,7 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 402;
+			this.state = 403;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
 			case 1:
@@ -2166,7 +2154,7 @@ export default class AleoParser extends Parser {
 			case 7:
 			case 8:
 				{
-				this.state = 393;
+				this.state = 394;
 				this.unary();
 				}
 				break;
@@ -2197,58 +2185,58 @@ export default class AleoParser extends Parser {
 			case 33:
 			case 34:
 				{
-				this.state = 394;
+				this.state = 395;
 				this.binary();
 				}
 				break;
-			case 92:
+			case 90:
 				{
-				this.state = 395;
+				this.state = 396;
 				this.ternary();
 				}
 				break;
 			case 35:
 			case 36:
 				{
-				this.state = 396;
+				this.state = 397;
 				this.is_1();
 				}
 				break;
 			case 37:
 			case 38:
 				{
-				this.state = 397;
+				this.state = 398;
 				this.assert_1();
+				}
+				break;
+			case 91:
+				{
+				this.state = 399;
+				this.commit();
+				}
+				break;
+			case 92:
+				{
+				this.state = 400;
+				this.hash();
 				}
 				break;
 			case 93:
 				{
-				this.state = 398;
-				this.commit();
-				}
-				break;
-			case 94:
-				{
-				this.state = 399;
-				this.hash();
-				}
-				break;
-			case 95:
-				{
-				this.state = 400;
+				this.state = 401;
 				this.cast();
 				}
 				break;
-			case 65:
+			case 63:
 				{
-				this.state = 401;
+				this.state = 402;
 				this.call();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			this.state = 404;
+			this.state = 405;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2273,21 +2261,21 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 406;
-			this.match(AleoParser.T__65);
 			this.state = 407;
-			this.identifier();
-			this.state = 408;
-			this.match(AleoParser.T__66);
-			this.state = 409;
-			this.operand();
-			this.state = 410;
-			this.match(AleoParser.T__67);
-			this.state = 411;
 			this.match(AleoParser.T__63);
+			this.state = 408;
+			this.identifier();
+			this.state = 409;
+			this.match(AleoParser.T__64);
+			this.state = 410;
+			this.operand();
+			this.state = 411;
+			this.match(AleoParser.T__65);
 			this.state = 412;
-			this.register();
+			this.match(AleoParser.T__61);
 			this.state = 413;
+			this.register();
+			this.state = 414;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2312,21 +2300,21 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 415;
-			this.match(AleoParser.T__68);
 			this.state = 416;
-			this.identifier();
-			this.state = 417;
 			this.match(AleoParser.T__66);
+			this.state = 417;
+			this.identifier();
 			this.state = 418;
-			this.operand();
+			this.match(AleoParser.T__64);
 			this.state = 419;
-			this.match(AleoParser.T__67);
+			this.operand();
 			this.state = 420;
-			this.match(AleoParser.T__63);
+			this.match(AleoParser.T__65);
 			this.state = 421;
-			this.register();
+			this.match(AleoParser.T__61);
 			this.state = 422;
+			this.register();
+			this.state = 423;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2351,23 +2339,23 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 424;
-			this.match(AleoParser.T__69);
 			this.state = 425;
-			this.identifier();
-			this.state = 426;
-			this.match(AleoParser.T__66);
-			this.state = 427;
-			this.operand();
-			this.state = 428;
 			this.match(AleoParser.T__67);
-			this.state = 429;
+			this.state = 426;
+			this.identifier();
+			this.state = 427;
+			this.match(AleoParser.T__64);
+			this.state = 428;
 			this.operand();
+			this.state = 429;
+			this.match(AleoParser.T__65);
 			this.state = 430;
-			this.match(AleoParser.T__63);
+			this.operand();
 			this.state = 431;
-			this.register();
+			this.match(AleoParser.T__61);
 			this.state = 432;
+			this.register();
+			this.state = 433;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2392,21 +2380,21 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 434;
-			this.match(AleoParser.T__70);
 			this.state = 435;
-			this.operand();
+			this.match(AleoParser.T__68);
 			this.state = 436;
-			this.match(AleoParser.T__63);
-			this.state = 437;
-			this.identifier();
-			this.state = 438;
-			this.match(AleoParser.T__66);
-			this.state = 439;
 			this.operand();
+			this.state = 437;
+			this.match(AleoParser.T__61);
+			this.state = 438;
+			this.identifier();
+			this.state = 439;
+			this.match(AleoParser.T__64);
 			this.state = 440;
-			this.match(AleoParser.T__67);
+			this.operand();
 			this.state = 441;
+			this.match(AleoParser.T__65);
+			this.state = 442;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2431,17 +2419,17 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 443;
-			this.match(AleoParser.T__71);
 			this.state = 444;
-			this.identifier();
+			this.match(AleoParser.T__69);
 			this.state = 445;
-			this.match(AleoParser.T__66);
+			this.identifier();
 			this.state = 446;
-			this.operand();
+			this.match(AleoParser.T__64);
 			this.state = 447;
-			this.match(AleoParser.T__67);
+			this.operand();
 			this.state = 448;
+			this.match(AleoParser.T__65);
+			this.state = 449;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2467,21 +2455,21 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 450;
-			this.match(AleoParser.T__72);
+			this.state = 451;
+			this.match(AleoParser.T__70);
 			{
-			this.state = 457;
+			this.state = 458;
 			this._errHandler.sync(this);
 			switch ( this._interp.adaptivePredict(this._input, 24, this._ctx) ) {
 			case 1:
 				{
 				{
 				{
-				this.state = 451;
+				this.state = 452;
 				this.operand();
 				}
 				{
-				this.state = 452;
+				this.state = 453;
 				this.operand();
 				}
 				}
@@ -2489,12 +2477,12 @@ export default class AleoParser extends Parser {
 				break;
 			case 2:
 				{
-				this.state = 455;
+				this.state = 456;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (((((_la - 43)) & ~0x1F) === 0 && ((1 << (_la - 43)) & 7) !== 0) || ((((_la - 82)) & ~0x1F) === 0 && ((1 << (_la - 82)) & 2080769) !== 0)) {
+				if (((((_la - 43)) & ~0x1F) === 0 && ((1 << (_la - 43)) & 7) !== 0) || ((((_la - 80)) & ~0x1F) === 0 && ((1 << (_la - 80)) & 2080769) !== 0)) {
 					{
-					this.state = 454;
+					this.state = 455;
 					this.operand();
 					}
 				}
@@ -2503,15 +2491,15 @@ export default class AleoParser extends Parser {
 				break;
 			}
 			}
-			this.state = 459;
-			this.match(AleoParser.T__63);
 			this.state = 460;
-			this.register();
+			this.match(AleoParser.T__61);
 			this.state = 461;
-			this.match(AleoParser.T__54);
+			this.register();
 			this.state = 462;
-			this.literal_type();
+			this.match(AleoParser.T__54);
 			this.state = 463;
+			this.literal_type();
+			this.state = 464;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2536,7 +2524,7 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 465;
+			this.state = 466;
 			this.identifier();
 			}
 		}
@@ -2561,11 +2549,11 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 467;
-			this.match(AleoParser.T__73);
 			this.state = 468;
-			this.label();
+			this.match(AleoParser.T__71);
 			this.state = 469;
+			this.label();
+			this.state = 470;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2590,15 +2578,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 471;
-			this.match(AleoParser.BRANCH_OP);
 			this.state = 472;
-			this.operand();
+			this.match(AleoParser.BRANCH_OP);
 			this.state = 473;
 			this.operand();
 			this.state = 474;
-			this.label();
+			this.operand();
 			this.state = 475;
+			this.label();
+			this.state = 476;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2621,62 +2609,62 @@ export default class AleoParser extends Parser {
 		let localctx: CommandContext = new CommandContext(this, this._ctx, this.state);
 		this.enterRule(localctx, 104, AleoParser.RULE_command);
 		try {
-			this.state = 486;
+			this.state = 487;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case 66:
+			case 64:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 477;
+				this.state = 478;
 				this.contains();
 				}
 				break;
-			case 69:
+			case 67:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 478;
+				this.state = 479;
 				this.get_();
 				}
 				break;
-			case 70:
+			case 68:
 				this.enterOuterAlt(localctx, 3);
 				{
-				this.state = 479;
+				this.state = 480;
 				this.get_or_use();
 				}
 				break;
-			case 71:
+			case 69:
 				this.enterOuterAlt(localctx, 4);
 				{
-				this.state = 480;
+				this.state = 481;
 				this.set_();
 				}
 				break;
-			case 72:
+			case 70:
 				this.enterOuterAlt(localctx, 5);
 				{
-				this.state = 481;
+				this.state = 482;
 				this.remove();
 				}
 				break;
-			case 73:
+			case 71:
 				this.enterOuterAlt(localctx, 6);
 				{
-				this.state = 482;
+				this.state = 483;
 				this.random();
 				}
 				break;
-			case 74:
+			case 72:
 				this.enterOuterAlt(localctx, 7);
 				{
-				this.state = 483;
+				this.state = 484;
 				this.position();
 				}
 				break;
-			case 87:
+			case 85:
 				this.enterOuterAlt(localctx, 8);
 				{
-				this.state = 484;
+				this.state = 485;
 				this.branch();
 				}
 				break;
@@ -2718,14 +2706,14 @@ export default class AleoParser extends Parser {
 			case 36:
 			case 37:
 			case 38:
-			case 65:
+			case 63:
+			case 90:
+			case 91:
 			case 92:
 			case 93:
-			case 94:
-			case 95:
 				this.enterOuterAlt(localctx, 9);
 				{
-				this.state = 485;
+				this.state = 486;
 				this.instruction();
 				}
 				break;
@@ -2755,23 +2743,23 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 488;
-			this.match(AleoParser.T__74);
-			this.state = 492;
+			this.state = 489;
+			this.match(AleoParser.T__72);
+			this.state = 493;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (((((_la - 43)) & ~0x1F) === 0 && ((1 << (_la - 43)) & 7) !== 0) || ((((_la - 82)) & ~0x1F) === 0 && ((1 << (_la - 82)) & 2080769) !== 0)) {
+			while (((((_la - 43)) & ~0x1F) === 0 && ((1 << (_la - 43)) & 7) !== 0) || ((((_la - 80)) & ~0x1F) === 0 && ((1 << (_la - 80)) & 2080769) !== 0)) {
 				{
 				{
-				this.state = 489;
+				this.state = 490;
 				this.operand();
 				}
 				}
-				this.state = 494;
+				this.state = 495;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 495;
+			this.state = 496;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2797,51 +2785,51 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 497;
-			this.match(AleoParser.T__75);
 			this.state = 498;
-			this.identifier();
+			this.match(AleoParser.T__73);
 			this.state = 499;
+			this.identifier();
+			this.state = 500;
 			this.match(AleoParser.T__52);
-			this.state = 503;
+			this.state = 504;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===77) {
+			while (_la===75) {
 				{
 				{
-				this.state = 500;
+				this.state = 501;
 				this.closure_input();
 				}
 				}
-				this.state = 505;
+				this.state = 506;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 507;
+			this.state = 508;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 506;
+				this.state = 507;
 				this.instruction();
 				}
 				}
-				this.state = 509;
+				this.state = 510;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & 4294967294) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 127) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 2013265921) !== 0));
-			this.state = 514;
+			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & 4294967294) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2147483775) !== 0) || ((((_la - 90)) & ~0x1F) === 0 && ((1 << (_la - 90)) & 15) !== 0));
+			this.state = 515;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===78) {
+			while (_la===76) {
 				{
 				{
-				this.state = 511;
+				this.state = 512;
 				this.closure_output();
 				}
 				}
-				this.state = 516;
+				this.state = 517;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
@@ -2868,15 +2856,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 517;
-			this.match(AleoParser.T__76);
 			this.state = 518;
-			this.register();
+			this.match(AleoParser.T__74);
 			this.state = 519;
-			this.match(AleoParser.T__54);
+			this.register();
 			this.state = 520;
-			this.register_type();
+			this.match(AleoParser.T__54);
 			this.state = 521;
+			this.register_type();
+			this.state = 522;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2901,15 +2889,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 523;
-			this.match(AleoParser.T__77);
 			this.state = 524;
-			this.operand();
+			this.match(AleoParser.T__75);
 			this.state = 525;
-			this.match(AleoParser.T__54);
+			this.operand();
 			this.state = 526;
-			this.register_type();
+			this.match(AleoParser.T__54);
 			this.state = 527;
+			this.register_type();
+			this.state = 528;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -2935,62 +2923,62 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 529;
-			this.match(AleoParser.T__78);
 			this.state = 530;
-			this.identifier();
+			this.match(AleoParser.T__76);
 			this.state = 531;
+			this.identifier();
+			this.state = 532;
 			this.match(AleoParser.T__52);
-			this.state = 535;
+			this.state = 536;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===77) {
+			while (_la===75) {
 				{
 				{
-				this.state = 532;
+				this.state = 533;
 				this.function_input();
 				}
 				}
-				this.state = 537;
+				this.state = 538;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 541;
+			this.state = 542;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while ((((_la) & ~0x1F) === 0 && ((1 << _la) & 4294967294) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 127) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 2013265921) !== 0)) {
+			while ((((_la) & ~0x1F) === 0 && ((1 << _la) & 4294967294) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2147483775) !== 0) || ((((_la - 90)) & ~0x1F) === 0 && ((1 << (_la - 90)) & 15) !== 0)) {
 				{
 				{
-				this.state = 538;
+				this.state = 539;
 				this.instruction();
 				}
 				}
-				this.state = 543;
+				this.state = 544;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 547;
+			this.state = 548;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===78) {
+			while (_la===76) {
 				{
 				{
-				this.state = 544;
+				this.state = 545;
 				this.function_output();
 				}
 				}
-				this.state = 549;
+				this.state = 550;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 553;
+			this.state = 554;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la===75) {
+			if (_la===73) {
 				{
-				this.state = 550;
-				this.finalize_command();
 				this.state = 551;
+				this.finalize_command();
+				this.state = 552;
 				this.finalize();
 				}
 			}
@@ -3018,15 +3006,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 555;
-			this.match(AleoParser.T__76);
 			this.state = 556;
-			this.register();
+			this.match(AleoParser.T__74);
 			this.state = 557;
-			this.match(AleoParser.T__54);
+			this.register();
 			this.state = 558;
-			this.value_type();
+			this.match(AleoParser.T__54);
 			this.state = 559;
+			this.value_type();
+			this.state = 560;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -3051,15 +3039,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 561;
-			this.match(AleoParser.T__77);
 			this.state = 562;
-			this.operand();
+			this.match(AleoParser.T__75);
 			this.state = 563;
-			this.match(AleoParser.T__54);
+			this.operand();
 			this.state = 564;
-			this.value_type();
+			this.match(AleoParser.T__54);
 			this.state = 565;
+			this.value_type();
+			this.state = 566;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -3085,51 +3073,51 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 567;
-			this.match(AleoParser.T__74);
 			this.state = 568;
-			this.identifier();
+			this.match(AleoParser.T__72);
 			this.state = 569;
+			this.identifier();
+			this.state = 570;
 			this.match(AleoParser.T__52);
-			this.state = 573;
+			this.state = 574;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===77) {
+			while (_la===75) {
 				{
 				{
-				this.state = 570;
+				this.state = 571;
 				this.finalize_input();
 				}
 				}
-				this.state = 575;
+				this.state = 576;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
-			this.state = 577;
+			this.state = 578;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 576;
+				this.state = 577;
 				this.command();
 				}
 				}
-				this.state = 579;
+				this.state = 580;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & 4294967294) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 127) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 2017461235) !== 0));
-			this.state = 584;
+			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & 4294967294) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2147483775) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1008730617) !== 0));
+			this.state = 585;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la===78) {
+			while (_la===76) {
 				{
 				{
-				this.state = 581;
+				this.state = 582;
 				this.finalize_output();
 				}
 				}
-				this.state = 586;
+				this.state = 587;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			}
@@ -3156,15 +3144,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 587;
-			this.match(AleoParser.T__76);
 			this.state = 588;
-			this.register();
+			this.match(AleoParser.T__74);
 			this.state = 589;
-			this.match(AleoParser.T__54);
+			this.register();
 			this.state = 590;
-			this.finalize_type();
+			this.match(AleoParser.T__54);
 			this.state = 591;
+			this.finalize_type();
+			this.state = 592;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -3189,15 +3177,15 @@ export default class AleoParser extends Parser {
 		try {
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 593;
-			this.match(AleoParser.T__77);
 			this.state = 594;
-			this.operand();
+			this.match(AleoParser.T__75);
 			this.state = 595;
-			this.match(AleoParser.T__54);
+			this.operand();
 			this.state = 596;
-			this.finalize_type();
+			this.match(AleoParser.T__54);
 			this.state = 597;
+			this.finalize_type();
+			this.state = 598;
 			this.match(AleoParser.T__50);
 			}
 		}
@@ -3221,73 +3209,73 @@ export default class AleoParser extends Parser {
 		this.enterRule(localctx, 126, AleoParser.RULE_sourceUnit);
 		let _la: number;
 		try {
-			this.state = 619;
+			this.state = 620;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
 			case -1:
 			case 50:
 				this.enterOuterAlt(localctx, 1);
 				{
-				this.state = 602;
+				this.state = 603;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				while (_la===50) {
 					{
 					{
-					this.state = 599;
+					this.state = 600;
 					this.import_1();
 					}
 					}
-					this.state = 604;
+					this.state = 605;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
 				}
 				break;
-			case 80:
+			case 78:
 				this.enterOuterAlt(localctx, 2);
 				{
-				this.state = 605;
-				this.match(AleoParser.T__79);
 				this.state = 606;
-				this.program_id();
+				this.match(AleoParser.T__77);
 				this.state = 607;
+				this.program_id();
+				this.state = 608;
 				this.match(AleoParser.T__50);
-				this.state = 613;
+				this.state = 614;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				do {
 					{
-					this.state = 613;
+					this.state = 614;
 					this._errHandler.sync(this);
 					switch (this._input.LA(1)) {
 					case 52:
 						{
-						this.state = 608;
+						this.state = 609;
 						this.mapping();
 						}
 						break;
 					case 57:
 						{
-						this.state = 609;
+						this.state = 610;
 						this.struct_1();
 						}
 						break;
 					case 58:
 						{
-						this.state = 610;
+						this.state = 611;
 						this.record();
 						}
 						break;
-					case 76:
+					case 74:
 						{
-						this.state = 611;
+						this.state = 612;
 						this.closure();
 						}
 						break;
-					case 79:
+					case 77:
 						{
-						this.state = 612;
+						this.state = 613;
 						this.function_();
 						}
 						break;
@@ -3295,11 +3283,11 @@ export default class AleoParser extends Parser {
 						throw new NoViableAltException(this);
 					}
 					}
-					this.state = 615;
+					this.state = 616;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
-				} while (((((_la - 52)) & ~0x1F) === 0 && ((1 << (_la - 52)) & 150995041) !== 0));
-				this.state = 617;
+				} while (((((_la - 52)) & ~0x1F) === 0 && ((1 << (_la - 52)) & 37748833) !== 0));
+				this.state = 618;
 				this.match(AleoParser.EOF);
 				}
 				break;
@@ -3322,7 +3310,7 @@ export default class AleoParser extends Parser {
 		return localctx;
 	}
 
-	public static readonly _serializedATN: number[] = [4,1,105,622,2,0,7,0,
+	public static readonly _serializedATN: number[] = [4,1,103,623,2,0,7,0,
 	2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,7,7,2,8,7,8,2,9,7,9,
 	2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,14,2,15,7,15,2,16,7,16,2,
 	17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,
@@ -3343,81 +3331,81 @@ export default class AleoParser extends Parser {
 	23,1,23,1,23,3,23,250,8,23,1,24,1,24,1,24,1,24,1,25,1,25,1,25,1,25,1,25,
 	1,25,1,26,1,26,1,26,1,26,1,26,1,26,1,27,1,27,1,27,1,27,1,27,1,27,1,28,1,
 	28,1,28,1,28,4,28,278,8,28,11,28,12,28,279,1,29,1,29,1,29,1,29,1,29,1,30,
-	1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,5,30,299,8,30,10,
-	30,12,30,302,9,30,1,30,4,30,305,8,30,11,30,12,30,306,1,31,1,31,1,31,1,31,
-	1,31,1,32,1,32,1,32,3,32,317,8,32,1,33,1,33,1,33,1,33,1,33,1,34,1,34,1,
-	34,1,34,1,34,1,34,1,34,1,35,1,35,1,35,1,35,1,35,1,35,1,35,1,35,1,36,1,36,
-	1,36,1,36,1,36,1,36,1,37,1,37,1,37,1,37,1,38,1,38,1,38,1,38,1,38,1,38,1,
-	38,1,38,1,39,1,39,1,39,1,39,1,39,1,39,1,39,3,39,364,8,39,1,40,1,40,4,40,
-	368,8,40,11,40,12,40,369,1,40,1,40,1,40,1,40,1,40,1,41,1,41,1,41,3,41,380,
-	8,41,1,41,5,41,383,8,41,10,41,12,41,386,9,41,1,41,1,41,4,41,390,8,41,11,
-	41,12,41,391,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,3,42,403,8,42,
-	1,42,1,42,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,44,1,44,1,44,1,
-	44,1,44,1,44,1,44,1,44,1,44,1,45,1,45,1,45,1,45,1,45,1,45,1,45,1,45,1,45,
-	1,45,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,47,1,47,1,47,1,47,1,
-	47,1,47,1,47,1,48,1,48,1,48,1,48,1,48,3,48,456,8,48,3,48,458,8,48,1,48,
-	1,48,1,48,1,48,1,48,1,48,1,49,1,49,1,50,1,50,1,50,1,50,1,51,1,51,1,51,1,
-	51,1,51,1,51,1,52,1,52,1,52,1,52,1,52,1,52,1,52,1,52,1,52,3,52,487,8,52,
-	1,53,1,53,5,53,491,8,53,10,53,12,53,494,9,53,1,53,1,53,1,54,1,54,1,54,1,
-	54,5,54,502,8,54,10,54,12,54,505,9,54,1,54,4,54,508,8,54,11,54,12,54,509,
-	1,54,5,54,513,8,54,10,54,12,54,516,9,54,1,55,1,55,1,55,1,55,1,55,1,55,1,
-	56,1,56,1,56,1,56,1,56,1,56,1,57,1,57,1,57,1,57,5,57,534,8,57,10,57,12,
-	57,537,9,57,1,57,5,57,540,8,57,10,57,12,57,543,9,57,1,57,5,57,546,8,57,
-	10,57,12,57,549,9,57,1,57,1,57,1,57,3,57,554,8,57,1,58,1,58,1,58,1,58,1,
-	58,1,58,1,59,1,59,1,59,1,59,1,59,1,59,1,60,1,60,1,60,1,60,5,60,572,8,60,
-	10,60,12,60,575,9,60,1,60,4,60,578,8,60,11,60,12,60,579,1,60,5,60,583,8,
-	60,10,60,12,60,586,9,60,1,61,1,61,1,61,1,61,1,61,1,61,1,62,1,62,1,62,1,
-	62,1,62,1,62,1,63,5,63,601,8,63,10,63,12,63,604,9,63,1,63,1,63,1,63,1,63,
-	1,63,1,63,1,63,1,63,4,63,614,8,63,11,63,12,63,615,1,63,1,63,3,63,620,8,
-	63,1,63,0,0,64,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,
-	42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,
-	90,92,94,96,98,100,102,104,106,108,110,112,114,116,118,120,122,124,126,
-	0,10,1,0,1,8,1,0,9,34,1,0,35,36,1,0,37,38,1,0,97,98,1,0,88,89,1,0,46,48,
-	1,0,47,48,1,0,60,61,1,0,83,85,633,0,128,1,0,0,0,2,130,1,0,0,0,4,132,1,0,
-	0,0,6,134,1,0,0,0,8,136,1,0,0,0,10,138,1,0,0,0,12,140,1,0,0,0,14,151,1,
-	0,0,0,16,160,1,0,0,0,18,162,1,0,0,0,20,164,1,0,0,0,22,168,1,0,0,0,24,172,
-	1,0,0,0,26,178,1,0,0,0,28,183,1,0,0,0,30,191,1,0,0,0,32,193,1,0,0,0,34,
-	199,1,0,0,0,36,205,1,0,0,0,38,209,1,0,0,0,40,226,1,0,0,0,42,237,1,0,0,0,
-	44,239,1,0,0,0,46,249,1,0,0,0,48,251,1,0,0,0,50,255,1,0,0,0,52,261,1,0,
-	0,0,54,267,1,0,0,0,56,273,1,0,0,0,58,281,1,0,0,0,60,286,1,0,0,0,62,308,
-	1,0,0,0,64,316,1,0,0,0,66,318,1,0,0,0,68,323,1,0,0,0,70,330,1,0,0,0,72,
-	338,1,0,0,0,74,344,1,0,0,0,76,348,1,0,0,0,78,356,1,0,0,0,80,365,1,0,0,0,
-	82,376,1,0,0,0,84,402,1,0,0,0,86,406,1,0,0,0,88,415,1,0,0,0,90,424,1,0,
-	0,0,92,434,1,0,0,0,94,443,1,0,0,0,96,450,1,0,0,0,98,465,1,0,0,0,100,467,
-	1,0,0,0,102,471,1,0,0,0,104,486,1,0,0,0,106,488,1,0,0,0,108,497,1,0,0,0,
-	110,517,1,0,0,0,112,523,1,0,0,0,114,529,1,0,0,0,116,555,1,0,0,0,118,561,
-	1,0,0,0,120,567,1,0,0,0,122,587,1,0,0,0,124,593,1,0,0,0,126,619,1,0,0,0,
-	128,129,7,0,0,0,129,1,1,0,0,0,130,131,7,1,0,0,131,3,1,0,0,0,132,133,7,2,
-	0,0,133,5,1,0,0,0,134,135,7,3,0,0,135,7,1,0,0,0,136,137,5,96,0,0,137,9,
-	1,0,0,0,138,139,5,96,0,0,139,11,1,0,0,0,140,148,3,10,5,0,141,144,5,39,0,
-	0,142,145,5,40,0,0,143,145,3,14,7,0,144,142,1,0,0,0,144,143,1,0,0,0,145,
-	147,1,0,0,0,146,141,1,0,0,0,147,150,1,0,0,0,148,146,1,0,0,0,148,149,1,0,
-	0,0,149,13,1,0,0,0,150,148,1,0,0,0,151,157,3,8,4,0,152,156,3,8,4,0,153,
-	156,5,81,0,0,154,156,5,41,0,0,155,152,1,0,0,0,155,153,1,0,0,0,155,154,1,
-	0,0,0,156,159,1,0,0,0,157,155,1,0,0,0,157,158,1,0,0,0,158,15,1,0,0,0,159,
-	157,1,0,0,0,160,161,3,14,7,0,161,17,1,0,0,0,162,163,3,14,7,0,163,19,1,0,
-	0,0,164,165,3,16,8,0,165,166,5,39,0,0,166,167,3,18,9,0,167,21,1,0,0,0,168,
-	169,3,20,10,0,169,170,5,42,0,0,170,171,3,14,7,0,171,23,1,0,0,0,172,173,
-	7,4,0,0,173,25,1,0,0,0,174,179,3,24,12,0,175,179,5,99,0,0,176,179,5,100,
-	0,0,177,179,5,101,0,0,178,174,1,0,0,0,178,175,1,0,0,0,178,176,1,0,0,0,178,
-	177,1,0,0,0,179,27,1,0,0,0,180,184,3,26,13,0,181,184,5,82,0,0,182,184,5,
-	102,0,0,183,180,1,0,0,0,183,181,1,0,0,0,183,182,1,0,0,0,184,29,1,0,0,0,
-	185,192,3,28,14,0,186,192,3,12,6,0,187,192,3,20,10,0,188,192,5,43,0,0,189,
-	192,5,44,0,0,190,192,5,45,0,0,191,185,1,0,0,0,191,186,1,0,0,0,191,187,1,
-	0,0,0,191,188,1,0,0,0,191,189,1,0,0,0,191,190,1,0,0,0,192,31,1,0,0,0,193,
-	194,7,5,0,0,194,33,1,0,0,0,195,200,3,32,16,0,196,200,5,84,0,0,197,200,5,
-	85,0,0,198,200,5,86,0,0,199,195,1,0,0,0,199,196,1,0,0,0,199,197,1,0,0,0,
-	199,198,1,0,0,0,200,35,1,0,0,0,201,206,3,34,17,0,202,206,5,83,0,0,203,206,
-	5,90,0,0,204,206,5,91,0,0,205,201,1,0,0,0,205,202,1,0,0,0,205,203,1,0,0,
-	0,205,204,1,0,0,0,206,37,1,0,0,0,207,210,3,36,18,0,208,210,3,14,7,0,209,
-	207,1,0,0,0,209,208,1,0,0,0,210,39,1,0,0,0,211,212,3,38,19,0,212,213,5,
-	46,0,0,213,227,1,0,0,0,214,215,3,38,19,0,215,216,5,47,0,0,216,227,1,0,0,
-	0,217,218,3,38,19,0,218,219,5,48,0,0,219,227,1,0,0,0,220,221,3,14,7,0,221,
-	222,5,49,0,0,222,227,1,0,0,0,223,224,3,22,11,0,224,225,5,49,0,0,225,227,
-	1,0,0,0,226,211,1,0,0,0,226,214,1,0,0,0,226,217,1,0,0,0,226,220,1,0,0,0,
-	226,223,1,0,0,0,227,41,1,0,0,0,228,229,3,38,19,0,229,230,5,47,0,0,230,238,
-	1,0,0,0,231,232,3,14,7,0,232,233,5,49,0,0,233,238,1,0,0,0,234,235,3,22,
-	11,0,235,236,5,49,0,0,236,238,1,0,0,0,237,228,1,0,0,0,237,231,1,0,0,0,237,
+	1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,1,30,5,30,300,8,
+	30,10,30,12,30,303,9,30,1,30,4,30,306,8,30,11,30,12,30,307,1,31,1,31,1,
+	31,1,31,1,31,1,32,1,32,1,32,3,32,318,8,32,1,33,1,33,1,33,1,33,1,33,1,34,
+	1,34,1,34,1,34,1,34,1,34,1,34,1,35,1,35,1,35,1,35,1,35,1,35,1,35,1,35,1,
+	36,1,36,1,36,1,36,1,36,1,36,1,37,1,37,1,37,1,37,1,38,1,38,1,38,1,38,1,38,
+	1,38,1,38,1,38,1,39,1,39,1,39,1,39,1,39,1,39,1,39,3,39,365,8,39,1,40,1,
+	40,4,40,369,8,40,11,40,12,40,370,1,40,1,40,1,40,1,40,1,40,1,41,1,41,1,41,
+	3,41,381,8,41,1,41,5,41,384,8,41,10,41,12,41,387,9,41,1,41,1,41,4,41,391,
+	8,41,11,41,12,41,392,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,1,42,3,42,
+	404,8,42,1,42,1,42,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,44,1,
+	44,1,44,1,44,1,44,1,44,1,44,1,44,1,44,1,45,1,45,1,45,1,45,1,45,1,45,1,45,
+	1,45,1,45,1,45,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,47,1,47,1,
+	47,1,47,1,47,1,47,1,47,1,48,1,48,1,48,1,48,1,48,3,48,457,8,48,3,48,459,
+	8,48,1,48,1,48,1,48,1,48,1,48,1,48,1,49,1,49,1,50,1,50,1,50,1,50,1,51,1,
+	51,1,51,1,51,1,51,1,51,1,52,1,52,1,52,1,52,1,52,1,52,1,52,1,52,1,52,3,52,
+	488,8,52,1,53,1,53,5,53,492,8,53,10,53,12,53,495,9,53,1,53,1,53,1,54,1,
+	54,1,54,1,54,5,54,503,8,54,10,54,12,54,506,9,54,1,54,4,54,509,8,54,11,54,
+	12,54,510,1,54,5,54,514,8,54,10,54,12,54,517,9,54,1,55,1,55,1,55,1,55,1,
+	55,1,55,1,56,1,56,1,56,1,56,1,56,1,56,1,57,1,57,1,57,1,57,5,57,535,8,57,
+	10,57,12,57,538,9,57,1,57,5,57,541,8,57,10,57,12,57,544,9,57,1,57,5,57,
+	547,8,57,10,57,12,57,550,9,57,1,57,1,57,1,57,3,57,555,8,57,1,58,1,58,1,
+	58,1,58,1,58,1,58,1,59,1,59,1,59,1,59,1,59,1,59,1,60,1,60,1,60,1,60,5,60,
+	573,8,60,10,60,12,60,576,9,60,1,60,4,60,579,8,60,11,60,12,60,580,1,60,5,
+	60,584,8,60,10,60,12,60,587,9,60,1,61,1,61,1,61,1,61,1,61,1,61,1,62,1,62,
+	1,62,1,62,1,62,1,62,1,63,5,63,602,8,63,10,63,12,63,605,9,63,1,63,1,63,1,
+	63,1,63,1,63,1,63,1,63,1,63,4,63,615,8,63,11,63,12,63,616,1,63,1,63,3,63,
+	621,8,63,1,63,0,0,64,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,
+	38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,
+	86,88,90,92,94,96,98,100,102,104,106,108,110,112,114,116,118,120,122,124,
+	126,0,9,1,0,1,8,1,0,9,34,1,0,35,36,1,0,37,38,1,0,95,96,1,0,86,87,1,0,46,
+	48,1,0,47,48,1,0,81,83,634,0,128,1,0,0,0,2,130,1,0,0,0,4,132,1,0,0,0,6,
+	134,1,0,0,0,8,136,1,0,0,0,10,138,1,0,0,0,12,140,1,0,0,0,14,151,1,0,0,0,
+	16,160,1,0,0,0,18,162,1,0,0,0,20,164,1,0,0,0,22,168,1,0,0,0,24,172,1,0,
+	0,0,26,178,1,0,0,0,28,183,1,0,0,0,30,191,1,0,0,0,32,193,1,0,0,0,34,199,
+	1,0,0,0,36,205,1,0,0,0,38,209,1,0,0,0,40,226,1,0,0,0,42,237,1,0,0,0,44,
+	239,1,0,0,0,46,249,1,0,0,0,48,251,1,0,0,0,50,255,1,0,0,0,52,261,1,0,0,0,
+	54,267,1,0,0,0,56,273,1,0,0,0,58,281,1,0,0,0,60,286,1,0,0,0,62,309,1,0,
+	0,0,64,317,1,0,0,0,66,319,1,0,0,0,68,324,1,0,0,0,70,331,1,0,0,0,72,339,
+	1,0,0,0,74,345,1,0,0,0,76,349,1,0,0,0,78,357,1,0,0,0,80,366,1,0,0,0,82,
+	377,1,0,0,0,84,403,1,0,0,0,86,407,1,0,0,0,88,416,1,0,0,0,90,425,1,0,0,0,
+	92,435,1,0,0,0,94,444,1,0,0,0,96,451,1,0,0,0,98,466,1,0,0,0,100,468,1,0,
+	0,0,102,472,1,0,0,0,104,487,1,0,0,0,106,489,1,0,0,0,108,498,1,0,0,0,110,
+	518,1,0,0,0,112,524,1,0,0,0,114,530,1,0,0,0,116,556,1,0,0,0,118,562,1,0,
+	0,0,120,568,1,0,0,0,122,588,1,0,0,0,124,594,1,0,0,0,126,620,1,0,0,0,128,
+	129,7,0,0,0,129,1,1,0,0,0,130,131,7,1,0,0,131,3,1,0,0,0,132,133,7,2,0,0,
+	133,5,1,0,0,0,134,135,7,3,0,0,135,7,1,0,0,0,136,137,5,94,0,0,137,9,1,0,
+	0,0,138,139,5,94,0,0,139,11,1,0,0,0,140,148,3,10,5,0,141,144,5,39,0,0,142,
+	145,5,40,0,0,143,145,3,14,7,0,144,142,1,0,0,0,144,143,1,0,0,0,145,147,1,
+	0,0,0,146,141,1,0,0,0,147,150,1,0,0,0,148,146,1,0,0,0,148,149,1,0,0,0,149,
+	13,1,0,0,0,150,148,1,0,0,0,151,157,3,8,4,0,152,156,3,8,4,0,153,156,5,79,
+	0,0,154,156,5,41,0,0,155,152,1,0,0,0,155,153,1,0,0,0,155,154,1,0,0,0,156,
+	159,1,0,0,0,157,155,1,0,0,0,157,158,1,0,0,0,158,15,1,0,0,0,159,157,1,0,
+	0,0,160,161,3,14,7,0,161,17,1,0,0,0,162,163,3,14,7,0,163,19,1,0,0,0,164,
+	165,3,16,8,0,165,166,5,39,0,0,166,167,3,18,9,0,167,21,1,0,0,0,168,169,3,
+	20,10,0,169,170,5,42,0,0,170,171,3,14,7,0,171,23,1,0,0,0,172,173,7,4,0,
+	0,173,25,1,0,0,0,174,179,3,24,12,0,175,179,5,97,0,0,176,179,5,98,0,0,177,
+	179,5,99,0,0,178,174,1,0,0,0,178,175,1,0,0,0,178,176,1,0,0,0,178,177,1,
+	0,0,0,179,27,1,0,0,0,180,184,3,26,13,0,181,184,5,80,0,0,182,184,5,100,0,
+	0,183,180,1,0,0,0,183,181,1,0,0,0,183,182,1,0,0,0,184,29,1,0,0,0,185,192,
+	3,28,14,0,186,192,3,12,6,0,187,192,3,20,10,0,188,192,5,43,0,0,189,192,5,
+	44,0,0,190,192,5,45,0,0,191,185,1,0,0,0,191,186,1,0,0,0,191,187,1,0,0,0,
+	191,188,1,0,0,0,191,189,1,0,0,0,191,190,1,0,0,0,192,31,1,0,0,0,193,194,
+	7,5,0,0,194,33,1,0,0,0,195,200,3,32,16,0,196,200,5,82,0,0,197,200,5,83,
+	0,0,198,200,5,84,0,0,199,195,1,0,0,0,199,196,1,0,0,0,199,197,1,0,0,0,199,
+	198,1,0,0,0,200,35,1,0,0,0,201,206,3,34,17,0,202,206,5,81,0,0,203,206,5,
+	88,0,0,204,206,5,89,0,0,205,201,1,0,0,0,205,202,1,0,0,0,205,203,1,0,0,0,
+	205,204,1,0,0,0,206,37,1,0,0,0,207,210,3,36,18,0,208,210,3,14,7,0,209,207,
+	1,0,0,0,209,208,1,0,0,0,210,39,1,0,0,0,211,212,3,38,19,0,212,213,5,46,0,
+	0,213,227,1,0,0,0,214,215,3,38,19,0,215,216,5,47,0,0,216,227,1,0,0,0,217,
+	218,3,38,19,0,218,219,5,48,0,0,219,227,1,0,0,0,220,221,3,14,7,0,221,222,
+	5,49,0,0,222,227,1,0,0,0,223,224,3,22,11,0,224,225,5,49,0,0,225,227,1,0,
+	0,0,226,211,1,0,0,0,226,214,1,0,0,0,226,217,1,0,0,0,226,220,1,0,0,0,226,
+	223,1,0,0,0,227,41,1,0,0,0,228,229,3,38,19,0,229,230,5,47,0,0,230,238,1,
+	0,0,0,231,232,3,14,7,0,232,233,5,49,0,0,233,238,1,0,0,0,234,235,3,22,11,
+	0,235,236,5,49,0,0,236,238,1,0,0,0,237,228,1,0,0,0,237,231,1,0,0,0,237,
 	234,1,0,0,0,238,43,1,0,0,0,239,240,3,38,19,0,240,241,7,6,0,0,241,45,1,0,
 	0,0,242,243,3,22,11,0,243,244,5,49,0,0,244,250,1,0,0,0,245,246,3,14,7,0,
 	246,247,5,49,0,0,247,250,1,0,0,0,248,250,3,38,19,0,249,242,1,0,0,0,249,
@@ -3431,96 +3419,96 @@ export default class AleoParser extends Parser {
 	279,1,0,0,0,279,277,1,0,0,0,279,280,1,0,0,0,280,57,1,0,0,0,281,282,3,14,
 	7,0,282,283,5,55,0,0,283,284,3,38,19,0,284,285,5,51,0,0,285,59,1,0,0,0,
 	286,287,5,58,0,0,287,288,3,14,7,0,288,289,5,53,0,0,289,290,5,40,0,0,290,
-	291,5,55,0,0,291,292,5,83,0,0,292,293,7,7,0,0,293,300,5,51,0,0,294,295,
-	5,59,0,0,295,296,5,55,0,0,296,297,7,8,0,0,297,299,5,51,0,0,298,294,1,0,
-	0,0,299,302,1,0,0,0,300,298,1,0,0,0,300,301,1,0,0,0,301,304,1,0,0,0,302,
-	300,1,0,0,0,303,305,3,62,31,0,304,303,1,0,0,0,305,306,1,0,0,0,306,304,1,
-	0,0,0,306,307,1,0,0,0,307,61,1,0,0,0,308,309,3,14,7,0,309,310,5,55,0,0,
-	310,311,3,44,22,0,311,312,5,51,0,0,312,63,1,0,0,0,313,317,3,46,23,0,314,
-	317,5,62,0,0,315,317,5,63,0,0,316,313,1,0,0,0,316,314,1,0,0,0,316,315,1,
-	0,0,0,317,65,1,0,0,0,318,319,3,0,0,0,319,320,3,30,15,0,320,321,5,64,0,0,
-	321,322,3,10,5,0,322,67,1,0,0,0,323,324,3,2,1,0,324,325,3,30,15,0,325,326,
-	3,30,15,0,326,327,1,0,0,0,327,328,5,64,0,0,328,329,3,10,5,0,329,69,1,0,
-	0,0,330,331,5,92,0,0,331,332,3,30,15,0,332,333,3,30,15,0,333,334,3,30,15,
-	0,334,335,1,0,0,0,335,336,5,64,0,0,336,337,3,10,5,0,337,71,1,0,0,0,338,
-	339,3,4,2,0,339,340,3,30,15,0,340,341,3,30,15,0,341,342,5,64,0,0,342,343,
-	3,10,5,0,343,73,1,0,0,0,344,345,3,6,3,0,345,346,3,30,15,0,346,347,3,30,
-	15,0,347,75,1,0,0,0,348,349,5,93,0,0,349,350,3,30,15,0,350,351,3,30,15,
-	0,351,352,5,64,0,0,352,353,3,10,5,0,353,354,5,55,0,0,354,355,7,9,0,0,355,
-	77,1,0,0,0,356,357,5,94,0,0,357,358,3,30,15,0,358,359,5,64,0,0,359,360,
-	3,10,5,0,360,363,5,55,0,0,361,364,3,34,17,0,362,364,5,83,0,0,363,361,1,
-	0,0,0,363,362,1,0,0,0,364,79,1,0,0,0,365,367,5,95,0,0,366,368,3,30,15,0,
-	367,366,1,0,0,0,368,369,1,0,0,0,369,367,1,0,0,0,369,370,1,0,0,0,370,371,
-	1,0,0,0,371,372,5,64,0,0,372,373,3,10,5,0,373,374,5,55,0,0,374,375,3,64,
-	32,0,375,81,1,0,0,0,376,379,5,65,0,0,377,380,3,22,11,0,378,380,3,14,7,0,
-	379,377,1,0,0,0,379,378,1,0,0,0,380,384,1,0,0,0,381,383,3,30,15,0,382,381,
-	1,0,0,0,383,386,1,0,0,0,384,382,1,0,0,0,384,385,1,0,0,0,385,387,1,0,0,0,
-	386,384,1,0,0,0,387,389,5,64,0,0,388,390,3,10,5,0,389,388,1,0,0,0,390,391,
-	1,0,0,0,391,389,1,0,0,0,391,392,1,0,0,0,392,83,1,0,0,0,393,403,3,66,33,
-	0,394,403,3,68,34,0,395,403,3,70,35,0,396,403,3,72,36,0,397,403,3,74,37,
-	0,398,403,3,76,38,0,399,403,3,78,39,0,400,403,3,80,40,0,401,403,3,82,41,
-	0,402,393,1,0,0,0,402,394,1,0,0,0,402,395,1,0,0,0,402,396,1,0,0,0,402,397,
-	1,0,0,0,402,398,1,0,0,0,402,399,1,0,0,0,402,400,1,0,0,0,402,401,1,0,0,0,
-	403,404,1,0,0,0,404,405,5,51,0,0,405,85,1,0,0,0,406,407,5,66,0,0,407,408,
-	3,14,7,0,408,409,5,67,0,0,409,410,3,30,15,0,410,411,5,68,0,0,411,412,5,
-	64,0,0,412,413,3,10,5,0,413,414,5,51,0,0,414,87,1,0,0,0,415,416,5,69,0,
-	0,416,417,3,14,7,0,417,418,5,67,0,0,418,419,3,30,15,0,419,420,5,68,0,0,
-	420,421,5,64,0,0,421,422,3,10,5,0,422,423,5,51,0,0,423,89,1,0,0,0,424,425,
-	5,70,0,0,425,426,3,14,7,0,426,427,5,67,0,0,427,428,3,30,15,0,428,429,5,
-	68,0,0,429,430,3,30,15,0,430,431,5,64,0,0,431,432,3,10,5,0,432,433,5,51,
-	0,0,433,91,1,0,0,0,434,435,5,71,0,0,435,436,3,30,15,0,436,437,5,64,0,0,
-	437,438,3,14,7,0,438,439,5,67,0,0,439,440,3,30,15,0,440,441,5,68,0,0,441,
-	442,5,51,0,0,442,93,1,0,0,0,443,444,5,72,0,0,444,445,3,14,7,0,445,446,5,
-	67,0,0,446,447,3,30,15,0,447,448,5,68,0,0,448,449,5,51,0,0,449,95,1,0,0,
-	0,450,457,5,73,0,0,451,452,3,30,15,0,452,453,3,30,15,0,453,458,1,0,0,0,
-	454,456,3,30,15,0,455,454,1,0,0,0,455,456,1,0,0,0,456,458,1,0,0,0,457,451,
-	1,0,0,0,457,455,1,0,0,0,458,459,1,0,0,0,459,460,5,64,0,0,460,461,3,10,5,
-	0,461,462,5,55,0,0,462,463,3,36,18,0,463,464,5,51,0,0,464,97,1,0,0,0,465,
-	466,3,14,7,0,466,99,1,0,0,0,467,468,5,74,0,0,468,469,3,98,49,0,469,470,
-	5,51,0,0,470,101,1,0,0,0,471,472,5,87,0,0,472,473,3,30,15,0,473,474,3,30,
-	15,0,474,475,3,98,49,0,475,476,5,51,0,0,476,103,1,0,0,0,477,487,3,86,43,
-	0,478,487,3,88,44,0,479,487,3,90,45,0,480,487,3,92,46,0,481,487,3,94,47,
-	0,482,487,3,96,48,0,483,487,3,100,50,0,484,487,3,102,51,0,485,487,3,84,
-	42,0,486,477,1,0,0,0,486,478,1,0,0,0,486,479,1,0,0,0,486,480,1,0,0,0,486,
-	481,1,0,0,0,486,482,1,0,0,0,486,483,1,0,0,0,486,484,1,0,0,0,486,485,1,0,
-	0,0,487,105,1,0,0,0,488,492,5,75,0,0,489,491,3,30,15,0,490,489,1,0,0,0,
-	491,494,1,0,0,0,492,490,1,0,0,0,492,493,1,0,0,0,493,495,1,0,0,0,494,492,
-	1,0,0,0,495,496,5,51,0,0,496,107,1,0,0,0,497,498,5,76,0,0,498,499,3,14,
-	7,0,499,503,5,53,0,0,500,502,3,110,55,0,501,500,1,0,0,0,502,505,1,0,0,0,
-	503,501,1,0,0,0,503,504,1,0,0,0,504,507,1,0,0,0,505,503,1,0,0,0,506,508,
-	3,84,42,0,507,506,1,0,0,0,508,509,1,0,0,0,509,507,1,0,0,0,509,510,1,0,0,
-	0,510,514,1,0,0,0,511,513,3,112,56,0,512,511,1,0,0,0,513,516,1,0,0,0,514,
-	512,1,0,0,0,514,515,1,0,0,0,515,109,1,0,0,0,516,514,1,0,0,0,517,518,5,77,
-	0,0,518,519,3,10,5,0,519,520,5,55,0,0,520,521,3,46,23,0,521,522,5,51,0,
-	0,522,111,1,0,0,0,523,524,5,78,0,0,524,525,3,30,15,0,525,526,5,55,0,0,526,
-	527,3,46,23,0,527,528,5,51,0,0,528,113,1,0,0,0,529,530,5,79,0,0,530,531,
-	3,14,7,0,531,535,5,53,0,0,532,534,3,116,58,0,533,532,1,0,0,0,534,537,1,
-	0,0,0,535,533,1,0,0,0,535,536,1,0,0,0,536,541,1,0,0,0,537,535,1,0,0,0,538,
-	540,3,84,42,0,539,538,1,0,0,0,540,543,1,0,0,0,541,539,1,0,0,0,541,542,1,
-	0,0,0,542,547,1,0,0,0,543,541,1,0,0,0,544,546,3,118,59,0,545,544,1,0,0,
-	0,546,549,1,0,0,0,547,545,1,0,0,0,547,548,1,0,0,0,548,553,1,0,0,0,549,547,
-	1,0,0,0,550,551,3,106,53,0,551,552,3,120,60,0,552,554,1,0,0,0,553,550,1,
-	0,0,0,553,554,1,0,0,0,554,115,1,0,0,0,555,556,5,77,0,0,556,557,3,10,5,0,
-	557,558,5,55,0,0,558,559,3,40,20,0,559,560,5,51,0,0,560,117,1,0,0,0,561,
-	562,5,78,0,0,562,563,3,30,15,0,563,564,5,55,0,0,564,565,3,40,20,0,565,566,
-	5,51,0,0,566,119,1,0,0,0,567,568,5,75,0,0,568,569,3,14,7,0,569,573,5,53,
-	0,0,570,572,3,122,61,0,571,570,1,0,0,0,572,575,1,0,0,0,573,571,1,0,0,0,
-	573,574,1,0,0,0,574,577,1,0,0,0,575,573,1,0,0,0,576,578,3,104,52,0,577,
-	576,1,0,0,0,578,579,1,0,0,0,579,577,1,0,0,0,579,580,1,0,0,0,580,584,1,0,
-	0,0,581,583,3,124,62,0,582,581,1,0,0,0,583,586,1,0,0,0,584,582,1,0,0,0,
-	584,585,1,0,0,0,585,121,1,0,0,0,586,584,1,0,0,0,587,588,5,77,0,0,588,589,
-	3,10,5,0,589,590,5,55,0,0,590,591,3,42,21,0,591,592,5,51,0,0,592,123,1,
-	0,0,0,593,594,5,78,0,0,594,595,3,30,15,0,595,596,5,55,0,0,596,597,3,42,
-	21,0,597,598,5,51,0,0,598,125,1,0,0,0,599,601,3,48,24,0,600,599,1,0,0,0,
-	601,604,1,0,0,0,602,600,1,0,0,0,602,603,1,0,0,0,603,620,1,0,0,0,604,602,
-	1,0,0,0,605,606,5,80,0,0,606,607,3,20,10,0,607,613,5,51,0,0,608,614,3,50,
-	25,0,609,614,3,56,28,0,610,614,3,60,30,0,611,614,3,108,54,0,612,614,3,114,
-	57,0,613,608,1,0,0,0,613,609,1,0,0,0,613,610,1,0,0,0,613,611,1,0,0,0,613,
-	612,1,0,0,0,614,615,1,0,0,0,615,613,1,0,0,0,615,616,1,0,0,0,616,617,1,0,
-	0,0,617,618,5,0,0,1,618,620,1,0,0,0,619,602,1,0,0,0,619,605,1,0,0,0,620,
-	127,1,0,0,0,41,144,148,155,157,178,183,191,199,205,209,226,237,249,279,
-	300,306,316,363,369,379,384,391,402,455,457,486,492,503,509,514,535,541,
-	547,553,573,579,584,602,613,615,619];
+	291,5,55,0,0,291,292,5,81,0,0,292,293,7,7,0,0,293,301,5,51,0,0,294,295,
+	5,59,0,0,295,296,5,55,0,0,296,297,3,40,20,0,297,298,5,51,0,0,298,300,1,
+	0,0,0,299,294,1,0,0,0,300,303,1,0,0,0,301,299,1,0,0,0,301,302,1,0,0,0,302,
+	305,1,0,0,0,303,301,1,0,0,0,304,306,3,62,31,0,305,304,1,0,0,0,306,307,1,
+	0,0,0,307,305,1,0,0,0,307,308,1,0,0,0,308,61,1,0,0,0,309,310,3,14,7,0,310,
+	311,5,55,0,0,311,312,3,44,22,0,312,313,5,51,0,0,313,63,1,0,0,0,314,318,
+	3,46,23,0,315,318,5,60,0,0,316,318,5,61,0,0,317,314,1,0,0,0,317,315,1,0,
+	0,0,317,316,1,0,0,0,318,65,1,0,0,0,319,320,3,0,0,0,320,321,3,30,15,0,321,
+	322,5,62,0,0,322,323,3,10,5,0,323,67,1,0,0,0,324,325,3,2,1,0,325,326,3,
+	30,15,0,326,327,3,30,15,0,327,328,1,0,0,0,328,329,5,62,0,0,329,330,3,10,
+	5,0,330,69,1,0,0,0,331,332,5,90,0,0,332,333,3,30,15,0,333,334,3,30,15,0,
+	334,335,3,30,15,0,335,336,1,0,0,0,336,337,5,62,0,0,337,338,3,10,5,0,338,
+	71,1,0,0,0,339,340,3,4,2,0,340,341,3,30,15,0,341,342,3,30,15,0,342,343,
+	5,62,0,0,343,344,3,10,5,0,344,73,1,0,0,0,345,346,3,6,3,0,346,347,3,30,15,
+	0,347,348,3,30,15,0,348,75,1,0,0,0,349,350,5,91,0,0,350,351,3,30,15,0,351,
+	352,3,30,15,0,352,353,5,62,0,0,353,354,3,10,5,0,354,355,5,55,0,0,355,356,
+	7,8,0,0,356,77,1,0,0,0,357,358,5,92,0,0,358,359,3,30,15,0,359,360,5,62,
+	0,0,360,361,3,10,5,0,361,364,5,55,0,0,362,365,3,34,17,0,363,365,5,81,0,
+	0,364,362,1,0,0,0,364,363,1,0,0,0,365,79,1,0,0,0,366,368,5,93,0,0,367,369,
+	3,30,15,0,368,367,1,0,0,0,369,370,1,0,0,0,370,368,1,0,0,0,370,371,1,0,0,
+	0,371,372,1,0,0,0,372,373,5,62,0,0,373,374,3,10,5,0,374,375,5,55,0,0,375,
+	376,3,64,32,0,376,81,1,0,0,0,377,380,5,63,0,0,378,381,3,22,11,0,379,381,
+	3,14,7,0,380,378,1,0,0,0,380,379,1,0,0,0,381,385,1,0,0,0,382,384,3,30,15,
+	0,383,382,1,0,0,0,384,387,1,0,0,0,385,383,1,0,0,0,385,386,1,0,0,0,386,388,
+	1,0,0,0,387,385,1,0,0,0,388,390,5,62,0,0,389,391,3,10,5,0,390,389,1,0,0,
+	0,391,392,1,0,0,0,392,390,1,0,0,0,392,393,1,0,0,0,393,83,1,0,0,0,394,404,
+	3,66,33,0,395,404,3,68,34,0,396,404,3,70,35,0,397,404,3,72,36,0,398,404,
+	3,74,37,0,399,404,3,76,38,0,400,404,3,78,39,0,401,404,3,80,40,0,402,404,
+	3,82,41,0,403,394,1,0,0,0,403,395,1,0,0,0,403,396,1,0,0,0,403,397,1,0,0,
+	0,403,398,1,0,0,0,403,399,1,0,0,0,403,400,1,0,0,0,403,401,1,0,0,0,403,402,
+	1,0,0,0,404,405,1,0,0,0,405,406,5,51,0,0,406,85,1,0,0,0,407,408,5,64,0,
+	0,408,409,3,14,7,0,409,410,5,65,0,0,410,411,3,30,15,0,411,412,5,66,0,0,
+	412,413,5,62,0,0,413,414,3,10,5,0,414,415,5,51,0,0,415,87,1,0,0,0,416,417,
+	5,67,0,0,417,418,3,14,7,0,418,419,5,65,0,0,419,420,3,30,15,0,420,421,5,
+	66,0,0,421,422,5,62,0,0,422,423,3,10,5,0,423,424,5,51,0,0,424,89,1,0,0,
+	0,425,426,5,68,0,0,426,427,3,14,7,0,427,428,5,65,0,0,428,429,3,30,15,0,
+	429,430,5,66,0,0,430,431,3,30,15,0,431,432,5,62,0,0,432,433,3,10,5,0,433,
+	434,5,51,0,0,434,91,1,0,0,0,435,436,5,69,0,0,436,437,3,30,15,0,437,438,
+	5,62,0,0,438,439,3,14,7,0,439,440,5,65,0,0,440,441,3,30,15,0,441,442,5,
+	66,0,0,442,443,5,51,0,0,443,93,1,0,0,0,444,445,5,70,0,0,445,446,3,14,7,
+	0,446,447,5,65,0,0,447,448,3,30,15,0,448,449,5,66,0,0,449,450,5,51,0,0,
+	450,95,1,0,0,0,451,458,5,71,0,0,452,453,3,30,15,0,453,454,3,30,15,0,454,
+	459,1,0,0,0,455,457,3,30,15,0,456,455,1,0,0,0,456,457,1,0,0,0,457,459,1,
+	0,0,0,458,452,1,0,0,0,458,456,1,0,0,0,459,460,1,0,0,0,460,461,5,62,0,0,
+	461,462,3,10,5,0,462,463,5,55,0,0,463,464,3,36,18,0,464,465,5,51,0,0,465,
+	97,1,0,0,0,466,467,3,14,7,0,467,99,1,0,0,0,468,469,5,72,0,0,469,470,3,98,
+	49,0,470,471,5,51,0,0,471,101,1,0,0,0,472,473,5,85,0,0,473,474,3,30,15,
+	0,474,475,3,30,15,0,475,476,3,98,49,0,476,477,5,51,0,0,477,103,1,0,0,0,
+	478,488,3,86,43,0,479,488,3,88,44,0,480,488,3,90,45,0,481,488,3,92,46,0,
+	482,488,3,94,47,0,483,488,3,96,48,0,484,488,3,100,50,0,485,488,3,102,51,
+	0,486,488,3,84,42,0,487,478,1,0,0,0,487,479,1,0,0,0,487,480,1,0,0,0,487,
+	481,1,0,0,0,487,482,1,0,0,0,487,483,1,0,0,0,487,484,1,0,0,0,487,485,1,0,
+	0,0,487,486,1,0,0,0,488,105,1,0,0,0,489,493,5,73,0,0,490,492,3,30,15,0,
+	491,490,1,0,0,0,492,495,1,0,0,0,493,491,1,0,0,0,493,494,1,0,0,0,494,496,
+	1,0,0,0,495,493,1,0,0,0,496,497,5,51,0,0,497,107,1,0,0,0,498,499,5,74,0,
+	0,499,500,3,14,7,0,500,504,5,53,0,0,501,503,3,110,55,0,502,501,1,0,0,0,
+	503,506,1,0,0,0,504,502,1,0,0,0,504,505,1,0,0,0,505,508,1,0,0,0,506,504,
+	1,0,0,0,507,509,3,84,42,0,508,507,1,0,0,0,509,510,1,0,0,0,510,508,1,0,0,
+	0,510,511,1,0,0,0,511,515,1,0,0,0,512,514,3,112,56,0,513,512,1,0,0,0,514,
+	517,1,0,0,0,515,513,1,0,0,0,515,516,1,0,0,0,516,109,1,0,0,0,517,515,1,0,
+	0,0,518,519,5,75,0,0,519,520,3,10,5,0,520,521,5,55,0,0,521,522,3,46,23,
+	0,522,523,5,51,0,0,523,111,1,0,0,0,524,525,5,76,0,0,525,526,3,30,15,0,526,
+	527,5,55,0,0,527,528,3,46,23,0,528,529,5,51,0,0,529,113,1,0,0,0,530,531,
+	5,77,0,0,531,532,3,14,7,0,532,536,5,53,0,0,533,535,3,116,58,0,534,533,1,
+	0,0,0,535,538,1,0,0,0,536,534,1,0,0,0,536,537,1,0,0,0,537,542,1,0,0,0,538,
+	536,1,0,0,0,539,541,3,84,42,0,540,539,1,0,0,0,541,544,1,0,0,0,542,540,1,
+	0,0,0,542,543,1,0,0,0,543,548,1,0,0,0,544,542,1,0,0,0,545,547,3,118,59,
+	0,546,545,1,0,0,0,547,550,1,0,0,0,548,546,1,0,0,0,548,549,1,0,0,0,549,554,
+	1,0,0,0,550,548,1,0,0,0,551,552,3,106,53,0,552,553,3,120,60,0,553,555,1,
+	0,0,0,554,551,1,0,0,0,554,555,1,0,0,0,555,115,1,0,0,0,556,557,5,75,0,0,
+	557,558,3,10,5,0,558,559,5,55,0,0,559,560,3,40,20,0,560,561,5,51,0,0,561,
+	117,1,0,0,0,562,563,5,76,0,0,563,564,3,30,15,0,564,565,5,55,0,0,565,566,
+	3,40,20,0,566,567,5,51,0,0,567,119,1,0,0,0,568,569,5,73,0,0,569,570,3,14,
+	7,0,570,574,5,53,0,0,571,573,3,122,61,0,572,571,1,0,0,0,573,576,1,0,0,0,
+	574,572,1,0,0,0,574,575,1,0,0,0,575,578,1,0,0,0,576,574,1,0,0,0,577,579,
+	3,104,52,0,578,577,1,0,0,0,579,580,1,0,0,0,580,578,1,0,0,0,580,581,1,0,
+	0,0,581,585,1,0,0,0,582,584,3,124,62,0,583,582,1,0,0,0,584,587,1,0,0,0,
+	585,583,1,0,0,0,585,586,1,0,0,0,586,121,1,0,0,0,587,585,1,0,0,0,588,589,
+	5,75,0,0,589,590,3,10,5,0,590,591,5,55,0,0,591,592,3,42,21,0,592,593,5,
+	51,0,0,593,123,1,0,0,0,594,595,5,76,0,0,595,596,3,30,15,0,596,597,5,55,
+	0,0,597,598,3,42,21,0,598,599,5,51,0,0,599,125,1,0,0,0,600,602,3,48,24,
+	0,601,600,1,0,0,0,602,605,1,0,0,0,603,601,1,0,0,0,603,604,1,0,0,0,604,621,
+	1,0,0,0,605,603,1,0,0,0,606,607,5,78,0,0,607,608,3,20,10,0,608,614,5,51,
+	0,0,609,615,3,50,25,0,610,615,3,56,28,0,611,615,3,60,30,0,612,615,3,108,
+	54,0,613,615,3,114,57,0,614,609,1,0,0,0,614,610,1,0,0,0,614,611,1,0,0,0,
+	614,612,1,0,0,0,614,613,1,0,0,0,615,616,1,0,0,0,616,614,1,0,0,0,616,617,
+	1,0,0,0,617,618,1,0,0,0,618,619,5,0,0,1,619,621,1,0,0,0,620,603,1,0,0,0,
+	620,606,1,0,0,0,621,127,1,0,0,0,41,144,148,155,157,178,183,191,199,205,
+	209,226,237,249,279,301,307,317,364,370,380,385,392,403,456,458,487,493,
+	504,510,515,536,542,548,554,574,580,585,603,614,616,620];
 
 	private static __ATN: ATN;
 	public static get _ATN(): ATN {
@@ -4362,6 +4350,12 @@ export class RecordContext extends ParserRuleContext {
 	}
 	public ADDRESS_TYPE(): TerminalNode {
 		return this.getToken(AleoParser.ADDRESS_TYPE, 0);
+	}
+	public value_type_list(): Value_typeContext[] {
+		return this.getTypedRuleContexts(Value_typeContext) as Value_typeContext[];
+	}
+	public value_type(i: number): Value_typeContext {
+		return this.getTypedRuleContext(Value_typeContext, i) as Value_typeContext;
 	}
 	public entry_list(): EntryContext[] {
 		return this.getTypedRuleContexts(EntryContext) as EntryContext[];
